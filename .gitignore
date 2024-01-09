@@ -7,3 +7,6 @@ public/
 # gatsby auto-generated types
 gatsby-types.d.ts
 
+Database/dumps/
+
+
