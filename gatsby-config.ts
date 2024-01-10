@@ -24,19 +24,19 @@ const config: GatsbyConfig = {
         concurrency: 5,
         tables: [
           {
-            baseId: `apptYPkeoCz0lSn19`,
-            tableName: `Table 1`,
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `Landing Page`,
             tableView: `CMS`,
             mapping: { Image: `fileNode` },
           },
           {
-            baseId: `apptYPkeoCz0lSn19`,
+            baseId: `appD0BHXtft0HSTNM`,
             tableName: `Site metadata`,
             tableView: `CMS`,
             mapping: { Image: `fileNode` },
           },
           {
-            baseId: `apptYPkeoCz0lSn19`,
+            baseId: `appD0BHXtft0HSTNM`,
             tableName: `Icons`,
             tableView: `CMS`,
             mapping: { SVG: `fileNode` },
@@ -44,6 +44,14 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `./data/csv/`,
+      },
+    },
+    `gatsby-transformer-csv`,
     {
       // filling in the gtag here
       // will set up both the gatsby
