@@ -14,7 +14,7 @@ database dump, and export the CSV files of data for the site.
     ```zsh
     sh/start-db.sh
     ```
-1. Restore from the tracking database dump:
+1. In a new terminal window, restore from the tracking database dump:
     ```sh
     sh/restore-db.sh
     ```
