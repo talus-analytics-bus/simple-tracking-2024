@@ -1,5 +1,7 @@
 # How to access Tracking Database Dump
 
+## Setup
+
 Simple way to use Docker to run postgres:14 with the tracking 
 database dump, and export the CSV files of data for the site.
 
@@ -23,6 +25,8 @@ database dump, and export the CSV files of data for the site.
     sh/create-csvs.sh
     ```
 
+### Notes
+
 > *You may get an error saying the port is already in use 
 if your system is already running `postgres`, if you 
 get that message, shut down your instance of 
@@ -43,6 +47,22 @@ The `sh/create-csvs.sh` script will take each query in the
 `./queries/` directory, execute it, and send the output of
 the SQL query to a CSV file in the `./csv/` directory.
 
+
+## Development
+
+### Connect
+
+To connect using a graphical database management tool 
+(e.g. dBeaver, pgAdmin):
+
+```
+host:      localhost
+database:  tracking
+username:  postgres
+password:  1234
+```
+
+### Watch `./queries/` for changes
 
 If you have `fswatch` installed on your system, you can
 make the CSV files automatically regenerate each time you
