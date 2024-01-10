@@ -1,14 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import CMS from '@talus-analytics/library.airtable-cms'
-import Providers from '../components/layout/Providers'
+import CMS from "@talus-analytics/library.airtable-cms";
+import Providers from "../components/layout/Providers";
 
-import Main from '../components/layout/Main'
+import Main from "../components/layout/Main";
 
-import useIndexPageData from '../cmsHooks/useIndexPageData'
+import useIndexPageData from "../cmsHooks/useIndexPageData";
+import styled from "styled-components";
+
+const ExampleBox = styled.div<{ mode: "funder" | "recipient" }>`
+  background-color: ${({ theme, mode }) => theme[mode].colors.mapViz1};
+`;
 
 const IndexPage = (): JSX.Element => {
-  const data = useIndexPageData()
+  const data = useIndexPageData();
 
   return (
     // all pages should be wrapped in the Providers component
@@ -16,19 +21,18 @@ const IndexPage = (): JSX.Element => {
     <Providers>
       <CMS.SEO />
       <Main>
-        <CMS.Image name="Talus Logo" data={data} />
-        <h1>
-          <CMS.Text name="H1" data={data} />
-        </h1>
-        <p>
-          <CMS.Text name="Example Text" data={data} />
-          <a href={CMS.getText(data, 'Airtable URL')}>
-            <CMS.Text name="Airtable Link Text" data={data} />
-          </a>
-        </p>
+        <ExampleBox mode={"funder"}>
+          <h1>Simple Tracking 2024</h1>
+          <p>
+            <CMS.Text name="Example Text" data={data} />
+            <a href={CMS.getText(data, "Airtable URL")}>
+              <CMS.Text name="Airtable Link Text" data={data} />
+            </a>
+          </p>
+        </ExampleBox>
       </Main>
     </Providers>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
