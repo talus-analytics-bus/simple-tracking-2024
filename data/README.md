@@ -25,12 +25,22 @@ database dump, and export the CSV files of data for the site.
     sh/create-csvs.sh
     ```
 
-### Notes
+### Errors
+
+#### Port 5432 In Use
 
 > *You may get an error saying the port is already in use 
 if your system is already running `postgres`, if you 
 get that message, shut down your instance of 
 `postgres` first*
+
+#### AWS CLI not found, please download database dump manually.
+
+If you don't have AWS CLI or credentials, download the tracking
+database dump file, name it `dump-tracking`, and place it in the
+`./dumps/` directory.
+
+### Notes
 
 After restoring the database, `sh/start-db.sh` will re-start
 the database with all data from the previous session, so you
