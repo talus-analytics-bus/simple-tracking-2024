@@ -44,3 +44,9 @@ The `sh/create-csvs.sh` script will take each query in the
 the SQL query to a CSV file in the `./csv/` directory.
 
 
+If you have `fswatch` installed on your system, you can
+make the CSV files automatically regenerate each time you
+add or edit a query file by running the command: 
+```sh
+fswatch -o path | xargs -n1 -I{} program
+```
