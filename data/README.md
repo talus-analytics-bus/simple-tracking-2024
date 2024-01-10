@@ -14,11 +14,6 @@ database dump, and export the CSV files of data for the site.
     ```zsh
     sh/start-db.sh
     ```
-> *You may get an error saying the port is already in use 
-if your system is already running `postgres`, if you 
-get that message, shut down your instance of 
-`postgres` first*
-
 1. In a new terminal window, restore from the tracking database dump:
     ```sh
     sh/restore-db.sh
@@ -27,6 +22,11 @@ get that message, shut down your instance of
     ```bash
     sh/create-csvs.sh
     ```
+
+> *You may get an error saying the port is already in use 
+if your system is already running `postgres`, if you 
+get that message, shut down your instance of 
+`postgres` first*
 
 After restoring the database, `sh/start-db.sh` will re-start
 the database with all data from the previous session, so you
