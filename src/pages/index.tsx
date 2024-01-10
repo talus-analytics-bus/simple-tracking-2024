@@ -6,14 +6,12 @@ import Providers from "../components/layout/Providers";
 import Main from "../components/layout/Main";
 
 import useIndexPageData from "../cmsHooks/useIndexPageData";
-import styled from "styled-components";
-
-const ExampleBox = styled.div<{ mode: "funder" | "recipient" }>`
-  background-color: ${({ theme, mode }) => theme[mode].colors.mapViz1};
-`;
+import useCountries from "queryHooks/useCountries";
+import { Link } from "gatsby";
 
 const IndexPage = (): JSX.Element => {
   const data = useIndexPageData();
+  const countries = useCountries();
 
   return (
     // all pages should be wrapped in the Providers component
@@ -21,15 +19,17 @@ const IndexPage = (): JSX.Element => {
     <Providers>
       <CMS.SEO />
       <Main>
-        <ExampleBox mode={"funder"}>
-          <h1>Simple Tracking 2024</h1>
+        <h1>Tracking 2024</h1>
+        <p>
+          <CMS.Text name="H1" data={data} />
+        </p>
+        {countries.map((country) => (
           <p>
-            <CMS.Text name="Example Text" data={data} />
-            <a href={CMS.getText(data, "Airtable URL")}>
-              <CMS.Text name="Airtable Link Text" data={data} />
-            </a>
+            <Link to={`/countries/${country.iso3?.toLowerCase()}/`}>
+              {country.name}
+            </Link>
           </p>
-        </ExampleBox>
+        ))}
       </Main>
     </Providers>
   );
