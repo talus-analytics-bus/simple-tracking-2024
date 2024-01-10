@@ -13,6 +13,9 @@ persisted when the container restarts._
     Docker is used to download and run a container using the
     correct (previous) version of posgresql.
 1. Start a postgres:14.2 container: *`sh/start-db.sh`*
+    ```sh
+    sh/start-db.sh
+    ```
     1. You may get an error saying the port is already in use 
         if your system is already running `postgres`, if you 
         get that message, shut down your instance of 
@@ -20,7 +23,13 @@ persisted when the container restarts._
 1. Place the tracking database dump in the `/dumps/` directory,
     and name it `dump-tracking`
 1. Restore from the tracking database dump: *`sh/restore-db.sh`*
+    ```sh
+    sh/restore-db.sh
+    ```
 1. Run `sh/create-csvs.sh`
+    ```bash
+    sh/create-csvs.sh
+    ```
 
 The `sh/create-csvs.sh` script will take each query in the 
 `./queries/` directory, execute it, and send the output of
