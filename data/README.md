@@ -36,7 +36,7 @@ get that message, shut down your instance of
 
 #### AWS CLI not found, please download database dump manually.
 
-If you don't have AWS CLI or credentials, download the tracking
+> If you don't have AWS CLI or credentials, download the tracking
 database dump file, name it `dump-tracking`, and place it in the
 `./dumps/` directory.
 
