@@ -1,1 +1,101 @@
-OCI runtime exec failed: exec failed: unable to start container process: exec: "PGPASSWORD=1234": executable file not found in $PATH: unknown
+name,iso3
+Nauru,NRU
+Monaco,MCO
+Burundi,BDI
+Trinidad and Tobago,TTO
+Argentina,ARG
+Australia,AUS
+Belgium,BEL
+Cameroon,CMR
+Somalia,SOM
+Bosnia and Herzegovina,BIH
+Iraq,IRQ
+Turkey,TUR
+Suriname,SUR
+Denmark,DNK
+Sri Lanka,LKA
+Serbia,SRB
+Sweden,SWE
+China,CHN
+Jordan,JOR
+Myanmar,MMR
+Pakistan,PAK
+Saint Kitts and Nevis,KNA
+Singapore,SGP
+Cambodia,KHM
+Wallis and Futuna,WLF
+Ecuador,ECU
+Malawi,MWI
+Eritrea,ERI
+Turkmenistan,TKM
+Ethiopia,ETH
+Tajikistan,TJK
+San Marino,SMR
+Kazakhstan,KAZ
+Dominica,DMA
+Spain,ESP
+Canada,CAN
+Benin,BEN
+Guatemala,GTM
+Samoa,WSM
+Netherlands,NLD
+Rwanda,RWA
+Kiribati,KIR
+Armenia,ARM
+Grenada,GRD
+Liberia,LBR
+Nepal,NPL
+Palau,PLW
+Cabo Verde,CPV
+Albania,ALB
+Saint Vincent and the Grenadines,VCT
+Timor-Leste,TLS
+Kyrgyzstan,KGZ
+Niger,NER
+Honduras,HND
+Aruba,ABW
+Italy,ITA
+Philippines,PHL
+Niue,NIU
+Viet Nam,VNM
+Sudan,SDN
+Equatorial Guinea,GNQ
+Holy See,VAT
+Belize,BLZ
+Antigua and Barbuda,ATG
+Western Sahara,SAH
+Congo,COG
+Dominican Republic,DOM
+Solomon Islands,SLB
+Bolivia,BOL
+United Kingdom,GBR
+Senegal,SEN
+Panama,PAN
+Gambia,GMB
+Norway,NOR
+Botswana,BWA
+Croatia,HRV
+Guyana,GUY
+"Venezuela, Bolivarian Republic of",VEN
+Papua New Guinea,PNG
+Oman,OMN
+Mauritania,MRT
+United States of America,USA
+Guinea,GIN
+United Republic of Tanzania,TZA
+Jamaica,JAM
+Angola,AGO
+Republic of Korea,KOR
+Bhutan,BTN
+El Salvador,SLV
+Andorra,AND
+Saint Lucia,LCA
+French Polynesia,PYF
+Comoros,COM
+Eswatini,SWZ
+Finland,FIN
+Romania,ROU
+Syrian Arab Republic,SYR
+Colombia,COL
+Nicaragua,NIC
+Afghanistan,AFG
