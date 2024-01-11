@@ -12,10 +12,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   DomainName:
     Type: String
-    Default: 'talusanalytics.com'
+    Default: 'ghssidea.org'
   CertificateArn:
     Type: String
-    Default: 'arn:aws:acm:us-east-1:560812044035:certificate/d98e831c-999b-4d94-8d09-5b8922f2fcb8'
+    Default: 'arn:aws:acm:us-east-1:560812044035:certificate/d2a78318-eef1-4b0b-8b34-93c53e4bfd4f'
 
 Conditions:
   # This conditional checks if the domain name is project-specific, or
@@ -39,7 +39,7 @@ Conditions:
   # aws cloudformation update-stack \
   #   --stack-name build-stack-test \
   #   --template-body file://build-stack.yaml
-  CustomDomainProvided: !Not [!Equals [!Ref DomainName, 'talusanalytics.com']]
+  CustomDomainProvided: !Not [!Equals [!Ref DomainName, 'ghssidea.org']]
 
 Resources:
   # Using lambda to generate random string to use in headers between CF and S3
@@ -207,6 +207,12 @@ Resources:
       WebsiteConfiguration:
         ErrorDocument: index.html
         IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+
 
   # the bucket hosts the website. This is
   # not the standard way to connect S3 to
@@ -314,6 +320,11 @@ Resources:
       WebsiteConfiguration:
         ErrorDocument: index.html
         IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
 
   S3ReviewBucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -413,6 +424,11 @@ Resources:
       WebsiteConfiguration:
         ErrorDocument: index.html
         IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
 
   S3StagingBucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -512,6 +528,11 @@ Resources:
       WebsiteConfiguration:
         ErrorDocument: index.html
         IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
 
   S3ProdBucketPolicy:
     Type: AWS::S3::BucketPolicy
