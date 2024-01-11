@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql, PageProps } from "gatsby";
-import Main from "components/layout/Main";
-import Providers from "components/layout/Providers";
-import CMS from "@talus-analytics/library.airtable-cms";
+import React from 'react'
+import { graphql, PageProps } from 'gatsby'
+import Main from 'components/layout/Main'
+import Providers from 'components/layout/Providers'
+import CMS from 'components/library/airtable-cms/'
 
 const CountryPage = ({
   data,
@@ -18,21 +18,21 @@ const CountryPage = ({
             {Object.entries(data.countryReceivedAndDisbursedCsv ?? {}).map(
               ([label, value]) => (
                 <tr>
-                  <td style={{ textAlign: "right" }}>
+                  <td style={{ textAlign: 'right' }}>
                     ${new Number(value).toLocaleString()}
                   </td>
-                  <td style={{ paddingLeft: 20, textAlign: "left" }}>
-                    {label.replaceAll("_", " ")}
+                  <td style={{ paddingLeft: 20, textAlign: 'left' }}>
+                    {label.replaceAll('_', ' ')}
                   </td>
                 </tr>
-              ),
+              )
             )}
           </tbody>
         </table>
       </Main>
     </Providers>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query CountryPage($name: String) {
@@ -49,6 +49,6 @@ export const query = graphql`
       Total_Response_Received
     }
   }
-`;
+`
 
-export default CountryPage;
+export default CountryPage

@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 
-import CMS from "@talus-analytics/library.airtable-cms";
-import Providers from "../components/layout/Providers";
+import CMS from 'components/library/airtable-cms/'
+import Providers from '../components/layout/Providers'
 
-import Main from "../components/layout/Main";
+import Main from '../components/layout/Main'
 
-import useIndexPageData from "../cmsHooks/useIndexPageData";
-import useCountries from "queryHooks/useCountries";
-import { Link } from "gatsby";
+import useIndexPageData from '../cmsHooks/useIndexPageData'
+import useCountries from 'queryHooks/useCountries'
+import { Link } from 'gatsby'
 
 const IndexPage = (): JSX.Element => {
-  const data = useIndexPageData();
-  const countries = useCountries();
+  const data = useIndexPageData()
+  const countries = useCountries()
 
   return (
     // all pages should be wrapped in the Providers component
@@ -28,7 +28,7 @@ const IndexPage = (): JSX.Element => {
         <h3>
           <CMS.Text name="Section 1 paragraph 2" data={data} />
         </h3>
-        {countries.map((country) => (
+        {countries.map(country => (
           <p>
             <Link to={`/countries/${country.iso3?.toLowerCase()}/`}>
               {country.name}
@@ -37,7 +37,7 @@ const IndexPage = (): JSX.Element => {
         ))}
       </Main>
     </Providers>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage

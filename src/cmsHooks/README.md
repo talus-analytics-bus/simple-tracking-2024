@@ -20,7 +20,7 @@ interface AirtableCMSData {
 This type should be imported as:
 
 ```ts
-import { AirtableCMSData } from '@talus-analytics/library.airtable-cms'
+import { AirtableCMSData } from 'components/library/airtable-cms/'
 ```
 
 This means these queries can supply the `data` prop for `airtable-cms` components.

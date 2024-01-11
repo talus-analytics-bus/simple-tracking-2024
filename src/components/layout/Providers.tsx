@@ -2,7 +2,7 @@ import React from 'react'
 
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import CMS from '@talus-analytics/library.airtable-cms'
+import CMS from 'components/library/airtable-cms/'
 
 import textStyles from 'figma/textStyles'
 import colorPalette from 'figma/colorPalette'
