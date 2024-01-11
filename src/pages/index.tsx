@@ -19,10 +19,15 @@ const IndexPage = (): JSX.Element => {
     <Providers>
       <CMS.SEO />
       <Main>
-        <h1>Tracking 2024</h1>
-        <p>
+        <h1>
           <CMS.Text name="H1" data={data} />
-        </p>
+        </h1>
+        <h2>
+          <CMS.Text name="Section 1 paragraph 1" data={data} />
+        </h2>
+        <h3>
+          <CMS.Text name="Section 1 paragraph 2" data={data} />
+        </h3>
         {countries.map((country) => (
           <p>
             <Link to={`/countries/${country.iso3?.toLowerCase()}/`}>
