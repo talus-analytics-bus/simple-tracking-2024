@@ -85,9 +85,13 @@ jobs:
           name: Yarn Install
           command: yarn install --network-timeout 1000000
 
-      - run:
-          name: Typescript Checks
-          command: yarn tsc
+      # Commenting this out because this project
+      # requires dynamic type generation which
+      # we're not running here in the build
+
+      # - run:
+      #     name: Typescript Checks
+      #     command: yarn tsc
 
       - run:
           name: Gatsby build
