@@ -78,12 +78,12 @@ jobs:
 
       - restore_cache:
           keys:
-            - yarn-deps-{{ checksum "yarn.lock" }}
-            - yarn-deps-
+            - npm-deps-{{ checksum "package-lock.json" }}
+            - npm-deps-
 
       - run:
-          name: Yarn Install
-          command: yarn install --network-timeout 1000000
+          name: NPM Install
+          command: npm i
 
       # Commenting this out because this project
       # requires dynamic type generation which
@@ -96,7 +96,7 @@ jobs:
       - run:
           name: Gatsby build
           command: |
-            yarn build
+            npm run build
 
       - run:
           name: AWS S3 Sync to <<parameters.bucket>>
@@ -110,7 +110,7 @@ jobs:
             --paths "/*"
 
       - save_cache:
-          key: yarn-deps-{{ checksum "yarn.lock" }}
+          key: yarn-deps-{{ checksum "package-lock.json" }}
           paths:
             - 'node_modules'
             - '.cache'
