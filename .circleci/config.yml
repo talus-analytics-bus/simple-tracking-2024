@@ -110,7 +110,7 @@ jobs:
             --paths "/*"
 
       - save_cache:
-          key: yarn-deps-{{ checksum "package-lock.json" }}
+          key: npm-deps-{{ checksum "package-lock.json" }}
           paths:
             - 'node_modules'
             - '.cache'
