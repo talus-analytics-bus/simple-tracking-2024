@@ -2,7 +2,6 @@ version: 2.1
 
 credentials: &credentials
   - AWS Credentials
-  # - Bit Credentials
 
 workflows:
   version: 2
@@ -67,14 +66,6 @@ jobs:
     steps:
       - checkout
       - aws-cli/install
-
-      # - run:
-      #     name: Adding bit.dev to NPM Registry
-      #     command: |
-      #       echo "always-auth=true" >> ~/.npmrc;
-      #       echo "@talus-analytics:registry=https://node.bit.dev" >> ~/.npmrc;
-      #       echo "@teambit:registry=https://node.bit.dev" >> ~/.npmrc;
-      #       echo "//node.bit.dev/:_authToken={$BIT_TOKEN}" >> ~/.npmrc;
 
       - restore_cache:
           keys:
