@@ -6,8 +6,8 @@
 
 ### Dependencies
 
-1. **[Install Docker Desktop](https://docs.docker.com/get-docker/).**
-    Docker desktop must be running for the development commands to work.
+**[Install Docker Desktop](https://docs.docker.com/get-docker/).**
+Docker desktop must be running for the development commands to work.
 
 ### Run project
 
@@ -15,8 +15,8 @@
 docker compose up
 ```
 
-The command `docker compose up` will start both the database (at port `5432`) and the website 
-(at port `8000`).
+This command starts the database (at port `5432`) and the website 
+(at [http://localhost:8000/](http://localhost:8000/)).
 
 If **[AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)** 
 are not configured, you will need to provide an airtable token:
@@ -28,6 +28,8 @@ AIRTABLE_API_KEY='XXXX' docker compose up
 You can [create an airtable token](https://airtable.com/create/tokens) in the 
 developers settings in airtable.
 
+</br>
+</br>
 
 ### Ingest Tracking Database
 
