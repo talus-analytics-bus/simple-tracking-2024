@@ -64,6 +64,12 @@ username:  postgres
 password:  1234
 ```
 
+### Graphiql query interface
+
+While containers are running, visit:
+
+[http://localhost:8000/__graphql](http://localhost:8000/__graphql)
+
 
 # Sample Project Readme Template
 
