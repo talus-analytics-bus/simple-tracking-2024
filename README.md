@@ -23,7 +23,7 @@ Credentials should be set up according to
 docker compose up
 ```
 
-Docker compose up will start both the database (at port 5432) and the website 
+The command `docker compose up` will start both the database (at port 5432) and the website 
 (at port 8000).
 
 ## Run website only
