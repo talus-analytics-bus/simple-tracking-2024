@@ -2,17 +2,20 @@ services:
   website:
     container_name: simple-tracking-site
     build: .
-    ports: 
+    ports:
       - "8000:8000"
       - "8888:8888"
     volumes:
       - ~/.aws:/root/.aws
       - ./src:/app/src
+      - ./data:/app/data
+    environment:
+      PGPASSWORD: "1234"
 
   database:
     container_name: simple-tracking-db
     image: postgres:14.2
-    environment: 
+    environment:
       POSTGRES_PASSWORD: "1234"
       POSTGRES_DB: "tracking"
       PGPASSWORD: "1234"
