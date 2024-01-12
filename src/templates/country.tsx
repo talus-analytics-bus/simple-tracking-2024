@@ -3,6 +3,7 @@ import { graphql, PageProps } from 'gatsby'
 import Main from 'components/layout/Main'
 import Providers from 'components/layout/Providers'
 import CMS from 'components/library/airtable-cms/'
+import NavBar from 'components/layout/NavBar/NavBar'
 
 const CountryPage = ({
   data,
@@ -10,7 +11,7 @@ const CountryPage = ({
   return (
     <Providers>
       <CMS.SEO />
-
+      <NavBar />
       <Main>
         <h1>{data.countriesCsv?.name}</h1>
         <table>
