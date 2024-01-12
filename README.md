@@ -1,4 +1,68 @@
 <h1 align="center">
+    Tracking 2024
+</h1>
+
+# Development
+
+## Dependencies
+
+### [Install Docker Desktop](https://docs.docker.com/get-docker/)
+
+Docker desktop must be running for the development commands to work.
+
+
+### Configure AWS Credentials
+AWS Credentials are used to access data and retreive secrets. 
+Credentials should be set up according to 
+[AWS credentials documentation.](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) 
+
+
+# Run project
+
+```sh
+docker compose up
+```
+
+Docker compose up will start both the database (at port 5432) and the website 
+(at port 8000).
+
+## Run website only
+
+```sh
+docker compose up website
+```
+
+## Run database only
+
+```sh
+docker compose up database
+```
+
+### Ingest Tracking Database
+
+While the database is running:
+
+```sh
+sh/restore-db
+```
+
+#### AWS CLI not found, please download database dump manually.
+> If you don't have AWS CLI or credentials, you will get a message saying
+"AWS CLI not found, please download database dump manually." In this case, 
+download the tracking database dump file, name it `dump-tracking`, and 
+place it in the `./data/dumps/` directory.
+
+#### Port 5432 In Use
+> *You may get an error saying the port is already in use 
+if your system is already running `postgres`, if you 
+get that message, shut down your instance of 
+`postgres` first*
+
+
+
+
+
+<h1 align="center">
   Talus-Gatsby-Starter
 </h1>
 

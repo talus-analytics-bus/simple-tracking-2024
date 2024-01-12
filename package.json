@@ -13,7 +13,7 @@
     "start": "scripts/start.sh",
     "build": "scripts/build.sh",
     "serve": "gatsby serve",
-    "postinstall": "scripts/postinstall.sh"
+    "docker-start": "scripts/docker-start.sh"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
