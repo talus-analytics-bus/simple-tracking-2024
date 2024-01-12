@@ -50,7 +50,7 @@ if [ "$database_ready" = "database:5432 - accepting connections" ]; then
     done
 
     {
-      inotifywait -e close_write,moved_to,create -m data/queries/ |
+      inotifywait -m -e moved_to,create,close_write,modify data/queries/ |
       while read -r directory events filename; do
         echo "Running Query $filename"
         psql -h database -U postgres -d tracking --csv -f data/queries/$filename > data/csv/${filename%.*}.csv
