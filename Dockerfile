@@ -2,7 +2,12 @@ FROM node:20
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y jq awscli python3
+RUN apt-get update && apt-get install -y \
+  jq \
+  awscli \
+  python3 \
+  postgresql-client\
+  inotify-tools
 
 COPY package*.json ./
 
