@@ -31,8 +31,6 @@ if [ "$reset" == "1" ]; then
   gatsby clean;
 fi
 
-exit
-
 if [ "$clean" == "1" ]; then
   gatsby clean
 fi
