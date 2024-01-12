@@ -8,8 +8,6 @@
 
 1. *[Install Docker Desktop](https://docs.docker.com/get-docker/).* 
     Docker desktop must be running for the development commands to work.
-1. *[Configure AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)* 
-    to access data and retreive secrets.
 
 ### Run project
 
@@ -20,6 +18,12 @@ docker compose up
 The command `docker compose up` will start both the database (at port `5432`) and the website 
 (at port `8000`).
 
+If *[AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)* 
+are not configured, you will need to provide an airtable token:
+
+```sh
+AIRTABLE_API_KEY='XXXX' docker compose up
+```
 
 ### Ingest Tracking Database
 
@@ -42,16 +46,16 @@ get that message, shut down your instance of
 `postgres` first*
 
 
-## Run website only
+### Connect to Tracking DB
 
-```sh
-docker compose up website
+To connect using a graphical database management tool 
+(e.g. dBeaver, pgAdmin):
+
 ```
-
-## Run database only
-
-```sh
-docker compose up database
+host:      localhost
+database:  tracking
+username:  postgres
+password:  1234
 ```
 
 

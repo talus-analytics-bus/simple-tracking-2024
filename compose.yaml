@@ -11,6 +11,7 @@ services:
       - ./data:/app/data
     environment:
       PGPASSWORD: "1234"
+      AIRTABLE_API_KEY:
 
   database:
     container_name: simple-tracking-db
