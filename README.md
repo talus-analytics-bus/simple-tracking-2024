@@ -2,41 +2,27 @@
     Tracking 2024
 </h1>
 
-# Development
+## 👩‍💻 Local Development Quick start
 
-## Dependencies
+### Dependencies
 
-### [Install Docker Desktop](https://docs.docker.com/get-docker/)
+1. *[Install Docker Desktop](https://docs.docker.com/get-docker/).* 
+    Docker desktop must be running for the development commands to work.
 
-Docker desktop must be running for the development commands to work.
 
-
-### Configure AWS Credentials
-AWS Credentials are used to access data and retreive secrets. 
-Credentials should be set up according to 
+1. *Configure AWS Credentials* to access data and retreive secrets. Credentials should be set up according to 
 [AWS credentials documentation.](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) 
 
 
-# Run project
+### Run project
 
 ```sh
 docker compose up
 ```
 
-The command `docker compose up` will start both the database (at port 5432) and the website 
-(at port 8000).
+The command `docker compose up` will start both the database (at port `5432`) and the website 
+(at port `8000`).
 
-## Run website only
-
-```sh
-docker compose up website
-```
-
-## Run database only
-
-```sh
-docker compose up database
-```
 
 ### Ingest Tracking Database
 
@@ -59,6 +45,17 @@ get that message, shut down your instance of
 `postgres` first*
 
 
+## Run website only
+
+```sh
+docker compose up website
+```
+
+## Run database only
+
+```sh
+docker compose up database
+```
 
 
 
