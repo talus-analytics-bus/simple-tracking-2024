@@ -9,6 +9,8 @@ const Columns = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'text map';
   align-items: stretch;
+  padding: 50px 0;
+  gap: 50px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

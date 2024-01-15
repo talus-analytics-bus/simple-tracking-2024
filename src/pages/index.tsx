@@ -4,10 +4,9 @@ import CMS from 'components/library/airtable-cms/'
 import Providers from '../components/layout/Providers'
 
 import Main from '../components/layout/Main'
-
-import useIndexPageData from '../cmsHooks/useIndexPageData'
 import NavBar from 'components/layout/NavBar/NavBar'
 import FirstFold from 'components/landing/FirstFold'
+import PurpleBar from 'components/landing/PurpleBar'
 
 const IndexPage = (): JSX.Element => (
   <Providers>
@@ -16,6 +15,7 @@ const IndexPage = (): JSX.Element => (
     <Main>
       <FirstFold />
     </Main>
+    <PurpleBar />
   </Providers>
 )
 
