@@ -1,9 +1,10 @@
 export default {
+
   primitives: {
     colors: {
       badJob: "#c42300",
       blue300: "#b5e8ff",
-      blue400: "#349ecdb0",
+      blue400: "#349ecdcc",
       blue500: "#349ecd",
       goodJob: "#5faa66",
       link: "#1e54a5",
@@ -30,7 +31,8 @@ export default {
       colorPlumPlum900: "#360b38",
       colorThemeThemeDarker: "#2d1440",
       colorThemeThemeEvenDarker: "#1d092c",
-      colorThemeThemeHover: "#a178c0",
+      colorThemeThemeHazy: "#574366",
+      colorThemeThemeHover: "#82609b",
       colorThemeThemeLight: "#e0dbe4",
       colorThemeThemePrimary: "#662d91",
     },
@@ -70,7 +72,7 @@ export default {
   common: {
     colors: {
       callToActionDefault: "#349ecd",
-      callToActionHover: "#349ecdb0",
+      callToActionHover: "#349ecdcc",
       strokeWhite: "#ffffff",
       surfaceGray100: "#f1f1f1",
       surfaceGray200: "#d3d3d3",
@@ -82,7 +84,8 @@ export default {
       surfaceTheme: "#662d91",
       surfaceThemeDarker: "#2d1440",
       surfaceThemeEvenDarker: "#1d092c",
-      surfaceThemeHover: "#a178c0",
+      surfaceThemeHazy: "#574366",
+      surfaceThemeHover: "#82609b",
       surfaceThemeLighter: "#e0dbe4",
       surfaceWhite: "#ffffff",
       surfaceWhite20: "#ffffff33",
@@ -91,6 +94,7 @@ export default {
       textPrimary: "#202020",
       textSecondary: "#767676",
       textTheme: "#662d91",
+      textThemeDarker: "#2d1440",
     },
   }
 }
