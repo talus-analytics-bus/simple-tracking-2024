@@ -22,15 +22,13 @@ const ColumnLayout = styled.div`
   align-items: start;
   column-gap: 50px;
   row-gap: 30px;
+  padding: 20px 0;
 
   @media (max-width: 1000px) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: unset;
-    // grid-auto-flow: column;
   }
 `
 

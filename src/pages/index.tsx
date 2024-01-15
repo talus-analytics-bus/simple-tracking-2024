@@ -7,6 +7,7 @@ import Main from '../components/layout/Main'
 import NavBar from 'components/layout/NavBar/NavBar'
 import FirstFold from 'components/landing/FirstFold'
 import PurpleBar from 'components/landing/PurpleBar'
+import Footer from 'components/layout/Footer'
 
 const IndexPage = (): JSX.Element => (
   <Providers>
@@ -16,6 +17,7 @@ const IndexPage = (): JSX.Element => (
       <FirstFold />
     </Main>
     <PurpleBar />
+    <Footer />
   </Providers>
 )
 
