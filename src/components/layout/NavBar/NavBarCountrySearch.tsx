@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react'
 
 import Typeahead from 'components/library/ui/typeahead'
 
-import useCountryNames from 'queryHooks/useCountries'
+import useCountries from 'queryHooks/useCountries'
 import { navigate } from 'gatsby'
 import styled, { useTheme } from 'styled-components'
 
@@ -34,7 +34,7 @@ enum SearchStatus {
 }
 
 const CountrySearch = ({ style }: CoutnrySearchProps) => {
-  const countries = useCountryNames()
+  const countries = useCountries()
   const theme = useTheme()
 
   const [searchStatus, setSearchStatus] = useState(SearchStatus.Initial)
