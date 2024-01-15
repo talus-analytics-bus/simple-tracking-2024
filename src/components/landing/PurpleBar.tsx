@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react'
-import CMS from 'components/library/airtable-cms'
 import { Link, navigate } from 'gatsby'
 import styled, { useTheme } from 'styled-components'
+
+import CMS from 'components/library/airtable-cms'
 
 import Main from 'components/layout/Main'
 import Typeahead, { RenderItemProps } from 'components/library/ui/typeahead'
@@ -32,21 +33,28 @@ const ColumnLayout = styled.div`
     // grid-auto-flow: column;
   }
 `
-// const Item = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   justify-content: space-between;
-// `
+
+const PurpleBarIcon = styled(CMS.Icon)`
+  height: 50px;
+  align-self: center;
+
+  @media (max-width: 1000px) {
+    margin-top: 40px;
+    align-self: flex-start;
+  }
+`
+
 const H2 = styled.h2`
   color: ${({ theme }) => theme.common.colors.textInvert};
   margin: 0;
 `
+
 const H3 = styled.h3`
   color: ${({ theme }) => theme.common.colors.textInvert};
   margin: 0;
   margin-bottom: 10px;
 `
+
 const ButtonLink = styled(Link)`
   background-color: ${({ theme }) => theme.common.colors.surfaceThemeHazy};
   color: ${({ theme }) => theme.common.colors.textInvert};
@@ -59,6 +67,12 @@ const ButtonLink = styled(Link)`
     background-color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
   }
 `
+
+const StyledTypeahead = styled(Typeahead)`
+  margin-top: 0;
+  max-width: 300px;
+`
+
 const TypeaheadResultContainer = styled.span<{ selected?: boolean }>`
   box-sizing: border-box;
   display: flex;
@@ -69,7 +83,6 @@ const TypeaheadResultContainer = styled.span<{ selected?: boolean }>`
   padding: 8px 12px;
   background-color: rgba(0, 50, 100, 0);
   transition: 150ms ease;
-
   &:hover {
     background-color: ${({ theme }) => theme.common.colors.surfaceThemeDarker};
   }
@@ -78,20 +91,6 @@ const TypeaheadResultContainer = styled.span<{ selected?: boolean }>`
 const TypeaheadResult = ({ item: { label } }: RenderItemProps) => (
   <TypeaheadResultContainer>{label}</TypeaheadResultContainer>
 )
-
-const StyledTypeahead = styled(Typeahead)`
-  margin-top: 0;
-  max-width: 300px;
-`
-
-const PurpleBarIcon = styled(CMS.Icon)`
-  height: 50px;
-  align-self: center;
-  @media (max-width: 1000px) {
-    margin-top: 40px;
-    align-self: flex-start;
-  }
-`
 
 const PurpleBar = () => {
   const theme = useTheme()
