@@ -4,6 +4,7 @@ import Main from 'components/layout/Main'
 import Providers from 'components/layout/Providers'
 import CMS from 'components/library/airtable-cms/'
 import NavBar from 'components/layout/NavBar/NavBar'
+import Footer from 'components/layout/Footer'
 
 const CountryPage = ({
   data,
@@ -31,6 +32,7 @@ const CountryPage = ({
           </tbody>
         </table>
       </Main>
+      <Footer />
     </Providers>
   )
 }
