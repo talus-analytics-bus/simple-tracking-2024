@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import useIndexPageData from 'cmsHooks/useIndexPageData'
 import CMS from 'components/library/airtable-cms'
+import Main from 'components/layout/Main'
 
 const Columns = styled.div`
   display: grid;
@@ -38,22 +39,24 @@ const FirstFold = () => {
   const data = useIndexPageData()
 
   return (
-    <Columns>
-      <TextContainer>
-        <H1>
-          <CMS.Text name="H1" data={data} />
-        </H1>
-        <h2>
-          <CMS.Text name="Section 1 paragraph 1" data={data} />
-        </h2>
-        <h3>
-          <CMS.Text name="Section 1 paragraph 2" data={data} />
-        </h3>
-      </TextContainer>
-      <MapContainer>
-        <em>map placeholder</em>
-      </MapContainer>
-    </Columns>
+    <Main>
+      <Columns>
+        <TextContainer>
+          <H1>
+            <CMS.Text name="H1" data={data} />
+          </H1>
+          <h2>
+            <CMS.Text name="Section 1 paragraph 1" data={data} />
+          </h2>
+          <h3>
+            <CMS.Text name="Section 1 paragraph 2" data={data} />
+          </h3>
+        </TextContainer>
+        <MapContainer>
+          <em>map placeholder</em>
+        </MapContainer>
+      </Columns>
+    </Main>
   )
 }
 
