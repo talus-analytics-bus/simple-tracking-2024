@@ -6,8 +6,8 @@ import rehypeStringify from 'rehype-stringify'
 
 // takes a string of markdown and HTML from an airtable
 // rich text field and returns a string of html
-const parseCMSRichText = (string: string) => {
-  const html = unified()
+const parseCMSRichText = (string: string) =>
+  unified()
     .use(remarkParse)
     // @ts-expect-error
     .use(remarkRehype, { allowDangerousHtml: true })
@@ -16,10 +16,5 @@ const parseCMSRichText = (string: string) => {
     // @ts-expect-error
     .use(rehypeStringify)
     .processSync(string)
-
-  console.log(html)
-
-  return html
-}
 
 export default parseCMSRichText
