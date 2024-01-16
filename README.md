@@ -19,10 +19,10 @@ This command starts the database (at port `5432`) and the website
 (at [http://localhost:8000/](http://localhost:8000/)).
 
 If **[AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)** 
-are not configured, you will need to provide an airtable token:
+are not configured, you will need to provide an Airtable token and Mapbox API key:
 
 ```sh
-AIRTABLE_API_KEY='XXXX' docker compose up
+GATSBY_MAPBOX_API_KEY='XXXX' AIRTABLE_API_KEY='XXXX' docker compose up
 ```
 
 You can [create an airtable token](https://airtable.com/create/tokens) in the 
