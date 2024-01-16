@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import useIndexPageData from 'cmsHooks/useIndexPageData'
 import CMS from 'components/library/airtable-cms'
 import Main from 'components/layout/Main'
+import FundingMap from 'components/map/Map'
 
 const Columns = styled.div`
   display: grid;
@@ -30,8 +31,6 @@ const MapContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid ${({ theme }) => theme.common.colors.surfaceGray200};
-  background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
 `
 const H1 = styled.h1``
 
@@ -53,7 +52,7 @@ const FirstFold = () => {
           </h3>
         </TextContainer>
         <MapContainer>
-          <em>map placeholder</em>
+          <FundingMap />
         </MapContainer>
       </Columns>
     </Main>
