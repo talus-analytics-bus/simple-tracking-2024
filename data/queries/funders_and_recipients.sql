@@ -1,10 +1,10 @@
-with all_countries as(
+WITH all_countries AS (
 		-- All the stakeholders which are "countries"
 	SELECT id FROM stakeholders 
 		WHERE subcat = 'country' 
 		AND iso3 IS NOT null
 		AND "show"
-), all_orgs as(
+), all_orgs AS (
 	-- All the organizations which should become pages
 	SELECT id FROM stakeholders 
 		JOIN children_to_parents_direct_credit 
