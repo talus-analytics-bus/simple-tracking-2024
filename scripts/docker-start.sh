@@ -27,7 +27,7 @@ fi
 
 if [[ -z "${GATSBY_MAPBOX_API_KEY}" ]]; then
   # fetch environment variables from secrets manager
-  echo "Fetch AIRTABLE_API_KEY from secrets manager"
+  echo "Fetch GATSBY_MAPBOX_API_KEY from secrets manager"
   export GATSBY_MAPBOX_API_KEY=$(
     aws secretsmanager get-secret-value --secret-id pharos-mapbox-api-key --region us-west-1 |\
     jq  -r .SecretString | jq -r .MAPBOX_API_KEY\
