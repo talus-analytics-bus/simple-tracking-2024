@@ -102,8 +102,6 @@ const useCountryLayer = () => {
       beforeId: 'countries-outline',
     }
 
-    console.log(countryLayer)
-
     return countryLayer
   }, [countriesReceivedAndDisbursed, theme])
 
