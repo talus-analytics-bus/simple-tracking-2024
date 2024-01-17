@@ -81,7 +81,7 @@ const Footer = (): JSX.Element => {
           </LogoLink>
         </Logos>
         <Copyright>
-          <CMS.Text name="Copyright" data={cmsData} />
+          <CMS.RichText name="Copyright" data={cmsData} />
         </Copyright>
       </FooterContent>
     </FooterContainer>
