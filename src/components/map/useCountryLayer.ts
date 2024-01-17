@@ -25,26 +25,26 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
   }
 }
 
-const getColorFunder = (value: string, theme: ReturnType<typeof useTheme>) => {
-  switch (true) {
-    case value === "":
-      return theme.funder.colors.mapUnspecified
-    case value === "0":
-      return theme.funder.colors.mapNone
-    case Number(value) < 570_000:
-      return theme.funder.colors.mapViz5
-    case Number(value) < 2_300_000:
-      return theme.funder.colors.mapViz4
-    case Number(value) < 19_000_000:
-      return theme.funder.colors.mapViz3
-    case Number(value) < 490_000_000:
-      return theme.funder.colors.mapViz3
-    case Number(value) < 1_700_000_000:
-      return theme.funder.colors.mapViz1
-    default:
-      return theme.funder.colors.mapViz1
-  }
-}
+// const getColorFunder = (value: string, theme: ReturnType<typeof useTheme>) => {
+//   switch (true) {
+//     case value === "":
+//       return theme.funder.colors.mapUnspecified
+//     case value === "0":
+//       return theme.funder.colors.mapNone
+//     case Number(value) < 570_000:
+//       return theme.funder.colors.mapViz5
+//     case Number(value) < 2_300_000:
+//       return theme.funder.colors.mapViz4
+//     case Number(value) < 19_000_000:
+//       return theme.funder.colors.mapViz3
+//     case Number(value) < 490_000_000:
+//       return theme.funder.colors.mapViz3
+//     case Number(value) < 1_700_000_000:
+//       return theme.funder.colors.mapViz1
+//     default:
+//       return theme.funder.colors.mapViz1
+//   }
+// }
 
 
 const useCountryLayer = () => {
