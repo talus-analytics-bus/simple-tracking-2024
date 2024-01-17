@@ -1,7 +1,7 @@
--- all countries, with their received and disbursed funding
+-- all countries and organizations, with their received and disbursed funding
 SELECT 
-	all_countries.name AS "Name",
-	all_countries.iso3 AS "ISO3",
+	all_stakeholders.name AS "name",
+	all_stakeholders.iso3 AS "iso3",
 	response_received AS "Total Response Received",
 	capacity_received AS "Total Capacity Received",
 	total_received AS "Total Disbursed Received",
@@ -9,12 +9,23 @@ SELECT
 	total_capacity AS "Total Capacity Disbursed",
 	total_disbursed AS "Total Disbursed"
 FROM (
-	-- All the stakeholders which are "countries"
-	SELECT name, iso3 FROM stakeholders 
-		WHERE subcat = 'country' 
-		AND iso3 IS NOT null
-		AND "show"
-) all_countries
+	SELECT name, iso3, child_id, parent_id FROM stakeholders 
+		JOIN children_to_parents_direct_credit 
+		ON stakeholders.id = children_to_parents_direct_credit.parent_id
+		WHERE (
+			-- All the stakeholders which are "countries"
+			subcat = 'country' 
+			AND iso3 IS NOT NULL
+			AND child_id = parent_id
+			AND "show"
+		) OR (
+			-- All the stakeholders which are "organizations"
+			stakeholders.cat != 'government'
+			AND stakeholders.subcat != 'sub-organization'
+			AND stakeholders.iso3 IS NULL
+			AND child_id = parent_id
+		)
+) all_stakeholders
 LEFT JOIN (
 	-- flows received by those countries
 	SELECT
@@ -28,9 +39,9 @@ LEFT JOIN (
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY name, iso3
+		GROUP BY id
 ) received
-ON received.iso3 = all_countries.iso3
+ON received.name = all_stakeholders.name
 LEFT JOIN (
 	-- flows sent by those countries
 	SELECT
@@ -44,7 +55,7 @@ LEFT JOIN (
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY name, iso3
+		GROUP BY id
 ) disbursed 
-ON disbursed.iso3 = all_countries.iso3
-ORDER BY "Name" ASC;
+ON disbursed.name = all_stakeholders.name
+ORDER BY name ASC;
