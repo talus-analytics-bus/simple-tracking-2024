@@ -42,13 +42,13 @@ const PublicationsCiting = () => {
       </H3>
       <PublicationsGrid>
         {publications.map(publication => (
-          <>
+          <React.Fragment key={publication}>
             <PublicationCover
               name={`Publication ${publication} image`}
               data={data}
             />
             <CMS.RichText name={`Publication ${publication}`} data={data} />
-          </>
+          </React.Fragment>
         ))}
       </PublicationsGrid>
     </Main>
