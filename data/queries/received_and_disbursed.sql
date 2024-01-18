@@ -17,13 +17,14 @@ FROM (
 			subcat = 'country' 
 			AND iso3 IS NOT NULL
 			AND child_id = parent_id
-			AND "show"
+			AND stakeholders.show
 		) OR (
 			-- All the stakeholders which are "organizations"
 			stakeholders.cat != 'government'
 			AND stakeholders.subcat != 'sub-organization'
 			AND stakeholders.iso3 IS NULL
 			AND child_id = parent_id
+			and stakeholders.show
 		)
 ) all_stakeholders
 LEFT JOIN (
