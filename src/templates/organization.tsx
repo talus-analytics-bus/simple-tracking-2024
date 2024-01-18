@@ -16,7 +16,7 @@ const CountryPage = ({
       <CMS.SEO />
       <NavBar />
       <Main>
-        <h1>Country: {data.stakeholdersCsv?.name}</h1>
+        <h1>Organization: {data.stakeholdersCsv?.name}</h1>
         <table>
           <tbody>
             {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
