@@ -18,8 +18,6 @@ const useStakeholderSearchItems = () => {
     []
   )
 
-  console.log(items)
-
   return items
 }
 

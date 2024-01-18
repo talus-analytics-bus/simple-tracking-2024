@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Link, navigate } from 'gatsby'
 import styled, { useTheme } from 'styled-components'
 
@@ -8,7 +8,6 @@ import Main from 'components/layout/Main'
 import Typeahead, { RenderItemProps } from 'components/library/ui/typeahead'
 
 import useIndexPageData from 'cmsHooks/useIndexPageData'
-import useStakeholders from 'queryHooks/useStakeholders'
 import useStakeholderSearchItems from 'hooks/useStakeholderSearchItems'
 
 const PurpleBarContainer = styled.div`
