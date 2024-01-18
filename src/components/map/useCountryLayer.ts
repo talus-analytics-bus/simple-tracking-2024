@@ -67,7 +67,7 @@ const useCountryLayer = () => {
     // to populate the mapbox fill-color match statement format
     const countryColorMatch: string[] = []
     for (const country of countriesReceivedAndDisbursed) {
-      const iso = country.ISO3
+      const iso = country.iso3
       const received = country.Total_Disbursed_Received
 
       if (received && iso)
