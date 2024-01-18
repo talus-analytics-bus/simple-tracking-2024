@@ -14,10 +14,10 @@ const CountryPage = ({
       <CMS.SEO />
       <NavBar />
       <Main>
-        <h1>{data.countriesCsv?.name}</h1>
+        <h1>{data.stakeholdersCsv?.name}</h1>
         <table>
           <tbody>
-            {Object.entries(data.countryReceivedAndDisbursedCsv ?? {}).map(
+            {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
               ([label, value]) => (
                 <tr>
                   <td style={{ textAlign: 'right' }}>
@@ -39,11 +39,11 @@ const CountryPage = ({
 
 export const query = graphql`
   query CountryPage($name: String) {
-    countriesCsv(name: { eq: $name }) {
+    stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
     }
-    countryReceivedAndDisbursedCsv(name: { eq: $name }) {
+    receivedAndDisbursedCsv(name: { eq: $name }) {
       Total_Capacity_Disbursed
       Total_Capacity_Received
       Total_Disbursed
