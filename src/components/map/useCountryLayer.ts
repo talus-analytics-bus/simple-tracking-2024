@@ -75,8 +75,8 @@ const useCountryLayer = () => {
           iso,
           getColor(received, theme)
         )
-      else
-        console.log(`Country status not found for ${JSON.stringify(country)}`)
+      // else
+      //   console.log(`Country status not found for ${JSON.stringify(country)}`)
     }
 
     const countryLayer = {
