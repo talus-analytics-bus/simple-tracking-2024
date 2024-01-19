@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 export const Layout = styled.div`
@@ -11,6 +12,10 @@ export const Layout = styled.div`
   grid-template-areas:
     'sidebar topbar'
     'sidebar main';
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'topbar' 'main';
+  }
 `
 
 export const TopBar = styled.div`
@@ -21,6 +26,10 @@ export const TopBar = styled.div`
   background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
   border-bottom: 1px solid ${({ theme }) => theme.common.colors.surfaceGray600};
   padding: 15px;
+
+  > h1 {
+    margin-bottom: 0px;
+  }
 `
 
 export const Sidebar = styled.div`
@@ -32,7 +41,52 @@ export const Sidebar = styled.div`
   flex-direction: column;
   padding-top: 40px;
   padding-right: 25px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
+
+const StyledSidebarLink = styled.a<{ selected: boolean }>`
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: ${({ theme }) => theme.common.colors.textPrimary};
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:target {
+    background-color: ${({ theme }) => theme.common.colors.surfaceThemeDarker};
+    color: ${({ theme }) => theme.common.colors.textInvert};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
+  }
+
+  ${({ selected, theme }) =>
+    selected &&
+    `
+    background-color: ${theme.common.colors.surfaceThemeDarker};
+    color: ${theme.common.colors.textInvert};
+  `};
+`
+
+export const SidebarLink = (
+  props: React.AnchorHTMLAttributes<HTMLAnchorElement>
+) => {
+  const hash = typeof window !== 'undefined' ? window.location.hash : ''
+  let selected = Boolean(hash) && hash.includes(props.href ?? '')
+
+  // show first link as selected if there is no hash
+  if (hash === '' && props.href === '#1') selected = true
+
+  return (
+    <StyledSidebarLink {...props} selected={selected}>
+      {props.children}
+    </StyledSidebarLink>
+  )
+}
 
 export const MainContent = styled.div`
   grid-area: main;

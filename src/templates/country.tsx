@@ -10,6 +10,7 @@ import {
   Layout,
   MainContent,
   Sidebar,
+  SidebarLink,
   TopBar,
 } from 'components/stakeholderPage/StakeholderLayout'
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
@@ -30,13 +31,15 @@ const CountryPage = ({
       <NavBar />
       <Layout>
         <Sidebar>
-          <StakeholderSearch style={{ width: '100%' }} />
-          <button>Items</button>
-          <button>Items</button>
-          <button>Items</button>
-          <button>Items</button>
-          <button>Items</button>
-          <button>Items</button>
+          <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
+          <SidebarLink href="#1">Section link</SidebarLink>
+          <SidebarLink href="#2">Section link</SidebarLink>
+          <SidebarLink href="#3">Section link</SidebarLink>
+          <SidebarLink href="#4">Section link</SidebarLink>
+          <SidebarLink href="#5">Section link</SidebarLink>
+          <SidebarLink href="#6">Section link</SidebarLink>
+          <SidebarLink href="#7">Section link</SidebarLink>
+          <SidebarLink href="#8">Section link</SidebarLink>
         </Sidebar>
         <TopBar>
           <h1>Country: {data.stakeholdersCsv?.name}</h1>
@@ -59,6 +62,7 @@ const CountryPage = ({
             </tbody>
           </table>
           <ContentPlaceholder />
+          <a id={'1'}>Section 1</a>
         </MainContent>
       </Layout>
       <Footer />

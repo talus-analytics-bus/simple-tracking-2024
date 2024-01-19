@@ -14,6 +14,9 @@ import getTrackingId from 'utilities/trackingId'
 import '../../../static/assets/fonts/fonts.css'
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     padding: 0;
