@@ -1,0 +1,216 @@
+risk_index,iso3,year,risk_score,rank,meaning
+inform,SGP,2022,0.5,1,Very Low Risk
+inform,FIN,2022,0.9,2,Very Low Risk
+inform,LIE,2022,1,4,Very Low Risk
+inform,NOR,2022,1,4,Very Low Risk
+inform,BHR,2022,1.1,7,Very Low Risk
+inform,DNK,2022,1.1,7,Very Low Risk
+inform,LUX,2022,1.1,7,Very Low Risk
+inform,EST,2022,1.2,8,Very Low Risk
+inform,CHE,2022,1.4,12,Very Low Risk
+inform,ISL,2022,1.4,12,Very Low Risk
+inform,QAT,2022,1.4,12,Very Low Risk
+inform,SWE,2022,1.4,12,Very Low Risk
+inform,NLD,2022,1.5,13,Very Low Risk
+inform,KWT,2022,1.6,16,Very Low Risk
+inform,NZL,2022,1.6,16,Very Low Risk
+inform,SVN,2022,1.6,16,Very Low Risk
+inform,ARE,2022,1.7,20,Very Low Risk
+inform,BEL,2022,1.7,20,Very Low Risk
+inform,IRL,2022,1.7,20,Very Low Risk
+inform,LTU,2022,1.7,20,Very Low Risk
+inform,BLR,2022,1.8,27,Very Low Risk
+inform,BRN,2022,1.8,27,Very Low Risk
+inform,GRD,2022,1.8,27,Very Low Risk
+inform,KNA,2022,1.8,27,Very Low Risk
+inform,KOR,2022,1.8,27,Very Low Risk
+inform,SYC,2022,1.8,27,Very Low Risk
+inform,URY,2022,1.8,27,Very Low Risk
+inform,AUT,2022,1.9,31,Very Low Risk
+inform,CZE,2022,1.9,31,Very Low Risk
+inform,LVA,2022,1.9,31,Very Low Risk
+inform,MLT,2022,1.9,31,Very Low Risk
+inform,BHS,2022,2,37,Low Risk
+inform,BRB,2022,2,37,Low Risk
+inform,GBR,2022,2,37,Low Risk
+inform,HUN,2022,2,37,Low Risk
+inform,KAZ,2022,2,37,Low Risk
+inform,PRT,2022,2,37,Low Risk
+inform,ATG,2022,2.1,39,Low Risk
+inform,DEU,2022,2.1,39,Low Risk
+inform,JPN,2022,2.2,42,Low Risk
+inform,MUS,2022,2.2,42,Low Risk
+inform,SVK,2022,2.2,42,Low Risk
+inform,CAN,2022,2.3,47,Low Risk
+inform,ESP,2022,2.3,47,Low Risk
+inform,FRA,2022,2.3,47,Low Risk
+inform,MDV,2022,2.3,47,Low Risk
+inform,TKM,2022,2.3,47,Low Risk
+inform,AUS,2022,2.4,50,Low Risk
+inform,MKD,2022,2.4,50,Low Risk
+inform,VCT,2022,2.4,50,Low Risk
+inform,CPV,2022,2.5,55,Low Risk
+inform,HRV,2022,2.5,55,Low Risk
+inform,ITA,2022,2.5,55,Low Risk
+inform,LCA,2022,2.5,55,Low Risk
+inform,POL,2022,2.5,55,Low Risk
+inform,MNE,2022,2.6,60,Low Risk
+inform,MNG,2022,2.6,60,Low Risk
+inform,OMN,2022,2.6,60,Low Risk
+inform,PRY,2022,2.6,60,Low Risk
+inform,STP,2022,2.6,60,Low Risk
+inform,GRC,2022,2.7,64,Low Risk
+inform,ISR,2022,2.7,64,Low Risk
+inform,ROU,2022,2.7,64,Low Risk
+inform,TTO,2022,2.7,64,Low Risk
+inform,BGR,2022,2.8,66,Low Risk
+inform,SRB,2022,2.8,66,Low Risk
+inform,ARG,2022,2.9,71,Low Risk
+inform,BWA,2022,2.9,71,Low Risk
+inform,CHN,2022,2.9,71,Low Risk
+inform,CUB,2022,2.9,71,Low Risk
+inform,FJI,2022,2.9,71,Low Risk
+inform,ALB,2022,3,79,Low Risk
+inform,BTN,2022,3,79,Low Risk
+inform,CYP,2022,3,79,Low Risk
+inform,DMA,2022,3,79,Low Risk
+inform,GAB,2022,3,79,Low Risk
+inform,KGZ,2022,3,79,Low Risk
+inform,MYS,2022,3,79,Low Risk
+inform,TUN,2022,3,79,Low Risk
+inform,JAM,2022,3.1,83,Low Risk
+inform,USA,2022,3.1,83,Low Risk
+inform,UZB,2022,3.1,83,Low Risk
+inform,WSM,2022,3.1,83,Low Risk
+inform,PLW,2022,3.2,84,Low Risk
+inform,LKA,2022,3.3,89,Low Risk
+inform,MDA,2022,3.3,89,Low Risk
+inform,NRU,2022,3.3,89,Low Risk
+inform,SUR,2022,3.3,89,Low Risk
+inform,SWZ,2022,3.3,89,Low Risk
+inform,CHL,2022,3.4,95,Low Risk
+inform,GEO,2022,3.4,95,Low Risk
+inform,GNQ,2022,3.4,95,Low Risk
+inform,KIR,2022,3.4,95,Low Risk
+inform,SAU,2022,3.4,95,Low Risk
+inform,VNM,2022,3.4,95,Low Risk
+inform,BIH,2022,3.5,99,Medium Risk
+inform,CRI,2022,3.5,99,Medium Risk
+inform,FSM,2022,3.5,99,Medium Risk
+inform,GHA,2022,3.5,99,Medium Risk
+inform,DZA,2022,3.6,103,Medium Risk
+inform,GUY,2022,3.6,103,Medium Risk
+inform,MAR,2022,3.6,103,Medium Risk
+inform,TUV,2022,3.6,103,Medium Risk
+inform,BEN,2022,3.7,106,Medium Risk
+inform,COM,2022,3.7,106,Medium Risk
+inform,GMB,2022,3.7,106,Medium Risk
+inform,LAO,2022,3.8,109,Medium Risk
+inform,LSO,2022,3.8,109,Medium Risk
+inform,TON,2022,3.8,109,Medium Risk
+inform,GNB,2022,3.9,112,Medium Risk
+inform,PAN,2022,3.9,112,Medium Risk
+inform,TGO,2022,3.9,112,Medium Risk
+inform,BOL,2022,4,118,Medium Risk
+inform,MHL,2022,4,118,Medium Risk
+inform,NAM,2022,4,118,Medium Risk
+inform,SEN,2022,4,118,Medium Risk
+inform,THA,2022,4,118,Medium Risk
+inform,TJK,2022,4,118,Medium Risk
+inform,BLZ,2022,4.1,121,Medium Risk
+inform,RUS,2022,4.1,121,Medium Risk
+inform,TLS,2022,4.1,121,Medium Risk
+inform,JOR,2022,4.2,123,Medium Risk
+inform,SLV,2022,4.2,123,Medium Risk
+inform,KHM,2022,4.3,126,Medium Risk
+inform,PRK,2022,4.3,126,Medium Risk
+inform,ZMB,2022,4.3,126,Medium Risk
+inform,DOM,2022,4.4,131,Medium Risk
+inform,NIC,2022,4.4,131,Medium Risk
+inform,NPL,2022,4.4,131,Medium Risk
+inform,SLE,2022,4.4,131,Medium Risk
+inform,VUT,2022,4.4,131,Medium Risk
+inform,AGO,2022,4.5,136,Medium Risk
+inform,BRA,2022,4.5,136,Medium Risk
+inform,CIV,2022,4.5,136,Medium Risk
+inform,ECU,2022,4.5,136,Medium Risk
+inform,RWA,2022,4.5,136,Medium Risk
+inform,ARM,2022,4.6,140,Medium Risk
+inform,IDN,2022,4.6,140,Medium Risk
+inform,LBR,2022,4.6,140,Medium Risk
+inform,ZWE,2022,4.6,140,Medium Risk
+inform,EGY,2022,4.7,145,Medium Risk
+inform,LBN,2022,4.7,145,Medium Risk
+inform,MWI,2022,4.7,145,Medium Risk
+inform,PSE,2022,4.7,145,Medium Risk
+inform,SLB,2022,4.7,145,Medium Risk
+inform,GIN,2022,4.8,147,Medium Risk
+inform,PER,2022,4.8,147,Medium Risk
+inform,MRT,2022,4.9,148,Medium Risk
+inform,COG,2022,5,152,High Risk
+inform,IRN,2022,5,152,High Risk
+inform,MEX,2022,5,152,High Risk
+inform,TUR,2022,5,152,High Risk
+inform,DJI,2022,5.1,157,High Risk
+inform,GTM,2022,5.1,157,High Risk
+inform,HND,2022,5.1,157,High Risk
+inform,UKR,2022,5.1,157,High Risk
+inform,VEN,2022,5.1,157,High Risk
+inform,ZAF,2022,5.2,158,High Risk
+inform,IND,2022,5.3,159,High Risk
+inform,COL,2022,5.4,162,High Risk
+inform,MDG,2022,5.4,162,High Risk
+inform,PHL,2022,5.4,162,High Risk
+inform,BGD,2022,5.5,163,High Risk
+inform,AZE,2022,5.8,165,High Risk
+inform,TZA,2022,5.8,165,High Risk
+inform,BDI,2022,5.9,167,High Risk
+inform,PNG,2022,5.9,167,High Risk
+inform,LBY,2022,6,168,High Risk
+inform,ERI,2022,6.1,169,High Risk
+inform,PAK,2022,6.3,170,High Risk
+inform,HTI,2022,6.4,171,High Risk
+inform,IRQ,2022,6.6,172,Very High Risk
+inform,CMR,2022,6.7,174,Very High Risk
+inform,KEN,2022,6.7,174,Very High Risk
+inform,NGA,2022,6.8,175,Very High Risk
+inform,MMR,2022,6.9,177,Very High Risk
+inform,SYR,2022,6.9,177,Very High Risk
+inform,MLI,2022,7,178,Very High Risk
+inform,ETH,2022,7.1,180,Very High Risk
+inform,UGA,2022,7.1,180,Very High Risk
+inform,BFA,2022,7.2,181,Very High Risk
+inform,SDN,2022,7.3,182,Very High Risk
+inform,MOZ,2022,7.4,183,Very High Risk
+inform,NER,2022,7.5,184,Very High Risk
+inform,COD,2022,7.8,185,Very High Risk
+inform,TCD,2022,7.9,186,Very High Risk
+inform,AFG,2022,8.1,188,Very High Risk
+inform,YEM,2022,8.1,188,Very High Risk
+inform,CAF,2022,8.6,190,Very High Risk
+inform,SSD,2022,8.6,190,Very High Risk
+inform,SOM,2022,8.7,191,Very High Risk
+inform,ABW,2022,,,No data
+inform,AND,2022,,,No data
+inform,ASM,2022,,,No data
+inform,ATF,2022,,,No data
+inform,COK,2022,,,No data
+inform,CUW,2022,,,No data
+inform,CYM,2022,,,No data
+inform,FLK,2022,,,No data
+inform,FRO,2022,,,No data
+inform,GGY,2022,,,No data
+inform,IOT,2022,,,No data
+inform,JEY,2022,,,No data
+inform,MAF,2022,,,No data
+inform,MCO,2022,,,No data
+inform,NIU,2022,,,No data
+inform,PYF,2022,,,No data
+inform,SAH,2022,,,No data
+inform,SMR,2022,,,No data
+inform,SXM,2022,,,No data
+inform,TWN,2022,,,No data
+inform,VAT,2022,,,No data
+inform,VGB,2022,,,No data
+inform,WLF,2022,,,No data
+inform,XKX,2022,,,No data
