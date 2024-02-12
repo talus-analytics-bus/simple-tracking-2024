@@ -28,7 +28,7 @@ const CountryPage = ({
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
   const cmsData = useStakeholderPageData()
 
-  const leftNavElements = cmsData.nodes.filter(node => node.data.Name.includes('left nav')).map(node => node.data.Name)
+  const leftNavElements = cmsData.nodes.filter(node => node.data.Name.includes('left nav'))
 
   return (
     <Providers>
@@ -37,9 +37,9 @@ const CountryPage = ({
       <Layout>
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
-          {leftNavElements.map((name, index) =>
-            <SidebarLink href={`#${index}`}>
-              <CMS.Text name={name} data={cmsData} />
+          {leftNavElements.map(node =>
+            <SidebarLink href={`#${node.data.Text}`}>
+              <CMS.Text name={node.data.Name} data={cmsData} />
             </SidebarLink>
           )}
         </Sidebar>
