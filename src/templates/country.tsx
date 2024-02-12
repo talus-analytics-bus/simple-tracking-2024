@@ -56,7 +56,7 @@ const CountryPage = ({
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
           {leftNavElements.map(node => (
-            <SidebarLink href={`#${node.data.Text}`}>
+            <SidebarLink href={`#${node.data.Text.replace(' ', '-')}`}>
               <CMS.Text name={node.data.Name} data={cmsData} />
             </SidebarLink>
           ))}
@@ -84,7 +84,7 @@ const CountryPage = ({
           {headers.map((node, index) => (
             <>
               <ScrollTarget
-                id={leftNavElements[index].data.Text}
+                id={leftNavElements[index].data.Text.replace(' ', '-')}
               ></ScrollTarget>
               <h2>
                 <CMS.Text name={node.data.Name} data={cmsData} />
