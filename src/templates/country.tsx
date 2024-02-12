@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 
-import CMS from 'components/library/airtable-cms/'
+import CMS, { AirtableCMSData } from 'components/library/airtable-cms/'
 
 import Providers from 'components/layout/Providers'
 import NavBar from 'components/layout/NavBar/NavBar'
@@ -17,18 +17,36 @@ import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import styled from 'styled-components'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
-const ContentPlaceholder = styled.div`
-  height: 300vh;
-  width: 100px;
-  background-color: red;
+const ScrollTarget = styled.div`
+  position: relative;
+  top: -160px;
 `
+
+const ContentPlaceholder = styled.div`
+  height: 30vh;
+  width: 370px;
+  background-color: lightgray;
+`
+
+const sortHLabeledNodes = (
+  a: AirtableCMSData['nodes'][0],
+  b: AirtableCMSData['nodes'][0]
+) =>
+  Number(a.data.Name.split(' ')[0].replace('H', '')) -
+  Number(b.data.Name.split(' ')[0].replace('H', ''))
 
 const CountryPage = ({
   data,
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
   const cmsData = useStakeholderPageData()
 
-  const leftNavElements = cmsData.nodes.filter(node => node.data.Name.includes('left nav'))
+  const leftNavElements = cmsData.nodes
+    .filter(node => node.data.Name.includes('left nav'))
+    .sort(sortHLabeledNodes)
+
+  const headers = cmsData.nodes
+    .filter(node => node.data.Name.includes('header'))
+    .sort(sortHLabeledNodes)
 
   return (
     <Providers>
@@ -37,11 +55,11 @@ const CountryPage = ({
       <Layout>
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
-          {leftNavElements.map(node =>
+          {leftNavElements.map(node => (
             <SidebarLink href={`#${node.data.Text}`}>
               <CMS.Text name={node.data.Name} data={cmsData} />
             </SidebarLink>
-          )}
+          ))}
         </Sidebar>
         <TopBar>
           <h1>Country: {data.stakeholdersCsv?.name}</h1>
@@ -63,7 +81,17 @@ const CountryPage = ({
               )}
             </tbody>
           </table>
-          <ContentPlaceholder />
+          {headers.map((node, index) => (
+            <>
+              <ScrollTarget
+                id={leftNavElements[index].data.Text}
+              ></ScrollTarget>
+              <h2>
+                <CMS.Text name={node.data.Name} data={cmsData} />
+              </h2>
+              <ContentPlaceholder />
+            </>
+          ))}
           <a id={'1'}>Section 1</a>
         </MainContent>
       </Layout>
