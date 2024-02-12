@@ -35,6 +35,8 @@ const sortHLabeledNodes = (
   Number(a.data.Name.split(' ')[0].replace('H', '')) -
   Number(b.data.Name.split(' ')[0].replace('H', ''))
 
+const formatHash = (str: string) => str.replaceAll(' ', '-').toLowerCase()
+
 const CountryPage = ({
   data,
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
@@ -56,7 +58,7 @@ const CountryPage = ({
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
           {leftNavElements.map(node => (
-            <SidebarLink href={`#${node.data.Text.replace(' ', '-')}`}>
+            <SidebarLink href={`#${formatHash(node.data.Text)}`}>
               <CMS.Text name={node.data.Name} data={cmsData} />
             </SidebarLink>
           ))}
@@ -84,7 +86,7 @@ const CountryPage = ({
           {headers.map((node, index) => (
             <>
               <ScrollTarget
-                id={leftNavElements[index].data.Text.replace(' ', '-')}
+                id={formatHash(leftNavElements[index].data.Text)}
               ></ScrollTarget>
               <h2>
                 <CMS.Text name={node.data.Name} data={cmsData} />
