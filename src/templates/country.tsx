@@ -15,6 +15,7 @@ import {
 } from 'components/stakeholderPage/StakeholderLayout'
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import styled from 'styled-components'
+import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
 const ContentPlaceholder = styled.div`
   height: 300vh;
@@ -25,6 +26,10 @@ const ContentPlaceholder = styled.div`
 const CountryPage = ({
   data,
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
+  const cmsData = useStakeholderPageData()
+
+  const leftNavElements = cmsData.nodes.filter(node => node.data.Name.includes('left nav')).map(node => node.data.Name)
+
   return (
     <Providers>
       <CMS.SEO />
@@ -32,14 +37,11 @@ const CountryPage = ({
       <Layout>
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
-          <SidebarLink href="#1">Section link</SidebarLink>
-          <SidebarLink href="#2">Section link</SidebarLink>
-          <SidebarLink href="#3">Section link</SidebarLink>
-          <SidebarLink href="#4">Section link</SidebarLink>
-          <SidebarLink href="#5">Section link</SidebarLink>
-          <SidebarLink href="#6">Section link</SidebarLink>
-          <SidebarLink href="#7">Section link</SidebarLink>
-          <SidebarLink href="#8">Section link</SidebarLink>
+          {leftNavElements.map((name, index) =>
+            <SidebarLink href={`#${index}`}>
+              <CMS.Text name={name} data={cmsData} />
+            </SidebarLink>
+          )}
         </Sidebar>
         <TopBar>
           <h1>Country: {data.stakeholdersCsv?.name}</h1>
