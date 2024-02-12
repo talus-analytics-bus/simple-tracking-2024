@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
         tables: [
           {
             baseId: `appD0BHXtft0HSTNM`,
-            tableName: `Landing Page`,
+            tableName: `Landing page`,
             tableView: `CMS`,
             mapping: { Image: `fileNode` },
           },
