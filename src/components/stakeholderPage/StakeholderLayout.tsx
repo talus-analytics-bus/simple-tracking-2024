@@ -24,7 +24,7 @@ export const TopBar = styled.div`
   top: 67px;
   width: 100%;
   background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
-  border-bottom: 1px solid ${({ theme }) => theme.common.colors.surfaceGray600};
+  border-bottom: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
   padding: 15px;
 
   > h1 {
