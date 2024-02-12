@@ -26,7 +26,7 @@ export GATSBY_MAPBOX_API_KEY=$(
 
 if [ "$reset" == "1" ]; then 
   bvm upgrade;
-  yarn install;
+  npm install;
   gatsby clean;
 fi
 
