@@ -7,7 +7,7 @@ import { AirtableCMSData } from 'components/library/airtable-cms/'
 const useIndexPageData = () => {
   const { cmsContent }: { cmsContent: AirtableCMSData } =
     useStaticQuery(graphql`
-      query cmsContentQuery {
+      query {
         cmsContent: allAirtable(filter: { table: { eq: "Landing page" } }) {
           nodes {
             data {
