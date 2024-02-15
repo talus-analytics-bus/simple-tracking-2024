@@ -58,6 +58,35 @@ const config: GatsbyConfig = {
       },
     },
     `gatsby-transformer-csv`,
+    // {
+    //   resolve: `gatsby-plugin-remote-images`,
+    //   options: {
+    //     nodeType: 'AirtableDatabase',
+    //     imagePath: 'data.PDF[].thumbnails.large.url',
+    //     // ** ALL OPTIONAL BELOW HERE: **
+    //     name: 'documentThumbnail',
+    //     skipUndefinedUrls: true,
+    //     prepareUrl: (url: string) => {
+    //       if (!url || url === 'N/A') return undefined
+    //       return url
+    //     },
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'StakeholdersCsv',
+        imagePath: 'iso2',
+        // ** ALL OPTIONAL BELOW HERE: **
+        name: 'flag',
+        skipUndefinedUrls: true,
+        prepareUrl: (url: string) => {
+          if (!url || url === 'N/A' || url === undefined || url === "") return undefined
+          console.log(`https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`)
+          return `https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`
+        },
+      },
+    },
     {
       // filling in the gtag here
       // will set up both the gatsby
