@@ -1,216 +1,216 @@
-name,iso3
-Nauru,NRU
-Monaco,MCO
-Burundi,BDI
-Trinidad and Tobago,TTO
-Argentina,ARG
-Australia,AUS
-Belgium,BEL
-Cameroon,CMR
-Somalia,SOM
-Bosnia and Herzegovina,BIH
-Iraq,IRQ
-Turkey,TUR
-Suriname,SUR
-Denmark,DNK
-Sri Lanka,LKA
-Serbia,SRB
-Sweden,SWE
-China,CHN
-Jordan,JOR
-Myanmar,MMR
-Pakistan,PAK
-Saint Kitts and Nevis,KNA
-Singapore,SGP
-Cambodia,KHM
-Wallis and Futuna,WLF
-Ecuador,ECU
-Malawi,MWI
-Eritrea,ERI
-Turkmenistan,TKM
-Ethiopia,ETH
-Tajikistan,TJK
-San Marino,SMR
-Kazakhstan,KAZ
-Dominica,DMA
-Spain,ESP
-Canada,CAN
-Benin,BEN
-Guatemala,GTM
-Samoa,WSM
-Netherlands,NLD
-Rwanda,RWA
-Kiribati,KIR
-Armenia,ARM
-Grenada,GRD
-Liberia,LBR
-Nepal,NPL
-Palau,PLW
-Cabo Verde,CPV
-Albania,ALB
-Saint Vincent and the Grenadines,VCT
-Timor-Leste,TLS
-Kyrgyzstan,KGZ
-Niger,NER
-Honduras,HND
-Aruba,ABW
-Italy,ITA
-Philippines,PHL
-Niue,NIU
-Viet Nam,VNM
-Sudan,SDN
-Equatorial Guinea,GNQ
-Holy See,VAT
-Belize,BLZ
-Antigua and Barbuda,ATG
-Western Sahara,SAH
-Congo,COG
-Dominican Republic,DOM
-Solomon Islands,SLB
-Bolivia,BOL
-United Kingdom,GBR
-Senegal,SEN
-Panama,PAN
-Gambia,GMB
-Norway,NOR
-Botswana,BWA
-Croatia,HRV
-Guyana,GUY
-"Venezuela, Bolivarian Republic of",VEN
-Papua New Guinea,PNG
-Oman,OMN
-Mauritania,MRT
-United States of America,USA
-Guinea,GIN
-United Republic of Tanzania,TZA
-Jamaica,JAM
-Angola,AGO
-Republic of Korea,KOR
-Bhutan,BTN
-El Salvador,SLV
-Andorra,AND
-Saint Lucia,LCA
-French Polynesia,PYF
-Comoros,COM
-Eswatini,SWZ
-Finland,FIN
-Romania,ROU
-Syrian Arab Republic,SYR
-Colombia,COL
-Nicaragua,NIC
-Afghanistan,AFG
-Taiwan,TWN
-Vanuatu,VUT
-Bulgaria,BGR
-Peru,PER
-Lao People's Democratic Republic,LAO
-Nigeria,NGA
-South Sudan,SSD
-Egypt,EGY
-Gabon,GAB
-Kenya,KEN
-Mozambique,MOZ
-Malaysia,MYS
-Switzerland,CHE
-Madagascar,MDG
-Seychelles,SYC
-Bahrain,BHR
-Japan,JPN
-Marshall Islands,MHL
-Togo,TGO
-Mali,MLI
-Cook Islands,COK
-Burkina Faso,BFA
-Montenegro,MNE
-Jersey,JEY
-Costa Rica,CRI
-Ghana,GHA
-Republic of Moldova,MDA
-Djibouti,DJI
-Federated States of Micronesia,FSM
-Kosovo,XKX
-Belarus,BLR
-Brunei Darussalam,BRN
-Algeria,DZA
-Paraguay,PRY
-Haiti,HTI
-Mauritius,MUS
-Maldives,MDV
-Namibia,NAM
-Fiji,FJI
-Cote d'Ivoire,CIV
-Russian Federation,RUS
-Austria,AUT
-Sao Tome and Principe,STP
-Zambia,ZMB
-Lithuania,LTU
-Faroe Islands,FRO
-Tonga,TON
-Uruguay,URY
-Falkland Islands (Malvinas),FLK
-Germany,DEU
-Brazil,BRA
-Iran,IRN
-Mongolia,MNG
-Bahamas,BHS
-Indonesia,IDN
-British Indian Ocean Territory,IOT
-Cyprus,CYP
-Czech Republic,CZE
-Estonia,EST
-French Southern and Antarctic Lands,ATF
-Greece,GRC
-Hungary,HUN
-Iceland,ISL
-Israel,ISR
-Kuwait,KWT
-Latvia,LVA
-Luxembourg,LUX
-Malta,MLT
-Poland,POL
-Portugal,PRT
-Qatar,QAT
-Saudi Arabia,SAU
-Slovenia,SVN
-Palestine,PSE
-American Samoa,ASM
-North Macedonia,MKD
-Ireland,IRL
-Georgia,GEO
-Guinea Bissau,GNB
-Lebanon,LBN
-Lesotho,LSO
-Sint Maarten,SXM
-Chad,TCD
-Ukraine,UKR
-Libya,LBY
-France,FRA
-India,IND
-Slovakia,SVK
-Uzbekistan,UZB
-Curaçao,CUW
-Tuvalu,TUV
-Democratic Republic of the Congo,COD
-New Zealand,NZL
-Cayman Islands,CYM
-Thailand,THA
-Uganda,UGA
-Azerbaijan,AZE
-Sierra Leone,SLE
-Mexico,MEX
-Saint Martin,MAF
-South Africa,ZAF
-Cuba,CUB
-Guernsey,GGY
-Barbados,BRB
-Central African Republic,CAF
-Liechtenstein,LIE
-Morocco,MAR
-Tunisia,TUN
-Chile,CHL
-Zimbabwe,ZWE
-Bangladesh,BGD
-British Virgin Islands,VGB
-Democratic People's Republic of Korea,PRK
-United Arab Emirates,ARE
-Yemen,YEM
+name,iso3,iso2
+Nauru,NRU,NR
+Monaco,MCO,MC
+Burundi,BDI,BI
+Trinidad and Tobago,TTO,TT
+Argentina,ARG,AR
+Australia,AUS,AU
+Belgium,BEL,BE
+Cameroon,CMR,CM
+Somalia,SOM,SO
+Bosnia and Herzegovina,BIH,BA
+Iraq,IRQ,IQ
+Turkey,TUR,TR
+Suriname,SUR,SR
+Denmark,DNK,DK
+Sri Lanka,LKA,LK
+Serbia,SRB,RS
+Sweden,SWE,SE
+China,CHN,CN
+Jordan,JOR,JO
+Myanmar,MMR,MM
+Pakistan,PAK,PK
+Saint Kitts and Nevis,KNA,KN
+Singapore,SGP,SG
+Cambodia,KHM,KH
+Wallis and Futuna,WLF,WF
+Ecuador,ECU,EC
+Malawi,MWI,MW
+Eritrea,ERI,ER
+Turkmenistan,TKM,TM
+Ethiopia,ETH,ET
+Tajikistan,TJK,TJ
+San Marino,SMR,SM
+Kazakhstan,KAZ,KZ
+Dominica,DMA,DM
+Spain,ESP,ES
+Canada,CAN,CA
+Benin,BEN,BJ
+Guatemala,GTM,GT
+Samoa,WSM,WS
+Netherlands,NLD,NL
+Rwanda,RWA,RW
+Kiribati,KIR,KI
+Armenia,ARM,AM
+Grenada,GRD,GD
+Liberia,LBR,LR
+Nepal,NPL,NP
+Palau,PLW,PW
+Cabo Verde,CPV,CV
+Albania,ALB,AL
+Saint Vincent and the Grenadines,VCT,VC
+Timor-Leste,TLS,TL
+Kyrgyzstan,KGZ,KG
+Niger,NER,NE
+Honduras,HND,HN
+Aruba,ABW,AW
+Italy,ITA,IT
+Philippines,PHL,PH
+Niue,NIU,NU
+Viet Nam,VNM,VN
+Sudan,SDN,SD
+Equatorial Guinea,GNQ,GQ
+Holy See,VAT,VA
+Belize,BLZ,BZ
+Antigua and Barbuda,ATG,AG
+Western Sahara,SAH,EH
+Congo,COG,CG
+Dominican Republic,DOM,DO
+Solomon Islands,SLB,SB
+Bolivia,BOL,BO
+United Kingdom,GBR,GB
+Senegal,SEN,SN
+Panama,PAN,PA
+Gambia,GMB,GM
+Norway,NOR,NO
+Botswana,BWA,BW
+Croatia,HRV,HR
+Guyana,GUY,GY
+"Venezuela, Bolivarian Republic of",VEN,VE
+Papua New Guinea,PNG,PG
+Oman,OMN,OM
+Mauritania,MRT,MR
+United States of America,USA,US
+Guinea,GIN,GN
+United Republic of Tanzania,TZA,TZ
+Jamaica,JAM,JM
+Angola,AGO,AO
+Republic of Korea,KOR,KR
+Bhutan,BTN,BT
+El Salvador,SLV,SV
+Andorra,AND,AD
+Saint Lucia,LCA,LC
+French Polynesia,PYF,PF
+Comoros,COM,KM
+Eswatini,SWZ,SZ
+Finland,FIN,FI
+Romania,ROU,RO
+Syrian Arab Republic,SYR,SY
+Colombia,COL,CO
+Nicaragua,NIC,NI
+Afghanistan,AFG,AF
+Taiwan,TWN,TW
+Vanuatu,VUT,VU
+Bulgaria,BGR,BG
+Peru,PER,PE
+Lao People's Democratic Republic,LAO,LA
+Nigeria,NGA,NG
+South Sudan,SSD,SS
+Egypt,EGY,EG
+Gabon,GAB,GA
+Kenya,KEN,KE
+Mozambique,MOZ,MZ
+Malaysia,MYS,MY
+Switzerland,CHE,CH
+Madagascar,MDG,MG
+Seychelles,SYC,SC
+Bahrain,BHR,BH
+Japan,JPN,JP
+Marshall Islands,MHL,MH
+Togo,TGO,TG
+Mali,MLI,ML
+Cook Islands,COK,CK
+Burkina Faso,BFA,BF
+Montenegro,MNE,ME
+Jersey,JEY,JE
+Costa Rica,CRI,CR
+Ghana,GHA,GH
+Republic of Moldova,MDA,MD
+Djibouti,DJI,DJ
+Federated States of Micronesia,FSM,FM
+Kosovo,XKX,XK
+Belarus,BLR,BY
+Brunei Darussalam,BRN,BN
+Algeria,DZA,DZ
+Paraguay,PRY,PY
+Haiti,HTI,HT
+Mauritius,MUS,MU
+Maldives,MDV,MV
+Namibia,NAM,NA
+Fiji,FJI,FJ
+Cote d'Ivoire,CIV,CI
+Russian Federation,RUS,RU
+Austria,AUT,AT
+Sao Tome and Principe,STP,ST
+Zambia,ZMB,ZM
+Lithuania,LTU,LT
+Faroe Islands,FRO,FO
+Tonga,TON,TO
+Uruguay,URY,UY
+Falkland Islands (Malvinas),FLK,FK
+Germany,DEU,DE
+Brazil,BRA,BR
+Iran,IRN,IR
+Mongolia,MNG,MN
+Bahamas,BHS,BS
+Indonesia,IDN,ID
+British Indian Ocean Territory,IOT,IO
+Cyprus,CYP,CY
+Czech Republic,CZE,CZ
+Estonia,EST,EE
+French Southern and Antarctic Lands,ATF,TF
+Greece,GRC,GR
+Hungary,HUN,HU
+Iceland,ISL,IS
+Israel,ISR,IL
+Kuwait,KWT,KW
+Latvia,LVA,LV
+Luxembourg,LUX,LU
+Malta,MLT,MT
+Poland,POL,PL
+Portugal,PRT,PT
+Qatar,QAT,QA
+Saudi Arabia,SAU,SA
+Slovenia,SVN,SI
+Palestine,PSE,PS
+American Samoa,ASM,AS
+North Macedonia,MKD,MK
+Ireland,IRL,IE
+Georgia,GEO,GE
+Guinea Bissau,GNB,GW
+Lebanon,LBN,LB
+Lesotho,LSO,LS
+Sint Maarten,SXM,SX
+Chad,TCD,TD
+Ukraine,UKR,UA
+Libya,LBY,LY
+France,FRA,FR
+India,IND,IN
+Slovakia,SVK,SK
+Uzbekistan,UZB,UZ
+Curaçao,CUW,CW
+Tuvalu,TUV,TV
+Democratic Republic of the Congo,COD,CD
+New Zealand,NZL,NZ
+Cayman Islands,CYM,KY
+Thailand,THA,TH
+Uganda,UGA,UG
+Azerbaijan,AZE,AZ
+Sierra Leone,SLE,SL
+Mexico,MEX,MX
+Saint Martin,MAF,MF
+South Africa,ZAF,ZA
+Cuba,CUB,CU
+Guernsey,GGY,GG
+Barbados,BRB,BB
+Central African Republic,CAF,CF
+Liechtenstein,LIE,LI
+Morocco,MAR,MA
+Tunisia,TUN,TN
+Chile,CHL,CL
+Zimbabwe,ZWE,ZW
+Bangladesh,BGD,BD
+British Virgin Islands,VGB,VG
+Democratic People's Republic of Korea,PRK,KP
+United Arab Emirates,ARE,AE
+Yemen,YEM,YE

@@ -1,779 +1,779 @@
-name,iso3
-Netherlands,NLD
-Germany,DEU
-Australia,AUS
-Belgium,BEL
-Canada,CAN
-China,CHN
-Denmark,DNK
-Ireland,IRL
-Italy,ITA
-Japan,JPN
-Lithuania,LTU
-Mozambique,MOZ
-Norway,NOR
-Slovakia,SVK
-Slovenia,SVN
-Spain,ESP
-Sweden,SWE
-Switzerland,CHE
-United Kingdom,GBR
-United States of America,USA
-Action Against Hunger,
-Bill & Melinda Gates Foundation,
-Food for the Hungry,
-Handicap International,
-Heifer International,
-International Red Cross and Red Crescent Movement,
-International Rescue Committee,
-Light For The World,
-Mifumi,
-Oxfam International,
-Palladium International Limited,
-Plan International,
-Save the Children,
-The Leprosy Mission,
-United Nations (UN),
-World Bank,
-World Child Cancer,
-World Health Organization (WHO),
-Afghanistan,AFG
-Albania,ALB
-Algeria,DZA
-American Samoa,ASM
-Andorra,AND
-Angola,AGO
-Antigua and Barbuda,ATG
-Argentina,ARG
-Armenia,ARM
-Aruba,ABW
-Austria,AUT
-Azerbaijan,AZE
-Bahamas,BHS
-Bahrain,BHR
-Bangladesh,BGD
-Barbados,BRB
-Belarus,BLR
-Belize,BLZ
-Benin,BEN
-Bhutan,BTN
-Bolivia,BOL
-Bosnia and Herzegovina,BIH
-Botswana,BWA
-Brazil,BRA
-British Indian Ocean Territory,IOT
-British Virgin Islands,VGB
-Brunei Darussalam,BRN
-Bulgaria,BGR
-Burkina Faso,BFA
-Burundi,BDI
-Cabo Verde,CPV
-Cambodia,KHM
-Cameroon,CMR
-Cayman Islands,CYM
-Central African Republic,CAF
-Chad,TCD
-Chile,CHL
-Colombia,COL
-Comoros,COM
-Congo,COG
-Cook Islands,COK
-Costa Rica,CRI
-Croatia,HRV
-Cuba,CUB
-Curaçao,CUW
-Cyprus,CYP
-Czech Republic,CZE
-Cote d'Ivoire,CIV
-Democratic People's Republic of Korea,PRK
-Democratic Republic of the Congo,COD
-Djibouti,DJI
-Dominica,DMA
-Dominican Republic,DOM
-Timor-Leste,TLS
-Ecuador,ECU
-Egypt,EGY
-El Salvador,SLV
-Equatorial Guinea,GNQ
-Eritrea,ERI
-Estonia,EST
-Eswatini,SWZ
-Ethiopia,ETH
-Falkland Islands (Malvinas),FLK
-Faroe Islands,FRO
-Federated States of Micronesia,FSM
-Fiji,FJI
-Finland,FIN
-France,FRA
-French Polynesia,PYF
-French Southern and Antarctic Lands,ATF
-Gabon,GAB
-Gambia,GMB
-Georgia,GEO
-Ghana,GHA
-Greece,GRC
-Grenada,GRD
-Guatemala,GTM
-Guernsey,GGY
-Guinea,GIN
-Guinea Bissau,GNB
-Guyana,GUY
-Haiti,HTI
-Holy See,VAT
-Honduras,HND
-Hungary,HUN
-Iceland,ISL
-India,IND
-Indonesia,IDN
-Iran,IRN
-Iraq,IRQ
-Israel,ISR
-Jamaica,JAM
-Jersey,JEY
-Jordan,JOR
-Kazakhstan,KAZ
-Kenya,KEN
-Kiribati,KIR
-Kuwait,KWT
-Kyrgyzstan,KGZ
-Lao People's Democratic Republic,LAO
-Latvia,LVA
-Lebanon,LBN
-Lesotho,LSO
-Liberia,LBR
-Libya,LBY
-Liechtenstein,LIE
-Luxembourg,LUX
-Madagascar,MDG
-Malawi,MWI
-Malaysia,MYS
-Maldives,MDV
-Mali,MLI
-Malta,MLT
-Marshall Islands,MHL
-Mauritania,MRT
-Mauritius,MUS
-Mexico,MEX
-Monaco,MCO
-Mongolia,MNG
-Montenegro,MNE
-Morocco,MAR
-Myanmar,MMR
-Namibia,NAM
-Nauru,NRU
-Nepal,NPL
-New Zealand,NZL
-Nicaragua,NIC
-Niger,NER
-Nigeria,NGA
-Niue,NIU
-North Macedonia,MKD
-Oman,OMN
-Pakistan,PAK
-Palau,PLW
-Palestine,PSE
-Panama,PAN
-Papua New Guinea,PNG
-Paraguay,PRY
-Peru,PER
-Philippines,PHL
-Poland,POL
-Portugal,PRT
-Qatar,QAT
-Republic of Korea,KOR
-Republic of Moldova,MDA
-Romania,ROU
-Russian Federation,RUS
-Rwanda,RWA
-Saint Kitts and Nevis,KNA
-Saint Lucia,LCA
-Saint Martin,MAF
-Saint Vincent and the Grenadines,VCT
-Samoa,WSM
-San Marino,SMR
-Sao Tome and Principe,STP
-Saudi Arabia,SAU
-Senegal,SEN
-Serbia,SRB
-Seychelles,SYC
-Sierra Leone,SLE
-Singapore,SGP
-Sint Maarten,SXM
-Solomon Islands,SLB
-Somalia,SOM
-South Africa,ZAF
-South Sudan,SSD
-Sri Lanka,LKA
-Sudan,SDN
-Suriname,SUR
-Syrian Arab Republic,SYR
-Taiwan,TWN
-Tajikistan,TJK
-Thailand,THA
-Togo,TGO
-Tonga,TON
-Trinidad and Tobago,TTO
-Tunisia,TUN
-Turkey,TUR
-Turkmenistan,TKM
-Tuvalu,TUV
-Uganda,UGA
-Ukraine,UKR
-United Arab Emirates,ARE
-United Republic of Tanzania,TZA
-Uruguay,URY
-Uzbekistan,UZB
-Vanuatu,VUT
-"Venezuela, Bolivarian Republic of",VEN
-Viet Nam,VNM
-Wallis and Futuna,WLF
-Western Sahara,SAH
-Yemen,YEM
-Zambia,ZMB
-Zimbabwe,ZWE
-Abaseen Foundation UK,
-AbbVie Foundation,
-act4africa,
-ActionAid International,
-AFEW International,
-Africa,
-Africa CDC,
-African Biological Safety Association (AfBSA),
-African Biosafety Network of Expertise (ABNE),
-African Development Bank,
-African Population and Health Research Center,
-African Union,
-AfriKids,
-Airbnb,
-Alibaba Foundation,
-Alwaleed Philanthropies,
-America,
-American Society for Microbiology,
-AmeriCares,
-Asia,
-Asia-Pacific,
-Asian Development Bank,
-AstraZeneca,
-Avast Foundation,
-Bangladesh Nari Progati Sangha,
-BasicNeeds,
-Bayer,
-BHP Billiton Sustainable Communities,
-BioBricks Foundation,
-Bipartisan Commission on Biodefense,
-Blue Ribbon Study Panel on Biodefense,
-Bouvet Island,
-BRAC,
-Brown-Forman,
-BTWC Implementation Support Unit (ISU),
-Cambridge Mayor's Disaster Relief Fund,
-CARE International,
-Carers Worldwide,
-Caribbean,
-CARICOM,
-Catholic Agency For Overseas Development (CAFOD),
-Center for a New American Security,
-Center for Global Development,
-Central America,
-Central Asia,
-Chan Zuckerberg Initiative,
-Charity Projects Ltd (Comic Relief),
-Chatham House,
-"Chemical and Allied Industries Association (CAIA, South Africa)",
-Children's National Hospital,
-"China, Macao Special Administrative Region",
-CHOICE for Youth and Sexuality,
-Citadel,
-Clinton Health Access Initiative,
-Coalition for Epidemic Preparedness Innovations (CEPI),
-ColaLife,
-Cordaid,
-COVID-19 Solidarity Response Fund,
-COVID-19 Therapeutics Accelerator (CTA),
-Crown Agents Limited,
-Cyan International,
-Dadco Alumina And Chemicals Ltd.,
-dance4life,
-Low and middle-income countries (LMIC),
-Diakonia Sweden,
-Direct Relief,
-Disability and Development Partners,
-District of Columbia,
-Dorcas Aid International,
-East Africa,
-Eastern Asia,
-Eli Lilly and Company,
-Elisabeth R. Griffin Foundation,
-EMMS International,
-Europe,
-European Bank for Reconstruction and Development,
-"Facebook, Inc.",
-Family Aids Caring Trust,
-Fédération Internationale de Football Association (FIFA),
-African Regional Industrial Property Organization,
-Feed the Minds,
-Flinders University,
-Fortress Investment Group,
-Foundation for Innovative New Diagnostics (FIND),
-Four Seasons Holdings Inc.,
-Fundación Oriéntame,
-Future of Humanity Institute,
-Genspace,
-Georgetown Center for Global Health Science and Security (GHSS),
-GlaxoSmithKline,
-Global Alliance for Vaccines and Immunisation (GAVI),
-GOAL,
-Goldman Sachs,
-Haiti Hospital Appeal,
-Health Poverty Action,
-HealthProm,
-Hospice Africa Ltd,
-Howard University Hospital,
-Indigo Trust,
-Indo-Pacific,
-Institute of Tropical Medicine,
-Inter-American Development Bank,
-interburns,
-International Atomic Energy Agency (IAEA),
-International Centre for Diarrhoeal Disease Research,
-International Centre of Insect Physiology and Ecology,
-International Criminal Police Organization (INTERPOL),
-International Development Law Organization (IDLO),
-International Federation of Biosafety Associations (IFBA),
-International Labour Organization (ILO),
-International Organization for Migration (IOM),
-International Planned Parenthood Federation,
-International Service,
-International Treatment Preparedness Coalition (ITPC),
-International Union Against Tuberculosis and Lung Disease,
-Ipas,
-Islamic Relief Worldwide,
-Jack Ma Foundation,
-JetBlue,
-Johns Hopkins Center for Health Security,
-Johnson & Johnson,
-King Baudouin Foundation,
-Kosovo,XKX
-LAMB Health Care Foundation,
-Latin America,
-Lepra,
-Mainline,
-Malaria Consortium,
-Mastercard,
-Medecins Sans Frontiers (MSF),
-Médecins Sans Vacances,
-MedStar Washington Hospital Center,
-Memisa,
-Merck,
-Middle Africa,
-Middle East,
-"National Academies of Sciences, Engineering, and Medicine",
-New York City,
-Next Generation for Global Health Security Network (NextGen),
-No More Epidemics Campaign,
-North Africa,
-North America,
-North Carolina State University,
-Not reported,
-Novartis,
-Nuclear Threat Initiative (NTI),
-OAS African Investments Limited,
-Oceania,
-One to One Children's Fund,
-OPEC Fund for International Development,
-Open Philanthropy,
-Options Consultancy Services,
-Orbis Charitable Trust,
-Palliative Care Support Trust,
-Pan American Health Organization (PAHO),
-Parliamentarians for Global Action,
-Partners in Health,
-PATH,
-Paul Allen Foundation,
-Pfizer,
-Pfizer Foundation,
-PHASE Worldwide,
-Project Harar,
-Project Hope,
-Protecting Families Against HIV/AIDS,
-Reed Hastings and Patty Quillin,
-Roche,
-Rockefeller Foundation,
-Royal Charity Organisation,
-Royal Tropical Institute,
-Rutgers,
-Salesforce,
-Sanofi Foundation,
-Sark,
-Sense International,
-Shinnyo-en,
-Sightsavers,
-Simavi,
-Simprints,
-Societe Anglogold Ashanti De Guinee (sag),
-Societe Des Mines De Fer De Guinee (smfg),
-South America,
-Southeast Asia,
-Southern Africa,
-Southern Asia,
-Special Hope Network,
-Stanford Center for International Security and Cooperation,
-Stichting fondsbeheer DGGF lokaal MKB,
-Stichting Health Action International,
-Sub-Saharan Africa,
-SynBioBeta,
-Takeda Pharmaceutical,
-TB Alert,
-The Access to Nutrition Foundation,
-"The Global Fund to Fight AIDS, Tuberculosis and Malaria",
-The Power of Nutrition,
-TikTok,
-Training Programs in Epidemiology and Public Health Interventions Network,
-ULB-Coopération,
-UN Foundation,
-United Purpose,
-University of California San Francisco,
-University of Nottingham,
-University of Washington,
-UPS,
-Vale International Holdings Gmbh,
-Vital Strategies/Resolve to Save Lives,
-Volvo Group,
-Vulcan Inc.,
-Washington National Cathedral,
-Welbodi Partnership,
-Wellcome Trust,
-West Africa,
-Women and Children First (UK),
-Women's Global Network on Reproductive Rights,
-World Central Kitchen,
-World Customs Organization (WCO),
-World Organisation for Animal Health (OIE),
-World Vision International,
-Y Care International,
-Hivos,
-Oxford Policy Management,
-The Global Forum on MSM & HIV (MSMGF),
-YWCA of Bangladesh,
-Damiaanactie / Action Damien,
-Wereldsolidariteit-Solidarité Mondiale (WSM),
-Association pour la Promotion de l'Education et de la Formation à l'Etranger,
-Vlaamse Interuniversitaire Raad voor Universitaire Ontwikkelingssamenwerking (VLIR-UOS),
-Louvain Coopération,
-Chaîne de l'Espoir Belgique / Keten van Hoop België / Chain of Hope Belgium,
-Académie de recherche et d'enseignement supérieur,
-Nutrition International,
-Global Antibiotic Research and Development Partnership,
-Danish Refugee Council,
-Danmission,
-Send a Cow,
-EngenderHealth Ethiopia,
-The Open University,
-CODA International,
-Samaritan's Purse UK,
-Interact Worldwide,
-The HALO Trust,
-Frontline AIDS,
-Alliance of Religions and Conservation,
-Anti-Slavery International,
-Christian Blind Mission (UK) Ltd.,
-African Initiatives,
-Survivors Fund (SURF),
-ADRA-UK,
-BBC Media Action,
-Compassion UK,
-Vision Aid Overseas,
-International Medical Corps UK,
-Relief International UK,
-Target TB,
-kidasha,
-Tropical Health and Education Trust,
-Joshua Orphan and Community Care,
-Child.org,
-PONT,
-Restless Development,
-The Fred Hollows Foundation (UK),
-Syria Relief,
-DeafKidz International,
-UK-Med,
-CDAC Network,
-Royal National Lifeboat Institution (RNLI),
-Leonard Cheshire Disability,
-Liverpool School of Tropical Medicine,
-Tearfund,
-Minority Rights Group,
-Agency for Cooperation and Research in Development (ACORD),
-Centre for Economic Policy Research,
-World Jewish Relief,
-Voluntary Service Overseas (VSO),
-ChildHope UK,
-Ecorys UK,
-Farm Africa,
-DAI Global Health,
-Mercy Ships UK Limited,
-Girls’ Education Challenge – Fund Manager PwC,
-MannionDaniels,
-ARK (Absolute Return for Kids),
-Development Initiatives Poverty Research,
-Worldwide Hospice Palliative Care Alliance,
-Digital Campus,
-PositiveNegatives,
-Aga Khan Foundation (United Kingdom),
-MSI Reproductive Choices,
-Mott MacDonald Limited,
-HelpAge International,
-World Association for Christian Communication (UK),
-Coffey International Development,
-Institute of Development Studies,
-Montrose International LLP,
-King's College London,
-University Of Liverpool,
-LTS International Limited,
-University of Birmingham,
-Scottish Catholic International Aid Fund (SCIAF),
-Concern Worldwide,
-Doctors with Africa CUAMM,
-We World - GVC Onlus,
-ABAAD - Resource Center for Gender Equality,
-Conseil et Appui pour l'Education à la Base Mali,
-Karuna Mission Social Solidarity - KMSS,
-Timidria,
-International Procurement Agency,
-Access to Medicine Foundation,
-Health Insurance Fund,
-COC Nederland,
-ZOA,
-Stichting Red een Kind,
-Stichting Vluchteling,
-SOS Children's Villages The Netherlands,
-Aidsfonds - Soa Aids Nederland,
-ICCO Cooperation,
-The Leprosy Mission Nepal,
-Sehat Kahani (Community Innovation Hub),
-"Medical Research Centre (MRC), Sierra Leone",
-CUAMM Trustees,
-Boston University,
-Abt Associates Inc,
-"The Population Council, Inc.",
-Guttmacher Institute,
-International Initiative for Impact Evaluation,
-Johns Hopkins University,
-IMA World Health,
-Kwame Nkrumah University of Science and Technology,
-Multilateral Investment Fund,
-World Bank Trust Funds,
-King Salman Humanitarian Aid and Relief Centre,
-Yamaan Foundation for Health and Social Development,
-Southern African Catholic Bishops' Conference Aids Office,
-Aeras,
-OCHA Country Based Pooled Funds,
-GlobalGiving.org,
-Practical Action,
-Christian Aid,
-People in Need,
-UN Pooled Funds,
-DanChurchAid,
-Norwegian Refugee Council,
-RedR UK,
-The William and Flora Hewlett Foundation,
-International Fund for Agricultural Development (IFAD),
-ADD International (Action on Disability and Development),
-MapAction,
-Ground Truth Solutions,
-Disasters Emergency Committee,
-Mercy Corps Europe,
-Stichting Beheer Subsidiegelden DRA,
-Islamic Development Bank,
-Gamers Without Borders,
-Southern African Development Community Secretariat (SADC),
-Shell,
-Thistledown Foundation,
-Princess Charlène of Monaco Foundation,
-Susan Thompson Buffett Foundation,
-Family Guidance Association of Ethiopia,
-DKT International,
-Elton John AIDS Foundation,
-Nuffic,
-Afrikagrupperna Sweden,
-TradeMark East Africa,
-CGIAR,
-International IDEA,
-Handicap International Federation,
-Penal Reform International,
-Disabled People's Organisations Denmark,
-Eastern Europe and Central Asia,
-Middle East and North Africa,
-Latin America and the Caribbean,
-Western Pacific,
-BRAC University,
-Fondation Hirondelle,
-Development Organisation of the Rural Poor,
-Pact,
-Chembio Diagnostics Systems Inc.,
-Google,
-International Severe Acute Respiratory and emerging Infection Consortium,
-PENTA Foundation,
-S. C. Johnson & Son Inc.,
-Elrha,
-International Campaign Women´s Right to Safe Abortion,
-IOD PARC,
-University of Leeds,
-Loughborough University,
-FHI360,
-GSMA Foundation,
-Medicos del Mundo,
-European Commission - International Partnerships,
-Global Green Growth Institute (GGGI),
-Young Africa International HUB,
-Zoological Society of London,
-Edukans Foundation,
-International Alert,
-1Day Sooner,
-AcceleratingHT,
-Against COVID-19,
-Analog Devices Foundation,
-Asia Philanthropy Circle,
-Brown Institute for Media Innovation,
-Cisco,
-Council on Strategic Risks,
-Global Financing Facility,
-"Good Judgement, Inc.",
-Gryphon Scientific,
-Harvard University,
-Massachusetts Institute of Technology Media Lab,
-McHugh O'Donovan Foundation,
-National Philanthropic Trust (NPT),
-Procter & Gamble,
-Sea-Long Global Respiratory Systems,
-The Pacific Community (SPC),
-The Visa Foundation,
-Wise,
-Twilio,
-UBS Optimus Foundation,
-University of Colorado,
-Vaccine Forward Initiative,
-altLabs,
-World Health Organization Foundation,
-Soccer Aid,
-East African Community,
-South and Central Asia,
-"Imperial College of Science, Technology and Medicine",
-Europe and Central Asia,
-Anonymous,
-Amref Health Africa,
-Ethiopiaid,
-International Federation of Terre des Hommes (TDHIF),
-Population Services International,
-UN Federal Credit Union Foundation,
-War Child International,
-Rode Kruis-Vlaanderen Internationaal,
-United Nations Human Settlement Programme,
-Bangladesh Primary Care Respiratory Society,
-International Primary Care Respiratory Group,
-The University of Oxford,
-Giro555 (Stichting Samenwerkende Hulporganisaties),
-Stichting Agriterra,
-Interpeace,
-Task Force for Global Health (TFGH),
-Veolia Environment Foundation,
-Sumitomo Mitsui Banking Corporation,
-Seadream Family Foundation,
-Fidelity Charitable,
-LEGO Foundation,
-GoodWeave International,
-Luminate Foundation Inc.,
-Universiti Malaya,
-University Putra Malaysia,
-INTERSOS Onlus,
-UHAI EASHRI,
-Max Foundation,
-The Hunger Project Netherlands,
-Global Network of People Living with HIV (GNP+),
-CISU,
-Aqua for All,
-Action Canada for Sexual Health and Rights,
-The Centre for Economic Governance and Accountability in Africa,
-Initiative Sankofa d'Afrique de l'Ouest,
-Kerk in Actie,
-South African Network of People who Use Drugs,
-China Medical Board,
-Nestle,
-African Reinsurance Corporation,
-GALZ,
-Stanley Black & Decker,
-University of Cambridge,
-Vir Biotechnology,
-International Genetically Engineered Machine Foundation (iGEM),
-Californians Against Pandemics,
-George Washington University,
-Center for Security and Emerging Technology,
-Federation of American Scientists,
-Tampere University,
-Immune Observatory,
-New Incentives,
-Against Malaria Foundation (AMF),
-Living Goods,
-Development Media International,
-Global Health Security Network (GHSN),
-Center for Population-Level Bioethics (CPLB),
-Charity Science Health,
-IDinsight,
-Results for Development (R4D),
-Biosecure Ltd,
-University of Sydney,
-Carnegie Endowment for International Peace (CEIP),
-InterAcademy Partnership (IAP),
-Abdul Latif Jameel Poverty Action Lab (J-PAL),
-University of Notre Dame,
-"University of California, Davis",
-Weill Cornell Medical College,
-Hypermind,
-OliLux Biosciences,
-221B Foundation,
-Binx Health Limited,
-Riboscience LLC,
-"University of California, Berkeley",
-Icosavax,
-Stanford University,
-Duke University,
-Soroka University Medical Center,
-University of Michigan,
-Icahn School of Medicine at Mount Sinai,
-Engineers Without Borders USA,
-Broad Institute of MIT and Harvard,
-Rockefeller University,
-Sherlock Biosciences,
-BlueDot Inc.,
-Bernhard Nocht Institute for Tropical Medicine,
-Bundeswehr Institute of Microbiology,
-Good Forever Foundation,
-Royal Scientific Society,
-EcoHealth Alliance,
-The Stimson Center,
-Geneva Centre for Security Policy,
-African Society for Laboratory Medicine (ASLM),
-CHC Global,
-African Field Epidemiology Network (AFENET),
-Swiss Tropical and Public Health Institute (Swiss TPH),
-Ingenuity and Purpose (IAP),
-Tianjin University,
-The United Nations on Drugs and Crime (UNODC),
-The Australia Group,
-Good Ventures,
-InvestInternational,
-Sisonke National Sex Workers Movement,
-International Institute for Environment and Development,
-International Bureau of Fiscal Documentation (IBFD),
-IMC WORLDWIDE,
-Amref Health Africa Headquarters,
-Wemos Foundation,
-Reach A Hand Uganda,
-Sexual Reproductive Health and Rights Africa Trust,
-Forum for African Women Educationalists (FAWE),
-BlackRock Foundation,
-Robert Wood Johnson Foundation,
-British International Investment plc,
-International Development Research Center (IDRC),
-Gilead Sciences,
-Johns Hopkins Center for Communication Programs,
-ViiV Healthcare,
+name,iso3,iso2
+Netherlands,NLD,NL
+Germany,DEU,DE
+Australia,AUS,AU
+Belgium,BEL,BE
+Canada,CAN,CA
+China,CHN,CN
+Denmark,DNK,DK
+Ireland,IRL,IE
+Italy,ITA,IT
+Japan,JPN,JP
+Lithuania,LTU,LT
+Mozambique,MOZ,MZ
+Norway,NOR,NO
+Slovakia,SVK,SK
+Slovenia,SVN,SI
+Spain,ESP,ES
+Sweden,SWE,SE
+Switzerland,CHE,CH
+United Kingdom,GBR,GB
+United States of America,USA,US
+Action Against Hunger,,
+Bill & Melinda Gates Foundation,,
+Food for the Hungry,,
+Handicap International,,
+Heifer International,,
+International Red Cross and Red Crescent Movement,,
+International Rescue Committee,,
+Light For The World,,
+Mifumi,,
+Oxfam International,,
+Palladium International Limited,,
+Plan International,,
+Save the Children,,
+The Leprosy Mission,,
+United Nations (UN),,
+World Bank,,
+World Child Cancer,,
+World Health Organization (WHO),,
+Afghanistan,AFG,AF
+Albania,ALB,AL
+Algeria,DZA,DZ
+American Samoa,ASM,AS
+Andorra,AND,AD
+Angola,AGO,AO
+Antigua and Barbuda,ATG,AG
+Argentina,ARG,AR
+Armenia,ARM,AM
+Aruba,ABW,AW
+Austria,AUT,AT
+Azerbaijan,AZE,AZ
+Bahamas,BHS,BS
+Bahrain,BHR,BH
+Bangladesh,BGD,BD
+Barbados,BRB,BB
+Belarus,BLR,BY
+Belize,BLZ,BZ
+Benin,BEN,BJ
+Bhutan,BTN,BT
+Bolivia,BOL,BO
+Bosnia and Herzegovina,BIH,BA
+Botswana,BWA,BW
+Brazil,BRA,BR
+British Indian Ocean Territory,IOT,IO
+British Virgin Islands,VGB,VG
+Brunei Darussalam,BRN,BN
+Bulgaria,BGR,BG
+Burkina Faso,BFA,BF
+Burundi,BDI,BI
+Cabo Verde,CPV,CV
+Cambodia,KHM,KH
+Cameroon,CMR,CM
+Cayman Islands,CYM,KY
+Central African Republic,CAF,CF
+Chad,TCD,TD
+Chile,CHL,CL
+Colombia,COL,CO
+Comoros,COM,KM
+Congo,COG,CG
+Cook Islands,COK,CK
+Costa Rica,CRI,CR
+Croatia,HRV,HR
+Cuba,CUB,CU
+Curaçao,CUW,CW
+Cyprus,CYP,CY
+Czech Republic,CZE,CZ
+Cote d'Ivoire,CIV,CI
+Democratic People's Republic of Korea,PRK,KP
+Democratic Republic of the Congo,COD,CD
+Djibouti,DJI,DJ
+Dominica,DMA,DM
+Dominican Republic,DOM,DO
+Timor-Leste,TLS,TL
+Ecuador,ECU,EC
+Egypt,EGY,EG
+El Salvador,SLV,SV
+Equatorial Guinea,GNQ,GQ
+Eritrea,ERI,ER
+Estonia,EST,EE
+Eswatini,SWZ,SZ
+Ethiopia,ETH,ET
+Falkland Islands (Malvinas),FLK,FK
+Faroe Islands,FRO,FO
+Federated States of Micronesia,FSM,FM
+Fiji,FJI,FJ
+Finland,FIN,FI
+France,FRA,FR
+French Polynesia,PYF,PF
+French Southern and Antarctic Lands,ATF,TF
+Gabon,GAB,GA
+Gambia,GMB,GM
+Georgia,GEO,GE
+Ghana,GHA,GH
+Greece,GRC,GR
+Grenada,GRD,GD
+Guatemala,GTM,GT
+Guernsey,GGY,GG
+Guinea,GIN,GN
+Guinea Bissau,GNB,GW
+Guyana,GUY,GY
+Haiti,HTI,HT
+Holy See,VAT,VA
+Honduras,HND,HN
+Hungary,HUN,HU
+Iceland,ISL,IS
+India,IND,IN
+Indonesia,IDN,ID
+Iran,IRN,IR
+Iraq,IRQ,IQ
+Israel,ISR,IL
+Jamaica,JAM,JM
+Jersey,JEY,JE
+Jordan,JOR,JO
+Kazakhstan,KAZ,KZ
+Kenya,KEN,KE
+Kiribati,KIR,KI
+Kuwait,KWT,KW
+Kyrgyzstan,KGZ,KG
+Lao People's Democratic Republic,LAO,LA
+Latvia,LVA,LV
+Lebanon,LBN,LB
+Lesotho,LSO,LS
+Liberia,LBR,LR
+Libya,LBY,LY
+Liechtenstein,LIE,LI
+Luxembourg,LUX,LU
+Madagascar,MDG,MG
+Malawi,MWI,MW
+Malaysia,MYS,MY
+Maldives,MDV,MV
+Mali,MLI,ML
+Malta,MLT,MT
+Marshall Islands,MHL,MH
+Mauritania,MRT,MR
+Mauritius,MUS,MU
+Mexico,MEX,MX
+Monaco,MCO,MC
+Mongolia,MNG,MN
+Montenegro,MNE,ME
+Morocco,MAR,MA
+Myanmar,MMR,MM
+Namibia,NAM,NA
+Nauru,NRU,NR
+Nepal,NPL,NP
+New Zealand,NZL,NZ
+Nicaragua,NIC,NI
+Niger,NER,NE
+Nigeria,NGA,NG
+Niue,NIU,NU
+North Macedonia,MKD,MK
+Oman,OMN,OM
+Pakistan,PAK,PK
+Palau,PLW,PW
+Palestine,PSE,PS
+Panama,PAN,PA
+Papua New Guinea,PNG,PG
+Paraguay,PRY,PY
+Peru,PER,PE
+Philippines,PHL,PH
+Poland,POL,PL
+Portugal,PRT,PT
+Qatar,QAT,QA
+Republic of Korea,KOR,KR
+Republic of Moldova,MDA,MD
+Romania,ROU,RO
+Russian Federation,RUS,RU
+Rwanda,RWA,RW
+Saint Kitts and Nevis,KNA,KN
+Saint Lucia,LCA,LC
+Saint Martin,MAF,MF
+Saint Vincent and the Grenadines,VCT,VC
+Samoa,WSM,WS
+San Marino,SMR,SM
+Sao Tome and Principe,STP,ST
+Saudi Arabia,SAU,SA
+Senegal,SEN,SN
+Serbia,SRB,RS
+Seychelles,SYC,SC
+Sierra Leone,SLE,SL
+Singapore,SGP,SG
+Sint Maarten,SXM,SX
+Solomon Islands,SLB,SB
+Somalia,SOM,SO
+South Africa,ZAF,ZA
+South Sudan,SSD,SS
+Sri Lanka,LKA,LK
+Sudan,SDN,SD
+Suriname,SUR,SR
+Syrian Arab Republic,SYR,SY
+Taiwan,TWN,TW
+Tajikistan,TJK,TJ
+Thailand,THA,TH
+Togo,TGO,TG
+Tonga,TON,TO
+Trinidad and Tobago,TTO,TT
+Tunisia,TUN,TN
+Turkey,TUR,TR
+Turkmenistan,TKM,TM
+Tuvalu,TUV,TV
+Uganda,UGA,UG
+Ukraine,UKR,UA
+United Arab Emirates,ARE,AE
+United Republic of Tanzania,TZA,TZ
+Uruguay,URY,UY
+Uzbekistan,UZB,UZ
+Vanuatu,VUT,VU
+"Venezuela, Bolivarian Republic of",VEN,VE
+Viet Nam,VNM,VN
+Wallis and Futuna,WLF,WF
+Western Sahara,SAH,EH
+Yemen,YEM,YE
+Zambia,ZMB,ZM
+Zimbabwe,ZWE,ZW
+Abaseen Foundation UK,,
+AbbVie Foundation,,
+act4africa,,
+ActionAid International,,
+AFEW International,,
+Africa,,
+Africa CDC,,
+African Biological Safety Association (AfBSA),,
+African Biosafety Network of Expertise (ABNE),,
+African Development Bank,,
+African Population and Health Research Center,,
+African Union,,
+AfriKids,,
+Airbnb,,
+Alibaba Foundation,,
+Alwaleed Philanthropies,,
+America,,
+American Society for Microbiology,,
+AmeriCares,,
+Asia,,
+Asia-Pacific,,
+Asian Development Bank,,
+AstraZeneca,,
+Avast Foundation,,
+Bangladesh Nari Progati Sangha,,
+BasicNeeds,,
+Bayer,,
+BHP Billiton Sustainable Communities,,
+BioBricks Foundation,,
+Bipartisan Commission on Biodefense,,
+Blue Ribbon Study Panel on Biodefense,,
+Bouvet Island,,BV
+BRAC,,
+Brown-Forman,,
+BTWC Implementation Support Unit (ISU),,
+Cambridge Mayor's Disaster Relief Fund,,
+CARE International,,
+Carers Worldwide,,
+Caribbean,,
+CARICOM,,
+Catholic Agency For Overseas Development (CAFOD),,
+Center for a New American Security,,
+Center for Global Development,,
+Central America,,
+Central Asia,,
+Chan Zuckerberg Initiative,,
+Charity Projects Ltd (Comic Relief),,
+Chatham House,,
+"Chemical and Allied Industries Association (CAIA, South Africa)",,
+Children's National Hospital,,
+"China, Macao Special Administrative Region",,
+CHOICE for Youth and Sexuality,,
+Citadel,,
+Clinton Health Access Initiative,,
+Coalition for Epidemic Preparedness Innovations (CEPI),,
+ColaLife,,
+Cordaid,,
+COVID-19 Solidarity Response Fund,,
+COVID-19 Therapeutics Accelerator (CTA),,
+Crown Agents Limited,,
+Cyan International,,
+Dadco Alumina And Chemicals Ltd.,,
+dance4life,,
+Low and middle-income countries (LMIC),,
+Diakonia Sweden,,
+Direct Relief,,
+Disability and Development Partners,,
+District of Columbia,,
+Dorcas Aid International,,
+East Africa,,
+Eastern Asia,,
+Eli Lilly and Company,,
+Elisabeth R. Griffin Foundation,,
+EMMS International,,
+Europe,,
+European Bank for Reconstruction and Development,,
+"Facebook, Inc.",,
+Family Aids Caring Trust,,
+Fédération Internationale de Football Association (FIFA),,
+African Regional Industrial Property Organization,,AP
+Feed the Minds,,
+Flinders University,,
+Fortress Investment Group,,
+Foundation for Innovative New Diagnostics (FIND),,
+Four Seasons Holdings Inc.,,
+Fundación Oriéntame,,
+Future of Humanity Institute,,
+Genspace,,
+Georgetown Center for Global Health Science and Security (GHSS),,
+GlaxoSmithKline,,
+Global Alliance for Vaccines and Immunisation (GAVI),,
+GOAL,,
+Goldman Sachs,,
+Haiti Hospital Appeal,,
+Health Poverty Action,,
+HealthProm,,
+Hospice Africa Ltd,,
+Howard University Hospital,,
+Indigo Trust,,
+Indo-Pacific,,
+Institute of Tropical Medicine,,
+Inter-American Development Bank,,
+interburns,,
+International Atomic Energy Agency (IAEA),,
+International Centre for Diarrhoeal Disease Research,,
+International Centre of Insect Physiology and Ecology,,
+International Criminal Police Organization (INTERPOL),,
+International Development Law Organization (IDLO),,
+International Federation of Biosafety Associations (IFBA),,
+International Labour Organization (ILO),,
+International Organization for Migration (IOM),,
+International Planned Parenthood Federation,,
+International Service,,
+International Treatment Preparedness Coalition (ITPC),,
+International Union Against Tuberculosis and Lung Disease,,
+Ipas,,
+Islamic Relief Worldwide,,
+Jack Ma Foundation,,
+JetBlue,,
+Johns Hopkins Center for Health Security,,
+Johnson & Johnson,,
+King Baudouin Foundation,,
+Kosovo,XKX,XK
+LAMB Health Care Foundation,,
+Latin America,,
+Lepra,,
+Mainline,,
+Malaria Consortium,,
+Mastercard,,
+Medecins Sans Frontiers (MSF),,
+Médecins Sans Vacances,,
+MedStar Washington Hospital Center,,
+Memisa,,
+Merck,,
+Middle Africa,,
+Middle East,,
+"National Academies of Sciences, Engineering, and Medicine",,
+New York City,,
+Next Generation for Global Health Security Network (NextGen),,
+No More Epidemics Campaign,,
+North Africa,,
+North America,,
+North Carolina State University,,
+Not reported,,
+Novartis,,
+Nuclear Threat Initiative (NTI),,
+OAS African Investments Limited,,
+Oceania,,
+One to One Children's Fund,,
+OPEC Fund for International Development,,
+Open Philanthropy,,
+Options Consultancy Services,,
+Orbis Charitable Trust,,
+Palliative Care Support Trust,,
+Pan American Health Organization (PAHO),,
+Parliamentarians for Global Action,,
+Partners in Health,,
+PATH,,
+Paul Allen Foundation,,
+Pfizer,,
+Pfizer Foundation,,
+PHASE Worldwide,,
+Project Harar,,
+Project Hope,,
+Protecting Families Against HIV/AIDS,,
+Reed Hastings and Patty Quillin,,
+Roche,,
+Rockefeller Foundation,,
+Royal Charity Organisation,,
+Royal Tropical Institute,,
+Rutgers,,
+Salesforce,,
+Sanofi Foundation,,
+Sark,,
+Sense International,,
+Shinnyo-en,,
+Sightsavers,,
+Simavi,,
+Simprints,,
+Societe Anglogold Ashanti De Guinee (sag),,
+Societe Des Mines De Fer De Guinee (smfg),,
+South America,,
+Southeast Asia,,
+Southern Africa,,
+Southern Asia,,
+Special Hope Network,,
+Stanford Center for International Security and Cooperation,,
+Stichting fondsbeheer DGGF lokaal MKB,,
+Stichting Health Action International,,
+Sub-Saharan Africa,,
+SynBioBeta,,
+Takeda Pharmaceutical,,
+TB Alert,,
+The Access to Nutrition Foundation,,
+"The Global Fund to Fight AIDS, Tuberculosis and Malaria",,
+The Power of Nutrition,,
+TikTok,,
+Training Programs in Epidemiology and Public Health Interventions Network,,
+ULB-Coopération,,
+UN Foundation,,
+United Purpose,,
+University of California San Francisco,,
+University of Nottingham,,
+University of Washington,,
+UPS,,
+Vale International Holdings Gmbh,,
+Vital Strategies/Resolve to Save Lives,,
+Volvo Group,,
+Vulcan Inc.,,
+Washington National Cathedral,,
+Welbodi Partnership,,
+Wellcome Trust,,
+West Africa,,
+Women and Children First (UK),,
+Women's Global Network on Reproductive Rights,,
+World Central Kitchen,,
+World Customs Organization (WCO),,
+World Organisation for Animal Health (OIE),,
+World Vision International,,
+Y Care International,,
+Hivos,,
+Oxford Policy Management,,
+The Global Forum on MSM & HIV (MSMGF),,
+YWCA of Bangladesh,,
+Damiaanactie / Action Damien,,
+Wereldsolidariteit-Solidarité Mondiale (WSM),,
+Association pour la Promotion de l'Education et de la Formation à l'Etranger,,
+Vlaamse Interuniversitaire Raad voor Universitaire Ontwikkelingssamenwerking (VLIR-UOS),,
+Louvain Coopération,,
+Chaîne de l'Espoir Belgique / Keten van Hoop België / Chain of Hope Belgium,,
+Académie de recherche et d'enseignement supérieur,,
+Nutrition International,,
+Global Antibiotic Research and Development Partnership,,
+Danish Refugee Council,,
+Danmission,,
+Send a Cow,,
+EngenderHealth Ethiopia,,
+The Open University,,
+CODA International,,
+Samaritan's Purse UK,,
+Interact Worldwide,,
+The HALO Trust,,
+Frontline AIDS,,
+Alliance of Religions and Conservation,,
+Anti-Slavery International,,
+Christian Blind Mission (UK) Ltd.,,
+African Initiatives,,
+Survivors Fund (SURF),,
+ADRA-UK,,
+BBC Media Action,,
+Compassion UK,,
+Vision Aid Overseas,,
+International Medical Corps UK,,
+Relief International UK,,
+Target TB,,
+kidasha,,
+Tropical Health and Education Trust,,
+Joshua Orphan and Community Care,,
+Child.org,,
+PONT,,
+Restless Development,,
+The Fred Hollows Foundation (UK),,
+Syria Relief,,
+DeafKidz International,,
+UK-Med,,
+CDAC Network,,
+Royal National Lifeboat Institution (RNLI),,
+Leonard Cheshire Disability,,
+Liverpool School of Tropical Medicine,,
+Tearfund,,
+Minority Rights Group,,
+Agency for Cooperation and Research in Development (ACORD),,
+Centre for Economic Policy Research,,
+World Jewish Relief,,
+Voluntary Service Overseas (VSO),,
+ChildHope UK,,
+Ecorys UK,,
+Farm Africa,,
+DAI Global Health,,
+Mercy Ships UK Limited,,
+Girls’ Education Challenge – Fund Manager PwC,,
+MannionDaniels,,
+ARK (Absolute Return for Kids),,
+Development Initiatives Poverty Research,,
+Worldwide Hospice Palliative Care Alliance,,
+Digital Campus,,
+PositiveNegatives,,
+Aga Khan Foundation (United Kingdom),,
+MSI Reproductive Choices,,
+Mott MacDonald Limited,,
+HelpAge International,,
+World Association for Christian Communication (UK),,
+Coffey International Development,,
+Institute of Development Studies,,
+Montrose International LLP,,
+King's College London,,
+University Of Liverpool,,
+LTS International Limited,,
+University of Birmingham,,
+Scottish Catholic International Aid Fund (SCIAF),,
+Concern Worldwide,,
+Doctors with Africa CUAMM,,
+We World - GVC Onlus,,
+ABAAD - Resource Center for Gender Equality,,
+Conseil et Appui pour l'Education à la Base Mali,,
+Karuna Mission Social Solidarity - KMSS,,
+Timidria,,
+International Procurement Agency,,
+Access to Medicine Foundation,,
+Health Insurance Fund,,
+COC Nederland,,
+ZOA,,
+Stichting Red een Kind,,
+Stichting Vluchteling,,
+SOS Children's Villages The Netherlands,,
+Aidsfonds - Soa Aids Nederland,,
+ICCO Cooperation,,
+The Leprosy Mission Nepal,,
+Sehat Kahani (Community Innovation Hub),,
+"Medical Research Centre (MRC), Sierra Leone",,
+CUAMM Trustees,,
+Boston University,,
+Abt Associates Inc,,
+"The Population Council, Inc.",,
+Guttmacher Institute,,
+International Initiative for Impact Evaluation,,
+Johns Hopkins University,,
+IMA World Health,,
+Kwame Nkrumah University of Science and Technology,,
+Multilateral Investment Fund,,
+World Bank Trust Funds,,
+King Salman Humanitarian Aid and Relief Centre,,
+Yamaan Foundation for Health and Social Development,,
+Southern African Catholic Bishops' Conference Aids Office,,
+Aeras,,
+OCHA Country Based Pooled Funds,,
+GlobalGiving.org,,
+Practical Action,,
+Christian Aid,,
+People in Need,,
+UN Pooled Funds,,
+DanChurchAid,,
+Norwegian Refugee Council,,
+RedR UK,,
+The William and Flora Hewlett Foundation,,
+International Fund for Agricultural Development (IFAD),,
+ADD International (Action on Disability and Development),,
+MapAction,,
+Ground Truth Solutions,,
+Disasters Emergency Committee,,
+Mercy Corps Europe,,
+Stichting Beheer Subsidiegelden DRA,,
+Islamic Development Bank,,
+Gamers Without Borders,,
+Southern African Development Community Secretariat (SADC),,
+Shell,,
+Thistledown Foundation,,
+Princess Charlène of Monaco Foundation,,
+Susan Thompson Buffett Foundation,,
+Family Guidance Association of Ethiopia,,
+DKT International,,
+Elton John AIDS Foundation,,
+Nuffic,,
+Afrikagrupperna Sweden,,
+TradeMark East Africa,,
+CGIAR,,
+International IDEA,,
+Handicap International Federation,,
+Penal Reform International,,
+Disabled People's Organisations Denmark,,
+Eastern Europe and Central Asia,,
+Middle East and North Africa,,
+Latin America and the Caribbean,,
+Western Pacific,,
+BRAC University,,
+Fondation Hirondelle,,
+Development Organisation of the Rural Poor,,
+Pact,,
+Chembio Diagnostics Systems Inc.,,
+Google,,
+International Severe Acute Respiratory and emerging Infection Consortium,,
+PENTA Foundation,,
+S. C. Johnson & Son Inc.,,
+Elrha,,
+International Campaign Women´s Right to Safe Abortion,,
+IOD PARC,,
+University of Leeds,,
+Loughborough University,,
+FHI360,,
+GSMA Foundation,,
+Medicos del Mundo,,
+European Commission - International Partnerships,,
+Global Green Growth Institute (GGGI),,
+Young Africa International HUB,,
+Zoological Society of London,,
+Edukans Foundation,,
+International Alert,,
+1Day Sooner,,
+AcceleratingHT,,
+Against COVID-19,,
+Analog Devices Foundation,,
+Asia Philanthropy Circle,,
+Brown Institute for Media Innovation,,
+Cisco,,
+Council on Strategic Risks,,
+Global Financing Facility,,
+"Good Judgement, Inc.",,
+Gryphon Scientific,,
+Harvard University,,
+Massachusetts Institute of Technology Media Lab,,
+McHugh O'Donovan Foundation,,
+National Philanthropic Trust (NPT),,
+Procter & Gamble,,
+Sea-Long Global Respiratory Systems,,
+The Pacific Community (SPC),,
+The Visa Foundation,,
+Wise,,
+Twilio,,
+UBS Optimus Foundation,,
+University of Colorado,,
+Vaccine Forward Initiative,,
+altLabs,,
+World Health Organization Foundation,,
+Soccer Aid,,
+East African Community,,
+South and Central Asia,,
+"Imperial College of Science, Technology and Medicine",,
+Europe and Central Asia,,
+Anonymous,,
+Amref Health Africa,,
+Ethiopiaid,,
+International Federation of Terre des Hommes (TDHIF),,
+Population Services International,,
+UN Federal Credit Union Foundation,,
+War Child International,,
+Rode Kruis-Vlaanderen Internationaal,,
+United Nations Human Settlement Programme,,
+Bangladesh Primary Care Respiratory Society,,
+International Primary Care Respiratory Group,,
+The University of Oxford,,
+Giro555 (Stichting Samenwerkende Hulporganisaties),,
+Stichting Agriterra,,
+Interpeace,,
+Task Force for Global Health (TFGH),,
+Veolia Environment Foundation,,
+Sumitomo Mitsui Banking Corporation,,
+Seadream Family Foundation,,
+Fidelity Charitable,,
+LEGO Foundation,,
+GoodWeave International,,
+Luminate Foundation Inc.,,
+Universiti Malaya,,
+University Putra Malaysia,,
+INTERSOS Onlus,,
+UHAI EASHRI,,
+Max Foundation,,
+The Hunger Project Netherlands,,
+Global Network of People Living with HIV (GNP+),,
+CISU,,
+Aqua for All,,
+Action Canada for Sexual Health and Rights,,
+The Centre for Economic Governance and Accountability in Africa,,
+Initiative Sankofa d'Afrique de l'Ouest,,
+Kerk in Actie,,
+South African Network of People who Use Drugs,,
+China Medical Board,,
+Nestle,,
+African Reinsurance Corporation,,
+GALZ,,
+Stanley Black & Decker,,
+University of Cambridge,,
+Vir Biotechnology,,
+International Genetically Engineered Machine Foundation (iGEM),,
+Californians Against Pandemics,,
+George Washington University,,
+Center for Security and Emerging Technology,,
+Federation of American Scientists,,
+Tampere University,,
+Immune Observatory,,
+New Incentives,,
+Against Malaria Foundation (AMF),,
+Living Goods,,
+Development Media International,,
+Global Health Security Network (GHSN),,
+Center for Population-Level Bioethics (CPLB),,
+Charity Science Health,,
+IDinsight,,
+Results for Development (R4D),,
+Biosecure Ltd,,
+University of Sydney,,
+Carnegie Endowment for International Peace (CEIP),,
+InterAcademy Partnership (IAP),,
+Abdul Latif Jameel Poverty Action Lab (J-PAL),,
+University of Notre Dame,,
+"University of California, Davis",,
+Weill Cornell Medical College,,
+Hypermind,,
+OliLux Biosciences,,
+221B Foundation,,
+Binx Health Limited,,
+Riboscience LLC,,
+"University of California, Berkeley",,
+Icosavax,,
+Stanford University,,
+Duke University,,
+Soroka University Medical Center,,
+University of Michigan,,
+Icahn School of Medicine at Mount Sinai,,
+Engineers Without Borders USA,,
+Broad Institute of MIT and Harvard,,
+Rockefeller University,,
+Sherlock Biosciences,,
+BlueDot Inc.,,
+Bernhard Nocht Institute for Tropical Medicine,,
+Bundeswehr Institute of Microbiology,,
+Good Forever Foundation,,
+Royal Scientific Society,,
+EcoHealth Alliance,,
+The Stimson Center,,
+Geneva Centre for Security Policy,,
+African Society for Laboratory Medicine (ASLM),,
+CHC Global,,
+African Field Epidemiology Network (AFENET),,
+Swiss Tropical and Public Health Institute (Swiss TPH),,
+Ingenuity and Purpose (IAP),,
+Tianjin University,,
+The United Nations on Drugs and Crime (UNODC),,
+The Australia Group,,
+Good Ventures,,
+InvestInternational,,
+Sisonke National Sex Workers Movement,,
+International Institute for Environment and Development,,
+International Bureau of Fiscal Documentation (IBFD),,
+IMC WORLDWIDE,,
+Amref Health Africa Headquarters,,
+Wemos Foundation,,
+Reach A Hand Uganda,,
+Sexual Reproductive Health and Rights Africa Trust,,
+Forum for African Women Educationalists (FAWE),,
+BlackRock Foundation,,
+Robert Wood Johnson Foundation,,
+British International Investment plc,,
+International Development Research Center (IDRC),,
+Gilead Sciences,,
+Johns Hopkins Center for Communication Programs,,
+ViiV Healthcare,,

@@ -1,4 +1,4 @@
-SELECT sta.name, sta.iso3
+SELECT sta.name, sta.iso3, sta.iso2
 	FROM stakeholders as sta
 	JOIN children_to_parents_direct_credit AS ctpdc
 		ON sta.id = ctpdc.parent_id
