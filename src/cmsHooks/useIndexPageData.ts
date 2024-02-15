@@ -16,7 +16,11 @@ const useIndexPageData = () => {
               Image {
                 localFiles {
                   childImageSharp {
-                    gatsbyImageData(height: 200, placeholder: BLURRED)
+                    gatsbyImageData(
+                      height: 200,
+                      placeholder: BLURRED
+                      blurredOptions: { width: 583 }
+                    )
                   }
                 }
               }
