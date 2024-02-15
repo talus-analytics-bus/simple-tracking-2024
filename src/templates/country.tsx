@@ -16,6 +16,7 @@ import {
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import styled from 'styled-components'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -26,6 +27,18 @@ const ContentPlaceholder = styled.div`
   height: 30vh;
   width: 370px;
   background-color: lightgray;
+`
+
+const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`
+
+const Flag = styled(GatsbyImage)`
+  width: 46px;
+  height: 46px;
+  filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.35));
 `
 
 const sortHLabeledNodes = (
@@ -50,6 +63,10 @@ const CountryPage = ({
     .filter(node => node.data.Name.includes('header'))
     .sort(sortHLabeledNodes)
 
+  console.log(data)
+
+  const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
+
   return (
     <Providers>
       <CMS.SEO />
@@ -58,13 +75,21 @@ const CountryPage = ({
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
           {leftNavElements.map(node => (
-            <SidebarLink href={`#${formatHash(node.data.Text)}`}>
+            <SidebarLink
+              key={node.data.Name}
+              href={`#${formatHash(node.data.Text)}`}
+            >
               <CMS.Text name={node.data.Name} data={cmsData} />
             </SidebarLink>
           ))}
         </Sidebar>
         <TopBar>
-          <h1>Country: {data.stakeholdersCsv?.name}</h1>
+          <H1>
+            {flagImage && (
+              <Flag image={flagImage} alt={data.stakeholdersCsv?.name ?? ''} />
+            )}
+            Country: {data.stakeholdersCsv?.name}
+          </H1>
         </TopBar>
         <MainContent>
           <table>
@@ -84,7 +109,7 @@ const CountryPage = ({
             </tbody>
           </table>
           {headers.map((node, index) => (
-            <>
+            <React.Fragment key={node.data.Name}>
               <ScrollTarget
                 id={formatHash(leftNavElements[index].data.Text)}
               ></ScrollTarget>
@@ -92,7 +117,7 @@ const CountryPage = ({
                 <CMS.Text name={node.data.Name} data={cmsData} />
               </h2>
               <ContentPlaceholder />
-            </>
+            </React.Fragment>
           ))}
           <a id={'1'}>Section 1</a>
         </MainContent>
@@ -107,6 +132,15 @@ export const query = graphql`
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
+      flag {
+        childImageSharp {
+          gatsbyImageData(
+            width: 92
+            placeholder: BLURRED
+            blurredOptions: { width: 46 }
+          )
+        }
+      }
     }
     receivedAndDisbursedCsv(name: { eq: $name }) {
       Total_Capacity_Disbursed
