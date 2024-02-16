@@ -19,6 +19,7 @@ workflows:
             branches:
               only:
                 - dev
+                - dev-cci-fix
       # review site
       - deploy:
           bucket: 's3://review-simple-tracking-2024'
