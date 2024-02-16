@@ -60,6 +60,14 @@ const CountryPage = ({
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
   const cmsData = useStakeholderPageData()
 
+  const yearOptions = [
+    'All time',
+    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
+      []),
+  ]
+
+  const [selectedYear, setSelectedYear] = React.useState(yearOptions[0])
+
   const leftNavElements = cmsData.nodes
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
@@ -71,12 +79,6 @@ const CountryPage = ({
   console.log(data)
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
-
-  const yearOptions = [
-    'All time',
-    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
-      []),
-  ]
 
   return (
     <Providers>
@@ -101,7 +103,10 @@ const CountryPage = ({
             )}
             Country: {data.stakeholdersCsv?.name}
           </H1>
-          <YearSelector>
+          <YearSelector
+            value={selectedYear}
+            onChange={e => setSelectedYear(e.target.value)}
+          >
             {yearOptions.map(year => (
               <option key={year} value={year}>
                 {year}
