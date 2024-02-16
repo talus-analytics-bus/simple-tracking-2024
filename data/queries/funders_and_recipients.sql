@@ -17,6 +17,7 @@ WITH all_countries AS (
 SELECT
     s1.name AS "Funder",
     s2.name AS "Recipient",
+    sf.year AS "Year",
     ROUND(SUM(sf.value)) AS "Total value"
 FROM
     flows_to_stakeholder_origins_direct_credit ftsodc
@@ -38,6 +39,6 @@ WHERE
     	s2.id in (select * from all_countries) or s2.id in (select * from all_orgs)
     	)
 GROUP BY
-    s1.name, s2.name
+    s1.name, s2.name, sf.year
 ORDER BY
-    "Total value" DESC;
+    "Funder" DESC;
