@@ -64,7 +64,7 @@ const CountryPage = ({
 
   const yearOptions = [
     'All time',
-    ...(data?.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
+    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
       []),
   ]
 
@@ -292,27 +292,27 @@ export const query = graphql`
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
-      flag {
-        childImageSharp {
-          gatsbyImageData(
-            width: 92
-            placeholder: BLURRED
-            blurredOptions: { width: 46 }
-          )
-        }
+      # flag {
+      #   childImageSharp {
+      #     gatsbyImageData(
+      #       width: 92
+      #       placeholder: BLURRED
+      #       blurredOptions: { width: 46 }
+      #     )
+      #   }
+      # }
+    }
+    allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
+      years: nodes {
+        Year
+        Total_Capacity_Disbursed
+        Total_Capacity_Received
+        Total_Disbursed
+        Total_Disbursed_Received
+        Total_Response_Disbursed
+        Total_Response_Received
       }
     }
-    # allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
-    #   years: nodes {
-    #     Year
-    #     Total_Capacity_Disbursed
-    #     Total_Capacity_Received
-    #     Total_Disbursed
-    #     Total_Disbursed_Received
-    #     Total_Response_Disbursed
-    #     Total_Response_Received
-    #   }
-    # }
   }
 `
 
