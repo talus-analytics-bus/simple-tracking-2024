@@ -78,10 +78,10 @@ const config: GatsbyConfig = {
         nodeType: 'StakeholdersCsv',
         imagePath: 'iso2',
         // ** ALL OPTIONAL BELOW HERE: **
-        name: 'flag',
+        name: 'flag_change',
         skipUndefinedUrls: true,
         prepareUrl: (url: string) => {
-          if (!url || url === 'N/A' || url === undefined || url === "") return undefined
+          if (!url || url === 'N/A' || url === 'ap') return undefined
           console.log(`https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`)
           return `https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`
         },
