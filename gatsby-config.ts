@@ -81,6 +81,7 @@ const config: GatsbyConfig = {
         name: 'flag',
         skipUndefinedUrls: true,
         prepareUrl: (url: string) => {
+          return undefined
           if (!url || url === 'N/A' || url === 'AP') return undefined
           return `https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`
         },
