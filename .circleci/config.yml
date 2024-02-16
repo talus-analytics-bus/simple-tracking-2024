@@ -20,6 +20,7 @@ workflows:
               only:
                 - dev
                 - dev-cci-fix
+                - dev-cci-fix-2
       # review site
       - deploy:
           bucket: 's3://review-simple-tracking-2024'
