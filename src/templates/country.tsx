@@ -72,9 +72,9 @@ const CountryPage = ({
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
 
-  const headers = cmsData.nodes
-    .filter(node => node.data.Name.includes('header'))
-    .sort(sortHLabeledNodes)
+  // const headers = cmsData.nodes
+  //   .filter(node => node.data.Name.includes('header'))
+  //   .sort(sortHLabeledNodes)
 
   console.log(data)
 
@@ -133,17 +133,152 @@ const CountryPage = ({
             //   </tbody>
             // </table>
           }
-          {headers.map((node, index) => (
-            <React.Fragment key={node.data.Name}>
-              <ScrollTarget
-                id={formatHash(leftNavElements[index].data.Text)}
-              ></ScrollTarget>
-              <h2>
-                <CMS.Text name={node.data.Name} data={cmsData} />
-              </h2>
-              <ContentPlaceholder />
-            </React.Fragment>
-          ))}
+          <ScrollTarget
+            id={formatHash(leftNavElements[0].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H2 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[1].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H3 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H3 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[2].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H4 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H4 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[3].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H5 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H5 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[4].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H6 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[4].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H6 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[5].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H6 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[4].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H7 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H7 subtitle'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[5].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H8 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H8 subtitle'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[6].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H9 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H9 subtitle'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[7].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H10 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H10 subtitle'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          <ScrollTarget
+            id={formatHash(leftNavElements[8].data.Text)}
+          ></ScrollTarget>
+          <h2>
+            <CMS.Text name={'H11 header'} data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name={'H11 subtitle'} data={cmsData} />
+          </h3>
+          <ContentPlaceholder />
+
+          {
+            // headers.map((node, index) => (
+            // <React.Fragment key={node.data.Name}>
+            //   <ScrollTarget
+            //     id={formatHash(leftNavElements[index].data.Text)}
+            //   ></ScrollTarget>
+            //   <h2>
+            //     <CMS.Text name={node.data.Name} data={cmsData} />
+            //   </h2>
+            //   <ContentPlaceholder />
+            // </React.Fragment>
+            // ))
+          }
+
           <a id={'1'}>Section 1</a>
         </MainContent>
       </Layout>
