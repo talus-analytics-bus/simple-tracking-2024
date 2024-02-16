@@ -58,7 +58,9 @@ const formatHash = (str: string) => str.replaceAll(' ', '-').toLowerCase()
 const CountryPage = ({
   data,
 }: PageProps<Queries.CountryPageQuery>): JSX.Element => {
-  const cmsData = useStakeholderPageData()
+  const cmsData = useStakeholderPageData({
+    '[STAKEHOLDER]': data.stakeholdersCsv?.name,
+  })
 
   const yearOptions = [
     'All time',
