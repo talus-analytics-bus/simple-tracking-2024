@@ -2,7 +2,6 @@
 SELECT 
 	all_stakeholders.name AS "name",
 	all_stakeholders.iso3 AS "iso3",
-	CASE WHEN received.year = NULL THEN disbursed.year ELSE received.year END AS "Year",
 	response_received AS "Total Response Received",
 	capacity_received AS "Total Capacity Received",
 	total_received AS "Total Disbursed Received",
@@ -33,7 +32,6 @@ LEFT JOIN (
 	SELECT
 		name,
 		iso3,
-		year,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS "response_received",
 		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS "capacity_received",
 		ROUND(SUM(CASE WHEN value IS NOT NULL THEN value ELSE 0 END)) AS "total_received"
@@ -42,7 +40,7 @@ LEFT JOIN (
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY id, year
+		GROUP BY id
 ) received
 ON received.name = all_stakeholders.name
 LEFT JOIN (
@@ -50,7 +48,6 @@ LEFT JOIN (
 	SELECT
 		name,
 		iso3,
-		year,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS total_response,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS total_capacity,
 		ROUND(SUM(CASE WHEN value IS NOT NULL THEN value ELSE 0 END)) AS total_disbursed
@@ -59,7 +56,7 @@ LEFT JOIN (
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY id, year
+		GROUP BY id
 ) disbursed 
-ON disbursed.name = all_stakeholders.name AND disbursed.year = received.year
+ON disbursed.name = all_stakeholders.name
 ORDER BY disbursed.name ASC;
