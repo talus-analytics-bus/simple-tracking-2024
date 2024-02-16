@@ -313,8 +313,6 @@ export const query = graphql`
         Total_Disbursed_Received
         Total_Response_Disbursed
         Total_Response_Received
-        Disbursed_Year
-        Received_Year
       }
     }
   }

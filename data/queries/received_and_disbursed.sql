@@ -62,4 +62,4 @@ LEFT JOIN (
 		GROUP BY id, year
 ) disbursed 
 ON disbursed.name = all_stakeholders.name AND disbursed.year = received.year
-ORDER BY disbursed.name ASC;
+ORDER BY name ASC, "Year" DESC;
