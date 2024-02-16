@@ -33,6 +33,7 @@ if [ "$clean" == "1" ]; then
   gatsby clean
 fi
 
+gatsby clean;
 gatsby build;
 
 
