@@ -41,6 +41,11 @@ const Flag = styled(GatsbyImage)`
   filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.35));
 `
 
+const YearSelector = styled.select`
+  padding: 5px 8px;
+  margin-left: auto;
+`
+
 const sortHLabeledNodes = (
   a: AirtableCMSData['nodes'][0],
   b: AirtableCMSData['nodes'][0]
@@ -67,6 +72,12 @@ const CountryPage = ({
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
+  const yearOptions = [
+    'All time',
+    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
+      []),
+  ]
+
   return (
     <Providers>
       <CMS.SEO />
@@ -90,24 +101,33 @@ const CountryPage = ({
             )}
             Country: {data.stakeholdersCsv?.name}
           </H1>
+          <YearSelector>
+            {yearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </YearSelector>
         </TopBar>
         <MainContent>
-          <table>
-            <tbody>
-              {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
-                ([label, value]) => (
-                  <tr key={label}>
-                    <td style={{ textAlign: 'right' }}>
-                      ${new Number(value).toLocaleString()}
-                    </td>
-                    <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-                      {label.replaceAll('_', ' ')}
-                    </td>
-                  </tr>
-                )
-              )}
-            </tbody>
-          </table>
+          {
+            // <table>
+            //   <tbody>
+            //     {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
+            //       ([label, value]) => (
+            //         <tr key={label}>
+            //           <td style={{ textAlign: 'right' }}>
+            //             ${new Number(value).toLocaleString()}
+            //           </td>
+            //           <td style={{ paddingLeft: 20, textAlign: 'left' }}>
+            //             {label.replaceAll('_', ' ')}
+            //           </td>
+            //         </tr>
+            //       )
+            //     )}
+            //   </tbody>
+            // </table>
+          }
           {headers.map((node, index) => (
             <React.Fragment key={node.data.Name}>
               <ScrollTarget
@@ -142,13 +162,18 @@ export const query = graphql`
         }
       }
     }
-    receivedAndDisbursedCsv(name: { eq: $name }) {
-      Total_Capacity_Disbursed
-      Total_Capacity_Received
-      Total_Disbursed
-      Total_Disbursed_Received
-      Total_Response_Disbursed
-      Total_Response_Received
+    allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
+      years: nodes {
+        Year
+        Total_Capacity_Disbursed
+        Total_Capacity_Received
+        Total_Disbursed
+        Total_Disbursed_Received
+        Total_Response_Disbursed
+        Total_Response_Received
+        Disbursed_Year
+        Received_Year
+      }
     }
   }
 `
