@@ -72,21 +72,21 @@ const config: GatsbyConfig = {
     //     },
     //   },
     // },
-    // {
-    //   resolve: `gatsby-plugin-remote-images`,
-    //   options: {
-    //     nodeType: 'StakeholdersCsv',
-    //     imagePath: 'iso2',
-    //     // ** ALL OPTIONAL BELOW HERE: **
-    //     name: 'flag',
-    //     skipUndefinedUrls: true,
-    //     prepareUrl: (url: string) => {
-    //       return undefined
-    //       if (!url || url === 'N/A' || url === 'AP') return undefined
-    //       return `https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'StakeholdersCsv',
+        imagePath: 'iso2',
+        // ** ALL OPTIONAL BELOW HERE: **
+        name: 'flag',
+        skipUndefinedUrls: true,
+        prepareUrl: (url: string) => {
+          return undefined
+          if (!url || url === 'N/A' || url === 'AP') return undefined
+          return `https://flags.talusanalytics.com/300px/${url.toLowerCase()}.png`
+        },
+      },
+    },
     {
       // filling in the gtag here
       // will set up both the gatsby
