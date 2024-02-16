@@ -292,15 +292,15 @@ export const query = graphql`
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
-      # flag {
-      #   childImageSharp {
-      #     gatsbyImageData(
-      #       width: 92
-      #       placeholder: BLURRED
-      #       blurredOptions: { width: 46 }
-      #     )
-      #   }
-      # }
+      flag {
+        childImageSharp {
+          gatsbyImageData(
+            width: 92
+            placeholder: BLURRED
+            blurredOptions: { width: 46 }
+          )
+        }
+      }
     }
     # allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
     #   years: nodes {
