@@ -67,10 +67,10 @@ jobs:
       - checkout
       - aws-cli/install
 
-      # - restore_cache:
-      #     keys:
-      #       - npm-deps-{{ checksum "package-lock.json" }}
-      #       - npm-deps-
+      - restore_cache:
+          keys:
+            - npm-deps-{{ checksum "package-lock.json" }}
+            - npm-deps-
 
       - run:
           name: NPM Install
