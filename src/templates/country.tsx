@@ -78,8 +78,6 @@ const CountryPage = ({
   //   .filter(node => node.data.Name.includes('header'))
   //   .sort(sortHLabeledNodes)
 
-  console.log(data)
-
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
   return (
