@@ -1,11 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+import { ContentBox } from './StakeholderLayout'
+import CMS from 'components/library/airtable-cms'
 
 interface FundingTotalsProps {
   data: Queries.CountryPageQuery
   selectedYear: string
+  selectedYearsLabel: string
 }
 
-const FundingTotals = ({ data, selectedYear }: FundingTotalsProps) => {
+const FundingColumns = styled.section`
+  display: flex;
+  gap: 15px;
+`
+
+const FundingTotals = ({
+  data,
+  selectedYear,
+  selectedYearsLabel,
+}: FundingTotalsProps) => {
   let displayTotals = {} as { [key: string]: number }
 
   if (!data.allReceivedAndDisbursedCsv?.years)
@@ -35,20 +48,54 @@ const FundingTotals = ({ data, selectedYear }: FundingTotalsProps) => {
     })
 
   return (
-    <div>
-      <table>
-        <tbody>
-          {Object.entries(displayTotals).map(([label, value]) => (
-            <tr key={label}>
-              <td style={{ textAlign: 'right' }}>${value.toLocaleString()}</td>
-              <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-                {label.replaceAll('_', ' ')}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <FundingColumns>
+      <ContentBox>
+        <h3>
+          <span>
+            <CMS.Icon name="Disbursed" style={{ height: 25 }} />
+            Funds disbursed
+          </span>
+          <span>{selectedYearsLabel}</span>
+        </h3>
+        <table>
+          <tbody>
+            {Object.entries(displayTotals).map(([label, value]) => (
+              <tr key={label}>
+                <td style={{ textAlign: 'right' }}>
+                  ${value.toLocaleString()}
+                </td>
+                <td style={{ paddingLeft: 20, textAlign: 'left' }}>
+                  {label.replaceAll('_', ' ')}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </ContentBox>
+      <ContentBox>
+        <h3>
+          <span>
+            <CMS.Icon name="Received" style={{ height: 25 }} />
+            Funds received
+          </span>
+          <span>{selectedYearsLabel}</span>
+        </h3>
+        <table>
+          <tbody>
+            {Object.entries(displayTotals).map(([label, value]) => (
+              <tr key={label}>
+                <td style={{ textAlign: 'right' }}>
+                  ${value.toLocaleString()}
+                </td>
+                <td style={{ paddingLeft: 20, textAlign: 'left' }}>
+                  {label.replaceAll('_', ' ')}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </ContentBox>
+    </FundingColumns>
   )
 }
 

@@ -95,3 +95,31 @@ export const MainContent = styled.div`
   grid-area: main;
   padding: 25px;
 `
+
+export const ContentBox = styled.div`
+  background-color: ${({ theme }) => theme.common.colors.surfaceGray50};
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 40px;
+
+  > h3 {
+    margin: -25px -25px 0 -25px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
+    ${({ theme }) => theme.textStyleSmallLabel};
+
+    > span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: ${({ theme }) => theme.common.colors.textPrimary};
+    }
+
+    > span:last-child {
+      color: ${({ theme }) => theme.common.colors.textSecondary};
+    }
+  }
+`

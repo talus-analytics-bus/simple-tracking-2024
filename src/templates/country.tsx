@@ -72,6 +72,11 @@ const CountryPage = ({
 
   const [selectedYear, setSelectedYear] = React.useState(yearOptions[0])
 
+  const selectedYearsLabel =
+    selectedYear === 'All time'
+      ? `${yearOptions[1]} – ${yearOptions.at(-1)}`
+      : selectedYear
+
   const leftNavElements = cmsData.nodes
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
@@ -122,7 +127,11 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <FundingTotals data={data} selectedYear={selectedYear} />
+          <FundingTotals
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
 
           <ScrollTarget
             id={formatHash(leftNavElements[1].data.Text)}
