@@ -1,11 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql, PageProps } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import CMS, { AirtableCMSData } from 'components/library/airtable-cms/'
 
 import Providers from 'components/layout/Providers'
 import NavBar from 'components/layout/NavBar/NavBar'
 import Footer from 'components/layout/Footer'
+import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
+import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import {
   Layout,
   MainContent,
@@ -13,11 +17,8 @@ import {
   SidebarLink,
   TopBar,
 } from 'components/stakeholderPage/StakeholderLayout'
-import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
-import styled from 'styled-components'
+
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import FundingTotals from 'components/stakeholderPage/FundingTotals'
 
 const ScrollTarget = styled.div`
   position: relative;
