@@ -109,7 +109,7 @@ export const ContentBox = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
-    ${({ theme }) => theme.textStyleSmallLabel};
+    ${({ theme }) => theme.textStyleNumbers};
 
     > span {
       display: flex;
