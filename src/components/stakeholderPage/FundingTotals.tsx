@@ -23,7 +23,7 @@ const FundingTotals = ({ data, selectedYear }: FundingTotalsProps) => {
         })
         return acc
       },
-      {} as { [key: string]: number }
+      {} as typeof displayTotals
     )
   else
     Object.entries(
