@@ -25,7 +25,7 @@ const FundingTotals = ({ data, selectedYear }: FundingTotalsProps) => {
       },
       {} as { [key: string]: number }
     )
-  else {
+  else
     Object.entries(
       data.allReceivedAndDisbursedCsv.years.find(
         year => year.Year === selectedYear
@@ -33,7 +33,6 @@ const FundingTotals = ({ data, selectedYear }: FundingTotalsProps) => {
     ).forEach(([key, val]) => {
       if (key !== 'Year') displayTotals[key] = Number(val)
     })
-  }
 
   return (
     <div>
