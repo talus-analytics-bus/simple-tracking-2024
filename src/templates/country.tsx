@@ -17,6 +17,7 @@ import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import styled from 'styled-components'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import FundingTotals from 'components/stakeholderPage/FundingTotals'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -74,10 +75,6 @@ const CountryPage = ({
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
 
-  // const headers = cmsData.nodes
-  //   .filter(node => node.data.Name.includes('header'))
-  //   .sort(sortHLabeledNodes)
-
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
   return (
@@ -115,24 +112,6 @@ const CountryPage = ({
           </YearSelector>
         </TopBar>
         <MainContent>
-          {
-            // <table>
-            //   <tbody>
-            //     {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
-            //       ([label, value]) => (
-            //         <tr key={label}>
-            //           <td style={{ textAlign: 'right' }}>
-            //             ${new Number(value).toLocaleString()}
-            //           </td>
-            //           <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-            //             {label.replaceAll('_', ' ')}
-            //           </td>
-            //         </tr>
-            //       )
-            //     )}
-            //   </tbody>
-            // </table>
-          }
           <ScrollTarget
             id={formatHash(leftNavElements[0].data.Text)}
           ></ScrollTarget>
@@ -142,7 +121,7 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <FundingTotals data={data} selectedYear={selectedYear} />
 
           <ScrollTarget
             id={formatHash(leftNavElements[1].data.Text)}
@@ -264,22 +243,6 @@ const CountryPage = ({
             <CMS.Text name={'H11 subtitle'} data={cmsData} />
           </h3>
           <ContentPlaceholder />
-
-          {
-            // headers.map((node, index) => (
-            // <React.Fragment key={node.data.Name}>
-            //   <ScrollTarget
-            //     id={formatHash(leftNavElements[index].data.Text)}
-            //   ></ScrollTarget>
-            //   <h2>
-            //     <CMS.Text name={node.data.Name} data={cmsData} />
-            //   </h2>
-            //   <ContentPlaceholder />
-            // </React.Fragment>
-            // ))
-          }
-
-          <a id={'1'}>Section 1</a>
         </MainContent>
       </Layout>
       <Footer />

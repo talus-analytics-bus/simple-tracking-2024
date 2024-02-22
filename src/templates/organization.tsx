@@ -10,7 +10,7 @@ import Footer from 'components/layout/Footer'
 
 const CountryPage = ({
   data,
-}: PageProps<Queries.CountryPageQuery>): JSX.Element => {
+}: PageProps<Queries.OrganizationPageQuery>): JSX.Element => {
   return (
     <Providers>
       <CMS.SEO />
@@ -40,7 +40,7 @@ const CountryPage = ({
 }
 
 export const query = graphql`
-  query CountryPage($name: String) {
+  query OrganizationPage($name: String) {
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
