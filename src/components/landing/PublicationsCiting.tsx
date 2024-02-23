@@ -4,8 +4,11 @@ import CMS from 'components/library/airtable-cms'
 import React from 'react'
 import styled from 'styled-components'
 
-const H2 = styled.h2``
+const H2 = styled.h2`
+  ${({ theme }) => theme.textStyleH2}
+`
 const H3 = styled.h3`
+  ${({ theme }) => theme.textStyleParagraph}
   margin-bottom: 40px;
 `
 
@@ -16,6 +19,8 @@ const PublicationsGrid = styled.div`
   align-items: start;
   grid-gap: 50px;
   grid-auto-flow: column;
+
+  ${({ theme }) => theme.textStyleParagraph}
 
   @media (max-width: 1000px) {
     display: flex;
