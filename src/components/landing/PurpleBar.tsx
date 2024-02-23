@@ -43,11 +43,13 @@ const PurpleBarIcon = styled(CMS.Icon)`
 `
 
 const H2 = styled.h2`
+  ${({ theme }) => theme.textStyleH2}
   color: ${({ theme }) => theme.common.colors.textInvert};
   margin: 0;
 `
 
 const H3 = styled.h3`
+  ${({ theme }) => theme.textStyleParagraph}
   color: ${({ theme }) => theme.common.colors.textInvert};
   margin: 0;
   margin-bottom: 10px;
