@@ -1,9 +1,6 @@
 
 @font-face {
   font-family: 'Barlow Condensed';
-  /* font-weight: normal; */
-  /* font-style: normal; */
-
   font-weight: 500;
   src: url(/assets/fonts/barlowCondensed/BarlowCondensed-Medium.woff2) format('woff2');
 }
