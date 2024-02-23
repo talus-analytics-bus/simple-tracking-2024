@@ -32,7 +32,9 @@ const MapContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
-const H1 = styled.h1``
+const H1 = styled.h1`
+  ${({ theme }) => theme.textStyleBigLanding}
+`
 
 const FirstFold = () => {
   const data = useIndexPageData()
