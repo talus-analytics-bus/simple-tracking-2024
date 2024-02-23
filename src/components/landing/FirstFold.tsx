@@ -35,6 +35,12 @@ const MapContainer = styled.div`
 const H1 = styled.h1`
   ${({ theme }) => theme.textStyleBigLanding}
 `
+const H2 = styled.h1`
+  ${({ theme }) => theme.textStyleBigParagraph}
+`
+const H3 = styled.h1`
+  ${({ theme }) => theme.textStyleParagraph}
+`
 
 const FirstFold = () => {
   const data = useIndexPageData()
@@ -46,12 +52,12 @@ const FirstFold = () => {
           <H1>
             <CMS.Text name="H1" data={data} />
           </H1>
-          <h2>
+          <H2>
             <CMS.Text name="Section 1 paragraph 1" data={data} />
-          </h2>
-          <h3>
+          </H2>
+          <H3>
             <CMS.Text name="Section 1 paragraph 2" data={data} />
-          </h3>
+          </H3>
         </TextContainer>
         <MapContainer>
           <FundingMap />
