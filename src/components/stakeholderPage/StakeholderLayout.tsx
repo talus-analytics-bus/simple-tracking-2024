@@ -129,11 +129,17 @@ export const TotalsTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  table-layout: fixed;
 
   td:first-child {
-    padding-left: 20px;
-    text-align: left;
+    padding: 15px 20px 15px 0;
+    text-align: right;
+    width: 40%;
     ${({ theme }) => theme.textStyleBigNumber};
+  }
+
+  td:last-child {
+    ${({ theme }) => theme.textStyleSmallNumbers};
   }
 
   td {

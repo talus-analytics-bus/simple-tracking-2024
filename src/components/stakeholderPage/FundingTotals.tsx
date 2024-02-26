@@ -15,6 +15,10 @@ interface FundingTotalsProps {
 const FundingColumns = styled.section`
   display: flex;
   gap: 15px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `
 
 const FundingTotals = ({

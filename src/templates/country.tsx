@@ -27,7 +27,7 @@ const ScrollTarget = styled.div`
 
 const ContentPlaceholder = styled.div`
   height: 30vh;
-  width: 370px;
+  width: 70px;
   background-color: lightgray;
 `
 
