@@ -94,13 +94,26 @@ export const SidebarLink = (
 export const MainContent = styled.div`
   grid-area: main;
   padding: 25px;
+
+  > h2 {
+    border-top: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
+    ${({ theme }) => theme.textStyleH2};
+    padding-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  > h3 {
+    ${({ theme }) => theme.textStyleParagraph};
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 `
 
 export const ContentBox = styled.div`
   background-color: ${({ theme }) => theme.common.colors.surfaceGray50};
   border-radius: 5px;
   padding: 25px;
-  margin-bottom: 40px;
   width: 100%;
 
   > h3 {
