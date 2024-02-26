@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CMS from 'components/library/airtable-cms'
 
-import { ContentBox } from './StakeholderLayout'
+import { ContentBox, TotalsTable } from './StakeholderLayout'
 
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
@@ -60,7 +60,7 @@ const FundingTotals = ({
           </span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        <table>
+        <TotalsTable>
           <tbody>
             <tr>
               <td>{formatDisplayNumber(displayTotals.totalDisbursed)}</td>
@@ -79,7 +79,7 @@ const FundingTotals = ({
               <td>PHEIC funding (USD)</td>
             </tr>
           </tbody>
-        </table>
+        </TotalsTable>
       </ContentBox>
       <ContentBox>
         <h3>
@@ -89,7 +89,7 @@ const FundingTotals = ({
           </span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        <table>
+        <TotalsTable>
           <tbody>
             <tr>
               <td>
@@ -110,7 +110,7 @@ const FundingTotals = ({
               <td>PHEIC funding (USD)</td>
             </tr>
           </tbody>
-        </table>
+        </TotalsTable>
       </ContentBox>
     </FundingColumns>
   )

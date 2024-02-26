@@ -124,3 +124,19 @@ export const ContentBox = styled.div`
     }
   }
 `
+
+export const TotalsTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  td:first-child {
+    padding-left: 20px;
+    text-align: left;
+    ${({ theme }) => theme.textStyleBigNumber};
+  }
+
+  td {
+    padding: 15px 0;
+  }
+`
