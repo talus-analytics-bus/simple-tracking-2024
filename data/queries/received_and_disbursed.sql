@@ -3,12 +3,12 @@ SELECT
 	all_stakeholders.name AS "name",
 	all_stakeholders.iso3 AS "iso3",
 	CASE WHEN received.year = NULL THEN disbursed.year ELSE received.year END AS "Year",
-	response_received AS "Total Response Received",
-	capacity_received AS "Total Capacity Received",
-	total_received AS "Total Disbursed Received",
-	total_response AS "Total Response Disbursed",
-	total_capacity AS "Total Capacity Disbursed",
-	total_disbursed AS "Total Disbursed"
+	response_received AS "totalResponseReceived",
+	capacity_received AS "totalCapacityReceived",
+	total_received AS "totalDisbursedReceived",
+	total_response AS "totalResponseDisbursed",
+	total_capacity AS "totalCapacityDisbursed",
+	total_disbursed AS "totalDisbursed"
 FROM (
 	SELECT name, iso3, child_id, parent_id FROM stakeholders 
 		JOIN children_to_parents_direct_credit 

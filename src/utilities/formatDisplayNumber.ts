@@ -1,7 +1,7 @@
 const format = Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
-  maximumSignificantDigits: 2,
+  maximumSignificantDigits: 3,
   notation: 'compact',
 })
 

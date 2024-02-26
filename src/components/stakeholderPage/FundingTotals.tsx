@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ContentBox } from './StakeholderLayout'
 import CMS from 'components/library/airtable-cms'
+
+import { ContentBox } from './StakeholderLayout'
+
+import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
 interface FundingTotalsProps {
   data: Queries.CountryPageQuery
@@ -59,16 +62,22 @@ const FundingTotals = ({
         </h3>
         <table>
           <tbody>
-            {Object.entries(displayTotals).map(([label, value]) => (
-              <tr key={label}>
-                <td style={{ textAlign: 'right' }}>
-                  ${value.toLocaleString()}
-                </td>
-                <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-                  {label.replaceAll('_', ' ')}
-                </td>
-              </tr>
-            ))}
+            <tr>
+              <td>{formatDisplayNumber(displayTotals.totalDisbursed)}</td>
+              <td>Total funding (USD)</td>
+            </tr>
+            <tr>
+              <td>
+                {formatDisplayNumber(displayTotals.totalCapacityDisbursed)}
+              </td>
+              <td>Non-PHEIC capacity building funding (USD)</td>
+            </tr>
+            <tr>
+              <td>
+                {formatDisplayNumber(displayTotals.totalResponseDisbursed)}
+              </td>
+              <td>PHEIC funding (USD)</td>
+            </tr>
           </tbody>
         </table>
       </ContentBox>
@@ -82,16 +91,24 @@ const FundingTotals = ({
         </h3>
         <table>
           <tbody>
-            {Object.entries(displayTotals).map(([label, value]) => (
-              <tr key={label}>
-                <td style={{ textAlign: 'right' }}>
-                  ${value.toLocaleString()}
-                </td>
-                <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-                  {label.replaceAll('_', ' ')}
-                </td>
-              </tr>
-            ))}
+            <tr>
+              <td>
+                {formatDisplayNumber(displayTotals.totalDisbursedReceived)}
+              </td>
+              <td>Total funding (USD)</td>
+            </tr>
+            <tr>
+              <td>
+                {formatDisplayNumber(displayTotals.totalCapacityReceived)}
+              </td>
+              <td>Non-PHEIC capacity building funding (USD)</td>
+            </tr>
+            <tr>
+              <td>
+                {formatDisplayNumber(displayTotals.totalResponseReceived)}
+              </td>
+              <td>PHEIC funding (USD)</td>
+            </tr>
           </tbody>
         </table>
       </ContentBox>

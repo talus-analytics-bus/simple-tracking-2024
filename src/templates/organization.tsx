@@ -46,12 +46,12 @@ export const query = graphql`
       iso3
     }
     receivedAndDisbursedCsv(name: { eq: $name }) {
-      Total_Capacity_Disbursed
-      Total_Capacity_Received
-      Total_Disbursed
-      Total_Disbursed_Received
-      Total_Response_Disbursed
-      Total_Response_Received
+      totalCapacityDisbursed
+      totalCapacityReceived
+      totalDisbursed
+      totalDisbursedReceived
+      totalResponseDisbursed
+      totalResponseReceived
     }
   }
 `

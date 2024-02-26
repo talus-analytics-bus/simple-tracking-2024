@@ -127,11 +127,7 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <FundingTotals
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+          <ContentPlaceholder />
 
           <ScrollTarget
             id={formatHash(leftNavElements[1].data.Text)}
@@ -142,7 +138,11 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H3 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <FundingTotals
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
 
           <ScrollTarget
             id={formatHash(leftNavElements[2].data.Text)}
@@ -278,12 +278,12 @@ export const query = graphql`
     allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
       years: nodes {
         Year
-        Total_Capacity_Disbursed
-        Total_Capacity_Received
-        Total_Disbursed
-        Total_Disbursed_Received
-        Total_Response_Disbursed
-        Total_Response_Received
+        totalCapacityDisbursed
+        totalCapacityReceived
+        totalDisbursed
+        totalDisbursedReceived
+        totalResponseDisbursed
+        totalResponseReceived
       }
     }
   }

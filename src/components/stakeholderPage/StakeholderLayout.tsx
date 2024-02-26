@@ -101,6 +101,7 @@ export const ContentBox = styled.div`
   border-radius: 5px;
   padding: 25px;
   margin-bottom: 40px;
+  width: 100%;
 
   > h3 {
     margin: -25px -25px 0 -25px;
