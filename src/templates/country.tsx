@@ -74,7 +74,7 @@ const CountryPage = ({
 
   const selectedYearsLabel =
     selectedYear === 'All time'
-      ? `${yearOptions[1]} – ${yearOptions.at(-1)}`
+      ? `${yearOptions.at(-1)} – ${yearOptions.at(1)}`
       : selectedYear
 
   const leftNavElements = cmsData.nodes
