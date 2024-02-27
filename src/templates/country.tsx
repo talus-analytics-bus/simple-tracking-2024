@@ -291,6 +291,49 @@ export const query = graphql`
         totalResponseReceived
       }
     }
+    allFundingByCapacityCsv(filter: { name: { eq: $name } }) {
+      years: nodes {
+        year
+        p1_received
+        p2_received
+        p3_received
+        p4_received
+        p5_received
+        p6_received
+        p7_received
+        d1_received
+        d2_received
+        d3_received
+        d4_received
+        r1_received
+        r2_received
+        r3_received
+        r4_received
+        r5_received
+        re_received
+        poe_received
+        ce_received
+        p1_disbursed
+        p2_disbursed
+        p3_disbursed
+        p4_disbursed
+        p5_disbursed
+        p6_disbursed
+        p7_disbursed
+        d1_disbursed
+        d2_disbursed
+        d3_disbursed
+        d4_disbursed
+        r1_disbursed
+        r2_disbursed
+        r3_disbursed
+        r4_disbursed
+        r5_disbursed
+        re_disbursed
+        poe_disbursed
+        ce_disbursed
+      }
+    }
   }
 `
 
