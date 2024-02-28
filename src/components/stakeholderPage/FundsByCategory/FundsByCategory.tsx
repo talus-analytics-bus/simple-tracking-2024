@@ -68,7 +68,7 @@ const FundsByCategory = ({
         <table>
           <tbody>
             {Object.entries(displayTotals)
-              .filter(([key]) => key.includes('_disbursed'))
+              .filter(([key, val]) => key.includes('_disbursed') && val)
               .sort((a, b) => b[1] - a[1])
               .map(([key, val]) => (
                 <tr key={key}>
@@ -92,7 +92,7 @@ const FundsByCategory = ({
         <table>
           <tbody>
             {Object.entries(displayTotals)
-              .filter(([key]) => key.includes('_received'))
+              .filter(([key, val]) => key.includes('_received') && val)
               .sort((a, b) => b[1] - a[1])
               .map(([key, val]) => (
                 <tr key={key}>
