@@ -111,7 +111,7 @@ LEFT JOIN (
 			ROUND(SUM(sf.value)) AS "Total disbursed"
 		FROM
 			simple_flows sf
-			JOIN flows_to_stakeholder_targets_direct_credit ftsodc ON sf.sf_id = ftsodc.flow_id
+			JOIN flows_to_stakeholder_origins_direct_credit ftsodc ON sf.sf_id = ftsodc.flow_id
 			JOIN stakeholders s ON s.id = ftsodc.stakeholder_id
 			JOIN ccs_to_flows ctf ON ctf.flow_id = sf.sf_id
 			JOIN core_capacities cc ON cc.id = ctf.cc_id
