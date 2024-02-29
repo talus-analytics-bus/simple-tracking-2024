@@ -1,0 +1,156 @@
+---
+displayName: DimPlotParent
+description: Parent component for DimPlot system, creating svg element and providing context
+labels: ['DimPlot', 'typescript', 'visualization']
+---
+
+import DimPlotParent, {usePlotSetup} from './'
+import DimPlotImage from './docs/dim.png'
+import useData from './docs/useData'
+import Points from './docs/Points'
+
+# DimPlot System
+
+The DimPlot system is a dimension and layout system designed to standardize many small plot components and help them work together with a clean API and DX. This `<DimPlotParent/>` component and the exported `usePlotDim()` hook provide clean, standardized access to the plot layout to all plot components.
+
+## DimPlot Example
+
+A DimPlot component should consist of three main things: custom hook for data, plot setup object declaration, and JSX representing the layers of the plot such as axes, spines, lines, shading, and so on. In order to take advantage of the `useDim()` hook, all the layers of the plot must be components inside the `<DimPlotParent/>` component.
+
+Plot Example:
+
+```ts live
+() => {
+  // custom hook to get data from static query or API
+  const data = useData()
+
+  // some simple parsing is allowed, for example, find the minimum and maximum values
+  const maxValue = data.reduce((max, point) => (point.y > max ? point.y : max), 0)
+  const [firstDay, lastDay] = [data[0].x, data.slice(-1)[0].x]
+
+  // set up dimensions and axes min and max:
+  const plotSetup = usePlotSetup({
+    width: 500, height: 200,
+    padding: { top: 10, right: 10, bottom: 30, left: 20 },
+    axes: {
+      x: { min: firstDay, max: lastDay },
+      y: { max: maxValue },
+    },
+  })
+
+  return (
+    <div style={{width: 500}}>
+      <DimPlotParent plotSetup={plotSetup}>
+        <Points dataPoints={data} />
+      </DimPlotParent>
+    </div>
+  )
+}
+```
+
+Where the `<Points/>` component might look like this (slightly simplified). These display components should be extremely small, single-focus, and forward as many props as possible (not shown in this example) so we can build up a large library of many different ways to display data.
+
+```js
+import React from 'react'
+import { useDim } from '..'
+
+const Points = ({ dataPoints }: { dataPoints: { x: Date, y: number }[] }) => {
+  const [dim] = useDim()
+
+  return (
+    <g>
+      {dataPoints.map(point => ( 
+        <circle cx={dim.axes.x.scale(point.x)} cy={dim.axes.y.scale(point.y)} r="1" />
+      ))}
+    </g>
+  )
+}
+
+export default Points
+```
+
+## Configuring a DimPlot
+
+The `<DimPlotParent/>` component takes one prop, `plotSetup`, which is returned from the `usePlotSetup()` hook, which accepts an object of default values for dimensions and overrides for configuring the plot. The `<DimPlotParent/>` component will handle derived and default relationships, but anything in the `dim` object can be overridden by specifying its key here.
+
+Because the values here set default values for the plot state, you'll need to refresh to see changes you make here. 
+
+Any plot-specific definitions needed can be passed as extra keys into the `plotSetup` default values object and they will be available in `dim` from the `usePlotDim()` hook.
+
+### DimPlot `plotSetup` required keys:
+
+```js
+const plotSetup = usePlotSetup({
+  width: 500,
+  height: 200,
+  padding: {
+    top: 10,
+    right: 10,
+    bottom: 30,
+    left: 20,
+  },
+  axes: {
+    x: { max: 100 },
+    y: { max: 100 },
+  },
+})
+```
+
+> Note: _the x-axis can interpret both number values and Date objects, but for a date x-axis the start date must be specified using the `min` key._
+
+## Dim Object
+
+The core part of the DimPlot system is the `dim` object, which can be accessed by any child through the `usePlotDim()` hook. This object describes the layout system for the plot with easy-to-use reference points.
+
+The `dim` object contains `width` and `height` keys which determine the "size" of the SVG figure, a `padding` object which determines the distance from the ends of the axes to the edges of the svg, and an `axes` object which contains dimensions for minimum value, maximum value, start, end, length, and a scale function which is used to turn data values into SVG dimensions.
+
+Some values are intentionally repeated (in default configuration) to make components easier to write and more extensible. For example, `dim.padding.left` is equivalent to `dim.axes.x.start` by default, but the semantically correct one should be used to future-proof agains a use-case where they may be configured separately.
+
+<img src={DimPlotImage} />
+
+This provides access to an object following this type:
+
+```js
+
+interface Dim {
+  height: number
+  width: number
+  padding: {
+    top: number
+    right: number
+    bottom: number
+    left: number
+  }
+  axes: {
+    x: {
+      min: number | Date
+      max: number | Date
+      start: number
+      end: number
+      length: number
+      scale: (value: number | Date) => number
+    }
+    y: {
+      min: number
+      max: number
+      start: number
+      end: number
+      length: number
+      scale: (value: number) => number
+    }
+    y2?: {
+      min: number
+      max: number
+      start: number
+      end: number
+      length: number
+      scale: (value: number) => number
+    }
+  }
+}
+
+```
+
+The `y2` axis is optional, but plot display compoenents should support it where appropriate with a `y2` boolean prop. 
+
+
