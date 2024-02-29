@@ -23,15 +23,17 @@ const FundsByCategory = ({
 }: FundsByCategoryProps) => {
   console.log(data)
 
+  if (!data.allFundingByCapacityCsv?.years)
+    throw new Error(
+      `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
+    )
+
   let displayTotals = {
     received: {} as { [key: string]: number },
     disbursed: {} as { [key: string]: number },
   }
 
-  if (!data.allFundingByCapacityCsv?.years)
-    throw new Error(
-      `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
-    )
+  let chartMax = 0
 
   if (selectedYear === 'All time')
     displayTotals = data.allFundingByCapacityCsv.years.reduce((acc, year) => {
@@ -44,6 +46,7 @@ const FundsByCategory = ({
           if (!acc[direction][prettyKey])
             acc[direction][prettyKey] = Number(val)
           else acc[direction][prettyKey] += Number(val)
+          chartMax = Math.max(chartMax, acc[direction][prettyKey])
         }
       })
       return acc
@@ -56,11 +59,14 @@ const FundsByCategory = ({
     ).forEach(([key, val]) => {
       if (key !== 'Year' && val) {
         const direction = key.includes('_disbursed') ? 'disbursed' : 'received'
-        displayTotals[direction][jeeCategoryNames[key]] = Number(val)
+        const prettyKey = jeeCategoryNames[key]
+        displayTotals[direction][prettyKey] = Number(val)
+        chartMax = Math.max(chartMax, displayTotals[direction][prettyKey])
       }
     })
 
   console.log(displayTotals)
+  console.log({ chartMax })
 
   return (
     <ChartColumn>

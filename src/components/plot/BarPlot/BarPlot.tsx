@@ -1,6 +1,9 @@
 import React from 'react'
 
-interface BarPlotProps {}
+interface BarPlotProps {
+  bars: { [key: string]: number }
+  max: number
+}
 
 const BarPlot = ({}: BarPlotProps) => {
   return <div>BarPlot</div>

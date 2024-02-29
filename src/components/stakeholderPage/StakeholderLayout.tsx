@@ -96,11 +96,14 @@ export const MainContent = styled.div`
   padding: 25px;
 
   > h2 {
-    border-top: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
     ${({ theme }) => theme.textStyleH2};
+    margin-bottom: 15px;
+  }
+
+  > h2:not(:first-of-type) {
+    border-top: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
     padding-top: 30px;
     margin-top: 60px;
-    margin-bottom: 15px;
   }
 
   > h3 {
