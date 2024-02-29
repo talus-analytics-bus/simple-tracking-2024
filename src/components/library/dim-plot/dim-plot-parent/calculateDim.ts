@@ -1,11 +1,11 @@
-import * as d3 from "d3";
+import * as d3 from 'd3'
 
-import type Dim from "./DimObjectType";
-import { PlotSetup } from "./usePlotSetup";
+import type Dim from './DimObjectType'
+import { PlotSetup } from './usePlotSetup'
 
 const calculateDim = (plotSetup: PlotSetup) => {
-  console.log("calculateDim runs");
-  const dim = { ...plotSetup };
+  console.log('calculateDim runs')
+  const dim = { ...plotSetup }
 
   dim.padding = {
     top: 0,
@@ -13,7 +13,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
     bottom: 0,
     left: 0,
     ...dim.padding,
-  };
+  }
 
   dim.axes.x = {
     start: dim.padding.left ?? 0,
@@ -22,7 +22,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
     min: 0,
     // override with any passed-in keys
     ...dim.axes.x,
-  };
+  }
   dim.axes.y = {
     start: dim.height - dim.padding.bottom!,
     end: dim.padding.top!,
@@ -30,7 +30,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
     min: 0,
     // override with any passed-in keys
     ...dim.axes.y,
-  };
+  }
 
   // if dim.axes.y2 is defined in setup, copy start/end/length
   // for convenience and consistency
@@ -40,7 +40,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
       min: 0,
       // override with any passed-in keys
       ...dim.axes.y2,
-    };
+    }
   }
 
   dim.axes.x.scale =
@@ -49,7 +49,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
     d3
       .scaleLinear()
       .domain([dim.axes.x.min!, dim.axes.x.max])
-      .range([dim.axes.x.start!, dim.axes.x.end!]);
+      .range([dim.axes.x.start!, dim.axes.x.end!])
 
   dim.axes.y.scale =
     // allow scales to be overridden
@@ -57,7 +57,7 @@ const calculateDim = (plotSetup: PlotSetup) => {
     d3
       .scaleLinear()
       .domain([dim.axes.y.min!, dim.axes.y.max])
-      .range([dim.axes.y.start!, dim.axes.y.end!]);
+      .range([dim.axes.y.start!, dim.axes.y.end!])
 
   if (dim.axes.y2 && Object.keys(dim.axes.y2).length !== 0) {
     dim.axes.y2.scale =
@@ -66,10 +66,14 @@ const calculateDim = (plotSetup: PlotSetup) => {
       d3
         .scaleLinear()
         .domain([dim.axes.y2.min!, dim.axes.y2.max])
-        .range([dim.axes.y2.start!, dim.axes.y2.end!]);
+        .range([dim.axes.y2.start!, dim.axes.y2.end!])
   }
 
-  return dim as Dim;
-};
+  if (!dim.reference) {
+    dim.reference = {}
+  }
 
-export default calculateDim;
+  return dim as Dim
+}
+
+export default calculateDim

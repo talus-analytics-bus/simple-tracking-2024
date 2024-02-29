@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { SetStateAction } from 'react'
+import { ScaleLinear } from 'd3-scale'
 
 export interface PlotSetup {
   height: number
@@ -16,7 +17,7 @@ export interface PlotSetup {
       start?: number
       end?: number
       length?: number
-      scale?: d3.ScaleLinear<number, number>
+      scale?: ScaleLinear<number, number>
     }
     y: {
       min?: number
@@ -24,7 +25,7 @@ export interface PlotSetup {
       start?: number
       end?: number
       length?: number
-      scale?: d3.ScaleLinear<number, number>
+      scale?: ScaleLinear<number, number>
     }
     y2?: {
       min?: number
@@ -32,8 +33,11 @@ export interface PlotSetup {
       start?: number
       end?: number
       length?: number
-      scale?: d3.ScaleLinear<number, number>
+      scale?: ScaleLinear<number, number>
     }
+  }
+  reference?: {
+    [key: string]: number
   }
 }
 
@@ -42,6 +46,13 @@ export interface PlotSetup {
 // may need to add a little more logic
 // and error handling here in the future.
 
-const usePlotSetup = (setup: PlotSetup) => useState(setup)
+const mockSetState = () => {}
+
+const usePlotSetup = (setup: PlotSetup) =>
+  [setup, mockSetState] as [
+    PlotSetup,
+    React.Dispatch<SetStateAction<PlotSetup>>,
+  ]
+// useState(setup)
 
 export default usePlotSetup

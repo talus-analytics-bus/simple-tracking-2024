@@ -1,8 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { ContentBox } from '../StakeholderLayout'
 import CMS from 'components/library/airtable-cms'
 import jeeCategoryNames from 'utilities/jeeCategoryNames'
+import BarPlot from 'components/plot/BarPlot/BarPlot'
 
 interface FundsByCategoryProps {
   data: Queries.CountryPageQuery
@@ -27,6 +28,8 @@ const FundsByCategory = ({
     throw new Error(
       `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
     )
+
+  const theme = useTheme()
 
   let displayTotals = {
     received: {} as { [key: string]: number },
@@ -80,18 +83,25 @@ const FundsByCategory = ({
             {data.stakeholdersCsv?.name} | {selectedYearsLabel}
           </span>
         </h3>
-        <table>
-          <tbody>
-            {Object.entries(displayTotals.disbursed)
-              .sort((a, b) => b[1] - a[1])
-              .map(([key, val]) => (
-                <tr key={key}>
-                  <td>{key}</td>
-                  <td>${val.toLocaleString()}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <BarPlot
+          bars={displayTotals.disbursed}
+          max={chartMax}
+          barColor={theme.funder.colors.graphViz1}
+        />
+        {
+          // <table>
+          //   <tbody>
+          //     {Object.entries(displayTotals.disbursed)
+          //       .sort((a, b) => b[1] - a[1])
+          //       .map(([key, val]) => (
+          //         <tr key={key}>
+          //           <td>{key}</td>
+          //           <td>${val.toLocaleString()}</td>
+          //         </tr>
+          //       ))}
+          //   </tbody>
+          // </table>
+        }
       </ContentBox>
       <ContentBox>
         <h3>
@@ -103,17 +113,24 @@ const FundsByCategory = ({
             {data.stakeholdersCsv?.name} | {selectedYearsLabel}
           </span>
         </h3>
+        <BarPlot
+          bars={displayTotals.received}
+          max={chartMax}
+          barColor={theme.recipient.colors.graphViz1}
+        />
         <table>
-          <tbody>
-            {Object.entries(displayTotals.received)
-              .sort((a, b) => b[1] - a[1])
-              .map(([key, val]) => (
-                <tr key={key}>
-                  <td>{key}</td>
-                  <td>${val.toLocaleString()}</td>
-                </tr>
-              ))}
-          </tbody>
+          {
+            // <tbody>
+            //   {Object.entries(displayTotals.received)
+            //     .sort((a, b) => b[1] - a[1])
+            //     .map(([key, val]) => (
+            //       <tr key={key}>
+            //         <td>{key}</td>
+            //         <td>${val.toLocaleString()}</td>
+            //       </tr>
+            //     ))}
+            // </tbody>
+          }
         </table>
       </ContentBox>
     </ChartColumn>

@@ -35,6 +35,9 @@ interface Dim {
       scale: d3.ScaleLinear<number, number>
     }
   }
+  reference: {
+    [key: string]: number
+  }
 }
 
 export default Dim
