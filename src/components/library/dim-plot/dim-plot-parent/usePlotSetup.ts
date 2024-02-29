@@ -14,6 +14,7 @@ export interface PlotSetup {
     x: {
       min?: number | Date
       max: number | Date
+      ticks?: number
       start?: number
       end?: number
       length?: number
@@ -22,6 +23,7 @@ export interface PlotSetup {
     y: {
       min?: number
       max: number
+      ticks?: number
       start?: number
       end?: number
       length?: number

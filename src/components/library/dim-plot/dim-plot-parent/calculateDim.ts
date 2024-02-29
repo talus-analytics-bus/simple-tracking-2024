@@ -43,6 +43,15 @@ const calculateDim = (plotSetup: PlotSetup) => {
     }
   }
 
+  dim.axes.x.ticks = dim.axes.x.ticks ?? 4
+
+  if (typeof dim.axes.x.min === 'number' && typeof dim.axes.x.max === 'number')
+    [dim.axes.x.min, dim.axes.x.max] = d3.nice(
+      dim.axes.x.min!,
+      dim.axes.x.max,
+      dim.axes.x.ticks!
+    )
+
   dim.axes.x.scale =
     // allow scales to be overridden
     dim.axes.x.scale ??
@@ -50,6 +59,15 @@ const calculateDim = (plotSetup: PlotSetup) => {
       .scaleLinear()
       .domain([dim.axes.x.min!, dim.axes.x.max])
       .range([dim.axes.x.start!, dim.axes.x.end!])
+
+  dim.axes.y.ticks = dim.axes.y.ticks ?? 4
+
+  if (typeof dim.axes.y.min === 'number' && typeof dim.axes.y.max === 'number')
+    [dim.axes.y.min, dim.axes.y.max] = d3.nice(
+      dim.axes.y.min!,
+      dim.axes.y.max,
+      dim.axes.y.ticks!
+    )
 
   dim.axes.y.scale =
     // allow scales to be overridden

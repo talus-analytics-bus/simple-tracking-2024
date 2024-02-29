@@ -17,6 +17,7 @@ interface Dim {
       end: number
       length: number
       scale: d3.ScaleLinear<number | Date, number>
+      ticks: number
     }
     y: {
       min: number
@@ -25,6 +26,7 @@ interface Dim {
       end: number
       length: number
       scale: d3.ScaleLinear<number, number>
+      ticks: number
     }
     y2?: {
       min: number
@@ -33,6 +35,7 @@ interface Dim {
       end: number
       length: number
       scale: d3.ScaleLinear<number, number>
+      ticks: number
     }
   }
   reference: {
