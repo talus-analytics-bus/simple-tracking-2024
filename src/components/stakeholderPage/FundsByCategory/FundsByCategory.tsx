@@ -23,7 +23,10 @@ const FundsByCategory = ({
 }: FundsByCategoryProps) => {
   console.log(data)
 
-  let displayTotals = {} as { [key: string]: number }
+  let displayTotals = {
+    received: {} as { [key: string]: number },
+    disbursed: {} as { [key: string]: number },
+  }
 
   if (!data.allFundingByCapacityCsv?.years)
     throw new Error(
@@ -31,24 +34,30 @@ const FundsByCategory = ({
     )
 
   if (selectedYear === 'All time')
-    displayTotals = data.allFundingByCapacityCsv.years.reduce(
-      (acc, year) => {
-        Object.entries(year).forEach(([key, val]) => {
-          if (key !== 'year')
-            if (!acc[key]) acc[key] = Number(val)
-            else acc[key] += Number(val)
-        })
-        return acc
-      },
-      {} as typeof displayTotals
-    )
+    displayTotals = data.allFundingByCapacityCsv.years.reduce((acc, year) => {
+      Object.entries(year).forEach(([key, val]) => {
+        if (key !== 'year' && val) {
+          const prettyKey = jeeCategoryNames[key]
+          const direction = key.includes('_disbursed')
+            ? 'disbursed'
+            : 'received'
+          if (!acc[direction][prettyKey])
+            acc[direction][prettyKey] = Number(val)
+          else acc[direction][prettyKey] += Number(val)
+        }
+      })
+      return acc
+    }, displayTotals)
   else
     Object.entries(
       data.allFundingByCapacityCsv.years.find(
         year => year.year === selectedYear
       ) ?? {}
     ).forEach(([key, val]) => {
-      if (key !== 'Year') displayTotals[key] = Number(val)
+      if (key !== 'Year' && val) {
+        const direction = key.includes('_disbursed') ? 'disbursed' : 'received'
+        displayTotals[direction][jeeCategoryNames[key]] = Number(val)
+      }
     })
 
   console.log(displayTotals)
@@ -67,12 +76,11 @@ const FundsByCategory = ({
         </h3>
         <table>
           <tbody>
-            {Object.entries(displayTotals)
-              .filter(([key, val]) => key.includes('_disbursed') && val)
+            {Object.entries(displayTotals.disbursed)
               .sort((a, b) => b[1] - a[1])
               .map(([key, val]) => (
                 <tr key={key}>
-                  <td>{jeeCategoryNames[key]}</td>
+                  <td>{key}</td>
                   <td>${val.toLocaleString()}</td>
                 </tr>
               ))}
@@ -91,12 +99,11 @@ const FundsByCategory = ({
         </h3>
         <table>
           <tbody>
-            {Object.entries(displayTotals)
-              .filter(([key, val]) => key.includes('_received') && val)
+            {Object.entries(displayTotals.received)
               .sort((a, b) => b[1] - a[1])
               .map(([key, val]) => (
                 <tr key={key}>
-                  <td>{jeeCategoryNames[key]}</td>
+                  <td>{key}</td>
                   <td>${val.toLocaleString()}</td>
                 </tr>
               ))}
