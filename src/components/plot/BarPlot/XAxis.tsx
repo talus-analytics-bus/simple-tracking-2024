@@ -33,22 +33,17 @@ const XAxis = () => {
       {
         // <DebugFrame x={0} y={0} width={dim.width} height={dim.height} />
       }
-      {ticks.map((tick, index) => (
-        <>
+      {ticks.map(tick => (
+        <React.Fragment key={tick}>
           <AxisPath
-            key={index}
             d={`M ${dim.axes.x.scale(tick) - 1} ${dim.axes.y.end} 
               L ${dim.axes.x.scale(tick) - 1} ${dim.axes.y.end - 10}`}
             stroke="black"
           />
-          <TickLabel
-            key={index}
-            x={dim.axes.x.scale(tick)}
-            y={dim.axes.y.end - 20}
-          >
+          <TickLabel x={dim.axes.x.scale(tick)} y={dim.axes.y.end - 20}>
             {formatDisplayNumber(tick)}
           </TickLabel>
-        </>
+        </React.Fragment>
       ))}
       <AxisPath
         d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 1} 

@@ -35,6 +35,7 @@ const Bar = ({ bars, color }: BarProps) => {
 
   return Object.entries(bars)
     .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
     .map(([label, value], index) => {
       const topLeft = {
         x: dim.axes.x.scale(0),
@@ -46,7 +47,7 @@ const Bar = ({ bars, color }: BarProps) => {
       const barEnd = Math.max(dim.axes.x.scale(value), dim.axes.x.scale(0) + 1)
 
       return (
-        <>
+        <React.Fragment key={index}>
           <YLabel x={topLeft.x - textHOffset} y={topLeft.y + textVOffset}>
             {label}
           </YLabel>
@@ -64,7 +65,7 @@ const Bar = ({ bars, color }: BarProps) => {
           >
             {formatDisplayNumber(value)}
           </BarQuanitityLabel>
-        </>
+        </React.Fragment>
       )
     })
 }
