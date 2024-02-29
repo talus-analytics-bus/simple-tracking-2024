@@ -69,7 +69,6 @@ const FundsByCategory = ({
     })
 
   console.log(displayTotals)
-  console.log({ chartMax })
 
   return (
     <ChartColumn>
