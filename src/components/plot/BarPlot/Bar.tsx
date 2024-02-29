@@ -37,12 +37,14 @@ const Bar = ({ bars, color }: BarProps) => {
     .sort((a, b) => b[1] - a[1])
     .map(([label, value], index) => {
       const topLeft = {
-        x: dim.axes.x.scale(1),
+        x: dim.axes.x.scale(0),
         y:
           dim.axes.y.end +
-          dim.reference.barSep +
           (dim.reference.barHeight + dim.reference.barSep) * index,
       }
+
+      const barEnd = Math.max(dim.axes.x.scale(value), dim.axes.x.scale(0) + 1)
+
       return (
         <>
           <YLabel x={topLeft.x - textHOffset} y={topLeft.y + textVOffset}>
@@ -51,8 +53,8 @@ const Bar = ({ bars, color }: BarProps) => {
           <BarPath
             color={color}
             d={`M ${topLeft.x} ${topLeft.y} 
-              L ${dim.axes.x.scale(value)} ${topLeft.y}
-              L ${dim.axes.x.scale(value)} ${topLeft.y + dim.reference.barHeight}
+              L ${barEnd} ${topLeft.y}
+              L ${barEnd} ${topLeft.y + dim.reference.barHeight}
               L ${topLeft.x} ${topLeft.y + dim.reference.barHeight}
             `}
           />

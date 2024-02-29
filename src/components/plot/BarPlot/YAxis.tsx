@@ -5,20 +5,20 @@ import { useDim } from 'components/library/dim-plot/dim-plot-parent'
 
 const AxisPath = styled.path`
   stroke: ${({ theme }) => theme.common.colors.surfaceGray400};
-  stroke-width: 1;
+  stroke-width: 2;
   fill: none;
 `
 
-const XAxis = () => {
+const YAxis = () => {
   const [dim] = useDim()
 
   return (
     <>
       <AxisPath
-        d={`M ${dim.axes.x.start} ${dim.axes.y.end} L ${dim.axes.x.start} ${dim.axes.y.start}`}
+        d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 2} L ${dim.axes.x.start - 1} ${dim.axes.y.start}`}
       />
     </>
   )
 }
 
-export default XAxis
+export default YAxis

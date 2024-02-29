@@ -7,6 +7,8 @@ import XAxis from './XAxis'
 import YAxis from './YAxis'
 import Bar from './Bar'
 
+import * as d3 from 'd3'
+
 const PlotContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +28,7 @@ const reference = {
 }
 
 const padding = {
-  top: 20,
+  top: 80,
   right: 20,
   bottom: 20,
   left: 415,
@@ -36,6 +38,8 @@ const width = 1000
 
 const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   const barCount = Object.keys(bars).length
+
+  const niceDomain = d3.nice(0, Math.round(max * 1.1), 5)
 
   const plotSetup = usePlotSetup({
     width,
@@ -47,7 +51,7 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
     axes: {
       x: {
         min: 0,
-        max: Math.ceil(max * 1.11),
+        max: niceDomain[1],
         // log scale version
         // max: Math.ceil(max * 2),
         // scale: scaleLog()
@@ -63,9 +67,9 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   return (
     <PlotContainer>
       <DimPlotParent plotSetup={plotSetup}>
-        <Bar bars={bars} color={barColor} />
         <YAxis />
         <XAxis />
+        <Bar bars={bars} color={barColor} />
       </DimPlotParent>
     </PlotContainer>
   )
