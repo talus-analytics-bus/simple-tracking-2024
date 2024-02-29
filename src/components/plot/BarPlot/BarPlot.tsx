@@ -42,8 +42,7 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
     height:
       padding.top +
       padding.bottom +
-      barCount * reference.barHeight +
-      barCount * reference.barSep,
+      barCount * (reference.barHeight + reference.barSep),
     axes: {
       x: {
         max,
@@ -62,7 +61,7 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
 
   return (
     <PlotContainer>
-      <DimPlotParent plotSetup={plotSetup}>
+      <DimPlotParent plotSetup={plotSetup} drawLayout>
         <YAxis />
         <XAxis />
         <Bar bars={bars} color={barColor} />

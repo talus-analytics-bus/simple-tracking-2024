@@ -15,24 +15,13 @@ const TickLabel = styled.text`
   fill: ${({ theme }) => theme.common.colors.textSecondary};
 `
 
-// const DebugFrame = styled.rect`
-//   stroke: red;
-//   stroke-width: 1;
-//   fill: none;
-// `
-
 const XAxis = () => {
   const [dim] = useDim()
 
   const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
-  console.log(ticks)
-
   return (
     <>
-      {
-        // <DebugFrame x={0} y={0} width={dim.width} height={dim.height} />
-      }
       {ticks.map(tick => (
         <React.Fragment key={tick}>
           <AxisPath
