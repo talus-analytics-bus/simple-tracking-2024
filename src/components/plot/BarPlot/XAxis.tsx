@@ -24,7 +24,7 @@ const TickLabel = styled.text`
 const XAxis = () => {
   const [dim] = useDim()
 
-  const ticks = dim.axes.x.scale.ticks(4)
+  const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
   console.log(ticks)
 
