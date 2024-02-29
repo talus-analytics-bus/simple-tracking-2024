@@ -15,7 +15,7 @@ export default {
   r3_received: 'Linking public health and security authorities',
   r4_received: 'Medical countermeasures and personnel deployment',
   r5_received: 'Risk communication',
-  re_received: 'Radiation events',
+  re_received: 'Radiation emergencies',
   poe_received: 'Points of entry',
   ce_received: 'Chemical events',
   p1_disbursed: 'National legislation, policy and financing',
@@ -34,7 +34,7 @@ export default {
   r3_disbursed: 'Linking public health and security authorities',
   r4_disbursed: 'Medical countermeasures and personnel deployment',
   r5_disbursed: 'Risk communication',
-  re_disbursed: 'Radiation events',
+  re_disbursed: 'Radiation emergencies',
   poe_disbursed: 'Points of entry',
   ce_disbursed: 'Chemical events',
 } as { [key: string]: string }
