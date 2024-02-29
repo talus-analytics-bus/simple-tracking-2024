@@ -24,7 +24,7 @@ const TickLabel = styled.text`
 const XAxis = () => {
   const [dim] = useDim()
 
-  const ticks = dim.axes.x.scale.ticks(5)
+  const ticks = dim.axes.x.scale.ticks(4)
 
   console.log(ticks)
 
@@ -51,7 +51,8 @@ const XAxis = () => {
         </>
       ))}
       <AxisPath
-        d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 1} L ${dim.axes.x.end} ${dim.axes.y.end - 1}`}
+        d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 1} 
+            L ${dim.axes.x.end} ${dim.axes.y.end - 1}`}
       />
     </>
   )

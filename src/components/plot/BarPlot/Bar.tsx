@@ -31,7 +31,7 @@ interface BarProps {
 const Bar = ({ bars, color }: BarProps) => {
   const [dim] = useDim()
 
-  const textVOffset = dim.reference.barHeight / 2 + 3
+  const textVOffset = dim.reference.barHeight / 2 + 4
 
   return Object.entries(bars)
     .sort((a, b) => b[1] - a[1])

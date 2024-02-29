@@ -29,7 +29,7 @@ const reference = {
 
 const padding = {
   top: 80,
-  right: 20,
+  right: 40,
   bottom: 20,
   left: 415,
 }
@@ -39,7 +39,7 @@ const width = 1000
 const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   const barCount = Object.keys(bars).length
 
-  const niceDomain = d3.nice(0, Math.round(max * 1.1), 5)
+  const niceDomain = d3.nice(0, max, 4)
 
   const plotSetup = usePlotSetup({
     width,
