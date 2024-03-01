@@ -14,7 +14,7 @@ const formatDisplayNumber = (num: number) => {
 
   let round = scaled
   if (scaled < 10) round = (Math.round((scaled * 10) / 5) * 5) / 10
-  else if (scaled > 100) round = Math.round(scaled / 50) * 50
+  else if (scaled > 100) round = Math.round(scaled / 5) * 5
   else round = Math.round(scaled)
 
   return format.format(round * scale)
