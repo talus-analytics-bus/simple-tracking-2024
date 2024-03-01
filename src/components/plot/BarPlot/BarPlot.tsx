@@ -1,8 +1,10 @@
+import React from 'react'
+import styled from 'styled-components'
+
 import DimPlotParent, {
   usePlotSetup,
 } from 'components/library/dim-plot/dim-plot-parent'
-import React from 'react'
-import styled from 'styled-components'
+
 import XAxis from './XAxis'
 import YAxis from './YAxis'
 import Bar from './Bar'
@@ -61,7 +63,7 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
 
   return (
     <PlotContainer>
-      <DimPlotParent plotSetup={plotSetup} drawLayout>
+      <DimPlotParent plotSetup={plotSetup}>
         <YAxis />
         <XAxis />
         <Bar bars={bars} color={barColor} />

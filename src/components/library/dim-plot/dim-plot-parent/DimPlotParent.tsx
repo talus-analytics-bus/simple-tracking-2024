@@ -47,7 +47,12 @@ const DimPlotParent = ({
 
   return (
     <DimPlotContext.Provider value={[dim, setPlotSetup]}>
-      <svg viewBox={`0 0 ${dim.width} ${dim.height}`} {...svgProps}>
+      <svg
+        width="100%"
+        height="100%"
+        viewBox={`0 0 ${dim.width} ${dim.height}`}
+        {...svgProps}
+      >
         {children}
         {drawLayout && (
           <g id="dimPlotLayout">
@@ -87,10 +92,10 @@ const DimPlotParent = ({
               stroke="red"
               fill="none"
               strokeWidth={1}
-              x={0}
-              y={0}
-              width={dim.width}
-              height={dim.height}
+              x={1}
+              y={1}
+              width={dim.width - 2}
+              height={dim.height - 2}
             />
           </g>
         )}
