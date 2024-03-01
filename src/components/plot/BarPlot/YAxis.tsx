@@ -18,16 +18,19 @@ const AxisLabel = styled.text`
 
 interface YAxisProps {
   yLabel: string
+  narrowLayout: boolean
 }
 
-const YAxis = ({ yLabel }: YAxisProps) => {
+const YAxis = ({ yLabel, narrowLayout }: YAxisProps) => {
   const [dim] = useDim()
 
   return (
     <>
-      <AxisLabel x={dim.axes.x.start - textHOffset} y={15}>
-        {yLabel}
-      </AxisLabel>
+      {!narrowLayout && (
+        <AxisLabel x={dim.axes.x.start - textHOffset} y={15}>
+          {yLabel}
+        </AxisLabel>
+      )}
       <AxisPath
         d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 2} L ${dim.axes.x.start - 1} ${dim.axes.y.start}`}
       />
