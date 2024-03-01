@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import DimPlotParent, {
@@ -22,22 +22,35 @@ interface BarPlotProps {
   barColor: string
 }
 
-const reference = {
-  barHeight: 30,
-  barSep: 15,
-}
-
-const padding = {
-  top: 80,
-  right: 45,
-  bottom: 20,
-  left: 415,
-}
-
-const width = 1000
-
 const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   const barCount = Object.keys(bars).slice(0, 10).length
+
+  const [narrowLayout, setNarrowLayout] = React.useState(false)
+  const [veryNarrowLayout, setVeryNarrowLayout] = React.useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNarrowLayout(window.innerWidth < 1200)
+      setVeryNarrowLayout(window.innerWidth < 600)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const width = narrowLayout ? (veryNarrowLayout ? 300 : 500) : 1000
+
+  const reference = {
+    barHeight: narrowLayout ? 60 : 30,
+    barSep: 15,
+  }
+
+  const padding = {
+    top: 80,
+    right: 50,
+    bottom: 5,
+    left: narrowLayout ? 5 : 415,
+  }
 
   const plotSetup = usePlotSetup({
     width,
@@ -66,7 +79,7 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
       <DimPlotParent plotSetup={plotSetup}>
         <YAxis />
         <XAxis />
-        <Bar bars={bars} color={barColor} />
+        <Bar bars={bars} color={barColor} narrowLayout={narrowLayout} />
       </DimPlotParent>
     </PlotContainer>
   )

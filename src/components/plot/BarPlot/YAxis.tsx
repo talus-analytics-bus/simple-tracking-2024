@@ -7,6 +7,7 @@ const AxisPath = styled.path`
   stroke: ${({ theme }) => theme.common.colors.surfaceGray400};
   stroke-width: 2;
   fill: none;
+  transition: 250ms;
 `
 
 const YAxis = () => {
