@@ -93,6 +93,8 @@ const FundsByCategory = ({
             bars={displayTotals.disbursed}
             max={chartMax}
             barColor={theme.funder.colors.graphViz1}
+            xLabel="Funds (USD)"
+            yLabel="JEE 1.0 Category"
           />
         ) : (
           <NoData>No data available</NoData>
@@ -112,6 +114,8 @@ const FundsByCategory = ({
           bars={displayTotals.received}
           max={chartMax}
           barColor={theme.recipient.colors.graphViz1}
+          xLabel="Funds (USD)"
+          yLabel="JEE 1.0 Category"
         />
       </ContentBox>
     </ChartColumn>

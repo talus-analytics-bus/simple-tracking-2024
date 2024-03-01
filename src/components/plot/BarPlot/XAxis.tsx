@@ -15,18 +15,30 @@ const TickLabel = styled.text`
   ${({ theme }) => theme.textStyleSmallNumbers};
   fill: ${({ theme }) => theme.common.colors.textSecondary};
 `
+const AxisLabel = styled.text`
+  text-anchor: middle;
+  ${({ theme }) => theme.textStyleSmallNumbersSemibold};
+  fill: ${({ theme }) => theme.common.colors.textPrimary};
+`
 
-const XAxis = () => {
+interface XAxisProps {
+  xLabel: string
+}
+
+const XAxis = ({ xLabel }: XAxisProps) => {
   const [dim] = useDim()
 
   const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
   return (
     <>
+      <AxisLabel x={dim.axes.x.scale((dim.axes.x.max as number) / 2)} y={15}>
+        {xLabel}
+      </AxisLabel>
       {ticks.map(tick => (
         <React.Fragment key={tick}>
           <AxisPath
-            d={`M ${dim.axes.x.scale(tick) - 1} ${dim.axes.y.end} 
+            d={`M ${dim.axes.x.scale(tick) - 1} ${dim.axes.y.end}
               L ${dim.axes.x.scale(tick) - 1} ${dim.axes.y.end - 10}`}
             stroke="black"
           />
@@ -36,7 +48,7 @@ const XAxis = () => {
         </React.Fragment>
       ))}
       <AxisPath
-        d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 1} 
+        d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 1}
             L ${dim.axes.x.end} ${dim.axes.y.end - 1}`}
       />
     </>

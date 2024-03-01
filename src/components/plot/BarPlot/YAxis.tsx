@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { useDim } from 'components/library/dim-plot/dim-plot-parent'
+import { textHOffset } from './Bar'
 
 const AxisPath = styled.path`
   stroke: ${({ theme }) => theme.common.colors.surfaceGray400};
@@ -9,12 +10,24 @@ const AxisPath = styled.path`
   fill: none;
   transition: 250ms;
 `
+const AxisLabel = styled.text`
+  text-anchor: end;
+  ${({ theme }) => theme.textStyleSmallNumbersSemibold};
+  fill: ${({ theme }) => theme.common.colors.textPrimary};
+`
 
-const YAxis = () => {
+interface YAxisProps {
+  yLabel: string
+}
+
+const YAxis = ({ yLabel }: YAxisProps) => {
   const [dim] = useDim()
 
   return (
     <>
+      <AxisLabel x={dim.axes.x.start - textHOffset} y={15}>
+        {yLabel}
+      </AxisLabel>
       <AxisPath
         d={`M ${dim.axes.x.start - 1} ${dim.axes.y.end - 2} L ${dim.axes.x.start - 1} ${dim.axes.y.start}`}
       />

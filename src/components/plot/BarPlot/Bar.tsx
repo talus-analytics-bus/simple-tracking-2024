@@ -5,8 +5,6 @@ import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
 const BarPath = styled.path<{ color: string }>`
   fill: ${({ color }) => color};
-  // stroke-width: 1;
-  // stroke: ${({ color }) => color};
   transition: 250ms;
 `
 
@@ -24,7 +22,7 @@ const BarQuanitityLabel = styled.text`
   transition: 250ms;
 `
 
-const textHOffset = 10
+export const textHOffset = 20
 
 interface BarProps {
   bars: { [key: string]: number }

@@ -20,9 +20,11 @@ interface BarPlotProps {
   bars: { [key: string]: number }
   max: number
   barColor: string
+  xLabel: string
+  yLabel: string
 }
 
-const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
+const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
   const barCount = Object.keys(bars).slice(0, 10).length
 
   const [narrowLayout, setNarrowLayout] = React.useState(false)
@@ -46,10 +48,10 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   }
 
   const padding = {
-    top: 80,
+    top: 70,
     right: 50,
     bottom: 5,
-    left: narrowLayout ? 5 : 415,
+    left: narrowLayout ? 5 : 425,
   }
 
   const plotSetup = usePlotSetup({
@@ -77,8 +79,8 @@ const BarPlot = ({ bars, max, barColor }: BarPlotProps) => {
   return (
     <PlotContainer>
       <DimPlotParent plotSetup={plotSetup}>
-        <YAxis />
-        <XAxis />
+        <YAxis yLabel={yLabel} />
+        <XAxis xLabel={xLabel} />
         <Bar bars={bars} color={barColor} narrowLayout={narrowLayout} />
       </DimPlotParent>
     </PlotContainer>
