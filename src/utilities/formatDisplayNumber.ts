@@ -1,4 +1,4 @@
-const format = Intl.NumberFormat(navigator.language, {
+const format = Intl.NumberFormat(undefined, {
   style: 'currency',
   currency: 'USD',
   maximumSignificantDigits: 3,
