@@ -16,6 +16,12 @@ const ChartColumn = styled.div`
   flex-direction: column;
   gap: 40px;
 `
+const NoData = styled.p`
+  text-align: center;
+  ${({ theme }) => theme.textStyleNumbers};
+  color: ${({ theme }) => theme.common.colors.textSecondary};
+  padding-top: 20px;
+`
 
 const FundsByCategory = ({
   data,
@@ -82,25 +88,15 @@ const FundsByCategory = ({
             {data.stakeholdersCsv?.name} | {selectedYearsLabel}
           </span>
         </h3>
-        <BarPlot
-          bars={displayTotals.disbursed}
-          max={chartMax}
-          barColor={theme.funder.colors.graphViz1}
-        />
-        {
-          // <table>
-          //   <tbody>
-          //     {Object.entries(displayTotals.disbursed)
-          //       .sort((a, b) => b[1] - a[1])
-          //       .map(([key, val]) => (
-          //         <tr key={key}>
-          //           <td>{key}</td>
-          //           <td>${val.toLocaleString()}</td>
-          //         </tr>
-          //       ))}
-          //   </tbody>
-          // </table>
-        }
+        {Object.keys(displayTotals.disbursed).length > 0 ? (
+          <BarPlot
+            bars={displayTotals.disbursed}
+            max={chartMax}
+            barColor={theme.funder.colors.graphViz1}
+          />
+        ) : (
+          <NoData>No data available</NoData>
+        )}
       </ContentBox>
       <ContentBox>
         <h3>
@@ -117,20 +113,6 @@ const FundsByCategory = ({
           max={chartMax}
           barColor={theme.recipient.colors.graphViz1}
         />
-        <table>
-          {
-            // <tbody>
-            //   {Object.entries(displayTotals.received)
-            //     .sort((a, b) => b[1] - a[1])
-            //     .map(([key, val]) => (
-            //       <tr key={key}>
-            //         <td>{key}</td>
-            //         <td>${val.toLocaleString()}</td>
-            //       </tr>
-            //     ))}
-            // </tbody>
-          }
-        </table>
       </ContentBox>
     </ChartColumn>
   )
