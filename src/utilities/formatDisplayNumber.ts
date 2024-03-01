@@ -20,6 +20,4 @@ const formatDisplayNumber = (num: number) => {
   return format.format(round * scale)
 }
 
-// const formatDisplayNumber = (num: number) => format.format(num)
-
 export default formatDisplayNumber
