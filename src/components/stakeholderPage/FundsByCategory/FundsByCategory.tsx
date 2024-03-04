@@ -63,8 +63,6 @@ const FundsByCategory = ({
       }
     })
 
-  console.log(displayTotals)
-
   return (
     <ChartColumn>
       <ContentBox>

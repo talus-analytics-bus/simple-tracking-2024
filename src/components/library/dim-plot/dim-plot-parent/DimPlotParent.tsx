@@ -19,8 +19,6 @@ const DimPlotParent = ({
   children,
   ...svgProps
 }: DimPlotParentProps) => {
-  console.log('dimplotparent runs')
-
   const [setup, setPlotSetup] = plotSetup
 
   if (!setup || Object.keys(setup).length === 0)

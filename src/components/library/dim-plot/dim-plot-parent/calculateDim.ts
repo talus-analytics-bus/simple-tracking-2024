@@ -4,7 +4,6 @@ import type Dim from './DimObjectType'
 import { PlotSetup } from './usePlotSetup'
 
 const calculateDim = (plotSetup: PlotSetup) => {
-  console.log('calculateDim runs')
   const dim = { ...plotSetup }
 
   dim.padding = {
