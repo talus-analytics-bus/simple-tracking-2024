@@ -162,3 +162,16 @@ export const TotalsTable = styled.table`
     padding: 15px 0;
   }
 `
+
+export const ChartColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`
+
+export const NoData = styled.p`
+  text-align: center;
+  ${({ theme }) => theme.textStyleNumbers};
+  color: ${({ theme }) => theme.common.colors.textSecondary};
+  padding-top: 20px;
+`

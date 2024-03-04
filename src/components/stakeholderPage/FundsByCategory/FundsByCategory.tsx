@@ -1,9 +1,12 @@
 import React from 'react'
-import styled, { useTheme } from 'styled-components'
-import { ContentBox } from '../StakeholderLayout'
+import { useTheme } from 'styled-components'
+
 import CMS from 'components/library/airtable-cms'
-import jeeCategoryNames from 'utilities/jeeCategoryNames'
+
+import { ChartColumn, ContentBox, NoData } from '../StakeholderLayout'
 import BarPlot from 'components/plot/BarPlot/BarPlot'
+
+import jeeCategoryNames from 'utilities/jeeCategoryNames'
 
 interface FundsByCategoryProps {
   data: Queries.CountryPageQuery
@@ -11,25 +14,11 @@ interface FundsByCategoryProps {
   selectedYearsLabel: string
 }
 
-const ChartColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-`
-const NoData = styled.p`
-  text-align: center;
-  ${({ theme }) => theme.textStyleNumbers};
-  color: ${({ theme }) => theme.common.colors.textSecondary};
-  padding-top: 20px;
-`
-
 const FundsByCategory = ({
   data,
   selectedYear,
   selectedYearsLabel,
 }: FundsByCategoryProps) => {
-  console.log(data)
-
   if (!data.allFundingByCapacityCsv?.years)
     throw new Error(
       `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`

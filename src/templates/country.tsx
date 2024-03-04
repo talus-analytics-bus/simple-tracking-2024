@@ -20,6 +20,7 @@ import {
 
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
+import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -169,7 +170,11 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H5 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <FundsByPHEIC
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
 
           <ScrollTarget
             id={formatHash(leftNavElements[4].data.Text)}
@@ -332,6 +337,24 @@ export const query = graphql`
         re_disbursed
         poe_disbursed
         ce_disbursed
+      }
+    }
+    pheic_received: allFundingByPheicCsv(
+      filter: { name: { eq: $name }, received: { ne: "" } }
+    ) {
+      pheics: nodes {
+        year
+        pheic
+        received
+      }
+    }
+    pheic_disbursed: allFundingByPheicCsv(
+      filter: { name: { eq: $name }, disbursed: { ne: "" } }
+    ) {
+      pheics: nodes {
+        year
+        pheic
+        disbursed
       }
     }
   }
