@@ -15,9 +15,10 @@ WITH all_countries AS (
 )
 -- All transaction pairs for selected stakeholders
 SELECT
-    s1.name AS "Funder",
-    s2.name AS "Recipient",
-    ROUND(SUM(sf.value)) AS "Total value"
+    s1.name AS funder,
+    s2.name AS recipient,
+    sf.year AS year,
+    ROUND(SUM(sf.value)) AS total
 FROM
     flows_to_stakeholder_origins_direct_credit ftsodc
 JOIN
@@ -38,6 +39,6 @@ WHERE
     	s2.id in (select * from all_countries) or s2.id in (select * from all_orgs)
     	)
 GROUP BY
-    s1.name, s2.name
+    s1.name, s2.name, sf.year
 ORDER BY
-    "Funder" DESC;
+    funder DESC, recipient DESC, year DESC 
