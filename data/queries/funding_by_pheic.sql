@@ -19,6 +19,7 @@ pheic_sums_received AS (
     SELECT
         s.name AS name,
         e.name AS pheic,
+		sf.year AS year,
         ROUND(SUM(sf.value)) AS received
     FROM
         simple_flows sf
@@ -32,6 +33,7 @@ pheic_sums_received AS (
         AND (s.id IN (SELECT * FROM all_countries) OR s.id IN (SELECT * FROM all_orgs))
     GROUP BY
         s.name,
+		sf.year,
         e.name
 ),
 pheic_sums_disbursed AS (
@@ -39,6 +41,7 @@ pheic_sums_disbursed AS (
     SELECT
         s.name AS name,
         e.name AS pheic,
+		sf.year AS year,
         ROUND(SUM(sf.value)) AS disbursed
     FROM
         simple_flows sf
@@ -52,10 +55,12 @@ pheic_sums_disbursed AS (
         AND (s.id IN (SELECT * FROM all_countries) OR s.id IN (SELECT * FROM all_orgs))
     GROUP BY
         s.name,
+		sf.year,
         e.name
 )
 SELECT
     COALESCE(pr.name, pd.name) AS name,
+	COALESCE(pr.year, pd.year) AS year,
     COALESCE(pr.pheic, pd.pheic) AS pheic,
     pr.received,
     pd.disbursed
