@@ -2,7 +2,7 @@
 SELECT 
 	all_stakeholders.name AS "name",
 	all_stakeholders.iso3 AS "iso3",
-	CASE WHEN received.year = NULL THEN disbursed.year ELSE received.year END AS "Year",
+	COALESCE(received.year, disbursed.year) AS "Year",
 	response_received AS "totalResponseReceived",
 	capacity_received AS "totalCapacityReceived",
 	total_received AS "totalDisbursedReceived",
