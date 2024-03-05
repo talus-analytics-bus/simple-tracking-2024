@@ -70,4 +70,4 @@ FULL JOIN
     pheic_sums_disbursed pd
 ON
     pr.name = pd.name AND pr.pheic = pd.pheic
-order by pr.name;
+order by pr.name, year DESC, pheic, received, disbursed;
