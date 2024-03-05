@@ -163,6 +163,15 @@ export const TotalsTable = styled.table`
   }
 `
 
+export const HorizontalColumns = styled.section`
+  display: flex;
+  gap: 15px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+`
+
 export const ChartColumn = styled.div`
   display: flex;
   flex-direction: column;

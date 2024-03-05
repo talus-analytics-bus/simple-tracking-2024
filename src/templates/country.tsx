@@ -21,6 +21,7 @@ import {
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
+import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -185,7 +186,11 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <TopFundersAndRecipients
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
 
           <ScrollTarget
             id={formatHash(leftNavElements[4].data.Text)}

@@ -1,8 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import CMS from 'components/library/airtable-cms'
 
-import { ContentBox, TotalsTable } from './StakeholderLayout'
+import { ContentBox, HorizontalColumns, TotalsTable } from './StakeholderLayout'
 
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
@@ -11,15 +10,6 @@ interface FundingTotalsProps {
   selectedYear: string
   selectedYearsLabel: string
 }
-
-const FundingColumns = styled.section`
-  display: flex;
-  gap: 15px;
-
-  @media (max-width: 1200px) {
-    flex-direction: column;
-  }
-`
 
 const FundingTotals = ({
   data,
@@ -55,7 +45,7 @@ const FundingTotals = ({
     })
 
   return (
-    <FundingColumns>
+    <HorizontalColumns>
       <ContentBox>
         <h3>
           <span>
@@ -116,7 +106,7 @@ const FundingTotals = ({
           </tbody>
         </TotalsTable>
       </ContentBox>
-    </FundingColumns>
+    </HorizontalColumns>
   )
 }
 
