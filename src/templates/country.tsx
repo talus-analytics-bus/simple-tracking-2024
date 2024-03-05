@@ -357,6 +357,15 @@ export const query = graphql`
         disbursed
       }
     }
+    top10FundersByYear: allFundersAndRecipientsCsv(
+      filter: { recipient: { eq: $name } }
+    ) {
+      nodes {
+        year
+        top_funder
+        total
+      }
+    }
   }
 `
 
