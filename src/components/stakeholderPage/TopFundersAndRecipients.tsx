@@ -21,10 +21,10 @@ const TopFundersAndRecipients = ({
   if (selectedYear === 'All time') {
     displayTotals = [{ name: 'sum', total: 100 }]
   } else {
-    displayTotals = data.top10FundersByYear.nodes
+    displayTotals = data.top10FundersByYear.funders
       .filter(funder => funder.year === selectedYear)
       .map(funder => ({
-        name: funder.top_funder ?? '',
+        name: funder.name ?? '',
         total: Number(funder.total) ?? 0,
       }))
   }

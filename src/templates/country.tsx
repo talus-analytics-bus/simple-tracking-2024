@@ -362,12 +362,12 @@ export const query = graphql`
         disbursed
       }
     }
-    top10FundersByYear: allFundersAndRecipientsCsv(
+    top10FundersByYear: allTop10FundersCsv(
       filter: { recipient: { eq: $name } }
     ) {
-      nodes {
+      funders: nodes {
         year
-        top_funder
+        name: funder
         total
       }
     }
