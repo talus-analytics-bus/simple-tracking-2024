@@ -20,16 +20,11 @@ WITH funders_to_recipients AS (
 	s2.name AS recipient,
 	sf.year AS year,
 	ROUND(SUM(sf.value)) AS total
-    FROM
-	flows_to_stakeholder_origins_direct_credit ftsodc
-    JOIN
-	simple_flows sf ON ftsodc.flow_id = sf.sf_id
-    JOIN
-	stakeholders s1 ON ftsodc.stakeholder_id = s1.id
-    JOIN
-	flows_to_stakeholder_targets_direct_credit ftstdc ON sf.sf_id = ftstdc.flow_id
-    JOIN
-	stakeholders s2 ON ftstdc.stakeholder_id = s2.id
+    FROM flows_to_stakeholder_origins_direct_credit ftsodc
+    JOIN simple_flows sf ON ftsodc.flow_id = sf.sf_id
+    JOIN stakeholders s1 ON ftsodc.stakeholder_id = s1.id
+    JOIN flows_to_stakeholder_targets_direct_credit ftstdc ON sf.sf_id = ftstdc.flow_id
+    JOIN stakeholders s2 ON ftstdc.stakeholder_id = s2.id
     WHERE
 	sf.flow_type = 'disbursed_funds'
 	AND sf."year" BETWEEN 2014 AND 3000
