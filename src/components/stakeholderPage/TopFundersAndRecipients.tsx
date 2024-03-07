@@ -16,12 +16,21 @@ const TopFundersAndRecipients = ({
 }: TopFundersAndRecipientsProps) => {
   console.log(data)
 
-  let displayTotals = [] as { name: string; total: number }[]
+  let displayTotals = {
+    recipients: [] as { name: string; total: number }[],
+    funders: [] as { name: string; total: number }[],
+  }
 
   if (selectedYear === 'All time') {
-    displayTotals = [{ name: 'sum', total: 100 }]
+    displayTotals.recipients = [{ name: 'sum', total: 100 }]
   } else {
-    displayTotals = data.top10FundersByYear.funders
+    displayTotals.funders = data.top10FundersByYear.funders
+      .filter(funder => funder.year === selectedYear)
+      .map(funder => ({
+        name: funder.name ?? '',
+        total: Number(funder.total) ?? 0,
+      }))
+    displayTotals.recipients = data.top10RecipientsByYear.recipients
       .filter(funder => funder.year === selectedYear)
       .map(funder => ({
         name: funder.name ?? '',
@@ -36,6 +45,16 @@ const TopFundersAndRecipients = ({
           <span>Top 10 recipients</span>
           <span>{selectedYearsLabel}</span>
         </h3>
+        <table>
+          <tbody>
+            {displayTotals.recipients.map((funder, i) => (
+              <tr key={i}>
+                <td>{funder.name}</td>
+                <td>{formatDisplayNumber(funder.total)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </ContentBox>
       <ContentBox>
         <h3>
@@ -44,7 +63,7 @@ const TopFundersAndRecipients = ({
         </h3>
         <table>
           <tbody>
-            {displayTotals.map((funder, i) => (
+            {displayTotals.funders.map((funder, i) => (
               <tr key={i}>
                 <td>{funder.name}</td>
                 <td>{formatDisplayNumber(funder.total)}</td>

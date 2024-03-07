@@ -16,8 +16,8 @@ WITH recipients_to_funders AS (
     )
     -- All transaction pairs for selected stakeholders
     SELECT
-		s1.name AS funder,
-		s2.name AS recipient,
+		s1.name AS recipient,
+		s2.name AS funder,
 		sf.year AS year,
 		ROUND(SUM(sf.value)) AS total
 	FROM flows_to_stakeholder_targets_direct_credit ftstdc
@@ -39,29 +39,28 @@ WITH recipients_to_funders AS (
     GROUP BY
 	s1.name, s2.name, sf.year
     ORDER BY
-	funder DESC, recipient DESC
+	recipient DESC, funder DESC
 ),
-ranked_recipients AS (
+ranked_funders AS (
     SELECT
-        funder,
-	year,
         recipient,
+		year,
+        funder,
         total,
         ROW_NUMBER()
 			OVER (
-				PARTITION BY recipient, year
+				PARTITION BY funder, year
 				ORDER BY total DESC
 			) AS rank
     FROM
         recipients_to_funders
 )
 SELECT
-    recipient,
-    year,
-	rank,
     funder,
+    year,
+    recipient,
     total
 FROM
-    ranked_recipients
+    ranked_funders
 WHERE
     rank <= 10;

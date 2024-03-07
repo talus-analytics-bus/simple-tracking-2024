@@ -1,4 +1,4 @@
-WITH funders_to_recipients AS (
+WITH recipients_to_funders AS (
     WITH all_countries AS (
 	-- All the stakeholders which are "countries"
 	SELECT id FROM stakeholders
@@ -51,7 +51,7 @@ ranked_recipients AS (
 		ORDER BY total DESC
 	    ) AS rank
     FROM
-        funders_to_recipients
+        recipients_to_funders
 )
 SELECT
     recipient,
