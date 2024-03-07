@@ -40,7 +40,7 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const width = narrowLayout ? (veryNarrowLayout ? 300 : 500) : 1000
+  const width = narrowLayout ? (veryNarrowLayout ? 450 : 600) : 1000
 
   const reference = {
     barHeight: narrowLayout ? 60 : 30,
@@ -79,7 +79,7 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
   return (
     <PlotContainer>
       <DimPlotParent plotSetup={plotSetup}>
-        <YAxis yLabel={yLabel} />
+        <YAxis yLabel={yLabel} narrowLayout={narrowLayout} />
         <XAxis xLabel={xLabel} />
         <Bar bars={bars} color={barColor} narrowLayout={narrowLayout} />
       </DimPlotParent>
