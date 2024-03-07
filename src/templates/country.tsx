@@ -83,6 +83,8 @@ const CountryPage = ({
   const leftNavElements = cmsData.nodes
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
+    // temporarily remove the first link for the maps
+    .slice(1)
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
@@ -121,17 +123,18 @@ const CountryPage = ({
           </YearSelector>
         </TopBar>
         <MainContent>
-          <ScrollTarget
-            id={formatHash(leftNavElements[0].data.Text)}
-          ></ScrollTarget>
-          <h2>
-            <CMS.Text name={'H2 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
-
+          {
+            // <ScrollTarget
+            //   id={formatHash(leftNavElements[0].data.Text)}
+            // ></ScrollTarget>
+            // <h2>
+            //   <CMS.Text name={'H2 header'} data={cmsData} />
+            // </h2>
+            // <h3>
+            //   <CMS.Text name={'H2 subtitle stakeholder'} data={cmsData} />
+            // </h3>
+            // <ContentPlaceholder />
+          }
           <ScrollTarget
             id={formatHash(leftNavElements[1].data.Text)}
           ></ScrollTarget>
