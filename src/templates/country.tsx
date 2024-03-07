@@ -196,28 +196,6 @@ const CountryPage = ({
             id={formatHash(leftNavElements[4].data.Text)}
           ></ScrollTarget>
           <h2>
-            <CMS.Text name={'H6 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
-
-          <ScrollTarget
-            id={formatHash(leftNavElements[5].data.Text)}
-          ></ScrollTarget>
-          <h2>
-            <CMS.Text name={'H6 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
-
-          <ScrollTarget
-            id={formatHash(leftNavElements[4].data.Text)}
-          ></ScrollTarget>
-          <h2>
             <CMS.Text name={'H7 header'} data={cmsData} />
           </h2>
           <h3>
