@@ -22,7 +22,46 @@ const TopFundersAndRecipients = ({
   }
 
   if (selectedYear === 'All time') {
-    displayTotals.recipients = [{ name: 'sum', total: 100 }]
+    const totalsByFunder = {
+      recipients: {} as { [key: string]: number },
+      funders: {} as { [key: string]: number },
+    }
+
+    totalsByFunder.recipients = data.top10RecipientsByYear.recipients.reduce(
+      (acc, recipient) => {
+        if (!acc[recipient.name ?? ''])
+          acc[recipient.name ?? ''] = Number(recipient.total)
+        else acc[recipient.name ?? ''] += Number(recipient.total)
+        return acc
+      },
+      {} as typeof totalsByFunder.recipients
+    )
+
+    totalsByFunder.funders = data.top10FundersByYear.funders.reduce(
+      (acc, recipient) => {
+        if (!acc[recipient.name ?? ''])
+          acc[recipient.name ?? ''] = Number(recipient.total)
+        else acc[recipient.name ?? ''] += Number(recipient.total)
+        return acc
+      },
+      {} as typeof totalsByFunder.funders
+    )
+
+    displayTotals.funders = Object.entries(totalsByFunder.funders)
+      .sort((a, b) => b[1] - a[1])
+      .map(([name, total]) => ({
+        name,
+        total,
+      }))
+      .slice(0, 10)
+
+    displayTotals.recipients = Object.entries(totalsByFunder.recipients)
+      .sort((a, b) => b[1] - a[1])
+      .map(([name, total]) => ({
+        name,
+        total,
+      }))
+      .slice(0, 10)
   } else {
     displayTotals.funders = data.top10FundersByYear.funders
       .filter(funder => funder.year === selectedYear)
