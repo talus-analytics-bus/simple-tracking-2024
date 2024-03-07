@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { ContentBox, HorizontalColumns } from './StakeholderLayout'
+import { ContentBox, HorizontalColumns, NoData } from './StakeholderLayout'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
+import styled, { useTheme } from 'styled-components'
 
 interface TopFundersAndRecipientsProps {
   data: Queries.CountryPageQuery
@@ -9,12 +10,33 @@ interface TopFundersAndRecipientsProps {
   selectedYearsLabel: string
 }
 
+const Table = styled.table`
+  border-collapse: collapse;
+
+  margin: 0px -25px -25px -25px;
+  width: calc(100% + 50px);
+
+  ${({ theme }) => theme.textStyleSmallNumbers};
+
+  tbody tr {
+    background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
+    border: 1px solid ${({ theme }) => theme.common.colors.surfaceGray100};
+  }
+  td {
+    padding: 10px 15px;
+    text-align: left;
+  }
+  td:nth-child(2) {
+    text-align: right;
+  }
+`
+
 const TopFundersAndRecipients = ({
   data,
   selectedYear,
   selectedYearsLabel,
 }: TopFundersAndRecipientsProps) => {
-  console.log(data)
+  const theme = useTheme()
 
   let displayTotals = {
     recipients: [] as { name: string; total: number }[],
@@ -79,28 +101,32 @@ const TopFundersAndRecipients = ({
 
   return (
     <HorizontalColumns>
-      <ContentBox>
+      <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
         <h3>
           <span>Top 10 recipients</span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        <table>
-          <tbody>
-            {displayTotals.recipients.map((funder, i) => (
-              <tr key={i}>
-                <td>{funder.name}</td>
-                <td>{formatDisplayNumber(funder.total)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {displayTotals.recipients.length !== 0 ? (
+          <Table>
+            <tbody>
+              {displayTotals.recipients.map((funder, i) => (
+                <tr key={i}>
+                  <td>{funder.name}</td>
+                  <td>{formatDisplayNumber(funder.total)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        ) : (
+          <NoData />
+        )}
       </ContentBox>
-      <ContentBox>
+      <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
         <h3>
           <span>Top 10 funders</span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        <table>
+        <Table>
           <tbody>
             {displayTotals.funders.map((funder, i) => (
               <tr key={i}>
@@ -109,7 +135,7 @@ const TopFundersAndRecipients = ({
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       </ContentBox>
     </HorizontalColumns>
   )
