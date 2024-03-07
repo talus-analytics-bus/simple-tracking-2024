@@ -6,9 +6,9 @@ import useCountriesReceivedAndDisbursed from 'queryHooks/useCountriesRecievedAnd
 
 const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
   switch (true) {
-    case value === "":
+    case value === '':
       return theme.recipient.colors.mapUnspecified
-    case value === "0":
+    case value === '0':
       return theme.recipient.colors.mapNone
     case Number(value) < 2_300_000:
       return theme.recipient.colors.mapViz6
@@ -46,7 +46,6 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
 //   }
 // }
 
-
 const useCountryLayer = () => {
   const theme = useTheme()
 
@@ -68,13 +67,10 @@ const useCountryLayer = () => {
     const countryColorMatch: string[] = []
     for (const country of countriesReceivedAndDisbursed) {
       const iso = country.iso3
-      const received = country.Total_Disbursed_Received
+      const received = country.totalDisbursedReceived
 
       if (received && iso)
-        countryColorMatch.push(
-          iso,
-          getColor(received, theme)
-        )
+        countryColorMatch.push(iso, getColor(received, theme))
       // else
       //   console.log(`Country status not found for ${JSON.stringify(country)}`)
     }
@@ -109,4 +105,3 @@ const useCountryLayer = () => {
 }
 
 export default useCountryLayer
-
