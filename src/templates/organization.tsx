@@ -19,18 +19,20 @@ const CountryPage = ({
         <h1>Organization: {data.stakeholdersCsv?.name}</h1>
         <table>
           <tbody>
-            {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
-              ([label, value]) => (
-                <tr key={label}>
-                  <td style={{ textAlign: 'right' }}>
-                    ${new Number(value).toLocaleString()}
-                  </td>
-                  <td style={{ paddingLeft: 20, textAlign: 'left' }}>
-                    {label.replaceAll('_', ' ')}
-                  </td>
-                </tr>
-              )
-            )}
+            {
+              // {Object.entries(data.receivedAndDisbursedCsv ?? {}).map(
+              //   ([label, value]) => (
+              //     <tr key={label}>
+              //       <td style={{ textAlign: 'right' }}>
+              //         ${new Number(value).toLocaleString()}
+              //       </td>
+              //       <td style={{ paddingLeft: 20, textAlign: 'left' }}>
+              //         {label.replaceAll('_', ' ')}
+              //       </td>
+              //     </tr>
+              //   )
+              // )}
+            }
           </tbody>
         </table>
       </Main>
