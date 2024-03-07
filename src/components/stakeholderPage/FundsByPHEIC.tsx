@@ -93,7 +93,7 @@ const FundsByPHEIC = ({
             yLabel="JEE 1.0 Category"
           />
         ) : (
-          <NoData>No data available</NoData>
+          <NoData />
         )}
       </ContentBox>
       <ContentBox>
@@ -115,7 +115,7 @@ const FundsByPHEIC = ({
             yLabel="JEE 1.0 Category"
           />
         ) : (
-          <NoData>No data available</NoData>
+          <NoData />
         )}
       </ContentBox>
     </ChartColumn>

@@ -178,9 +178,11 @@ export const ChartColumn = styled.div`
   gap: 40px;
 `
 
-export const NoData = styled.p`
+const NoDataP = styled.p`
   text-align: center;
   ${({ theme }) => theme.textStyleNumbers};
   color: ${({ theme }) => theme.common.colors.textSecondary};
   padding-top: 20px;
 `
+
+export const NoData = () => <NoDataP>No data available</NoDataP>

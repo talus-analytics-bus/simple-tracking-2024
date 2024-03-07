@@ -84,7 +84,7 @@ const FundsByCategory = ({
             yLabel="JEE 1.0 Category"
           />
         ) : (
-          <NoData>No data available</NoData>
+          <NoData />
         )}
       </ContentBox>
       <ContentBox>
