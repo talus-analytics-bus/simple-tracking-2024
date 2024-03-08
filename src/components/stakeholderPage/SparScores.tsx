@@ -17,19 +17,36 @@ const Table = styled.table`
   tbody tr {
     background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
     border: 1px solid ${({ theme }) => theme.common.colors.surfaceGray100};
+
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-template-areas:
+        'metric metric_name'
+        'meaning meaning';
+    }
   }
   td {
     padding: 10px 15px;
     text-align: left;
   }
   td:first-child {
+    grid-area: metric;
     color: ${({ theme }) => theme.common.colors.textSecondary};
   }
   td:nth-child(2) {
+    grid-area: metric_name;
     text-align: right;
   }
   td:nth-child(3) {
+    grid-area: meaning;
     text-align: center;
+
+    width: 230px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
 `
 
@@ -41,7 +58,7 @@ type SparMeaning =
 
 const SparMeaningChip = styled.div<{ meaning: SparMeaning }>`
   border-radius: 5px;
-  width: 210px;
+  width: 100%;
   color: ${({ theme }) => theme.common.colors.textInvert};
   padding: 5px 10px;
   background-color: ${({ theme, meaning }) =>
@@ -71,12 +88,12 @@ const SparScores = ({ data }: SparScoresProps) => {
   return (
     <HorizontalColumns>
       <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
-        <h3>SPAR</h3>
+        <h3 style={{ justifyContent: 'center' }}>SPAR</h3>
         {sparScoreColumns.length !== 0 ? (
           <Table>
             <tbody>
               {sparScoreColumns
-                .slice(0, sparScoreColumns.length / 2)
+                .slice(0, Math.ceil(sparScoreColumns.length / 2))
                 .map(column => (
                   <tr key={column.metric}>
                     <td>{column.metric}</td>
@@ -97,12 +114,15 @@ const SparScores = ({ data }: SparScoresProps) => {
         )}
       </ContentBox>
       <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
-        <h3>SPAR</h3>
+        <h3 style={{ justifyContent: 'center' }}>SPAR</h3>
         {sparScoreColumns.length !== 0 ? (
           <Table>
             <tbody>
               {sparScoreColumns
-                .slice(sparScoreColumns.length / 2, sparScoreColumns.length)
+                .slice(
+                  Math.ceil(sparScoreColumns.length / 2),
+                  sparScoreColumns.length
+                )
                 .map(column => (
                   <tr key={column.metric}>
                     <td>{column.metric}</td>
