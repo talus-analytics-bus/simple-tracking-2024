@@ -22,8 +22,14 @@ const Table = styled.table`
     padding: 10px 15px;
     text-align: left;
   }
+  td:first-child {
+    color: ${({ theme }) => theme.common.colors.textSecondary};
+  }
   td:nth-child(2) {
     text-align: right;
+  }
+  td:nth-child(3) {
+    text-align: center;
   }
 `
 
@@ -35,7 +41,7 @@ type SparMeaning =
 
 const SparMeaningChip = styled.div<{ meaning: SparMeaning }>`
   border-radius: 5px;
-  // width: 210px;
+  width: 210px;
   color: ${({ theme }) => theme.common.colors.textInvert};
   padding: 5px 10px;
   background-color: ${({ theme, meaning }) =>
