@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import styled from 'styled-components'
 
 import DimPlotParent, {
@@ -30,11 +30,13 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
   const [narrowLayout, setNarrowLayout] = React.useState(false)
   const [veryNarrowLayout, setVeryNarrowLayout] = React.useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleResize = () => {
       setNarrowLayout(window.innerWidth < 1200)
       setVeryNarrowLayout(window.innerWidth < 600)
     }
+
+    handleResize()
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
