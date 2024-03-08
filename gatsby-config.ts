@@ -57,6 +57,13 @@ const config: GatsbyConfig = {
         path: `./data/csv/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `./data/risk_index/`,
+      },
+    },
     `gatsby-transformer-csv`,
     // {
     //   resolve: `gatsby-plugin-remote-images`,

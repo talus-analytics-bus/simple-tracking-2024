@@ -7,9 +7,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
   actions,
   graphql,
 }) => {
-
   const countryPageTemplate = path.resolve('./src/templates/country.tsx')
-  const organizationPageTemplate = path.resolve('./src/templates/organization.tsx')
+  const organizationPageTemplate = path.resolve(
+    './src/templates/organization.tsx'
+  )
 
   const stakeholdersQuery = await graphql<Queries.CountriesQuery>(`
     query Stakeholders {
@@ -26,15 +27,14 @@ export const createPages: GatsbyNode['createPages'] = async ({
     throw new Error('No countries found to publish')
 
   for (const stakeholder of stakeholdersQuery.data.stakeholders.nodes) {
-    if (!stakeholder.name)
-      throw new Error(`All stakeholders must have a name`)
+    if (!stakeholder.name) throw new Error(`All stakeholders must have a name`)
 
     // if it has an iso3 code, it's a country
-    if (stakeholder.iso3 !== "") {
+    if (stakeholder.iso3 !== '') {
       actions.createPage({
         path: `/countries/${simplifyForUrl(stakeholder.iso3)}`,
         component: countryPageTemplate,
-        context: { name: stakeholder.name }
+        context: { name: stakeholder.name, iso3: stakeholder.iso3 },
       })
     }
 
@@ -43,11 +43,8 @@ export const createPages: GatsbyNode['createPages'] = async ({
       actions.createPage({
         path: `/organizations/${simplifyForUrl(stakeholder.name)}`,
         component: organizationPageTemplate,
-        context: { name: stakeholder.name }
+        context: { name: stakeholder.name, iso3: '' },
       })
     }
   }
 }
-
-
-

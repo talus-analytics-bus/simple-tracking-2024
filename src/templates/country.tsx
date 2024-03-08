@@ -22,6 +22,7 @@ import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
+import SparScores from 'components/stakeholderPage/SparScores'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -194,7 +195,7 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H7 subtitle'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <SparScores data={data} />
 
           <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
           <h2>
@@ -239,7 +240,7 @@ const CountryPage = ({
 }
 
 export const query = graphql`
-  query CountryPage($name: String) {
+  query CountryPage($name: String, $iso3: String) {
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
@@ -341,6 +342,13 @@ export const query = graphql`
         year
         name: recipient
         total
+      }
+    }
+    allSparScores2022Csv(filter: { iso3: { eq: $iso3 } }) {
+      nodes {
+        metric
+        metric_name
+        meaning
       }
     }
   }
