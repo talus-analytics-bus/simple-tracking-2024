@@ -126,16 +126,20 @@ const TopFundersAndRecipients = ({
           <span>Top 10 funders</span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        <Table>
-          <tbody>
-            {displayTotals.funders.map((funder, i) => (
-              <tr key={i}>
-                <td>{funder.name}</td>
-                <td>{formatDisplayNumber(funder.total)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        {displayTotals.recipients.length !== 0 ? (
+          <Table>
+            <tbody>
+              {displayTotals.funders.map((funder, i) => (
+                <tr key={i}>
+                  <td>{funder.name}</td>
+                  <td>{formatDisplayNumber(funder.total)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        ) : (
+          <NoData />
+        )}
       </ContentBox>
     </HorizontalColumns>
   )

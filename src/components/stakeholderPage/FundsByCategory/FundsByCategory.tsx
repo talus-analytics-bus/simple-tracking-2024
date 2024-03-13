@@ -97,13 +97,17 @@ const FundsByCategory = ({
             {data.stakeholdersCsv?.name} | {selectedYearsLabel}
           </span>
         </h3>
-        <BarPlot
-          bars={displayTotals.received}
-          max={chartMax}
-          barColor={theme.recipient.colors.graphViz1}
-          xLabel="Funds (USD)"
-          yLabel="JEE 1.0 Category"
-        />
+        {Object.keys(displayTotals.disbursed).length > 0 ? (
+          <BarPlot
+            bars={displayTotals.received}
+            max={chartMax}
+            barColor={theme.recipient.colors.graphViz1}
+            xLabel="Funds (USD)"
+            yLabel="JEE 1.0 Category"
+          />
+        ) : (
+          <NoData />
+        )}
       </ContentBox>
     </ChartColumn>
   )
