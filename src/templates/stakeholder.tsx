@@ -62,9 +62,11 @@ const sortHLabeledNodes = (
 
 const formatHash = (str: string) => str.replaceAll(' ', '-').toLowerCase()
 
-const CountryPage = ({
+const StakeholderPage = ({
   data,
-}: PageProps<Queries.CountryPageQuery>): JSX.Element => {
+}: PageProps<Queries.StakeholderPageQuery>): JSX.Element => {
+  console.log(data)
+
   const cmsData = useStakeholderPageData({
     '[STAKEHOLDER]': data.stakeholdersCsv?.name,
   })
@@ -90,12 +92,15 @@ const CountryPage = ({
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
-  const jeeVersion = { jee1: '1.0', jee2: '2.0' }[
-    data.allJeeScoresCsv.nodes[0].risk_index ?? ''
-  ]
+  const jeeVersion =
+    { jee1: '1.0', jee2: '2.0' }[
+      data.allJeeScoresCsv.nodes[0]?.risk_index ?? ''
+    ] ?? ''
 
-  if (!jeeVersion)
+  if (data.stakeholdersCsv?.iso3 && !jeeVersion)
     throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)
+
+  console.log('hello world')
 
   return (
     <Providers>
@@ -252,7 +257,7 @@ const CountryPage = ({
 }
 
 export const query = graphql`
-  query CountryPage($name: String, $iso3: String) {
+  query StakeholderPage($name: String, $iso3: String) {
     stakeholdersCsv(name: { eq: $name }) {
       name
       iso3
@@ -375,4 +380,4 @@ export const query = graphql`
   }
 `
 
-export default CountryPage
+export default StakeholderPage

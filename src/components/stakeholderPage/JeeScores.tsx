@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { ContentBox, HorizontalColumns } from './StakeholderLayout'
 
 interface JeeScoresProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
 }
 
 const HalfWidthContentBox = styled(ContentBox)`

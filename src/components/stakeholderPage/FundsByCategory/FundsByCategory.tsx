@@ -9,7 +9,7 @@ import BarPlot from 'components/plot/BarPlot/BarPlot'
 import jeeCategoryNames from 'utilities/jeeCategoryNames'
 
 interface FundsByCategoryProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
   selectedYear: string
   selectedYearsLabel: string
 }

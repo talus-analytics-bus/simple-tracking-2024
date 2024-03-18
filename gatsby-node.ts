@@ -7,9 +7,8 @@ export const createPages: GatsbyNode['createPages'] = async ({
   actions,
   graphql,
 }) => {
-  const countryPageTemplate = path.resolve('./src/templates/country.tsx')
-  const organizationPageTemplate = path.resolve(
-    './src/templates/organization.tsx'
+  const stakeholderPageTemplate = path.resolve(
+    './src/templates/stakeholder.tsx'
   )
 
   const stakeholdersQuery = await graphql<Queries.CountriesQuery>(`
@@ -33,7 +32,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     if (stakeholder.iso3 !== '') {
       actions.createPage({
         path: `/countries/${simplifyForUrl(stakeholder.iso3)}`,
-        component: countryPageTemplate,
+        component: stakeholderPageTemplate,
         context: { name: stakeholder.name, iso3: stakeholder.iso3 },
       })
     }
@@ -42,7 +41,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     else {
       actions.createPage({
         path: `/organizations/${simplifyForUrl(stakeholder.name)}`,
-        component: organizationPageTemplate,
+        component: stakeholderPageTemplate,
         context: { name: stakeholder.name, iso3: '' },
       })
     }

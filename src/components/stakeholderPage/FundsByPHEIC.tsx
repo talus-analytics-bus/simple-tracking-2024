@@ -7,21 +7,21 @@ import BarPlot from 'components/plot/BarPlot/BarPlot'
 import { useTheme } from 'styled-components'
 
 interface FundsByPHEICProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
   selectedYear: string
   selectedYearsLabel: string
 }
 
 const isDisbursed = (
   pheic: any
-): pheic is Queries.CountryPageQuery['pheic_disbursed']['pheics'][0] =>
+): pheic is Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0] =>
   'disbursed' in pheic
 
 const restructurePheics = (
   acc: { [key: string]: number },
   pheic:
-    | Queries.CountryPageQuery['pheic_disbursed']['pheics'][0]
-    | Queries.CountryPageQuery['pheic_received']['pheics'][0]
+    | Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0]
+    | Queries.StakeholderPageQuery['pheic_received']['pheics'][0]
 ) => {
   const pheicName = pheic.pheic ?? ''
   let value = 0

@@ -3,7 +3,7 @@ import styled, { useTheme } from 'styled-components'
 import { ContentBox, HorizontalColumns, NoData } from './StakeholderLayout'
 
 interface SparScoresProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
 }
 
 const Table = styled.table`

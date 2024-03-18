@@ -5,7 +5,7 @@ import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import styled, { useTheme } from 'styled-components'
 
 interface TopFundersAndRecipientsProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
   selectedYear: string
   selectedYearsLabel: string
 }

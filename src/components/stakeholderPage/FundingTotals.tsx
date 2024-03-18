@@ -6,7 +6,7 @@ import { ContentBox, HorizontalColumns, TotalsTable } from './StakeholderLayout'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
 interface FundingTotalsProps {
-  data: Queries.CountryPageQuery
+  data: Queries.StakeholderPageQuery
   selectedYear: string
   selectedYearsLabel: string
 }
