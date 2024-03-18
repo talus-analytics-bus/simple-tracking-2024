@@ -123,7 +123,7 @@ const StakeholderPage = ({
             {flagImage && (
               <Flag image={flagImage} alt={data.stakeholdersCsv?.name ?? ''} />
             )}
-            Country: {data.stakeholdersCsv?.name}
+            {data.stakeholdersCsv?.name}
           </H1>
           <YearSelector
             value={selectedYear}

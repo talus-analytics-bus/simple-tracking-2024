@@ -39,7 +39,7 @@ const FundsByPHEIC = ({
 }: FundsByPHEICProps) => {
   if (!data.pheic_received?.pheics || !data.pheic_disbursed?.pheics)
     throw new Error(
-      `Data not found for country ${data.stakeholdersCsv?.name} in pheic_received or pheic_disbursed`
+      `Data not found for stakeholder ${data.stakeholdersCsv?.name} in pheic_received or pheic_disbursed`
     )
 
   const theme = useTheme()

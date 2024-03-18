@@ -19,9 +19,12 @@ const FundsByCategory = ({
   selectedYear,
   selectedYearsLabel,
 }: FundsByCategoryProps) => {
-  if (!data.allFundingByCapacityCsv?.years)
+  if (
+    !data.allFundingByCapacityCsv?.years ||
+    data.allFundingByCapacityCsv.years.length === 0
+  )
     throw new Error(
-      `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
+      `No years found for stakeholder ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
     )
 
   const theme = useTheme()

@@ -18,9 +18,12 @@ const FundingTotals = ({
 }: FundingTotalsProps) => {
   let displayTotals = {} as { [key: string]: number }
 
-  if (!data.allReceivedAndDisbursedCsv?.years)
+  if (
+    !data.allReceivedAndDisbursedCsv?.years ||
+    data.allReceivedAndDisbursedCsv.years.length === 0
+  )
     throw new Error(
-      `No years found for country ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
+      `No years found for stakeholder ${data.stakeholdersCsv?.name} in allReceivedAndDisbursedCsv`
     )
 
   if (selectedYear === 'All time')
