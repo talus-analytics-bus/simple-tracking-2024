@@ -90,6 +90,13 @@ const CountryPage = ({
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
+  const jeeVersion = { jee1: '1.0', jee2: '2.0' }[
+    data.allJeeScoresCsv.nodes[0].risk_index ?? ''
+  ]
+
+  if (!jeeVersion)
+    throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)
+
   return (
     <Providers>
       <CMS.SEO />
@@ -200,7 +207,11 @@ const CountryPage = ({
 
           <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
           <h2>
-            <CMS.Text name={'H8 header'} data={cmsData} />
+            <CMS.Text
+              name={'H8 header'}
+              data={cmsData}
+              replace={{ '[1.0]': jeeVersion }}
+            />
           </h2>
           <h3>
             <CMS.Text name={'H8 subtitle'} data={cmsData} />
