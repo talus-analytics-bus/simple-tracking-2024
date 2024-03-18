@@ -41,10 +41,13 @@ function getCMSText(
       )
   }
 
-  if (replace)
+  if (replace && Object.keys(replace).length > 0) {
+    let replaced = text
     Object.entries(replace).forEach(([placeholder, value]) => {
-      text.replaceAll(placeholder, value)
+      replaced = replaced.replaceAll(placeholder, value)
     })
+    return replaced
+  }
 
   return text
 }
