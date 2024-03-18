@@ -33,7 +33,7 @@ const CMSText = ({
   replace = {},
   noEmitError = false,
 }: CMSTextProps): JSX.Element => {
-  const text = getCMSText(data, name, replace, noEmitError)
+  const text = getCMSText(data, name, noEmitError, replace)
   if (!text) return <></>
 
   return <>{text}</>

@@ -6,26 +6,26 @@ import { AirtableCMSData } from 'components/library/airtable/cms-types'
 function getCMSText(
   data: AirtableCMSData,
   name: string,
-  replace: { [key: string]: string },
-  noEmitError: true
+  noEmitError: true,
+  replace?: { [key: string]: string }
 ): string | undefined
 function getCMSText(
   data: AirtableCMSData,
   name: string,
-  replace: { [key: string]: string },
-  noEmitError: boolean
+  noEmitError: boolean,
+  replace?: { [key: string]: string }
 ): string | undefined
 function getCMSText(
   data: AirtableCMSData,
   name: string,
-  replace: { [key: string]: string },
-  noEmitError?: false
+  noEmitError?: false,
+  replace?: { [key: string]: string }
 ): string
 function getCMSText(
   data: AirtableCMSData,
   name: string,
-  replace: { [key: string]: string },
-  noEmitError?: true | false | boolean | undefined
+  noEmitError?: true | false | boolean | undefined,
+  replace?: { [key: string]: string }
 ) {
   const text = data.nodes.find(n => n.data.Name === name)?.data.Text
 

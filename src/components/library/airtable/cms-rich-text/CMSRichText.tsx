@@ -34,7 +34,7 @@ const CMSRichText = React.forwardRef<HTMLDivElement, CMSRichTextProps>(
     { data, name, replace = {}, noEmitError = false, ...props },
     ref
   ): JSX.Element => {
-    const markdown = getCMSText(data, name, replace, noEmitError)
+    const markdown = getCMSText(data, name, noEmitError, replace)
     if (!markdown) return <></>
     return <RenderCMSRichText {...props} ref={ref} markdown={markdown} />
   }
