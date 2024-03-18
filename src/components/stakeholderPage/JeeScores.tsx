@@ -105,8 +105,6 @@ const JeeScores = ({ data }: JeeScoresProps) => {
     )
   }
 
-  console.log(scoresByCategory)
-
   return (
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>
       {Object.entries(scoresByCategory).map(([category, scores]) => (
