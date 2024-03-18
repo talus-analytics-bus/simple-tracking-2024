@@ -15,6 +15,12 @@ export interface CMSRichTextProps extends React.ComponentPropsWithRef<'div'> {
    */
   data: AirtableCMSData
   /**
+   * Optional object to replace text in the
+   * returned string. The key is the placeholder to
+   * replace, and the value is the replacement.
+   */
+  replace?: { [key: string]: string }
+  /**
    * Suppress error handling; this will return
    * an empty fragment instead of throwing an
    * error if the requested text is missing
@@ -24,8 +30,11 @@ export interface CMSRichTextProps extends React.ComponentPropsWithRef<'div'> {
 }
 
 const CMSRichText = React.forwardRef<HTMLDivElement, CMSRichTextProps>(
-  ({ data, name, noEmitError = false, ...props }, ref): JSX.Element => {
-    const markdown = getCMSText(data, name, noEmitError)
+  (
+    { data, name, replace = {}, noEmitError = false, ...props },
+    ref
+  ): JSX.Element => {
+    const markdown = getCMSText(data, name, replace, noEmitError)
     if (!markdown) return <></>
     return <RenderCMSRichText {...props} ref={ref} markdown={markdown} />
   }

@@ -13,6 +13,12 @@ export interface CMSTextProps {
    */
   data: AirtableCMSData
   /**
+   * Optional object to replace text in the
+   * returned string. The key is the placeholder to
+   * replace, and the value is the replacement.
+   */
+  replace?: { [key: string]: string }
+  /**
    * Suppress error handling; this will return
    * an empty fragment instead of throwing an
    * error if the requested text is missing
@@ -24,10 +30,12 @@ export interface CMSTextProps {
 const CMSText = ({
   data,
   name,
+  replace = {},
   noEmitError = false,
 }: CMSTextProps): JSX.Element => {
-  const text = getCMSText(data, name, noEmitError)
+  const text = getCMSText(data, name, replace, noEmitError)
   if (!text) return <></>
+
   return <>{text}</>
 }
 

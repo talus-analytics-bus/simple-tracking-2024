@@ -6,33 +6,47 @@ import { AirtableCMSData } from 'components/library/airtable/cms-types'
 function getCMSText(
   data: AirtableCMSData,
   name: string,
+  replace: { [key: string]: string },
   noEmitError: true
 ): string | undefined
 function getCMSText(
   data: AirtableCMSData,
   name: string,
+  replace: { [key: string]: string },
   noEmitError: boolean
 ): string | undefined
 function getCMSText(
   data: AirtableCMSData,
   name: string,
+  replace: { [key: string]: string },
   noEmitError?: false
 ): string
 function getCMSText(
   data: AirtableCMSData,
   name: string,
+  replace: { [key: string]: string },
   noEmitError?: true | false | boolean | undefined
 ) {
   const text = data.nodes.find(n => n.data.Name === name)?.data.Text
-  if (text) return text
-  if (noEmitError === true) return undefined
-  throw new Error(
-    `Text section ${name} not found in ` +
-      `the Airtable data specified. Does that ` +
-      `query include the right tables, and ` +
-      `does one of those tables include a ` +
-      `section called ${name}?`
-  )
+
+  if (!text) {
+    if (noEmitError === true) return undefined
+    else
+      throw new Error(
+        `Text section ${name} not found in ` +
+          `the Airtable data specified. Does that ` +
+          `query include the right tables, and ` +
+          `does one of those tables include a ` +
+          `section called ${name}?`
+      )
+  }
+
+  if (replace)
+    Object.entries(replace).forEach(([placeholder, value]) => {
+      text.replaceAll(placeholder, value)
+    })
+
+  return text
 }
 
 export default getCMSText
