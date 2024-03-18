@@ -71,6 +71,8 @@ const StakeholderPage = ({
     '[STAKEHOLDER]': data.stakeholdersCsv?.name,
   })
 
+  const stakeholderIsCountry = data.stakeholdersCsv?.iso3 !== ''
+
   const yearOptions = [
     'All time',
     ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
@@ -97,7 +99,7 @@ const StakeholderPage = ({
       data.allJeeScoresCsv.nodes[0]?.risk_index ?? ''
     ] ?? ''
 
-  if (data.stakeholdersCsv?.iso3 && !jeeVersion)
+  if (stakeholderIsCountry && !jeeVersion)
     throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)
 
   console.log('hello world')
@@ -201,54 +203,58 @@ const StakeholderPage = ({
             selectedYearsLabel={selectedYearsLabel}
           />
 
-          <ScrollTarget id={formatHash(leftNavElements[4].data.Text)} />
-          <h2>
-            <CMS.Text name={'H7 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H7 subtitle'} data={cmsData} />
-          </h3>
-          <SparScores data={data} />
+          {stakeholderIsCountry && (
+            <>
+              <ScrollTarget id={formatHash(leftNavElements[4].data.Text)} />
+              <h2>
+                <CMS.Text name={'H7 header'} data={cmsData} />
+              </h2>
+              <h3>
+                <CMS.Text name={'H7 subtitle'} data={cmsData} />
+              </h3>
+              <SparScores data={data} />
 
-          <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
-          <h2>
-            <CMS.Text
-              name={'H8 header'}
-              data={cmsData}
-              replace={{ '[1.0]': jeeVersion }}
-            />
-          </h2>
-          <h3>
-            <CMS.Text name={'H8 subtitle'} data={cmsData} />
-          </h3>
-          <JeeScores data={data} />
+              <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
+              <h2>
+                <CMS.Text
+                  name={'H8 header'}
+                  data={cmsData}
+                  replace={{ '[1.0]': jeeVersion }}
+                />
+              </h2>
+              <h3>
+                <CMS.Text name={'H8 subtitle'} data={cmsData} />
+              </h3>
+              <JeeScores data={data} />
 
-          <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
-          <h2>
-            <CMS.Text name={'H9 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H9 subtitle'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
+              <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
+              <h2>
+                <CMS.Text name={'H9 header'} data={cmsData} />
+              </h2>
+              <h3>
+                <CMS.Text name={'H9 subtitle'} data={cmsData} />
+              </h3>
+              <ContentPlaceholder />
 
-          <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
-          <h2>
-            <CMS.Text name={'H10 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H10 subtitle'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
+              <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
+              <h2>
+                <CMS.Text name={'H10 header'} data={cmsData} />
+              </h2>
+              <h3>
+                <CMS.Text name={'H10 subtitle'} data={cmsData} />
+              </h3>
+              <ContentPlaceholder />
 
-          <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
-          <h2>
-            <CMS.Text name={'H11 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H11 subtitle'} data={cmsData} />
-          </h3>
-          <ContentPlaceholder />
+              <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
+              <h2>
+                <CMS.Text name={'H11 header'} data={cmsData} />
+              </h2>
+              <h3>
+                <CMS.Text name={'H11 subtitle'} data={cmsData} />
+              </h3>
+              <ContentPlaceholder />
+            </>
+          )}
         </MainContent>
       </Layout>
       <Footer />
