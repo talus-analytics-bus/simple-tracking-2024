@@ -23,6 +23,7 @@ import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByC
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
 import SparScores from 'components/stakeholderPage/SparScores'
+import JeeScores from 'components/stakeholderPage/JeeScores'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -204,7 +205,7 @@ const CountryPage = ({
           <h3>
             <CMS.Text name={'H8 subtitle'} data={cmsData} />
           </h3>
-          <ContentPlaceholder />
+          <JeeScores data={data} />
 
           <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
           <h2>
@@ -346,6 +347,15 @@ export const query = graphql`
     }
     allSparScores2022Csv(filter: { iso3: { eq: $iso3 } }) {
       nodes {
+        metric
+        metric_name
+        meaning
+      }
+    }
+    allJeeScoresCsv(filter: { iso3: { eq: $iso3 } }) {
+      nodes {
+        risk_index
+        capacity_category
         metric
         metric_name
         meaning
