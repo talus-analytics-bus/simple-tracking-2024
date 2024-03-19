@@ -40,7 +40,7 @@ LEFT JOIN (
 		stakeholders
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
-		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
+		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
 		GROUP BY id, year
 ) received
 ON received.id = top_level_stakeholders.id
@@ -56,16 +56,9 @@ LEFT JOIN (
 		stakeholders
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
-		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
+		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
 		GROUP BY id, year
 ) disbursed 
 ON disbursed.id = top_level_stakeholders.id AND disbursed.year = received.year
-WHERE COALESCE(
-	received.response,
-	received.capacity,
-	received.total,
-	disbursed.response, 
-	disbursed.capacity, 
-	disbursed.total
-) IS NOT NULL
+WHERE COALESCE(received.*, disbursed.*) IS NOT NULL
 ORDER BY name ASC, year DESC;
