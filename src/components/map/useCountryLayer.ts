@@ -49,7 +49,8 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
 const useCountryLayer = () => {
   const theme = useTheme()
 
-  const countriesReceivedAndDisbursed = useCountriesReceivedAndDisbursed()
+  // const countriesReceivedAndDisbursed = useCountriesReceivedAndDisbursed()
+  const countriesReceivedAndDisbursed = []
 
   const countryLayer = useMemo(() => {
     // find max value for received and disbursed

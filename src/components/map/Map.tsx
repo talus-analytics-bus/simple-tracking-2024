@@ -52,6 +52,8 @@ const FundingMap = () => {
     setHoveredISO(event.features?.[0]?.properties?.ISO_A3 ?? ' ')
   }, [])
 
+  return <>Map</>
+
   return (
     <MapContainer>
       <Map
