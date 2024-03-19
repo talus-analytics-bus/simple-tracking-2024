@@ -7,9 +7,9 @@ ActionAid International,2021,2019-2022 COVID-19 Pandemic,,1859207
 ActionAid International,2020,2019-2022 COVID-19 Pandemic,,2881880
 ADD International (Action on Disability and Development),2020,2019-2022 COVID-19 Pandemic,,167106
 Afghanistan,2022,2014-2022 Poliovirus,16329109,
-Afghanistan,2022,2019-2022 COVID-19 Pandemic,49086635,15261849
+Afghanistan,2022,2019-2022 COVID-19 Pandemic,49086635,
 Afghanistan,2021,2014-2022 Poliovirus,84543291,
-Afghanistan,2021,2019-2022 COVID-19 Pandemic,147051375,15261849
+Afghanistan,2021,2019-2022 COVID-19 Pandemic,147051375,
 Afghanistan,2020,2014-2022 Poliovirus,74551723,
 Afghanistan,2020,2019-2022 COVID-19 Pandemic,162773302,15261849
 Afghanistan,2019,2014-2022 Poliovirus,37534213,
@@ -99,9 +99,9 @@ Australia,2010,2009-2010 H1N1,,11869300
 Australia,2009,2009-2010 H1N1,,6656660
 Austria,2020,2019-2022 COVID-19 Pandemic,,4616884
 Azerbaijan,2022,2014-2022 Poliovirus,271176,
-Azerbaijan,2022,2019-2022 COVID-19 Pandemic,7338,10000000
+Azerbaijan,2022,2019-2022 COVID-19 Pandemic,7338,
 Azerbaijan,2021,2014-2022 Poliovirus,529196,
-Azerbaijan,2021,2019-2022 COVID-19 Pandemic,251187490,10000000
+Azerbaijan,2021,2019-2022 COVID-19 Pandemic,251187490,
 Azerbaijan,2020,2014-2022 Poliovirus,204190,
 Azerbaijan,2020,2019-2022 COVID-19 Pandemic,4637862,10000000
 Azerbaijan,2019,2014-2022 Poliovirus,203500,
@@ -259,9 +259,9 @@ Cambodia,2016,2014-2022 Poliovirus,591170,
 Cambodia,2015,2014-2022 Poliovirus,750985,
 Cambridge Mayor's Disaster Relief Fund,2020,2019-2022 COVID-19 Pandemic,2000000,
 Cameroon,2022,2014-2022 Poliovirus,1549333,
-Cameroon,2022,2019-2022 COVID-19 Pandemic,3839080,695827
+Cameroon,2022,2019-2022 COVID-19 Pandemic,3839080,
 Cameroon,2021,2014-2022 Poliovirus,9605288,
-Cameroon,2021,2019-2022 COVID-19 Pandemic,59201107,695827
+Cameroon,2021,2019-2022 COVID-19 Pandemic,59201107,
 Cameroon,2020,2014-2022 Poliovirus,7307144,
 Cameroon,2020,2019-2022 COVID-19 Pandemic,156228722,695827
 Cameroon,2019,2014-2022 Poliovirus,1694634,
@@ -270,30 +270,24 @@ Cameroon,2017,2014-2022 Poliovirus,7324969,
 Cameroon,2016,2014-2022 Poliovirus,6328230,
 Cameroon,2014,2014-2022 Poliovirus,2002106,
 Canada,2022,2014-2016 Ebola in West Africa,,696316
-Canada,2022,2019-2022 COVID-19 Pandemic,6568,7267591
-Canada,2022,2019-2022 COVID-19 Pandemic,6568,7275135
-Canada,2022,2019-2022 COVID-19 Pandemic,6568,7882735
 Canada,2022,2019-2022 COVID-19 Pandemic,6568,18478582
-Canada,2022,2019-2022 COVID-19 Pandemic,6568,117079582
-Canada,2022,2019-2022 COVID-19 Pandemic,6568,221404011
 Canada,2021,2014-2016 Ebola in West Africa,,696316
+Canada,2021,2019-2022 COVID-19 Pandemic,,221404011
 Canada,2020,2014-2016 Ebola in West Africa,,696316
 Canada,2020,2018-2020 Ebola in DRC,,415215
-Canada,2020,2019-2022 COVID-19 Pandemic,1395,7267591
-Canada,2020,2019-2022 COVID-19 Pandemic,1395,7275135
-Canada,2020,2019-2022 COVID-19 Pandemic,1395,7882735
-Canada,2020,2019-2022 COVID-19 Pandemic,1395,18478582
 Canada,2020,2019-2022 COVID-19 Pandemic,1395,117079582
-Canada,2020,2019-2022 COVID-19 Pandemic,1395,221404011
 Canada,2019,2014-2016 Ebola in West Africa,,696316
 Canada,2019,2014-2022 Poliovirus,,3755068
 Canada,2019,2018-2020 Ebola in DRC,,7044355
+Canada,2019,2019-2022 COVID-19 Pandemic,,7882735
 Canada,2018,2014-2016 Ebola in West Africa,,713375
 Canada,2018,2014-2022 Poliovirus,,2356408
 Canada,2018,2018-2020 Ebola in DRC,,2631462
+Canada,2018,2019-2022 COVID-19 Pandemic,,7275135
 Canada,2017,2014-2016 Ebola in West Africa,,712635
 Canada,2017,2014-2022 Poliovirus,,28085639
 Canada,2017,2015-2016 Zika Virus,,77781
+Canada,2017,2019-2022 COVID-19 Pandemic,,7267591
 Canada,2016,2014-2016 Ebola in West Africa,,10589267
 Canada,2016,2014-2022 Poliovirus,,39250027
 Canada,2016,2015-2016 Zika Virus,,964806
@@ -315,9 +309,9 @@ CDAC Network,2020,2019-2022 COVID-19 Pandemic,,15577
 CDC Foundation,2016,2015-2016 Zika Virus,4750000,
 CDC Foundation,2014,2014-2016 Ebola in West Africa,25000000,
 Central African Republic,2022,2014-2022 Poliovirus,17938,
-Central African Republic,2022,2019-2022 COVID-19 Pandemic,11891116,2450000
+Central African Republic,2022,2019-2022 COVID-19 Pandemic,11891116,
 Central African Republic,2021,2014-2022 Poliovirus,2896964,
-Central African Republic,2021,2019-2022 COVID-19 Pandemic,32726828,2450000
+Central African Republic,2021,2019-2022 COVID-19 Pandemic,32726828,
 Central African Republic,2020,2014-2022 Poliovirus,3280822,
 Central African Republic,2020,2018-2020 Ebola in DRC,19982432,
 Central African Republic,2020,2019-2022 COVID-19 Pandemic,64784770,2450000
@@ -328,9 +322,9 @@ Central African Republic,2016,2014-2016 Ebola in West Africa,2000000,
 Central African Republic,2016,2014-2022 Poliovirus,93659,
 Central African Republic,2015,2014-2022 Poliovirus,211711,
 Chad,2022,2014-2022 Poliovirus,853445,
-Chad,2022,2019-2022 COVID-19 Pandemic,8747164,2145554
+Chad,2022,2019-2022 COVID-19 Pandemic,8747164,
 Chad,2021,2014-2022 Poliovirus,9944162,
-Chad,2021,2019-2022 COVID-19 Pandemic,38106198,2145554
+Chad,2021,2019-2022 COVID-19 Pandemic,38106198,
 Chad,2020,2014-2022 Poliovirus,9499746,
 Chad,2020,2019-2022 COVID-19 Pandemic,118684974,2145554
 Chad,2019,2014-2022 Poliovirus,2789360,
@@ -345,9 +339,9 @@ Chembio Diagnostics Systems Inc.,2016,2015-2016 Zika Virus,550000,
 Chile,2021,2019-2022 COVID-19 Pandemic,293521,
 Chile,2020,2019-2022 COVID-19 Pandemic,983847,
 Chile,2014,2014-2016 Ebola in West Africa,,300000
-China,2022,2019-2022 COVID-19 Pandemic,198485,25100000
+China,2022,2019-2022 COVID-19 Pandemic,198485,
 China,2021,2014-2022 Poliovirus,193015,
-China,2021,2019-2022 COVID-19 Pandemic,1341999,25100000
+China,2021,2019-2022 COVID-19 Pandemic,1341999,
 China,2020,2014-2022 Poliovirus,253015,
 China,2020,2019-2022 COVID-19 Pandemic,10135281,25100000
 China,2019,2018-2020 Ebola in DRC,,3000000
@@ -376,11 +370,11 @@ Colombia,2021,2019-2022 COVID-19 Pandemic,31882388,
 Colombia,2020,2019-2022 COVID-19 Pandemic,200307219,
 Colombia,2017,2014-2022 Poliovirus,5806,
 Colombia,2014,2014-2016 Ebola in West Africa,,100000
-Comoros,2022,2019-2022 COVID-19 Pandemic,369594,1356625
+Comoros,2022,2019-2022 COVID-19 Pandemic,369594,
 Comoros,2021,2014-2022 Poliovirus,104346,
 Comoros,2021,2019-2022 COVID-19 Pandemic,13043042,1356625
 Comoros,2020,2014-2022 Poliovirus,76769,
-Comoros,2020,2019-2022 COVID-19 Pandemic,22768373,1356625
+Comoros,2020,2019-2022 COVID-19 Pandemic,22768373,
 Comoros,2019,2014-2022 Poliovirus,121502,
 Comoros,2018,2014-2022 Poliovirus,103540,
 Comoros,2016,2014-2022 Poliovirus,525,
@@ -413,9 +407,9 @@ Costa Rica,2022,2019-2022 COVID-19 Pandemic,76697,
 Costa Rica,2021,2019-2022 COVID-19 Pandemic,2624668,
 Costa Rica,2020,2019-2022 COVID-19 Pandemic,1643699,
 Cote d'Ivoire,2022,2014-2022 Poliovirus,551600,
-Cote d'Ivoire,2022,2019-2022 COVID-19 Pandemic,28856896,439351
+Cote d'Ivoire,2022,2019-2022 COVID-19 Pandemic,28856896,
 Cote d'Ivoire,2021,2014-2022 Poliovirus,4203786,
-Cote d'Ivoire,2021,2019-2022 COVID-19 Pandemic,172186268,439351
+Cote d'Ivoire,2021,2019-2022 COVID-19 Pandemic,172186268,
 Cote d'Ivoire,2020,2014-2022 Poliovirus,8976984,
 Cote d'Ivoire,2020,2019-2022 COVID-19 Pandemic,153784573,439351
 Cote d'Ivoire,2019,2014-2022 Poliovirus,2652153,
@@ -444,7 +438,8 @@ Cuba,2016,2014-2022 Poliovirus,304500,
 Cuba,2015,2014-2022 Poliovirus,730500,
 Curaçao,2021,2019-2022 COVID-19 Pandemic,22388986,
 Curaçao,2020,2019-2022 COVID-19 Pandemic,25005007,
-Cyprus,2021,2019-2022 COVID-19 Pandemic,759,110376
+Cyprus,2021,2019-2022 COVID-19 Pandemic,759,
+Cyprus,2020,2019-2022 COVID-19 Pandemic,,110376
 Cyprus,2014,2014-2016 Ebola in West Africa,,6350
 Czech Republic,2020,2019-2022 COVID-19 Pandemic,,258176
 Czech Republic,2015,2014-2016 Ebola in West Africa,,205052
@@ -465,13 +460,13 @@ Democratic People's Republic of Korea,2016,2014-2022 Poliovirus,18836,
 Democratic People's Republic of Korea,2015,2014-2022 Poliovirus,582758,
 Democratic People's Republic of Korea,2014,2014-2022 Poliovirus,608180,
 Democratic Republic of the Congo,2022,2018-2020 Ebola in DRC,500000,
-Democratic Republic of the Congo,2022,2019-2022 COVID-19 Pandemic,17758967,1285398
+Democratic Republic of the Congo,2022,2019-2022 COVID-19 Pandemic,17758967,
 Democratic Republic of the Congo,2021,2014-2022 Poliovirus,31224233,
 Democratic Republic of the Congo,2021,2018-2020 Ebola in DRC,1060000,
 Democratic Republic of the Congo,2021,2019-2022 COVID-19 Pandemic,227643494,1285398
 Democratic Republic of the Congo,2020,2014-2022 Poliovirus,35370368,
 Democratic Republic of the Congo,2020,2018-2020 Ebola in DRC,252188239,
-Democratic Republic of the Congo,2020,2019-2022 COVID-19 Pandemic,219381307,1285398
+Democratic Republic of the Congo,2020,2019-2022 COVID-19 Pandemic,219381307,
 Democratic Republic of the Congo,2019,2014-2022 Poliovirus,13912743,
 Democratic Republic of the Congo,2019,2018-2020 Ebola in DRC,411615230,
 Democratic Republic of the Congo,2018,2014-2022 Poliovirus,10471769,
@@ -482,9 +477,9 @@ Democratic Republic of the Congo,2016,2014-2016 Ebola in West Africa,4955375,
 Democratic Republic of the Congo,2016,2014-2022 Poliovirus,5708853,
 Democratic Republic of the Congo,2015,2014-2022 Poliovirus,6328432,
 Democratic Republic of the Congo,2014,2014-2022 Poliovirus,4422785,
-Denmark,2021,2019-2022 COVID-19 Pandemic,11949,2447874
+Denmark,2022,2019-2022 COVID-19 Pandemic,,2447874
 Denmark,2021,2019-2022 COVID-19 Pandemic,11949,63120577
-Denmark,2021,2019-2022 COVID-19 Pandemic,11949,149424174
+Denmark,2020,2019-2022 COVID-19 Pandemic,,149424174
 Denmark,2019,2018-2020 Ebola in DRC,,4430859
 Denmark,2016,2014-2016 Ebola in West Africa,,1411074
 Denmark,2015,2014-2016 Ebola in West Africa,,1411074
@@ -522,9 +517,9 @@ Ecuador,2021,2019-2022 COVID-19 Pandemic,570723946,
 Ecuador,2020,2019-2022 COVID-19 Pandemic,211128535,
 Ecuador,2017,2014-2022 Poliovirus,111143,
 Edukans Foundation,2020,2019-2022 COVID-19 Pandemic,,324276
-Egypt,2022,2019-2022 COVID-19 Pandemic,318227294,356830
+Egypt,2022,2019-2022 COVID-19 Pandemic,318227294,
 Egypt,2021,2019-2022 COVID-19 Pandemic,143262210,356830
-Egypt,2020,2019-2022 COVID-19 Pandemic,10096728,356830
+Egypt,2020,2019-2022 COVID-19 Pandemic,10096728,
 Eli Lilly and Company,2016,2014-2016 Ebola in West Africa,,16667
 Eli Lilly and Company,2015,2014-2016 Ebola in West Africa,,16667
 Eli Lilly and Company,2014,2014-2016 Ebola in West Africa,,16667
@@ -592,10 +587,10 @@ France,2020,2019-2022 COVID-19 Pandemic,,548044071
 France,2016,2014-2016 Ebola in West Africa,,211775
 France,2015,2014-2016 Ebola in West Africa,,211775
 France,2014,2014-2016 Ebola in West Africa,,211775
-Gabon,2023,2019-2022 COVID-19 Pandemic,138500,6827642
-Gabon,2022,2019-2022 COVID-19 Pandemic,407623,6827642
+Gabon,2023,2019-2022 COVID-19 Pandemic,138500,
+Gabon,2022,2019-2022 COVID-19 Pandemic,407623,
 Gabon,2021,2014-2022 Poliovirus,436091,
-Gabon,2021,2019-2022 COVID-19 Pandemic,1883291,6827642
+Gabon,2021,2019-2022 COVID-19 Pandemic,1883291,
 Gabon,2020,2014-2022 Poliovirus,512822,
 Gabon,2020,2019-2022 COVID-19 Pandemic,129435179,6827642
 Gambia,2022,2019-2022 COVID-19 Pandemic,847328,
@@ -692,9 +687,9 @@ Guatemala,2021,2014-2022 Poliovirus,91,
 Guatemala,2021,2019-2022 COVID-19 Pandemic,17129785,
 Guatemala,2020,2019-2022 COVID-19 Pandemic,16226310,
 Guatemala,2017,2014-2022 Poliovirus,259129,
-Guinea,2022,2019-2022 COVID-19 Pandemic,24702478,1794462
+Guinea,2022,2019-2022 COVID-19 Pandemic,24702478,
 Guinea,2021,2014-2022 Poliovirus,3341831,
-Guinea,2021,2019-2022 COVID-19 Pandemic,21711215,1794462
+Guinea,2021,2019-2022 COVID-19 Pandemic,21711215,
 Guinea,2020,2014-2022 Poliovirus,1827422,
 Guinea,2020,2019-2022 COVID-19 Pandemic,72385020,1794462
 Guinea,2019,2014-2022 Poliovirus,396099,
@@ -702,20 +697,14 @@ Guinea,2018,2014-2022 Poliovirus,390248,
 Guinea,2018,2018-2020 Ebola in DRC,638015,
 Guinea,2017,2014-2022 Poliovirus,263414,
 Guinea,2016,2014-2016 Ebola in West Africa,61806887,33333
-Guinea,2016,2014-2016 Ebola in West Africa,61806887,33333
-Guinea,2016,2014-2016 Ebola in West Africa,61806887,33333
 Guinea,2016,2014-2022 Poliovirus,594785,
-Guinea,2015,2014-2016 Ebola in West Africa,132272693,33333
-Guinea,2015,2014-2016 Ebola in West Africa,132272693,33333
 Guinea,2015,2014-2016 Ebola in West Africa,132272693,33333
 Guinea,2015,2014-2022 Poliovirus,680348,
 Guinea,2014,2014-2016 Ebola in West Africa,33231729,33333
-Guinea,2014,2014-2016 Ebola in West Africa,33231729,33333
-Guinea,2014,2014-2016 Ebola in West Africa,33231729,33333
 Guinea,2014,2014-2022 Poliovirus,62625,
-Guinea Bissau,2022,2019-2022 COVID-19 Pandemic,9851755,11831789
+Guinea Bissau,2022,2019-2022 COVID-19 Pandemic,9851755,
 Guinea Bissau,2021,2014-2022 Poliovirus,278829,
-Guinea Bissau,2021,2019-2022 COVID-19 Pandemic,5558316,11831789
+Guinea Bissau,2021,2019-2022 COVID-19 Pandemic,5558316,
 Guinea Bissau,2020,2014-2022 Poliovirus,134350,
 Guinea Bissau,2020,2019-2022 COVID-19 Pandemic,9611189,11831789
 Guinea Bissau,2019,2014-2022 Poliovirus,220561,
@@ -768,7 +757,8 @@ Honduras,2018,2014-2022 Poliovirus,1090500,
 Honduras,2017,2014-2022 Poliovirus,366496,
 Honduras,2016,2014-2022 Poliovirus,443000,
 Honduras,2015,2014-2022 Poliovirus,868500,
-Hungary,2021,2019-2022 COVID-19 Pandemic,17,800000
+Hungary,2021,2019-2022 COVID-19 Pandemic,17,
+Hungary,2020,2019-2022 COVID-19 Pandemic,,800000
 Hungary,2016,2014-2016 Ebola in West Africa,,20859
 Hungary,2015,2014-2016 Ebola in West Africa,,20859
 Hungary,2014,2014-2016 Ebola in West Africa,,20859
@@ -789,9 +779,9 @@ India,2015,2014-2022 Poliovirus,95115097,
 India,2014,2014-2016 Ebola in West Africa,,10166667
 India,2014,2014-2022 Poliovirus,15883396,
 Indigo Trust,2014,2014-2016 Ebola in West Africa,,15377
-Indonesia,2022,2019-2022 COVID-19 Pandemic,618173396,1000000
+Indonesia,2022,2019-2022 COVID-19 Pandemic,618173396,
 Indonesia,2021,2014-2022 Poliovirus,9091718,
-Indonesia,2021,2019-2022 COVID-19 Pandemic,1061308904,1000000
+Indonesia,2021,2019-2022 COVID-19 Pandemic,1061308904,
 Indonesia,2020,2014-2022 Poliovirus,599881,
 Indonesia,2020,2019-2022 COVID-19 Pandemic,1780786803,1000000
 Indonesia,2019,2014-2022 Poliovirus,14996891,
@@ -828,26 +818,18 @@ International Red Cross and Red Crescent Movement,2019,2014-2022 Poliovirus,,132
 International Red Cross and Red Crescent Movement,2019,2018-2020 Ebola in DRC,,17529095
 International Red Cross and Red Crescent Movement,2018,2018-2020 Ebola in DRC,,8199486
 International Red Cross and Red Crescent Movement,2017,2015-2016 Zika Virus,2700203,951646
-International Red Cross and Red Crescent Movement,2017,2015-2016 Zika Virus,2700203,4146664
 International Red Cross and Red Crescent Movement,2016,2014-2016 Ebola in West Africa,147050,11181770
-International Red Cross and Red Crescent Movement,2016,2014-2016 Ebola in West Africa,147050,27038965
-International Red Cross and Red Crescent Movement,2016,2014-2016 Ebola in West Africa,147050,52465151
-International Red Cross and Red Crescent Movement,2016,2015-2016 Zika Virus,4197724,951646
 International Red Cross and Red Crescent Movement,2016,2015-2016 Zika Virus,4197724,4146664
-International Red Cross and Red Crescent Movement,2015,2014-2016 Ebola in West Africa,147050,11181770
-International Red Cross and Red Crescent Movement,2015,2014-2016 Ebola in West Africa,147050,27038965
 International Red Cross and Red Crescent Movement,2015,2014-2016 Ebola in West Africa,147050,52465151
-International Red Cross and Red Crescent Movement,2014,2014-2016 Ebola in West Africa,147050,11181770
 International Red Cross and Red Crescent Movement,2014,2014-2016 Ebola in West Africa,147050,27038965
-International Red Cross and Red Crescent Movement,2014,2014-2016 Ebola in West Africa,147050,52465151
 International Rescue Committee,2020,2018-2020 Ebola in DRC,,75837
 International Rescue Committee,2019,2018-2020 Ebola in DRC,,158400
 International Union Against Tuberculosis and Lung Disease,2016,2014-2016 Ebola in West Africa,,146667
 International Union Against Tuberculosis and Lung Disease,2015,2014-2016 Ebola in West Africa,,146667
 International Union Against Tuberculosis and Lung Disease,2014,2014-2016 Ebola in West Africa,,146667
-Iran,2022,2019-2022 COVID-19 Pandemic,95617592,51793834
+Iran,2022,2019-2022 COVID-19 Pandemic,95617592,
 Iran,2021,2014-2022 Poliovirus,193015,
-Iran,2021,2019-2022 COVID-19 Pandemic,11012036,51793834
+Iran,2021,2019-2022 COVID-19 Pandemic,11012036,
 Iran,2020,2014-2022 Poliovirus,193015,
 Iran,2020,2019-2022 COVID-19 Pandemic,77481430,51793834
 Iran,2018,2014-2022 Poliovirus,64757,
@@ -865,7 +847,7 @@ Iraq,2017,2014-2022 Poliovirus,2989008,
 Iraq,2016,2014-2022 Poliovirus,2082237,
 Iraq,2015,2014-2022 Poliovirus,1100594,
 Iraq,2014,2014-2022 Poliovirus,3815117,
-Ireland,2020,2019-2022 COVID-19 Pandemic,25,936454
+Ireland,2021,2019-2022 COVID-19 Pandemic,,936454
 Ireland,2020,2019-2022 COVID-19 Pandemic,25,36309270
 Ireland,2019,2018-2020 Ebola in DRC,,2587338
 Ireland,2018,2018-2020 Ebola in DRC,,1138434
@@ -878,11 +860,8 @@ Islamic Relief Worldwide,2021,2019-2022 COVID-19 Pandemic,,201334
 Islamic Relief Worldwide,2020,2019-2022 COVID-19 Pandemic,,448034
 Israel,2021,2019-2022 COVID-19 Pandemic,4157,43267
 Israel,2014,2014-2016 Ebola in West Africa,,8750000
-Italy,2021,2019-2022 COVID-19 Pandemic,1459910,4052879
+Italy,2022,2019-2022 COVID-19 Pandemic,,4052879
 Italy,2021,2019-2022 COVID-19 Pandemic,1459910,13753543
-Italy,2021,2019-2022 COVID-19 Pandemic,1459910,16230979
-Italy,2020,2019-2022 COVID-19 Pandemic,2120685,4052879
-Italy,2020,2019-2022 COVID-19 Pandemic,2120685,13753543
 Italy,2020,2019-2022 COVID-19 Pandemic,2120685,16230979
 Italy,2019,2018-2020 Ebola in DRC,,335450
 Italy,2018,2014-2022 Poliovirus,,1138434
@@ -894,7 +873,7 @@ Italy,2014,2014-2016 Ebola in West Africa,,198519
 Jamaica,2021,2019-2022 COVID-19 Pandemic,91788310,
 Jamaica,2020,2019-2022 COVID-19 Pandemic,1946107,
 Japan,2021,2019-2022 COVID-19 Pandemic,6530,10431256
-Japan,2021,2019-2022 COVID-19 Pandemic,6530,171946751
+Japan,2020,2019-2022 COVID-19 Pandemic,,171946751
 Japan,2018,2018-2020 Ebola in DRC,,1300000
 Japan,2017,2015-2016 Zika Virus,,100305
 Japan,2016,2014-2016 Ebola in West Africa,,8276749
@@ -937,7 +916,7 @@ Kiribati,2014,2014-2022 Poliovirus,100526,
 Kosovo,2022,2019-2022 COVID-19 Pandemic,7368472,
 Kosovo,2021,2019-2022 COVID-19 Pandemic,27595572,
 Kosovo,2020,2019-2022 COVID-19 Pandemic,53985640,
-Kuwait,2020,2019-2022 COVID-19 Pandemic,267300,15000000
+Kuwait,2021,2019-2022 COVID-19 Pandemic,,15000000
 Kuwait,2020,2019-2022 COVID-19 Pandemic,267300,70500000
 Kuwait,2016,2014-2016 Ebola in West Africa,,1666667
 Kuwait,2015,2014-2016 Ebola in West Africa,,1666667
@@ -964,26 +943,26 @@ Lao People's Democratic Republic,2016,2014-2022 Poliovirus,472197,
 Lao People's Democratic Republic,2015,2014-2022 Poliovirus,413451,
 Lao People's Democratic Republic,2014,2014-2022 Poliovirus,145000,
 Latvia,2014,2014-2016 Ebola in West Africa,,48876
-Lebanon,2022,2019-2022 COVID-19 Pandemic,4411906,5562072
-Lebanon,2021,2019-2022 COVID-19 Pandemic,72916985,5562072
+Lebanon,2022,2019-2022 COVID-19 Pandemic,4411906,
+Lebanon,2021,2019-2022 COVID-19 Pandemic,72916985,
 Lebanon,2020,2019-2022 COVID-19 Pandemic,42552910,5562072
-Lesotho,2022,2019-2022 COVID-19 Pandemic,1369400,162912
+Lesotho,2022,2019-2022 COVID-19 Pandemic,1369400,
 Lesotho,2021,2014-2022 Poliovirus,241480,
 Lesotho,2021,2019-2022 COVID-19 Pandemic,19327443,162912
 Lesotho,2020,2014-2022 Poliovirus,162930,
-Lesotho,2020,2019-2022 COVID-19 Pandemic,15215459,162912
+Lesotho,2020,2019-2022 COVID-19 Pandemic,15215459,
 Lesotho,2019,2014-2022 Poliovirus,86156,
 Lesotho,2018,2014-2022 Poliovirus,165780,
 Lesotho,2017,2014-2022 Poliovirus,52100,
 Lesotho,2016,2014-2022 Poliovirus,12012,
 Lesotho,2015,2014-2022 Poliovirus,227644,
-Liberia,2022,2019-2022 COVID-19 Pandemic,13498685,1073696
+Liberia,2022,2019-2022 COVID-19 Pandemic,13498685,
 Liberia,2021,2014-2022 Poliovirus,3795754,
-Liberia,2021,2019-2022 COVID-19 Pandemic,28478968,1073696
+Liberia,2021,2019-2022 COVID-19 Pandemic,28478968,
 Liberia,2020,2014-2022 Poliovirus,677672,
 Liberia,2020,2019-2022 COVID-19 Pandemic,53510377,1073696
 Liberia,2019,2014-2022 Poliovirus,1227669,
-Liberia,2019,2019-2022 COVID-19 Pandemic,233333,1073696
+Liberia,2019,2019-2022 COVID-19 Pandemic,233333,
 Liberia,2018,2014-2022 Poliovirus,232538,
 Liberia,2017,2014-2022 Poliovirus,120351,
 Liberia,2016,2014-2016 Ebola in West Africa,124392931,
@@ -992,12 +971,12 @@ Liberia,2015,2014-2016 Ebola in West Africa,410807228,
 Liberia,2015,2014-2022 Poliovirus,89899,
 Liberia,2014,2014-2016 Ebola in West Africa,80089710,
 Liberia,2014,2014-2022 Poliovirus,167882,
-Libya,2022,2019-2022 COVID-19 Pandemic,748329,480000
-Libya,2021,2019-2022 COVID-19 Pandemic,20125364,480000
+Libya,2022,2019-2022 COVID-19 Pandemic,748329,
+Libya,2021,2019-2022 COVID-19 Pandemic,20125364,
 Libya,2020,2019-2022 COVID-19 Pandemic,11659790,480000
 Libya,2018,2014-2022 Poliovirus,569217,
 Liechtenstein,2020,2019-2022 COVID-19 Pandemic,,320513
-Lithuania,2021,2019-2022 COVID-19 Pandemic,1580385,111765
+Lithuania,2021,2019-2022 COVID-19 Pandemic,1580385,
 Lithuania,2020,2019-2022 COVID-19 Pandemic,1357916,111765
 Lithuania,2016,2015-2016 Zika Virus,22819,
 Luxembourg,2020,2019-2022 COVID-19 Pandemic,,2133509
@@ -1007,9 +986,9 @@ Luxembourg,2016,2014-2016 Ebola in West Africa,,117423
 Luxembourg,2015,2014-2016 Ebola in West Africa,,770543
 Luxembourg,2014,2014-2016 Ebola in West Africa,,366363
 Madagascar,2022,2014-2022 Poliovirus,1740500,
-Madagascar,2022,2019-2022 COVID-19 Pandemic,19804409,3700000
+Madagascar,2022,2019-2022 COVID-19 Pandemic,19804409,
 Madagascar,2021,2014-2022 Poliovirus,5062029,
-Madagascar,2021,2019-2022 COVID-19 Pandemic,106055773,3700000
+Madagascar,2021,2019-2022 COVID-19 Pandemic,106055773,
 Madagascar,2020,2014-2022 Poliovirus,4803047,
 Madagascar,2020,2019-2022 COVID-19 Pandemic,23629977,3700000
 Madagascar,2019,2014-2022 Poliovirus,2627784,
@@ -1039,11 +1018,11 @@ Malaysia,2015,2014-2016 Ebola in West Africa,,100000
 Maldives,2022,2019-2022 COVID-19 Pandemic,1571145,
 Maldives,2021,2019-2022 COVID-19 Pandemic,22592845,
 Maldives,2020,2019-2022 COVID-19 Pandemic,40636913,
-Mali,2022,2019-2022 COVID-19 Pandemic,15394331,1106717
+Mali,2022,2019-2022 COVID-19 Pandemic,15394331,
 Mali,2021,2014-2022 Poliovirus,8295851,
 Mali,2021,2019-2022 COVID-19 Pandemic,39936051,1106717
 Mali,2020,2014-2022 Poliovirus,4802773,
-Mali,2020,2019-2022 COVID-19 Pandemic,131152925,1106717
+Mali,2020,2019-2022 COVID-19 Pandemic,131152925,
 Mali,2019,2014-2022 Poliovirus,3127962,
 Mali,2018,2014-2022 Poliovirus,798139,
 Mali,2017,2014-2022 Poliovirus,678578,
@@ -1057,11 +1036,11 @@ MapAction,2021,2019-2022 COVID-19 Pandemic,,159898
 Marshall Islands,2022,2019-2022 COVID-19 Pandemic,0,
 Marshall Islands,2021,2019-2022 COVID-19 Pandemic,825066,
 Marshall Islands,2020,2019-2022 COVID-19 Pandemic,10849889,
-Mauritania,2022,2019-2022 COVID-19 Pandemic,16407394,933169
+Mauritania,2022,2019-2022 COVID-19 Pandemic,16407394,
 Mauritania,2021,2014-2022 Poliovirus,1584920,
 Mauritania,2021,2019-2022 COVID-19 Pandemic,15945366,933169
 Mauritania,2020,2014-2022 Poliovirus,485216,
-Mauritania,2020,2019-2022 COVID-19 Pandemic,59677443,933169
+Mauritania,2020,2019-2022 COVID-19 Pandemic,59677443,
 Mauritania,2019,2014-2022 Poliovirus,189279,
 Mauritania,2018,2014-2022 Poliovirus,166856,
 Mauritania,2017,2014-2022 Poliovirus,79448,
@@ -1078,9 +1057,9 @@ Merck,2016,2014-2016 Ebola in West Africa,,133717
 Merck,2015,2014-2016 Ebola in West Africa,,133717
 Merck,2014,2014-2016 Ebola in West Africa,,133717
 Mercy Corps Europe,2020,2019-2022 COVID-19 Pandemic,,332409
-Mexico,2022,2019-2022 COVID-19 Pandemic,185733,600000
+Mexico,2022,2019-2022 COVID-19 Pandemic,185733,
 Mexico,2021,2014-2022 Poliovirus,193015,
-Mexico,2021,2019-2022 COVID-19 Pandemic,4441187,600000
+Mexico,2021,2019-2022 COVID-19 Pandemic,4441187,
 Mexico,2020,2014-2022 Poliovirus,193015,
 Mexico,2020,2019-2022 COVID-19 Pandemic,5470863,600000
 Mexico,2018,2014-2022 Poliovirus,64757,
@@ -1156,25 +1135,16 @@ Nepal,2015,2014-2022 Poliovirus,1741014,
 Nepal,2014,2014-2022 Poliovirus,2036034,
 Nestle,2020,2019-2022 COVID-19 Pandemic,,1000000
 Netherlands,2022,2019-2022 COVID-19 Pandemic,41546,2667268
-Netherlands,2022,2019-2022 COVID-19 Pandemic,41546,88691083
-Netherlands,2022,2019-2022 COVID-19 Pandemic,41546,311772244
-Netherlands,2021,2019-2022 COVID-19 Pandemic,1349353,2667268
 Netherlands,2021,2019-2022 COVID-19 Pandemic,1349353,88691083
-Netherlands,2021,2019-2022 COVID-19 Pandemic,1349353,311772244
 Netherlands,2020,2018-2020 Ebola in DRC,,493797
-Netherlands,2020,2019-2022 COVID-19 Pandemic,5275123,2667268
-Netherlands,2020,2019-2022 COVID-19 Pandemic,5275123,88691083
 Netherlands,2020,2019-2022 COVID-19 Pandemic,5275123,311772244
 Netherlands,2019,2018-2020 Ebola in DRC,,19690
 Netherlands,2016,2014-2016 Ebola in West Africa,,2808514
 Netherlands,2015,2014-2016 Ebola in West Africa,,13534295
 Netherlands,2014,2014-2016 Ebola in West Africa,,24258911
-New Zealand,2021,2019-2022 COVID-19 Pandemic,514283,3469143
-New Zealand,2021,2019-2022 COVID-19 Pandemic,514283,74097681
+New Zealand,2022,2019-2022 COVID-19 Pandemic,,3469143
 New Zealand,2021,2019-2022 COVID-19 Pandemic,514283,210636340
-New Zealand,2020,2019-2022 COVID-19 Pandemic,2675355,3469143
 New Zealand,2020,2019-2022 COVID-19 Pandemic,2675355,74097681
-New Zealand,2020,2019-2022 COVID-19 Pandemic,2675355,210636340
 New Zealand,2017,2014-2022 Poliovirus,,3481285
 New Zealand,2016,2014-2016 Ebola in West Africa,,384468
 New Zealand,2016,2015-2016 Zika Virus,,289490
@@ -1312,15 +1282,16 @@ Pfizer,2016,2014-2016 Ebola in West Africa,,8333
 Pfizer,2016,2015-2016 Zika Virus,,2100000
 Pfizer,2015,2014-2016 Ebola in West Africa,,8333
 Pfizer,2014,2014-2016 Ebola in West Africa,,8333
-Philippines,2022,2019-2022 COVID-19 Pandemic,340826211,1459153
+Philippines,2022,2019-2022 COVID-19 Pandemic,340826211,
 Philippines,2021,2014-2022 Poliovirus,357518,
 Philippines,2021,2019-2022 COVID-19 Pandemic,1762156406,1459153
 Philippines,2020,2014-2022 Poliovirus,2074181,
-Philippines,2020,2019-2022 COVID-19 Pandemic,1297974752,1459153
+Philippines,2020,2019-2022 COVID-19 Pandemic,1297974752,
 Philippines,2019,2014-2022 Poliovirus,0,
 Philippines,2017,2014-2022 Poliovirus,382439,
-Philippines,2016,2014-2016 Ebola in West Africa,101799,2041742
+Philippines,2016,2014-2016 Ebola in West Africa,101799,
 Philippines,2016,2014-2022 Poliovirus,367308,
+Philippines,2015,2014-2016 Ebola in West Africa,,2041742
 Plan International,2022,2019-2022 COVID-19 Pandemic,,1052795
 Plan International,2021,2019-2022 COVID-19 Pandemic,,8644052
 Plan International,2020,2019-2022 COVID-19 Pandemic,,7132239
@@ -1347,8 +1318,8 @@ Qatar,2015,2014-2016 Ebola in West Africa,,333333
 Qatar,2014,2014-2016 Ebola in West Africa,,333333
 RedR UK,2020,2019-2022 COVID-19 Pandemic,,270889
 Relief International UK,2020,2019-2022 COVID-19 Pandemic,,781165
-Republic of Korea,2021,2019-2022 COVID-19 Pandemic,15600,9239380
 Republic of Korea,2021,2019-2022 COVID-19 Pandemic,15600,186862253
+Republic of Korea,2020,2019-2022 COVID-19 Pandemic,,9239380
 Republic of Korea,2019,2018-2020 Ebola in DRC,,500000
 Republic of Korea,2018,2018-2020 Ebola in DRC,,500000
 Republic of Korea,2016,2014-2016 Ebola in West Africa,,1316667
@@ -1364,7 +1335,7 @@ Republic of Moldova,2018,2014-2022 Poliovirus,133824,
 Republic of Moldova,2017,2014-2022 Poliovirus,86700,
 Republic of Moldova,2015,2014-2022 Poliovirus,104541,
 Rockefeller Foundation,2021,2019-2022 COVID-19 Pandemic,,2475248
-Romania,2022,2019-2022 COVID-19 Pandemic,1159,200000
+Romania,2022,2019-2022 COVID-19 Pandemic,1159,
 Romania,2020,2019-2022 COVID-19 Pandemic,354901,200000
 Romania,2014,2014-2016 Ebola in West Africa,,40000
 Royal Charity Organisation,2015,2014-2016 Ebola in West Africa,,1000000
@@ -1398,32 +1369,24 @@ Samoa,2020,2019-2022 COVID-19 Pandemic,29250384,
 Sanofi Foundation,2016,2014-2016 Ebola in West Africa,,42667
 Sanofi Foundation,2015,2014-2016 Ebola in West Africa,,42667
 Sanofi Foundation,2014,2014-2016 Ebola in West Africa,,42667
-Sao Tome and Principe,2022,2019-2022 COVID-19 Pandemic,910146,1311947
-Sao Tome and Principe,2022,2019-2022 COVID-19 Pandemic,910146,2017632
+Sao Tome and Principe,2022,2019-2022 COVID-19 Pandemic,910146,
 Sao Tome and Principe,2021,2014-2022 Poliovirus,25556,
-Sao Tome and Principe,2021,2019-2022 COVID-19 Pandemic,4436605,1311947
 Sao Tome and Principe,2021,2019-2022 COVID-19 Pandemic,4436605,2017632
 Sao Tome and Principe,2020,2014-2022 Poliovirus,20195,
 Sao Tome and Principe,2020,2019-2022 COVID-19 Pandemic,15846629,1311947
-Sao Tome and Principe,2020,2019-2022 COVID-19 Pandemic,15846629,2017632
 Sao Tome and Principe,2019,2014-2022 Poliovirus,23160,
 Sao Tome and Principe,2018,2014-2022 Poliovirus,33708,
 Sao Tome and Principe,2017,2014-2022 Poliovirus,18136,
 Sao Tome and Principe,2016,2014-2022 Poliovirus,361,
 Sao Tome and Principe,2015,2014-2022 Poliovirus,116867,
-Saudi Arabia,2021,2019-2022 COVID-19 Pandemic,1897,163000000
+Saudi Arabia,2021,2019-2022 COVID-19 Pandemic,1897,
+Saudi Arabia,2020,2019-2022 COVID-19 Pandemic,,163000000
 Save the Children,2022,2019-2022 COVID-19 Pandemic,,583995
 Save the Children,2021,2019-2022 COVID-19 Pandemic,,3688474
 Save the Children,2020,2019-2022 COVID-19 Pandemic,,6164200
-Save the Children,2016,2014-2016 Ebola in West Africa,187333,585425
 Save the Children,2016,2014-2016 Ebola in West Africa,187333,2740112
-Save the Children,2016,2014-2016 Ebola in West Africa,187333,4366394
-Save the Children,2015,2014-2016 Ebola in West Africa,187333,585425
-Save the Children,2015,2014-2016 Ebola in West Africa,187333,2740112
 Save the Children,2015,2014-2016 Ebola in West Africa,187333,4366394
 Save the Children,2014,2014-2016 Ebola in West Africa,187333,585425
-Save the Children,2014,2014-2016 Ebola in West Africa,187333,2740112
-Save the Children,2014,2014-2016 Ebola in West Africa,187333,4366394
 S. C. Johnson & Son Inc.,2017,2015-2016 Zika Virus,,14482
 S. C. Johnson & Son Inc.,2016,2015-2016 Zika Virus,,14469
 Senegal,2022,2019-2022 COVID-19 Pandemic,14946354,
@@ -1439,8 +1402,8 @@ Senegal,2015,2014-2016 Ebola in West Africa,787363,
 Senegal,2015,2014-2022 Poliovirus,568161,
 Senegal,2014,2014-2016 Ebola in West Africa,2001474,
 Senegal,2014,2014-2022 Poliovirus,1550617,
-Serbia,2022,2019-2022 COVID-19 Pandemic,5347572,2303753
-Serbia,2021,2019-2022 COVID-19 Pandemic,57985737,2303753
+Serbia,2022,2019-2022 COVID-19 Pandemic,5347572,
+Serbia,2021,2019-2022 COVID-19 Pandemic,57985737,
 Serbia,2020,2019-2022 COVID-19 Pandemic,11785178,2303753
 Seychelles,2022,2019-2022 COVID-19 Pandemic,0,
 Seychelles,2021,2014-2022 Poliovirus,2817,
@@ -1476,7 +1439,7 @@ Sightsavers,2017,2014-2022 Poliovirus,,52737
 Simavi,2022,2019-2022 COVID-19 Pandemic,,66306
 Simavi,2021,2019-2022 COVID-19 Pandemic,,1039709
 Simavi,2020,2019-2022 COVID-19 Pandemic,,5573263
-Singapore,2022,2019-2022 COVID-19 Pandemic,2978,800000
+Singapore,2022,2019-2022 COVID-19 Pandemic,2978,
 Singapore,2020,2019-2022 COVID-19 Pandemic,10398,800000
 Singapore,2016,2014-2016 Ebola in West Africa,,50000
 Singapore,2015,2014-2016 Ebola in West Africa,,50000
@@ -1595,18 +1558,15 @@ Suriname,2021,2019-2022 COVID-19 Pandemic,2341849,
 Suriname,2020,2019-2022 COVID-19 Pandemic,4471425,
 Susan Thompson Buffett Foundation,2021,2019-2022 COVID-19 Pandemic,,5000000
 Susan Thompson Buffett Foundation,2020,2019-2022 COVID-19 Pandemic,,15105294
-Sweden,2021,2019-2022 COVID-19 Pandemic,304880,149215145
+Sweden,2022,2019-2022 COVID-19 Pandemic,,149215145
 Sweden,2021,2019-2022 COVID-19 Pandemic,304880,645489606
-Sweden,2021,2019-2022 COVID-19 Pandemic,304880,849660900
-Sweden,2020,2019-2022 COVID-19 Pandemic,175118,149215145
-Sweden,2020,2019-2022 COVID-19 Pandemic,175118,645489606
 Sweden,2020,2019-2022 COVID-19 Pandemic,175118,849660900
 Sweden,2019,2018-2020 Ebola in DRC,,4230163
 Sweden,2016,2014-2016 Ebola in West Africa,,2664728
 Sweden,2015,2014-2016 Ebola in West Africa,,6315302
 Sweden,2014,2014-2016 Ebola in West Africa,,80175610
+Switzerland,2021,2019-2022 COVID-19 Pandemic,,150207439
 Switzerland,2020,2019-2022 COVID-19 Pandemic,402249,100217917
-Switzerland,2020,2019-2022 COVID-19 Pandemic,402249,150207439
 Switzerland,2019,2018-2020 Ebola in DRC,,1008648
 Switzerland,2018,2018-2020 Ebola in DRC,,352972
 Switzerland,2016,2014-2016 Ebola in West Africa,,346861
@@ -1635,12 +1595,9 @@ Tajikistan,2015,2014-2022 Poliovirus,26864,
 Tajikistan,2014,2014-2022 Poliovirus,222000,
 Takeda Pharmaceutical,2020,2019-2022 COVID-19 Pandemic,,2000000
 Tearfund,2020,2019-2022 COVID-19 Pandemic,,1282091
-Thailand,2022,2019-2022 COVID-19 Pandemic,663381,50000
-Thailand,2022,2019-2022 COVID-19 Pandemic,663381,100000
-Thailand,2021,2019-2022 COVID-19 Pandemic,1512761295,50000
+Thailand,2022,2019-2022 COVID-19 Pandemic,663381,
 Thailand,2021,2019-2022 COVID-19 Pandemic,1512761295,100000
 Thailand,2020,2019-2022 COVID-19 Pandemic,5461804,50000
-Thailand,2020,2019-2022 COVID-19 Pandemic,5461804,100000
 Thailand,2016,2014-2016 Ebola in West Africa,,50968
 Thailand,2015,2014-2016 Ebola in West Africa,,50968
 Thailand,2014,2014-2016 Ebola in West Africa,,50968
@@ -1670,8 +1627,9 @@ Togo,2020,2019-2022 COVID-19 Pandemic,64721970,
 Togo,2019,2014-2022 Poliovirus,1293824,
 Togo,2018,2014-2022 Poliovirus,116485,
 Togo,2017,2014-2022 Poliovirus,221100,
+Togo,2015,2014-2016 Ebola in West Africa,,1581
 Togo,2015,2014-2022 Poliovirus,228364,
-Togo,2014,2014-2016 Ebola in West Africa,820000,1581
+Togo,2014,2014-2016 Ebola in West Africa,820000,
 Tonga,2022,2019-2022 COVID-19 Pandemic,13595487,
 Tonga,2021,2019-2022 COVID-19 Pandemic,8043046,
 Tonga,2020,2019-2022 COVID-19 Pandemic,10003403,
@@ -1727,16 +1685,10 @@ Ukraine,2015,2014-2022 Poliovirus,391537,
 Ukraine,2014,2014-2022 Poliovirus,2601338,
 UN Federal Credit Union Foundation,2020,2019-2022 COVID-19 Pandemic,,76497
 United Kingdom,2022,2019-2022 COVID-19 Pandemic,226305,12232839
-United Kingdom,2022,2019-2022 COVID-19 Pandemic,226305,102395314
-United Kingdom,2022,2019-2022 COVID-19 Pandemic,226305,795752373
 United Kingdom,2021,2014-2022 Poliovirus,,6769623
-United Kingdom,2021,2019-2022 COVID-19 Pandemic,1767898,12232839
 United Kingdom,2021,2019-2022 COVID-19 Pandemic,1767898,102395314
-United Kingdom,2021,2019-2022 COVID-19 Pandemic,1767898,795752373
 United Kingdom,2020,2014-2022 Poliovirus,,93858188
 United Kingdom,2020,2018-2020 Ebola in DRC,,15035434
-United Kingdom,2020,2019-2022 COVID-19 Pandemic,9248384,12232839
-United Kingdom,2020,2019-2022 COVID-19 Pandemic,9248384,102395314
 United Kingdom,2020,2019-2022 COVID-19 Pandemic,9248384,795752373
 United Kingdom,2019,2014-2022 Poliovirus,,43302646
 United Kingdom,2019,2018-2020 Ebola in DRC,,86459901
@@ -1744,45 +1696,33 @@ United Kingdom,2018,2014-2022 Poliovirus,,63404912
 United Kingdom,2018,2018-2020 Ebola in DRC,,29587127
 United Kingdom,2017,2014-2022 Poliovirus,,84477965
 United Kingdom,2016,2014-2016 Ebola in West Africa,117650,31162221
-United Kingdom,2016,2014-2016 Ebola in West Africa,117650,99978077
-United Kingdom,2016,2014-2016 Ebola in West Africa,117650,149470204
 United Kingdom,2016,2014-2022 Poliovirus,,48710507
 United Kingdom,2016,2015-2016 Zika Virus,,7720280
-United Kingdom,2015,2014-2016 Ebola in West Africa,393018,31162221
 United Kingdom,2015,2014-2016 Ebola in West Africa,393018,99978077
-United Kingdom,2015,2014-2016 Ebola in West Africa,393018,149470204
 United Kingdom,2015,2014-2022 Poliovirus,,97397165
-United Kingdom,2014,2014-2016 Ebola in West Africa,143624,31162221
-United Kingdom,2014,2014-2016 Ebola in West Africa,143624,99978077
 United Kingdom,2014,2014-2016 Ebola in West Africa,143624,149470204
 United Kingdom,2014,2014-2022 Poliovirus,,78228606
 United Kingdom,2010,2009-2010 H1N1,,150753
 United Kingdom,2009,2009-2010 H1N1,,2685173
+United Nations (UN),2023,2019-2022 COVID-19 Pandemic,,262500
 United Nations (UN),2022,2014-2022 Poliovirus,,57466934
+United Nations (UN),2022,2019-2022 COVID-19 Pandemic,,114173988
 United Nations (UN),2021,2014-2022 Poliovirus,,196521742
+United Nations (UN),2021,2019-2022 COVID-19 Pandemic,,758473700
 United Nations (UN),2020,2014-2022 Poliovirus,,126337475
-United Nations (UN),2020,2019-2022 COVID-19 Pandemic,10950000,262500
-United Nations (UN),2020,2019-2022 COVID-19 Pandemic,10950000,114173988
+United Nations (UN),2020,2018-2020 Ebola in DRC,,69667225
 United Nations (UN),2020,2019-2022 COVID-19 Pandemic,10950000,568555167
-United Nations (UN),2020,2019-2022 COVID-19 Pandemic,10950000,758473700
 United Nations (UN),2019,2014-2022 Poliovirus,,176247679
+United Nations (UN),2019,2018-2020 Ebola in DRC,,41715616
 United Nations (UN),2018,2014-2022 Poliovirus,,170719201
 United Nations (UN),2018,2018-2020 Ebola in DRC,4600000,6920748
-United Nations (UN),2018,2018-2020 Ebola in DRC,4600000,41715616
-United Nations (UN),2018,2018-2020 Ebola in DRC,4600000,69667225
 United Nations (UN),2017,2014-2022 Poliovirus,,215789002
-United Nations (UN),2016,2014-2016 Ebola in West Africa,6070371,33340702
 United Nations (UN),2016,2014-2016 Ebola in West Africa,6070371,55798729
-United Nations (UN),2016,2014-2016 Ebola in West Africa,6070371,110926613
 United Nations (UN),2016,2014-2022 Poliovirus,,179737802
 United Nations (UN),2016,2015-2016 Zika Virus,,22819
-United Nations (UN),2015,2014-2016 Ebola in West Africa,24849787,33340702
-United Nations (UN),2015,2014-2016 Ebola in West Africa,24849787,55798729
 United Nations (UN),2015,2014-2016 Ebola in West Africa,24849787,110926613
 United Nations (UN),2015,2014-2022 Poliovirus,,111026097
 United Nations (UN),2014,2014-2016 Ebola in West Africa,117241353,33340702
-United Nations (UN),2014,2014-2016 Ebola in West Africa,117241353,55798729
-United Nations (UN),2014,2014-2016 Ebola in West Africa,117241353,110926613
 United Nations (UN),2014,2014-2022 Poliovirus,,115814885
 United Republic of Tanzania,2023,2019-2022 COVID-19 Pandemic,124000,
 United Republic of Tanzania,2022,2019-2022 COVID-19 Pandemic,31217166,
@@ -1797,24 +1737,16 @@ United Republic of Tanzania,2017,2014-2022 Poliovirus,1930800,
 United Republic of Tanzania,2015,2014-2016 Ebola in West Africa,36862,
 United Republic of Tanzania,2014,2014-2022 Poliovirus,1749333,
 United States of America,2022,2014-2022 Poliovirus,,3007552
-United States of America,2022,2019-2022 COVID-19 Pandemic,40546,233333
 United States of America,2022,2019-2022 COVID-19 Pandemic,40546,26480825
-United States of America,2022,2019-2022 COVID-19 Pandemic,40546,326764796
-United States of America,2022,2019-2022 COVID-19 Pandemic,40546,4435053724
 United States of America,2022,2022 Monkeypox,,725000
 United States of America,2021,2014-2022 Poliovirus,,19312121
-United States of America,2021,2019-2022 COVID-19 Pandemic,66634,233333
-United States of America,2021,2019-2022 COVID-19 Pandemic,66634,26480825
-United States of America,2021,2019-2022 COVID-19 Pandemic,66634,326764796
 United States of America,2021,2019-2022 COVID-19 Pandemic,66634,4435053724
 United States of America,2020,2014-2022 Poliovirus,,77538959
 United States of America,2020,2018-2020 Ebola in DRC,,122485913
-United States of America,2020,2019-2022 COVID-19 Pandemic,1333286,233333
-United States of America,2020,2019-2022 COVID-19 Pandemic,1333286,26480825
 United States of America,2020,2019-2022 COVID-19 Pandemic,1333286,326764796
-United States of America,2020,2019-2022 COVID-19 Pandemic,1333286,4435053724
 United States of America,2019,2014-2022 Poliovirus,,48808209
 United States of America,2019,2018-2020 Ebola in DRC,,100278289
+United States of America,2019,2019-2022 COVID-19 Pandemic,,233333
 United States of America,2018,2014-2022 Poliovirus,,53663517
 United States of America,2018,2018-2020 Ebola in DRC,,8844100
 United States of America,2017,2014-2022 Poliovirus,,40594090
@@ -1894,28 +1826,19 @@ World Bank,2016,2015-2016 Zika Virus,,150000000
 World Bank,2015,2014-2016 Ebola in West Africa,,221578050
 World Bank,2015,2014-2022 Poliovirus,,178772634
 World Bank,2014,2014-2016 Ebola in West Africa,,125697409
+World Health Organization (WHO),2022,2018-2020 Ebola in DRC,,500000
+World Health Organization (WHO),2022,2019-2022 COVID-19 Pandemic,,233400
 World Health Organization (WHO),2022,2022 Monkeypox,,8348983
 World Health Organization (WHO),2021,2014-2022 Poliovirus,,337381891
-World Health Organization (WHO),2021,2019-2022 COVID-19 Pandemic,1023478902,233400
+World Health Organization (WHO),2021,2018-2020 Ebola in DRC,,4310000
 World Health Organization (WHO),2021,2019-2022 COVID-19 Pandemic,1023478902,59234095
-World Health Organization (WHO),2021,2019-2022 COVID-19 Pandemic,1023478902,64434028
 World Health Organization (WHO),2020,2014-2022 Poliovirus,,322541011
-World Health Organization (WHO),2020,2019-2022 COVID-19 Pandemic,1534236864,233400
-World Health Organization (WHO),2020,2019-2022 COVID-19 Pandemic,1534236864,59234095
+World Health Organization (WHO),2020,2018-2020 Ebola in DRC,,22251979
 World Health Organization (WHO),2020,2019-2022 COVID-19 Pandemic,1534236864,64434028
-World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,500000
-World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,2000000
-World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,4310000
-World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,22251979
-World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,23152534
 World Health Organization (WHO),2019,2018-2020 Ebola in DRC,136174149,69893374
-World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,500000
-World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,2000000
-World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,4310000
-World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,22251979
 World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,23152534
-World Health Organization (WHO),2018,2018-2020 Ebola in DRC,95853468,69893374
 World Health Organization (WHO),2017,2014-2022 Poliovirus,,1626828
+World Health Organization (WHO),2017,2018-2020 Ebola in DRC,,2000000
 World Health Organization (WHO),2016,2014-2016 Ebola in West Africa,114162079,
 World Health Organization (WHO),2016,2015-2016 Zika Virus,,5615000
 World Health Organization (WHO),2015,2014-2016 Ebola in West Africa,114162079,
@@ -1926,9 +1849,9 @@ World Vision International,2021,2019-2022 COVID-19 Pandemic,,1244486
 World Vision International,2020,2014-2022 Poliovirus,,80000
 World Vision International,2020,2019-2022 COVID-19 Pandemic,,1591996
 World Vision International,2019,2014-2022 Poliovirus,,90000
-Yemen,2022,2019-2022 COVID-19 Pandemic,9123807,20000000
+Yemen,2022,2019-2022 COVID-19 Pandemic,9123807,
 Yemen,2021,2014-2022 Poliovirus,6048014,
-Yemen,2021,2019-2022 COVID-19 Pandemic,64361901,20000000
+Yemen,2021,2019-2022 COVID-19 Pandemic,64361901,
 Yemen,2020,2014-2022 Poliovirus,2564372,
 Yemen,2020,2019-2022 COVID-19 Pandemic,139913114,20000000
 Yemen,2019,2014-2022 Poliovirus,2257310,

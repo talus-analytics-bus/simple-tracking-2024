@@ -1,5 +1,5 @@
 WITH top_level_stakeholders AS (
-	SELECT id
+	SELECT id, name
 	FROM stakeholders
 	INNER JOIN LATERAL (
 		SELECT COUNT(id) > 1 as is_sub_stakeholder
@@ -28,33 +28,31 @@ received AS (
 	FROM
 		simple_flows sf
 		JOIN flows_to_stakeholder_targets_direct_credit ftstdc ON sf.sf_id = ftstdc.flow_id
-		JOIN stakeholders s ON s.id = ftstdc.stakeholder_id
+		JOIN top_level_stakeholders s ON s.id = ftstdc.stakeholder_id
 		JOIN events_to_flows etf ON etf.flow_id = sf.sf_id
 		JOIN events e ON e.id = etf.event_id
 	WHERE
 		sf.flow_type = 'disbursed_funds'
 		AND sf.response_or_capacity = 'response'
-		AND s.id IN (SELECT * FROM top_level_stakeholders)
-	GROUP BY s.name, sf.year, e.name
+	GROUP BY s.name, year, pheic
 ),
 disbursed AS (
 	-- all the countries which disbursed response funding
 	SELECT
 		s.name AS name,
 		e.name AS pheic,
-	sf.year AS year,
+		sf.year AS year,
 		ROUND(SUM(sf.value)) AS total
 	FROM
 		simple_flows sf
 		JOIN flows_to_stakeholder_origins_direct_credit ftsodc ON sf.sf_id = ftsodc.flow_id
-		JOIN stakeholders s ON s.id = ftsodc.stakeholder_id
+		JOIN top_level_stakeholders s ON s.id = ftsodc.stakeholder_id
 		JOIN events_to_flows etf ON etf.flow_id = sf.sf_id
 		JOIN events e ON e.id = etf.event_id
 	WHERE
 		sf.flow_type = 'disbursed_funds'
 		AND sf.response_or_capacity = 'response'
-		AND s.id IN (SELECT * FROM top_level_stakeholders)
-	GROUP BY s.name, sf.year, e.name
+	GROUP BY s.name, year, pheic
 )
 SELECT
 	COALESCE(received.name, disbursed.name) AS name,
@@ -63,5 +61,8 @@ SELECT
 	received.total AS received,
 	disbursed.total AS disbursed
 FROM received
-FULL JOIN disbursed ON received.name = disbursed.name AND received.pheic = disbursed.pheic
+FULL JOIN disbursed 
+	ON received.name = disbursed.name
+	AND received.pheic = disbursed.pheic 
+	AND received.year = disbursed.year
 ORDER BY name, year DESC, pheic, received, disbursed;
