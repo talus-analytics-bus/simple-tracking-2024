@@ -99,6 +99,8 @@ const StakeholderPage = ({
       data.allJeeScoresCsv.nodes[0]?.risk_index ?? ''
     ] ?? ''
 
+  console.log('jeeVersion', jeeVersion)
+
   if (stakeholderIsCountry && !jeeVersion)
     throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)
 
@@ -279,7 +281,7 @@ export const query = graphql`
     }
     allReceivedAndDisbursedCsv(filter: { name: { eq: $name } }) {
       years: nodes {
-        Year
+        year
         totalCapacityDisbursed
         totalCapacityReceived
         totalDisbursed

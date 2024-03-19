@@ -27,7 +27,7 @@ const FundingTotals = ({
     displayTotals = data.allReceivedAndDisbursedCsv.years.reduce(
       (acc, year) => {
         Object.entries(year).forEach(([key, val]) => {
-          if (key !== 'Year')
+          if (key !== 'year')
             if (!acc[key]) acc[key] = Number(val)
             else acc[key] += Number(val)
         })
@@ -38,10 +38,10 @@ const FundingTotals = ({
   else
     Object.entries(
       data.allReceivedAndDisbursedCsv.years.find(
-        year => year.Year === selectedYear
+        year => year.year === selectedYear
       ) ?? {}
     ).forEach(([key, val]) => {
-      if (key !== 'Year') displayTotals[key] = Number(val)
+      if (key !== 'year') displayTotals[key] = Number(val)
     })
 
   return (
