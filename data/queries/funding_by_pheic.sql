@@ -63,6 +63,5 @@ SELECT
 	received.total AS received,
 	disbursed.total AS disbursed
 FROM received
-FULL JOIN disbursed
-	ON received.name = disbursed.name AND received.pheic = disbursed.pheic
+FULL JOIN disbursed ON received.name = disbursed.name AND received.pheic = disbursed.pheic
 ORDER BY name, year DESC, pheic, received, disbursed;
