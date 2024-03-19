@@ -1,14 +1,5 @@
 -- all countries and organizations, with their received and disbursed funding
-SELECT 
-	name,
-	COALESCE(received.year, disbursed.year) AS year,
-	received.response AS "totalResponseReceived",
-	received.capacity AS "totalCapacityReceived",
-	received.total AS "totalDisbursedReceived",
-	disbursed.response AS "totalResponseDisbursed",
-	disbursed.capacity AS "totalCapacityDisbursed",
-	disbursed.total AS "totalDisbursed"
-FROM (
+WITH top_level_stakeholders AS (
 	SELECT id, name, iso3, iso2
 	FROM stakeholders
 	INNER JOIN LATERAL (
@@ -27,38 +18,48 @@ FROM (
 			'region',
 			'agency'
 		)
-) top_level_stakeholders
-LEFT JOIN (
+),
+received AS (
 	-- flows received by those countries
 	SELECT
-		id,
+		name,
 		year,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
 		ROUND(SUM(value)) AS total
 	FROM
-		stakeholders
+		top_level_stakeholders
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
-		GROUP BY id, year
-) received
-ON received.id = top_level_stakeholders.id
-LEFT JOIN (
+		GROUP BY name, year
+), 
+disbursed AS (
 	-- flows sent by those countries
 	SELECT
-		id,
+		name,
 		year,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
 		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
 		ROUND(SUM(value)) AS total
 	FROM
-		stakeholders
+		top_level_stakeholders
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
-		GROUP BY id, year
-) disbursed 
-ON disbursed.id = top_level_stakeholders.id AND disbursed.year = received.year
-WHERE COALESCE(received.*, disbursed.*) IS NOT NULL
-ORDER BY name ASC, year DESC;
+		GROUP BY name, year
+)
+SELECT 
+	COALESCE(received.name, disbursed.name) AS name,
+	COALESCE(received.year, disbursed.year) AS year,
+	received.response AS "totalResponseReceived",
+	received.capacity AS "totalCapacityReceived",
+	received.total AS "totalDisbursedReceived",
+	disbursed.response AS "totalResponseDisbursed",
+	disbursed.capacity AS "totalCapacityDisbursed",
+	disbursed.total AS "totalDisbursed"
+FROM received
+FULL JOIN disbursed 
+	ON received.name = disbursed.name 
+	AND received.year = disbursed.year
+ORDER BY name ASC, received.year DESC, disbursed.year DESC;
