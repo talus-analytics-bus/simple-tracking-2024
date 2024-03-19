@@ -25,8 +25,6 @@ country,Bolivia,bol,bo
 country,Bosnia and Herzegovina,bih,ba
 country,Botswana,bwa,bw
 country,Brazil,bra,br
-country,British Indian Ocean Territory,iot,io
-country,British Virgin Islands,vgb,vg
 country,Brunei Darussalam,brn,bn
 country,Bulgaria,bgr,bg
 country,Burkina Faso,bfa,bf
@@ -35,12 +33,10 @@ country,Cabo Verde,cpv,cv
 country,Cambodia,khm,kh
 country,Cameroon,cmr,cm
 country,Canada,can,ca
-country,Cayman Islands,cym,ky
 country,Central African Republic,caf,cf
 country,Chad,tcd,td
 country,Chile,chl,cl
 country,China,chn,cn
-country,"China, Hong Kong Special Administrative Region",hkg,hk
 country,Colombia,col,co
 country,Comoros,com,km
 country,Congo,cog,cg
@@ -66,15 +62,12 @@ country,Eritrea,eri,er
 country,Estonia,est,ee
 country,Eswatini,swz,sz
 country,Ethiopia,eth,et
-country,Falkland Islands (Malvinas),flk,fk
-country,Faroe Islands,fro,fo
 country,Federated States of Micronesia,fsm,fm
 country,Fiji,fji,fj
 country,Finland,fin,fi
 country,France,fra,fr
 country,French Guiana,guf,gf
 country,French Polynesia,pyf,pf
-country,French Southern and Antarctic Lands,atf,tf
 country,Gabon,gab,ga
 country,Gambia,gmb,gm
 country,Georgia,geo,ge
@@ -83,7 +76,6 @@ country,Ghana,gha,gh
 country,Greece,grc,gr
 country,Grenada,grd,gd
 country,Guatemala,gtm,gt
-country,Guernsey,ggy,gg
 country,Guinea,gin,gn
 country,Guinea Bissau,gnb,gw
 country,Guyana,guy,gy
@@ -101,7 +93,6 @@ country,Israel,isr,il
 country,Italy,ita,it
 country,Jamaica,jam,jm
 country,Japan,jpn,jp
-country,Jersey,jey,je
 country,Jordan,jor,jo
 country,Kazakhstan,kaz,kz
 country,Kenya,ken,ke
@@ -181,13 +172,11 @@ country,Slovenia,svn,si
 country,Solomon Islands,slb,sb
 country,Somalia,som,so
 country,South Africa,zaf,za
-country,South Georgia and the South Sandwich Islands,sgs,gs
 country,South Sudan,ssd,ss
 country,Spain,esp,es
 country,Sri Lanka,lka,lk
 country,Sudan,sdn,sd
 country,Suriname,sur,sr
-country,Svalbard and Jan Mayen Islands,sjm,sj
 country,Sweden,swe,se
 country,Switzerland,che,ch
 country,Syrian Arab Republic,syr,sy

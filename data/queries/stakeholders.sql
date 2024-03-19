@@ -1,13 +1,5 @@
 -- all countries and organizations which should become pages on the site
-SELECT
-	CASE WHEN iso3 IS NULL
-		THEN 'organization'
-		ELSE 'country'
-	END AS slug,
-	name,
-	LOWER(iso3) as iso3,
-	LOWER(iso2) as iso2
-FROM (
+WITH top_level_stakeholders AS (
 	SELECT id, name, iso3, iso2
 	FROM stakeholders
 	INNER JOIN LATERAL (
@@ -26,27 +18,38 @@ FROM (
 			'region',
 			'agency'
 		)
-) top_level_stakeholders
-LEFT JOIN (
+),
+received AS (
 	-- flows received by those stakeholders
-	SELECT id, SUM(value) AS total
+	SELECT id, name, iso3, iso2, SUM(value) AS total
 	FROM
-		stakeholders
+		top_level_stakeholders
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY id
-) received ON received.id = top_level_stakeholders.id
-LEFT JOIN (
+		GROUP BY id, name, iso3, iso2
+), 
+disbursed AS(
 	-- flows sent by those stakeholders
-	SELECT id, SUM(value) AS total
+	SELECT id, name, iso3, iso2, SUM(value) AS total
 	FROM
-		stakeholders
+		top_level_stakeholders
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
-		GROUP BY id
-) disbursed ON disbursed.id = top_level_stakeholders.id
-WHERE COALESCE(received.total, disbursed.total) IS NOT NULL
-	AND iso3 IS NULL OR NOT iso3 IN ('GLOBAL', 'GLB')
+		GROUP BY id, name, iso3, iso2
+)
+SELECT
+	CASE WHEN COALESCE(received.iso3, disbursed.iso3) IS NULL
+		THEN 'organization'
+		ELSE 'country'
+	END AS slug,
+	COALESCE(received.name, disbursed.name) as name,
+	LOWER(COALESCE(received.iso3, disbursed.iso3)) as iso3,
+	LOWER(COALESCE(received.iso2, disbursed.iso2)) as iso2
+FROM received
+FULL JOIN disbursed ON disbursed.id = received.id
+WHERE 
+	COALESCE(received.iso3, disbursed.iso3) IS NULL 
+	OR NOT COALESCE(received.iso3, disbursed.iso3) IN ('GLOBAL', 'GLB')
 ORDER BY slug, name ASC
