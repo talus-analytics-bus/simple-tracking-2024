@@ -1,42 +1,41 @@
 -- all countries and organizations, with their received and disbursed funding
 SELECT 
-	all_stakeholders.name AS "name",
-	all_stakeholders.iso3 AS "iso3",
-	COALESCE(received.year, disbursed.year) AS "Year",
-	response_received AS "totalResponseReceived",
-	capacity_received AS "totalCapacityReceived",
-	total_received AS "totalDisbursedReceived",
-	total_response AS "totalResponseDisbursed",
-	total_capacity AS "totalCapacityDisbursed",
-	total_disbursed AS "totalDisbursed"
+	name,
+	COALESCE(received.year, disbursed.year) AS year,
+	received.response AS "totalResponseReceived",
+	received.capacity AS "totalCapacityReceived",
+	received.total AS "totalDisbursedReceived",
+	disbursed.response AS "totalResponseDisbursed",
+	disbursed.capacity AS "totalCapacityDisbursed",
+	disbursed.total AS "totalDisbursed"
 FROM (
-	SELECT name, iso3, child_id, parent_id FROM stakeholders 
-		JOIN children_to_parents_direct_credit 
-		ON stakeholders.id = children_to_parents_direct_credit.parent_id
-		WHERE (
-			-- All the stakeholders which are "countries"
-			subcat = 'country' 
-			AND iso3 IS NOT NULL
-			AND child_id = parent_id
-			AND stakeholders.show
-		) OR (
-			-- All the stakeholders which are "organizations"
-			stakeholders.cat != 'government'
-			AND stakeholders.subcat != 'sub-organization'
-			AND stakeholders.iso3 IS NULL
-			AND child_id = parent_id
-			and stakeholders.show
+	SELECT id, name, iso3, iso2
+	FROM stakeholders
+	INNER JOIN LATERAL (
+		SELECT COUNT(id) > 1 as is_sub_stakeholder
+		FROM stakeholders sta
+		JOIN children_to_parents_direct_credit ctpdc
+			ON sta.id = ctpdc.parent_id
+		WHERE ctpdc.child_id = stakeholders.id
+	) AS sub_stakeholders on True
+	WHERE
+		stakeholders.show
+		AND NOT sub_stakeholders.is_sub_stakeholder
+		AND stakeholders.slug != 'not-reported'
+		AND stakeholders.subcat NOT IN (
+			'sub-organization',
+			'region',
+			'agency'
 		)
-) all_stakeholders
+) top_level_stakeholders
 LEFT JOIN (
 	-- flows received by those countries
 	SELECT
-		name,
-		iso3,
+		id,
 		year,
-		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS "response_received",
-		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS "capacity_received",
-		ROUND(SUM(CASE WHEN value IS NOT NULL THEN value ELSE 0 END)) AS "total_received"
+		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
+		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
+		ROUND(SUM(value)) AS total
 	FROM
 		stakeholders
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
@@ -44,16 +43,15 @@ LEFT JOIN (
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
 		GROUP BY id, year
 ) received
-ON received.name = all_stakeholders.name
+ON received.id = top_level_stakeholders.id
 LEFT JOIN (
 	-- flows sent by those countries
 	SELECT
-		name,
-		iso3,
+		id,
 		year,
-		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS total_response,
-		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS total_capacity,
-		ROUND(SUM(CASE WHEN value IS NOT NULL THEN value ELSE 0 END)) AS total_disbursed
+		ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
+		ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
+		ROUND(SUM(value)) AS total
 	FROM
 		stakeholders
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
@@ -61,5 +59,13 @@ LEFT JOIN (
 		WHERE flow_type = 'disbursed_funds' AND "year" BETWEEN 2014 AND 3000
 		GROUP BY id, year
 ) disbursed 
-ON disbursed.name = all_stakeholders.name AND disbursed.year = received.year
-ORDER BY name ASC, "Year" DESC;
+ON disbursed.id = top_level_stakeholders.id AND disbursed.year = received.year
+WHERE COALESCE(
+	received.response,
+	received.capacity,
+	received.total,
+	disbursed.response, 
+	disbursed.capacity, 
+	disbursed.total
+) IS NOT NULL
+ORDER BY name ASC, year DESC;
