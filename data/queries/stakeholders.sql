@@ -1,19 +1,23 @@
-SELECT sta.name, sta.iso3, sta.iso2
-	FROM stakeholders as sta
-	JOIN children_to_parents_direct_credit AS ctpdc
+SELECT
+	stakeholders.name,
+	stakeholders.iso3,
+	stakeholders.iso2
+FROM stakeholders
+INNER JOIN LATERAL (
+	SELECT COUNT(id) > 1 as is_sub_stakeholder
+	FROM stakeholders sta
+	JOIN children_to_parents_direct_credit ctpdc
 		ON sta.id = ctpdc.parent_id
-	WHERE (
-		-- All the stakeholders which are "countries"
-		sta.subcat = 'country'
-		AND sta.iso3 IS NOT NULL
-		AND ctpdc.child_id = ctpdc.parent_id
-		AND sta.show
-	) OR (
-		-- All the stakeholders which are "organizations"
-		sta.cat != 'government'
-		AND sta.subcat != 'sub-organization'
-		AND ctpdc.child_id = ctpdc.parent_id
-		AND sta.iso3 IS NULL
-		AND sta.show
+	WHERE ctpdc.child_id = stakeholders.id
+) AS sub_stakeholders on True
+WHERE
+	stakeholders.show
+	AND NOT sub_stakeholders.is_sub_stakeholder
+	AND stakeholders.slug != 'not-reported'
+	AND stakeholders.subcat NOT IN (
+		'sub-organization',
+		'region',
+		'agency'
 	)
+ORDER BY stakeholders.name
 
