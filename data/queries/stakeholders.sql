@@ -45,8 +45,8 @@ SELECT
 		ELSE 'country'
 	END AS slug,
 	COALESCE(received.name, disbursed.name) as name,
-	LOWER(COALESCE(received.iso3, disbursed.iso3)) as iso3,
-	LOWER(COALESCE(received.iso2, disbursed.iso2)) as iso2
+	COALESCE(received.iso3, disbursed.iso3) as iso3,
+	COALESCE(received.iso2, disbursed.iso2) as iso2
 FROM received
 FULL JOIN disbursed ON disbursed.id = received.id
 WHERE 

@@ -1,212 +1,212 @@
 slug,name,iso3,iso2
-country,Afghanistan,afg,af
-country,Albania,alb,al
-country,Algeria,dza,dz
-country,American Samoa,asm,as
-country,Andorra,and,ad
-country,Angola,ago,ao
-country,Antigua and Barbuda,atg,ag
-country,Argentina,arg,ar
-country,Armenia,arm,am
-country,Aruba,abw,aw
-country,Australia,aus,au
-country,Austria,aut,at
-country,Azerbaijan,aze,az
-country,Bahamas,bhs,bs
-country,Bahrain,bhr,bh
-country,Bangladesh,bgd,bd
-country,Barbados,brb,bb
-country,Belarus,blr,by
-country,Belgium,bel,be
-country,Belize,blz,bz
-country,Benin,ben,bj
-country,Bhutan,btn,bt
-country,Bolivia,bol,bo
-country,Bosnia and Herzegovina,bih,ba
-country,Botswana,bwa,bw
-country,Brazil,bra,br
-country,Brunei Darussalam,brn,bn
-country,Bulgaria,bgr,bg
-country,Burkina Faso,bfa,bf
-country,Burundi,bdi,bi
-country,Cabo Verde,cpv,cv
-country,Cambodia,khm,kh
-country,Cameroon,cmr,cm
-country,Canada,can,ca
-country,Central African Republic,caf,cf
-country,Chad,tcd,td
-country,Chile,chl,cl
-country,China,chn,cn
-country,Colombia,col,co
-country,Comoros,com,km
-country,Congo,cog,cg
-country,Cook Islands,cok,ck
-country,Costa Rica,cri,cr
-country,Cote d'Ivoire,civ,ci
-country,Croatia,hrv,hr
-country,Cuba,cub,cu
-country,Curaçao,cuw,cw
-country,Cyprus,cyp,cy
-country,Czech Republic,cze,cz
-country,Democratic People's Republic of Korea,prk,kp
-country,Democratic Republic of the Congo,cod,cd
-country,Denmark,dnk,dk
-country,Djibouti,dji,dj
-country,Dominica,dma,dm
-country,Dominican Republic,dom,do
-country,Ecuador,ecu,ec
-country,Egypt,egy,eg
-country,El Salvador,slv,sv
-country,Equatorial Guinea,gnq,gq
-country,Eritrea,eri,er
-country,Estonia,est,ee
-country,Eswatini,swz,sz
-country,Ethiopia,eth,et
-country,Federated States of Micronesia,fsm,fm
-country,Fiji,fji,fj
-country,Finland,fin,fi
-country,France,fra,fr
-country,French Guiana,guf,gf
-country,French Polynesia,pyf,pf
-country,Gabon,gab,ga
-country,Gambia,gmb,gm
-country,Georgia,geo,ge
-country,Germany,deu,de
-country,Ghana,gha,gh
-country,Greece,grc,gr
-country,Grenada,grd,gd
-country,Guatemala,gtm,gt
-country,Guinea,gin,gn
-country,Guinea Bissau,gnb,gw
-country,Guyana,guy,gy
-country,Haiti,hti,ht
-country,Holy See,vat,va
-country,Honduras,hnd,hn
-country,Hungary,hun,hu
-country,Iceland,isl,is
-country,India,ind,in
-country,Indonesia,idn,id
-country,Iran,irn,ir
-country,Iraq,irq,iq
-country,Ireland,irl,ie
-country,Israel,isr,il
-country,Italy,ita,it
-country,Jamaica,jam,jm
-country,Japan,jpn,jp
-country,Jordan,jor,jo
-country,Kazakhstan,kaz,kz
-country,Kenya,ken,ke
-country,Kiribati,kir,ki
-country,Kosovo,xkx,xk
-country,Kuwait,kwt,kw
-country,Kyrgyzstan,kgz,kg
-country,Lao People's Democratic Republic,lao,la
-country,Latvia,lva,lv
-country,Lebanon,lbn,lb
-country,Lesotho,lso,ls
-country,Liberia,lbr,lr
-country,Libya,lby,ly
-country,Liechtenstein,lie,li
-country,Lithuania,ltu,lt
-country,Luxembourg,lux,lu
-country,Madagascar,mdg,mg
-country,Malawi,mwi,mw
-country,Malaysia,mys,my
-country,Maldives,mdv,mv
-country,Mali,mli,ml
-country,Malta,mlt,mt
-country,Marshall Islands,mhl,mh
-country,Mauritania,mrt,mr
-country,Mauritius,mus,mu
-country,Mexico,mex,mx
-country,Monaco,mco,mc
-country,Mongolia,mng,mn
-country,Montenegro,mne,me
-country,Morocco,mar,ma
-country,Mozambique,moz,mz
-country,Myanmar,mmr,mm
-country,Namibia,nam,na
-country,Nauru,nru,nr
-country,Nepal,npl,np
-country,Netherlands,nld,nl
-country,New Zealand,nzl,nz
-country,Nicaragua,nic,ni
-country,Niger,ner,ne
-country,Nigeria,nga,ng
-country,Niue,niu,nu
-country,North Macedonia,mkd,mk
-country,Norway,nor,no
-country,Oman,omn,om
-country,Pakistan,pak,pk
-country,Palau,plw,pw
-country,Palestine,pse,ps
-country,Panama,pan,pa
-country,Papua New Guinea,png,pg
-country,Paraguay,pry,py
-country,Peru,per,pe
-country,Philippines,phl,ph
-country,Poland,pol,pl
-country,Portugal,prt,pt
-country,Qatar,qat,qa
-country,Republic of Korea,kor,kr
-country,Republic of Moldova,mda,md
-country,Romania,rou,ro
-country,Russian Federation,rus,ru
-country,Rwanda,rwa,rw
-country,Saint Kitts and Nevis,kna,kn
-country,Saint Lucia,lca,lc
-country,Saint Martin,maf,mf
-country,Saint Vincent and the Grenadines,vct,vc
-country,Samoa,wsm,ws
-country,San Marino,smr,sm
-country,Sao Tome and Principe,stp,st
-country,Saudi Arabia,sau,sa
-country,Senegal,sen,sn
-country,Serbia,srb,rs
-country,Seychelles,syc,sc
-country,Sierra Leone,sle,sl
-country,Singapore,sgp,sg
-country,Sint Maarten,sxm,sx
-country,Slovakia,svk,sk
-country,Slovenia,svn,si
-country,Solomon Islands,slb,sb
-country,Somalia,som,so
-country,South Africa,zaf,za
-country,South Sudan,ssd,ss
-country,Spain,esp,es
-country,Sri Lanka,lka,lk
-country,Sudan,sdn,sd
-country,Suriname,sur,sr
-country,Sweden,swe,se
-country,Switzerland,che,ch
-country,Syrian Arab Republic,syr,sy
-country,Taiwan,twn,tw
-country,Tajikistan,tjk,tj
-country,Thailand,tha,th
-country,Timor-Leste,tls,tl
-country,Togo,tgo,tg
-country,Tonga,ton,to
-country,Trinidad and Tobago,tto,tt
-country,Tunisia,tun,tn
-country,Turkey,tur,tr
-country,Turkmenistan,tkm,tm
-country,Tuvalu,tuv,tv
-country,Uganda,uga,ug
-country,Ukraine,ukr,ua
-country,United Arab Emirates,are,ae
-country,United Kingdom,gbr,gb
-country,United Republic of Tanzania,tza,tz
-country,United States of America,usa,us
-country,Uruguay,ury,uy
-country,Uzbekistan,uzb,uz
-country,Vanuatu,vut,vu
-country,"Venezuela, Bolivarian Republic of",ven,ve
-country,Viet Nam,vnm,vn
-country,Wallis and Futuna,wlf,wf
-country,Western Sahara,sah,eh
-country,Yemen,yem,ye
-country,Zambia,zmb,zm
-country,Zimbabwe,zwe,zw
+country,Afghanistan,AFG,AF
+country,Albania,ALB,AL
+country,Algeria,DZA,DZ
+country,American Samoa,ASM,AS
+country,Andorra,AND,AD
+country,Angola,AGO,AO
+country,Antigua and Barbuda,ATG,AG
+country,Argentina,ARG,AR
+country,Armenia,ARM,AM
+country,Aruba,ABW,AW
+country,Australia,AUS,AU
+country,Austria,AUT,AT
+country,Azerbaijan,AZE,AZ
+country,Bahamas,BHS,BS
+country,Bahrain,BHR,BH
+country,Bangladesh,BGD,BD
+country,Barbados,BRB,BB
+country,Belarus,BLR,BY
+country,Belgium,BEL,BE
+country,Belize,BLZ,BZ
+country,Benin,BEN,BJ
+country,Bhutan,BTN,BT
+country,Bolivia,BOL,BO
+country,Bosnia and Herzegovina,BIH,BA
+country,Botswana,BWA,BW
+country,Brazil,BRA,BR
+country,Brunei Darussalam,BRN,BN
+country,Bulgaria,BGR,BG
+country,Burkina Faso,BFA,BF
+country,Burundi,BDI,BI
+country,Cabo Verde,CPV,CV
+country,Cambodia,KHM,KH
+country,Cameroon,CMR,CM
+country,Canada,CAN,CA
+country,Central African Republic,CAF,CF
+country,Chad,TCD,TD
+country,Chile,CHL,CL
+country,China,CHN,CN
+country,Colombia,COL,CO
+country,Comoros,COM,KM
+country,Congo,COG,CG
+country,Cook Islands,COK,CK
+country,Costa Rica,CRI,CR
+country,Cote d'Ivoire,CIV,CI
+country,Croatia,HRV,HR
+country,Cuba,CUB,CU
+country,Curaçao,CUW,CW
+country,Cyprus,CYP,CY
+country,Czech Republic,CZE,CZ
+country,Democratic People's Republic of Korea,PRK,KP
+country,Democratic Republic of the Congo,COD,CD
+country,Denmark,DNK,DK
+country,Djibouti,DJI,DJ
+country,Dominica,DMA,DM
+country,Dominican Republic,DOM,DO
+country,Ecuador,ECU,EC
+country,Egypt,EGY,EG
+country,El Salvador,SLV,SV
+country,Equatorial Guinea,GNQ,GQ
+country,Eritrea,ERI,ER
+country,Estonia,EST,EE
+country,Eswatini,SWZ,SZ
+country,Ethiopia,ETH,ET
+country,Federated States of Micronesia,FSM,FM
+country,Fiji,FJI,FJ
+country,Finland,FIN,FI
+country,France,FRA,FR
+country,French Guiana,GUF,GF
+country,French Polynesia,PYF,PF
+country,Gabon,GAB,GA
+country,Gambia,GMB,GM
+country,Georgia,GEO,GE
+country,Germany,DEU,DE
+country,Ghana,GHA,GH
+country,Greece,GRC,GR
+country,Grenada,GRD,GD
+country,Guatemala,GTM,GT
+country,Guinea,GIN,GN
+country,Guinea Bissau,GNB,GW
+country,Guyana,GUY,GY
+country,Haiti,HTI,HT
+country,Holy See,VAT,VA
+country,Honduras,HND,HN
+country,Hungary,HUN,HU
+country,Iceland,ISL,IS
+country,India,IND,IN
+country,Indonesia,IDN,ID
+country,Iran,IRN,IR
+country,Iraq,IRQ,IQ
+country,Ireland,IRL,IE
+country,Israel,ISR,IL
+country,Italy,ITA,IT
+country,Jamaica,JAM,JM
+country,Japan,JPN,JP
+country,Jordan,JOR,JO
+country,Kazakhstan,KAZ,KZ
+country,Kenya,KEN,KE
+country,Kiribati,KIR,KI
+country,Kosovo,XKX,XK
+country,Kuwait,KWT,KW
+country,Kyrgyzstan,KGZ,KG
+country,Lao People's Democratic Republic,LAO,LA
+country,Latvia,LVA,LV
+country,Lebanon,LBN,LB
+country,Lesotho,LSO,LS
+country,Liberia,LBR,LR
+country,Libya,LBY,LY
+country,Liechtenstein,LIE,LI
+country,Lithuania,LTU,LT
+country,Luxembourg,LUX,LU
+country,Madagascar,MDG,MG
+country,Malawi,MWI,MW
+country,Malaysia,MYS,MY
+country,Maldives,MDV,MV
+country,Mali,MLI,ML
+country,Malta,MLT,MT
+country,Marshall Islands,MHL,MH
+country,Mauritania,MRT,MR
+country,Mauritius,MUS,MU
+country,Mexico,MEX,MX
+country,Monaco,MCO,MC
+country,Mongolia,MNG,MN
+country,Montenegro,MNE,ME
+country,Morocco,MAR,MA
+country,Mozambique,MOZ,MZ
+country,Myanmar,MMR,MM
+country,Namibia,NAM,NA
+country,Nauru,NRU,NR
+country,Nepal,NPL,NP
+country,Netherlands,NLD,NL
+country,New Zealand,NZL,NZ
+country,Nicaragua,NIC,NI
+country,Niger,NER,NE
+country,Nigeria,NGA,NG
+country,Niue,NIU,NU
+country,North Macedonia,MKD,MK
+country,Norway,NOR,NO
+country,Oman,OMN,OM
+country,Pakistan,PAK,PK
+country,Palau,PLW,PW
+country,Palestine,PSE,PS
+country,Panama,PAN,PA
+country,Papua New Guinea,PNG,PG
+country,Paraguay,PRY,PY
+country,Peru,PER,PE
+country,Philippines,PHL,PH
+country,Poland,POL,PL
+country,Portugal,PRT,PT
+country,Qatar,QAT,QA
+country,Republic of Korea,KOR,KR
+country,Republic of Moldova,MDA,MD
+country,Romania,ROU,RO
+country,Russian Federation,RUS,RU
+country,Rwanda,RWA,RW
+country,Saint Kitts and Nevis,KNA,KN
+country,Saint Lucia,LCA,LC
+country,Saint Martin,MAF,MF
+country,Saint Vincent and the Grenadines,VCT,VC
+country,Samoa,WSM,WS
+country,San Marino,SMR,SM
+country,Sao Tome and Principe,STP,ST
+country,Saudi Arabia,SAU,SA
+country,Senegal,SEN,SN
+country,Serbia,SRB,RS
+country,Seychelles,SYC,SC
+country,Sierra Leone,SLE,SL
+country,Singapore,SGP,SG
+country,Sint Maarten,SXM,SX
+country,Slovakia,SVK,SK
+country,Slovenia,SVN,SI
+country,Solomon Islands,SLB,SB
+country,Somalia,SOM,SO
+country,South Africa,ZAF,ZA
+country,South Sudan,SSD,SS
+country,Spain,ESP,ES
+country,Sri Lanka,LKA,LK
+country,Sudan,SDN,SD
+country,Suriname,SUR,SR
+country,Sweden,SWE,SE
+country,Switzerland,CHE,CH
+country,Syrian Arab Republic,SYR,SY
+country,Taiwan,TWN,TW
+country,Tajikistan,TJK,TJ
+country,Thailand,THA,TH
+country,Timor-Leste,TLS,TL
+country,Togo,TGO,TG
+country,Tonga,TON,TO
+country,Trinidad and Tobago,TTO,TT
+country,Tunisia,TUN,TN
+country,Turkey,TUR,TR
+country,Turkmenistan,TKM,TM
+country,Tuvalu,TUV,TV
+country,Uganda,UGA,UG
+country,Ukraine,UKR,UA
+country,United Arab Emirates,ARE,AE
+country,United Kingdom,GBR,GB
+country,United Republic of Tanzania,TZA,TZ
+country,United States of America,USA,US
+country,Uruguay,URY,UY
+country,Uzbekistan,UZB,UZ
+country,Vanuatu,VUT,VU
+country,"Venezuela, Bolivarian Republic of",VEN,VE
+country,Viet Nam,VNM,VN
+country,Wallis and Futuna,WLF,WF
+country,Western Sahara,SAH,EH
+country,Yemen,YEM,YE
+country,Zambia,ZMB,ZM
+country,Zimbabwe,ZWE,ZW
 organization,ABAAD - Resource Center for Gender Equality,,
 organization,Abaseen Foundation UK,,
 organization,Abt Associates Inc,,
@@ -224,7 +224,7 @@ organization,Africa CDC,,
 organization,African Development Bank,,
 organization,African Initiatives,,
 organization,African Population and Health Research Center,,
-organization,African Regional Industrial Property Organization,,ap
+organization,African Regional Industrial Property Organization,,AP
 organization,African Reinsurance Corporation,,
 organization,Afrikagrupperna Sweden,,
 organization,AfriKids,,
