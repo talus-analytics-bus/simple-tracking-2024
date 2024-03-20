@@ -1,17 +1,18 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
 
 const useStakeholders = () => {
-  const { allStakeholdersCsv: { stakeholders } }
-    = useStaticQuery<Queries.UseStakeholdersQuery>(graphql`
-      query UseStakeholders {
-        allStakeholdersCsv {
-          stakeholders: nodes {
-            name
-            iso3
-          }
+  const {
+    allStakeholdersCsv: { stakeholders },
+  } = useStaticQuery<Queries.UseStakeholdersQuery>(graphql`
+    query UseStakeholders {
+      allStakeholdersCsv {
+        stakeholders: nodes {
+          slug
+          name
         }
       }
-    `)
+    }
+  `)
 
   return stakeholders
 }
