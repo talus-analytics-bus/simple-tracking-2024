@@ -86,11 +86,11 @@ const StakeholderPage = ({
       ? `${yearOptions.at(-1)} – ${yearOptions.at(1)}`
       : selectedYear
 
-  const leftNavElements = cmsData.nodes
+  let leftNavElements = cmsData.nodes
     .filter(node => node.data.Name.includes('left nav'))
     .sort(sortHLabeledNodes)
-    // temporarily remove the first link for the maps
-    .slice(1)
+
+  if (!stakeholderIsCountry) leftNavElements = leftNavElements.slice(0, 5)
 
   const flagImage = data.stakeholdersCsv?.flag?.childImageSharp?.gatsbyImageData
 
@@ -113,14 +113,17 @@ const StakeholderPage = ({
       <Layout>
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
-          {leftNavElements.map(node => (
-            <SidebarLink
-              key={node.data.Name}
-              href={`#${formatHash(node.data.Text)}`}
-            >
-              <CMS.Text name={node.data.Name} data={cmsData} />
-            </SidebarLink>
-          ))}
+          {leftNavElements
+            // temporarily remove map section
+            .slice(1)
+            .map(node => (
+              <SidebarLink
+                key={node.data.Name}
+                href={`#${formatHash(node.data.Text)}`}
+              >
+                <CMS.Text name={node.data.Name} data={cmsData} />
+              </SidebarLink>
+            ))}
         </Sidebar>
         <TopBar>
           <H1>
@@ -207,7 +210,7 @@ const StakeholderPage = ({
 
           {stakeholderIsCountry && (
             <>
-              <ScrollTarget id={formatHash(leftNavElements[4].data.Text)} />
+              <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
               <h2>
                 <CMS.Text name={'H7 header'} data={cmsData} />
               </h2>
@@ -216,7 +219,7 @@ const StakeholderPage = ({
               </h3>
               <SparScores data={data} />
 
-              <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
+              <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
               <h2>
                 <CMS.Text
                   name={'H8 header'}
@@ -229,7 +232,7 @@ const StakeholderPage = ({
               </h3>
               <JeeScores data={data} />
 
-              <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
+              <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
               <h2>
                 <CMS.Text name={'H9 header'} data={cmsData} />
               </h2>
@@ -238,7 +241,7 @@ const StakeholderPage = ({
               </h3>
               <ContentPlaceholder />
 
-              <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
+              <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
               <h2>
                 <CMS.Text name={'H10 header'} data={cmsData} />
               </h2>
@@ -247,7 +250,7 @@ const StakeholderPage = ({
               </h3>
               <ContentPlaceholder />
 
-              <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
+              <ScrollTarget id={formatHash(leftNavElements[9].data.Text)} />
               <h2>
                 <CMS.Text name={'H11 header'} data={cmsData} />
               </h2>
