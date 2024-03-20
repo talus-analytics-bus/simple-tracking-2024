@@ -6,7 +6,8 @@ const format = Intl.NumberFormat(undefined, {
 })
 
 const formatDisplayNumber = (num: number) => {
-  if (num < 1000) return num
+  if (num === 0) return format.format(0)
+  if (num < 1000) return '<' + format.format(1000)
 
   const tier = (Math.log10(num) / 3) | 0
   const scale = Math.pow(10, tier * 3)
