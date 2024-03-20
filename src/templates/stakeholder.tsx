@@ -75,7 +75,7 @@ const StakeholderPage = ({
 
   const yearOptions = [
     'All time',
-    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.Year ?? '') ??
+    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.year ?? '') ??
       []),
   ]
 
