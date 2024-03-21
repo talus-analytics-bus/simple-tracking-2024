@@ -16,8 +16,8 @@ const OverviewPage = (): JSX.Element => {
   return (
     <Providers>
       <CMS.SEO
-        title="GHSS Tracking Overview"
-        description="Overview of the GHSS Tracking project"
+        title={CMS.getText(cmsData, 'Page title')}
+        description={CMS.getText(cmsData, 'Page description')}
       />
       <NavBar />
       <Main style={{ maxWidth: 1000 }}>
