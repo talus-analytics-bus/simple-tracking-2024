@@ -55,12 +55,6 @@ const DataSourcesPage = ({
 }: PageProps<Queries.DataSourcesPageQuery>): JSX.Element => {
   const cmsData = useAboutDataSourcesPageData()
 
-  const dataSources = (
-    data.dataSources.nodes as Writeable<
-      Queries.DataSourcesPageQuery['dataSources']['nodes']
-    >
-  ).sort((a, b) => b.source?.Order ?? 0 - (a.source?.Order ?? 0))
-
   return (
     <Providers>
       <CMS.SEO
@@ -84,7 +78,7 @@ const DataSourcesPage = ({
             </tr>
           </thead>
           <tbody>
-            {dataSources.map(node => (
+            {data.dataSources.nodes.map(node => (
               <tr key={node.source?.Data_source}>
                 <td>{node.source?.Data_source}</td>
                 <td
@@ -104,7 +98,10 @@ const DataSourcesPage = ({
 
 export const query = graphql`
   query DataSourcesPage {
-    dataSources: allAirtable(filter: { table: { eq: "Data sources" } }) {
+    dataSources: allAirtable(
+      filter: { table: { eq: "Data sources" } }
+      sort: { data: { Order: ASC } }
+    ) {
       nodes {
         source: data {
           Data_source
