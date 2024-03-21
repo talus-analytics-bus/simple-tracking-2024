@@ -69,7 +69,11 @@ const StakeholderPage = ({
 
   const cmsData = useStakeholderPageData()
 
+  const stakeholderName = data.stakeholdersCsv?.name
   const stakeholderIsCountry = data.stakeholdersCsv?.iso3 !== ''
+
+  if (!stakeholderName)
+    throw new Error('No stakeholder name found for stakeholder page')
 
   const yearOptions = [
     'All time',
@@ -102,7 +106,9 @@ const StakeholderPage = ({
   if (stakeholderIsCountry && !jeeVersion)
     throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)
 
-  console.log('hello world')
+  const stakeholderNameReplacement = {
+    '[STAKEHOLDER]': stakeholderName,
+  }
 
   return (
     <Providers>
@@ -122,20 +128,15 @@ const StakeholderPage = ({
                 <CMS.Text
                   name={node.data.Name}
                   data={cmsData}
-                  replace={{
-                    '[STAKEHOLDER]':
-                      data.stakeholdersCsv?.name ?? '[STAKEHOLDER]',
-                  }}
+                  replace={stakeholderNameReplacement}
                 />
               </SidebarLink>
             ))}
         </Sidebar>
         <TopBar>
           <H1>
-            {flagImage && (
-              <Flag image={flagImage} alt={data.stakeholdersCsv?.name ?? ''} />
-            )}
-            {data.stakeholdersCsv?.name}
+            {flagImage && <Flag image={flagImage} alt={stakeholderName} />}
+            {stakeholderName}
           </H1>
           <YearSelector
             value={selectedYear}
@@ -166,7 +167,11 @@ const StakeholderPage = ({
             <CMS.Text name={'H3 header'} data={cmsData} />
           </h2>
           <h3>
-            <CMS.Text name={'H3 subtitle stakeholder'} data={cmsData} />
+            <CMS.Text
+              name={'H3 subtitle stakeholder'}
+              data={cmsData}
+              replace={stakeholderNameReplacement}
+            />
           </h3>
           <FundingTotals
             data={data}
@@ -179,7 +184,11 @@ const StakeholderPage = ({
             <CMS.Text name={'H4 header'} data={cmsData} />
           </h2>
           <h3>
-            <CMS.Text name={'H4 subtitle stakeholder'} data={cmsData} />
+            <CMS.Text
+              name={'H4 subtitle stakeholder'}
+              data={cmsData}
+              replace={stakeholderNameReplacement}
+            />
           </h3>
           <FundsByCategory
             data={data}
@@ -192,7 +201,11 @@ const StakeholderPage = ({
             <CMS.Text name={'H5 header'} data={cmsData} />
           </h2>
           <h3>
-            <CMS.Text name={'H5 subtitle stakeholder'} data={cmsData} />
+            <CMS.Text
+              name={'H5 subtitle stakeholder'}
+              data={cmsData}
+              replace={stakeholderNameReplacement}
+            />
           </h3>
           <FundsByPHEIC
             data={data}
@@ -205,7 +218,11 @@ const StakeholderPage = ({
             <CMS.Text name={'H6 header'} data={cmsData} />
           </h2>
           <h3>
-            <CMS.Text name={'H6 subtitle stakeholder'} data={cmsData} />
+            <CMS.Text
+              name={'H6 subtitle stakeholder'}
+              data={cmsData}
+              replace={stakeholderNameReplacement}
+            />
           </h3>
           <TopFundersAndRecipients
             data={data}
@@ -220,7 +237,11 @@ const StakeholderPage = ({
                 <CMS.Text name={'H7 header'} data={cmsData} />
               </h2>
               <h3>
-                <CMS.Text name={'H7 subtitle'} data={cmsData} />
+                <CMS.Text
+                  name={'H7 subtitle'}
+                  data={cmsData}
+                  replace={stakeholderNameReplacement}
+                />
               </h3>
               <SparScores data={data} />
 
@@ -233,7 +254,11 @@ const StakeholderPage = ({
                 />
               </h2>
               <h3>
-                <CMS.Text name={'H8 subtitle'} data={cmsData} />
+                <CMS.Text
+                  name={'H8 subtitle'}
+                  data={cmsData}
+                  replace={stakeholderNameReplacement}
+                />
               </h3>
               <JeeScores data={data} />
 
@@ -242,7 +267,11 @@ const StakeholderPage = ({
                 <CMS.Text name={'H9 header'} data={cmsData} />
               </h2>
               <h3>
-                <CMS.Text name={'H9 subtitle'} data={cmsData} />
+                <CMS.Text
+                  name={'H9 subtitle'}
+                  data={cmsData}
+                  replace={stakeholderNameReplacement}
+                />
               </h3>
               <ContentPlaceholder />
 
@@ -251,7 +280,11 @@ const StakeholderPage = ({
                 <CMS.Text name={'H10 header'} data={cmsData} />
               </h2>
               <h3>
-                <CMS.Text name={'H10 subtitle'} data={cmsData} />
+                <CMS.Text
+                  name={'H10 subtitle'}
+                  data={cmsData}
+                  replace={stakeholderNameReplacement}
+                />
               </h3>
               <ContentPlaceholder />
 
@@ -260,7 +293,11 @@ const StakeholderPage = ({
                 <CMS.Text name={'H11 header'} data={cmsData} />
               </h2>
               <h3>
-                <CMS.Text name={'H11 subtitle'} data={cmsData} />
+                <CMS.Text
+                  name={'H11 subtitle'}
+                  data={cmsData}
+                  replace={stakeholderNameReplacement}
+                />
               </h3>
               <ContentPlaceholder />
             </>
