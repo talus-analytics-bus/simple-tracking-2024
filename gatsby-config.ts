@@ -37,6 +37,36 @@ const config: GatsbyConfig = {
           },
           {
             baseId: `appD0BHXtft0HSTNM`,
+            tableName: `NAPHS`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `PHEIC`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `PHEIC CMS`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `PVS Pathway`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `Data sources`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
+            tableName: `About CMS`,
+            tableView: `CMS`,
+          },
+          {
+            baseId: `appD0BHXtft0HSTNM`,
             tableName: `Site metadata`,
             tableView: `CMS`,
             mapping: { Image: `fileNode` },
