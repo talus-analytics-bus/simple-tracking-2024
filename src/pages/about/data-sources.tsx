@@ -59,7 +59,7 @@ const DataSourcesPage = ({
     data.dataSources.nodes as Writeable<
       Queries.DataSourcesPageQuery['dataSources']['nodes']
     >
-  ).sort((a, b) => a.source?.Order ?? 0 - (b.source?.Order ?? 0))
+  ).sort((a, b) => b.source?.Order ?? 0 - (a.source?.Order ?? 0))
 
   return (
     <Providers>
