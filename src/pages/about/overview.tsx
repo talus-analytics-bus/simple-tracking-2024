@@ -9,11 +9,10 @@ import Providers from 'components/layout/Providers'
 
 import AboutStyle from 'components/about/AboutStyle'
 import Footer from 'components/layout/Footer'
-// import useUserGuidePageData from 'cmsHooks/useUserGuideQuery'
+import useAboutOverviewPageData from 'cmsHooks/useAboutOverviewPageData'
 
 const OverviewPage = (): JSX.Element => {
-  // const cmsData = useUserGuidePageData()
-  const cmsData = {}
+  const cmsData = useAboutOverviewPageData()
   return (
     <Providers>
       <CMS.SEO
@@ -25,15 +24,9 @@ const OverviewPage = (): JSX.Element => {
         <AboutNav />
         <AboutStyle>
           <h1>
-            {
-              // <CMS.Text name="H1" data={cmsData} />
-            }
-            OVERVIEW PLACEHOLDER
+            <CMS.Text name="H1 title" data={cmsData} />
           </h1>
-          {
-            // <CMS.RichText name="User guide text" data={cmsData} />
-          }
-          PLACEHOLDER
+          <CMS.RichText name="H1 paragraph" data={cmsData} />
         </AboutStyle>
       </Main>
       <Footer />
