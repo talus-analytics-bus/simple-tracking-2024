@@ -64,6 +64,20 @@
     url(/assets/fonts/openSans/boldItalic/OpenSans-BoldItalic.eot) format('eot');
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans BoldItalic'), local('OpenSans-BoldItalic'),
+    url(/assets/fonts/openSans/semibold/OpenSans-Semibold.ttf) format('ttf'),
+    url(/assets/fonts/openSans/semibold/OpenSans-Semibold.woff2)
+      format('woff2'),
+    url(/assets/fonts/openSans/semibold/OpenSans-Semibold.woff)
+      format('woff'),
+    url(/assets/fonts/openSans/semibold/OpenSans-Semibold.eot) format('eot');
+}
+
+
 /* @font-face { */
 /*   font-family: 'Rawline'; */
 /*   src: url('/assets/fonts/rawline/rawline-100.woff2') format('woff2'), */
