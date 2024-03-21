@@ -67,9 +67,7 @@ const StakeholderPage = ({
 }: PageProps<Queries.StakeholderPageQuery>): JSX.Element => {
   console.log(data)
 
-  const cmsData = useStakeholderPageData({
-    '[STAKEHOLDER]': data.stakeholdersCsv?.name,
-  })
+  const cmsData = useStakeholderPageData()
 
   const stakeholderIsCountry = data.stakeholdersCsv?.iso3 !== ''
 
@@ -121,7 +119,14 @@ const StakeholderPage = ({
                 key={node.data.Name}
                 href={`#${formatHash(node.data.Text)}`}
               >
-                <CMS.Text name={node.data.Name} data={cmsData} />
+                <CMS.Text
+                  name={node.data.Name}
+                  data={cmsData}
+                  replace={{
+                    '[STAKEHOLDER]':
+                      data.stakeholdersCsv?.name ?? '[STAKEHOLDER]',
+                  }}
+                />
               </SidebarLink>
             ))}
         </Sidebar>
