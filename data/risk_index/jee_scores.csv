@@ -1519,6 +1519,25 @@ jee1,GTM,,Respond,R.5,Risk Communication,,,No data
 jee1,GTM,,Other Hazards,PoE,Points of Entry (PoE),,,No data
 jee1,GTM,,Other Hazards,CE,Chemical Events,,,No data
 jee1,GTM,,Other Hazards,RE,Radiation Emergencies,,,No data
+jee1,GUF,,Prevent,P.1,"National Legislation, Policy and Financing",,,No data
+jee1,GUF,,Prevent,P.2,"IHR Coordination, Communication and Advocacy",,,No data
+jee1,GUF,,Prevent,P.3,Antimicrobial Resistance (AMR),,,No data
+jee1,GUF,,Prevent,P.4,Zoonotic Disease,,,No data
+jee1,GUF,,Prevent,P.5,Food Safety,,,No data
+jee1,GUF,,Prevent,P.6,Biosafety and Biosecurity,,,No data
+jee1,GUF,,Prevent,P.7,Immunization,,,No data
+jee1,GUF,,Detect,D.1,National Laboratory System,,,No data
+jee1,GUF,,Detect,D.2,Real Time Surveillance,,,No data
+jee1,GUF,,Detect,D.3,Reporting,,,No data
+jee1,GUF,,Detect,D.4,Workforce Development,,,No data
+jee1,GUF,,Respond,R.1,Preparedness,,,No data
+jee1,GUF,,Respond,R.2,Emergency Response Operations,,,No data
+jee1,GUF,,Respond,R.3,Linking Public Health and Security Authorities,,,No data
+jee1,GUF,,Respond,R.4,Medical Countermeasures and Personnel Deployment,,,No data
+jee1,GUF,,Respond,R.5,Risk Communication,,,No data
+jee1,GUF,,Other Hazards,PoE,Points of Entry (PoE),,,No data
+jee1,GUF,,Other Hazards,CE,Chemical Events,,,No data
+jee1,GUF,,Other Hazards,RE,Radiation Emergencies,,,No data
 jee1,GUY,,Prevent,P.1,"National Legislation, Policy and Financing",,,No data
 jee1,GUY,,Prevent,P.2,"IHR Coordination, Communication and Advocacy",,,No data
 jee1,GUY,,Prevent,P.3,Antimicrobial Resistance (AMR),,,No data
