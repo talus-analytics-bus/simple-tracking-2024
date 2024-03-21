@@ -26,7 +26,6 @@ const PaddedLink = styled(Link)`
   &:hover {
     transition: 250ms ease;
     background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
-    color: ${({ theme }) => theme.common.colors.textInvert};
   }
 `
 
