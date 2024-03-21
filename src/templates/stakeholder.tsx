@@ -60,7 +60,8 @@ const sortHLabeledNodes = (
   Number(a.data.Name.split(' ')[0].replace('H', '')) -
   Number(b.data.Name.split(' ')[0].replace('H', ''))
 
-const formatHash = (str: string) => str.replaceAll(' ', '-').toLowerCase()
+const formatHash = (str: string) =>
+  str.trim().replaceAll(' ', '-').toLowerCase()
 
 const StakeholderPage = ({
   data,
