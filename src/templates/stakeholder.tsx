@@ -18,12 +18,13 @@ import {
   TopBar,
 } from 'components/stakeholderPage/StakeholderLayout'
 
-import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
 import SparScores from 'components/stakeholderPage/SparScores'
 import JeeScores from 'components/stakeholderPage/JeeScores'
+
+import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
 const ScrollTarget = styled.div`
   position: relative;
