@@ -51,5 +51,5 @@ FROM received
 FULL JOIN disbursed ON disbursed.id = received.id
 WHERE 
 	COALESCE(received.iso3, disbursed.iso3) IS NULL 
-	OR NOT COALESCE(received.iso3, disbursed.iso3) IN ('GLOBAL', 'GLB')
+	OR NOT COALESCE(received.iso3, disbursed.iso3) IN ('GLOBAL', 'GLB', 'GUF')
 ORDER BY slug, name ASC
