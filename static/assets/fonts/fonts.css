@@ -68,7 +68,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local('Open Sans BoldItalic'), local('OpenSans-BoldItalic'),
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
     url(/assets/fonts/openSans/semibold/OpenSans-Semibold.ttf) format('ttf'),
     url(/assets/fonts/openSans/semibold/OpenSans-Semibold.woff2)
       format('woff2'),
