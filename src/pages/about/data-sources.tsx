@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { PageProps, graphql } from 'gatsby'
 
 import CMS from 'components/library/airtable-cms/'
@@ -12,7 +13,6 @@ import AboutStyle from 'components/about/AboutStyle'
 import Footer from 'components/layout/Footer'
 
 import useAboutDataSourcesPageData from 'cmsHooks/useAboutDataSourcesPageData'
-import styled from 'styled-components'
 
 const DataSourcesTable = styled.table`
   width: 100%;
