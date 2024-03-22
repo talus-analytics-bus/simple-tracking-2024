@@ -14,8 +14,6 @@ import Footer from 'components/layout/Footer'
 import useAboutDataSourcesPageData from 'cmsHooks/useAboutDataSourcesPageData'
 import styled from 'styled-components'
 
-type Writeable<T> = { -readonly [P in keyof T]: T[P] }
-
 const DataSourcesTable = styled.table`
   width: 100%;
   border-collapse: collapse;
