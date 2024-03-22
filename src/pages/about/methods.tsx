@@ -9,31 +9,24 @@ import Providers from 'components/layout/Providers'
 
 import AboutStyle from 'components/about/AboutStyle'
 import Footer from 'components/layout/Footer'
-// import useUserGuidePageData from 'cmsHooks/useUserGuideQuery'
+import useAboutMethodsPageData from 'cmsHooks/useAboutMethodsPageData'
 
 const MethodsPage = (): JSX.Element => {
-  // const cmsData = useUserGuidePageData()
-  const cmsData = {}
+  const cmsData = useAboutMethodsPageData()
   return (
     <Providers>
       <CMS.SEO
-        title="GHSS Tracking Methods"
-        description="Methods of the GHSS Tracking project"
+        title={CMS.getText(cmsData, 'Page title')}
+        description={CMS.getText(cmsData, 'Page description')}
       />
       <NavBar />
       <Main style={{ maxWidth: 1000 }}>
         <AboutNav />
         <AboutStyle>
           <h1>
-            {
-              // <CMS.Text name="H1" data={cmsData} />
-            }
-            METHODS PLACEHOLDER
+            <CMS.Text name="H1 title" data={cmsData} />
           </h1>
-          {
-            // <CMS.RichText name="User guide text" data={cmsData} />
-          }
-          PLACEHOLDER
+          <CMS.RichText name="H2 content" data={cmsData} />
         </AboutStyle>
       </Main>
       <Footer />
