@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Page, PageProps, graphql } from 'gatsby'
+import { PageProps, graphql } from 'gatsby'
 
 import CMS from 'components/library/airtable-cms/'
 
@@ -35,7 +35,9 @@ const DOILink = styled.a`
 
 const Citation = ({
   data,
-}: PageProps<Queries.PublicationsPageQuery>['data']['publicationsByOurTeam']['nodes'][0]) => (
+}:
+  | PageProps<Queries.PublicationsPageQuery>['data']['publicationsByOurTeam']['nodes'][0]
+  | PageProps<Queries.PublicationsPageQuery>['data']['publicationsCitingOurWork']['nodes'][0]) => (
   <CitationText>
     {data?.Authors?.trim()}.{' '}
     <TitleLink href={data?.URL ?? ''}>
@@ -106,7 +108,7 @@ export const query = graphql`
               data: { Name: { eq: "Global Health Security Tracking" } }
             }
           }
-          NEW_citation_type: { ne: "By our team" }
+          NEW_citation_type: { eq: "By our team" }
         }
         table: { eq: "Citations" }
       }
