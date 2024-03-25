@@ -99,7 +99,7 @@ const PublicationsPage = ({
 }
 
 export const query = graphql`
-  query PublicationsPage {
+  query MyQuery {
     publicationsByOurTeam: allAirtableCitations(
       filter: {
         data: {
@@ -112,10 +112,10 @@ export const query = graphql`
         }
         table: { eq: "Citations" }
       }
+      sort: { data: { Publication_Date: DESC } }
     ) {
       nodes {
         data {
-          NEW_citation_type
           Publication_Title
           Authors
           Publication_Year
@@ -138,10 +138,10 @@ export const query = graphql`
         }
         table: { eq: "Citations" }
       }
+      sort: { data: { Publication_Date: DESC } }
     ) {
       nodes {
         data {
-          NEW_citation_type
           Publication_Title
           Authors
           Publication_Year
