@@ -73,8 +73,6 @@ const SparMeaningChip = styled.div<{ meaning: SparMeaning }>`
 type Writeable<T> = { -readonly [P in keyof T]: T[P] }
 
 const SparScores = ({ data }: SparScoresProps) => {
-  console.log(data)
-
   const theme = useTheme()
 
   const sparScoreColumns = (
