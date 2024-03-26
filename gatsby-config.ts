@@ -39,6 +39,7 @@ const config: GatsbyConfig = {
             baseId: `appD0BHXtft0HSTNM`,
             tableName: `NAPHS`,
             tableView: `CMS`,
+            mapping: { PDF: `fileNode` },
           },
           {
             baseId: `appD0BHXtft0HSTNM`,
@@ -54,6 +55,7 @@ const config: GatsbyConfig = {
             baseId: `appD0BHXtft0HSTNM`,
             tableName: `PVS Pathway`,
             tableView: `CMS`,
+            mapping: { PDF: `fileNode` },
           },
           {
             baseId: `appD0BHXtft0HSTNM`,

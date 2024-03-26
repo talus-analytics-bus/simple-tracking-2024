@@ -432,6 +432,39 @@ export const query = graphql`
         meaning
       }
     }
+    naphs: allAirtable(
+      filter: { table: { eq: "NAPHS" }, data: { Country_ISO3: { eq: $iso3 } } }
+    ) {
+      nodes {
+        data {
+          PDF {
+            localFiles {
+              publicURL
+            }
+          }
+          Years
+          Status
+        }
+      }
+    }
+    pvs_pathway: allAirtable(
+      filter: {
+        table: { eq: "PVS Pathway" }
+        data: { Country_ISO3: { eq: $iso3 } }
+      }
+    ) {
+      nodes {
+        data {
+          PDF {
+            localFiles {
+              publicURL
+            }
+          }
+          Year
+          Select
+        }
+      }
+    }
   }
 `
 
