@@ -110,6 +110,8 @@ const StakeholderPage = ({
     '[STAKEHOLDER]': stakeholderName,
   }
 
+  console.log(data)
+
   return (
     <Providers>
       <CMS.SEO />
@@ -459,7 +461,7 @@ export const query = graphql`
             }
           }
           Year
-          Select
+          Report_type
         }
       }
     }

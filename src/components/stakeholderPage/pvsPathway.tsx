@@ -22,7 +22,7 @@ const PvsPathway = ({ data }: PvsPathwayProps) => {
     <DocumentTable>
       <thead>
         <tr>
-          <th>Status</th>
+          <th>Report type</th>
           <th>Years</th>
           <th>Document</th>
         </tr>
@@ -30,7 +30,7 @@ const PvsPathway = ({ data }: PvsPathwayProps) => {
       <tbody>
         {data.pvs_pathway.nodes.map(({ data: document }) => (
           <tr key={document?.PDF?.localFiles?.[0]?.publicURL}>
-            <td>{document?.Select}</td>
+            <td>{document?.Report_type}</td>
             <td>{document?.Year}</td>
             <td>
               {document?.PDF?.localFiles?.[0]?.publicURL && (
