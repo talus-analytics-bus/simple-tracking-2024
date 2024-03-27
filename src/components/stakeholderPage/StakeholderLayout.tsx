@@ -186,3 +186,67 @@ const NoDataP = styled.p`
 `
 
 export const NoData = () => <NoDataP>No data available</NoDataP>
+
+export const DocumentTable = styled.table`
+  border-collapse: collapse;
+  width: 100%;
+
+  ${({ theme }) => theme.textStyleSmallNumbers};
+
+  tbody tr {
+    background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
+    border: 1px solid ${({ theme }) => theme.common.colors.surfaceGray100};
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  th {
+    padding: 10px 15px;
+    text-align: left;
+    background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
+  }
+  th:first-child,
+  td:nth-child(2),
+  th:nth-child(2) {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  td,
+  th {
+    padding: 10px 15px;
+    text-align: left;
+
+    @media (max-width: 600px) {
+      padding: 5px 15px;
+    }
+  }
+  td:first-child {
+    grid-area: metric;
+    color: ${({ theme }) => theme.common.colors.textSecondary};
+    @media (max-width: 600px) {
+      margin-top: 10px;
+    }
+  }
+  td:nth-child(2) {
+    grid-area: metric_name;
+  }
+  td:nth-child(3) {
+    grid-area: meaning;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+`
+export const DocumentLink = styled.a`
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+
+  color: ${({ theme }) => theme.common.colors.textLink};
+`
