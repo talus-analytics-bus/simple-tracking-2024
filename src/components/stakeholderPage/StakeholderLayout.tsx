@@ -227,6 +227,8 @@ export const DocumentTable = styled.table`
   td:first-child {
     grid-area: metric;
     color: ${({ theme }) => theme.common.colors.textSecondary};
+    width: 245px;
+
     @media (max-width: 600px) {
       margin-top: 10px;
     }
