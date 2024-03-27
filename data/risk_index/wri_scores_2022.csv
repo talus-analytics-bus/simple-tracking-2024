@@ -1,217 +1,217 @@
 risk_index,iso3,year,world_risk_index,rank,meaning
-wri,AND,2022,0.26,1,least vulnerable
-wri,MCO,2022,0.26,1,
-wri,SMR,2022,0.38,2,
-wri,STP,2022,0.48,3,
-wri,LUX,2022,0.52,4,
-wri,LIE,2022,0.79,5,
-wri,SGP,2022,0.81,6,
-wri,BLR,2022,0.83,7,
-wri,MLT,2022,0.94,8,
-wri,BHR,2022,0.95,9,
-wri,HUN,2022,0.97,10,
-wri,CZE,2022,1,13,
-wri,NRU,2022,1,13,
-wri,SVK,2022,1,13,
-wri,MDV,2022,1.02,14,
-wri,CHE,2022,1.03,16,
-wri,DNK,2022,1.03,16,
-wri,BTN,2022,1.09,17,
-wri,AUT,2022,1.14,18,
-wri,QAT,2022,1.17,19,
-wri,PLW,2022,1.25,20,
-wri,MKD,2022,1.26,21,
-wri,CPV,2022,1.27,22,
-wri,TKM,2022,1.29,23,
-wri,FIN,2022,1.3,25,
-wri,MDA,2022,1.3,25,
-wri,LSO,2022,1.32,27,
-wri,TGO,2022,1.32,27,
-wri,BRN,2022,1.34,28,
-wri,BWA,2022,1.44,30,
-wri,SVN,2022,1.44,30,
-wri,TUV,2022,1.46,31,
-wri,BEN,2022,1.61,32,
-wri,ISL,2022,1.65,33,
-wri,PRY,2022,1.74,35,
-wri,UZB,2022,1.74,35,
-wri,EST,2022,1.82,37,
-wri,SWZ,2022,1.82,37,
-wri,SRB,2022,1.84,38,
-wri,GRD,2022,1.85,39,
-wri,BFA,2022,2.06,42,
-wri,BRB,2022,2.06,42,
-wri,SWE,2022,2.06,42,
-wri,KNA,2022,2.07,43,
-wri,CIV,2022,2.08,45,
-wri,MNG,2022,2.08,45,
-wri,LVA,2022,2.14,46,
-wri,BGR,2022,2.15,47,
-wri,NER,2022,2.17,48,
-wri,KAZ,2022,2.18,49,
-wri,AZE,2022,2.2,51,
-wri,KGZ,2022,2.2,51,
-wri,LTU,2022,2.24,52,
-wri,MLI,2022,2.25,53,
-wri,MHL,2022,2.29,54,
-wri,VCT,2022,2.3,55,
-wri,TJK,2022,2.38,56,
-wri,ZWE,2022,2.44,57,
-wri,BIH,2022,2.51,58,
-wri,SYC,2022,2.54,59,
-wri,COM,2022,2.56,61,
-wri,KWT,2022,2.56,61,
-wri,NPL,2022,2.62,62,
-wri,KIR,2022,2.64,63,
-wri,LCA,2022,2.69,64,
-wri,RWA,2022,2.7,65,
-wri,ARM,2022,2.72,66,
-wri,CYP,2022,2.78,67,
-wri,UGA,2022,2.81,68,
-wri,LAO,2022,2.91,69,
-wri,TCD,2022,2.92,70,
-wri,TTO,2022,2.93,71,
-wri,ZMB,2022,2.94,72,
-wri,BDI,2022,3.03,73,
-wri,GHA,2022,3.05,74,
-wri,BOL,2022,3.07,75,
-wri,IRL,2022,3.1,76,
-wri,WSM,2022,3.15,77,
-wri,NOR,2022,3.16,78,
-wri,ROU,2022,3.19,79,
-wri,DMA,2022,3.27,80,
-wri,MNE,2022,3.3,82,
-wri,MWI,2022,3.3,82,
-wri,CAF,2022,3.34,83,
-wri,GNQ,2022,3.36,84,
-wri,JOR,2022,3.48,85,
-wri,MUS,2022,3.5,86,
-wri,LBN,2022,3.52,87,
-wri,BHS,2022,3.75,88,
-wri,GEO,2022,3.79,89,
-wri,ATG,2022,3.84,90,
-wri,UKR,2022,3.89,91,
-wri,DEU,2022,3.92,92,
-wri,TON,2022,3.94,93,
-wri,NLD,2022,4.04,94,
-wri,AFG,2022,4.05,95,
-wri,LBR,2022,4.11,96,
-wri,GNB,2022,4.14,97,
-wri,BEL,2022,4.16,98,
-wri,SSD,2022,4.21,99,
-wri,FSM,2022,4.36,100,
-wri,GMB,2022,4.45,101,
-wri,POL,2022,4.63,102,
-wri,ISR,2022,4.65,104,
-wri,JAM,2022,4.65,104,
-wri,GAB,2022,4.72,105,
-wri,ETH,2022,4.8,106,
-wri,COG,2022,4.85,107,
-wri,HRV,2022,4.86,108,
-wri,SUR,2022,4.87,109,
-wri,URY,2022,4.92,110,
-wri,ALB,2022,4.98,111,
-wri,SLE,2022,5,112,
-wri,PRT,2022,5.08,113,
-wri,SEN,2022,5.42,114,
-wri,GBR,2022,5.78,115,
-wri,LKA,2022,5.93,117,
-wri,NAM,2022,5.93,117,
-wri,ARE,2022,6.52,118,
-wri,FJI,2022,6.54,119,
-wri,GUY,2022,6.64,120,
-wri,FRA,2022,6.67,121,
-wri,GIN,2022,6.84,122,
-wri,OMN,2022,7.27,123,
-wri,BLZ,2022,7.65,124,
-wri,ERI,2022,7.7,125,
-wri,CUB,2022,7.97,127,
-wri,TLS,2022,7.97,127,
-wri,KHM,2022,8.42,128,
-wri,GRC,2022,8.55,129,
-wri,IRQ,2022,8.65,130,
-wri,NGA,2022,9.12,131,
-wri,MRT,2022,9.34,132,
-wri,ITA,2022,9.37,133,
-wri,ZAF,2022,9.42,134,
-wri,DZA,2022,9.58,135,
-wri,SAU,2022,9.64,136,
-wri,COD,2022,9.65,137,
-wri,ESP,2022,9.68,138,
-wri,TUN,2022,9.87,139,
-wri,HTI,2022,9.99,140,
-wri,SDN,2022,10.12,141,
-wri,MAR,2022,10.29,142,
-wri,KOR,2022,10.51,143,
-wri,VUT,2022,10.64,144,
-wri,DJI,2022,10.66,145,
-wri,AGO,2022,11.02,146,
-wri,CMR,2022,11.17,147,
-wri,GTM,2022,11.18,148,
-wri,PRK,2022,11.82,149,
-wri,BRA,2022,12.15,150,
-wri,SYR,2022,12.16,151,
-wri,NZL,2022,13.05,152,
-wri,DOM,2022,13.23,153,
-wri,CHL,2022,13.84,154,
-wri,KEN,2022,13.92,155,
-wri,CRI,2022,14.2,156,
-wri,LBY,2022,14.31,157,
-wri,MYS,2022,14.36,158,
-wri,SLV,2022,14.37,159,
-wri,SLB,2022,14.62,160,
-wri,ARG,2022,15.61,161,
-wri,HND,2022,16,162,
-wri,TUR,2022,16.23,163,
-wri,TZA,2022,16.38,164,
-wri,JPN,2022,17.03,165,
-wri,PAN,2022,18.38,166,
-wri,IRN,2022,18.48,167,
-wri,CAN,2022,18.99,168,
-wri,EGY,2022,20.65,169,
-wri,THA,2022,20.91,170,
-wri,AUS,2022,21.36,171,
-wri,NIC,2022,22.35,172,
-wri,ECU,2022,22.42,173,
-wri,VEN,2022,22.45,174,
-wri,USA,2022,22.73,175,
-wri,MDG,2022,23.48,176,
-wri,PNG,2022,24.1,177,
-wri,YEM,2022,24.26,178,
-wri,SOM,2022,25.07,179,
-wri,PER,2022,25.41,180,
-wri,VNM,2022,25.85,181,
-wri,RUS,2022,26.54,182,
-wri,PAK,2022,26.75,183,
-wri,BGD,2022,27.9,184,
-wri,CHN,2022,28.7,185,
-wri,MOZ,2022,34.37,186,
-wri,MMR,2022,35.49,187,
-wri,MEX,2022,37.55,188,
-wri,COL,2022,38.37,189,
-wri,IDN,2022,41.46,190,
-wri,IND,2022,42.31,191,
-wri,PHL,2022,46.82,192,most vulnerable
+wri,PHL,2022,46.82,1,Very High
+wri,IND,2022,42.31,2,Very High
+wri,IDN,2022,41.46,3,Very High
+wri,COL,2022,38.37,4,Very High
+wri,MEX,2022,37.55,5,Very High
+wri,MMR,2022,35.49,6,Very High
+wri,MOZ,2022,34.37,7,Very High
+wri,CHN,2022,28.7,8,Very High
+wri,BGD,2022,27.9,9,Very High
+wri,PAK,2022,26.75,10,Very High
+wri,RUS,2022,26.54,11,Very High
+wri,VNM,2022,25.85,12,Very High
+wri,PER,2022,25.41,13,Very High
+wri,SOM,2022,25.07,14,Very High
+wri,YEM,2022,24.26,15,Very High
+wri,PNG,2022,24.1,16,Very High
+wri,MDG,2022,23.48,17,Very High
+wri,USA,2022,22.73,18,Very High
+wri,VEN,2022,22.45,19,Very High
+wri,ECU,2022,22.42,20,Very High
+wri,NIC,2022,22.35,21,Very High
+wri,AUS,2022,21.36,22,Very High
+wri,THA,2022,20.91,23,Very High
+wri,EGY,2022,20.65,24,Very High
+wri,CAN,2022,18.99,25,Very High
+wri,IRN,2022,18.48,26,Very High
+wri,PAN,2022,18.38,27,Very High
+wri,JPN,2022,17.03,28,Very High
+wri,TZA,2022,16.38,29,Very High
+wri,TUR,2022,16.23,30,Very High
+wri,HND,2022,16,31,Very High
+wri,ARG,2022,15.61,32,Very High
+wri,SLB,2022,14.62,33,Very High
+wri,SLV,2022,14.37,34,Very High
+wri,MYS,2022,14.36,35,Very High
+wri,LBY,2022,14.31,36,Very High
+wri,CRI,2022,14.2,37,Very High
+wri,KEN,2022,13.92,38,Very High
+wri,CHL,2022,13.84,39,Very High
+wri,DOM,2022,13.23,40,Very High
+wri,NZL,2022,13.05,41,Very High
+wri,SYR,2022,12.16,42,High
+wri,BRA,2022,12.15,43,High
+wri,PRK,2022,11.82,44,High
+wri,GTM,2022,11.18,45,High
+wri,CMR,2022,11.17,46,High
+wri,AGO,2022,11.02,47,High
+wri,DJI,2022,10.66,48,High
+wri,VUT,2022,10.64,49,High
+wri,KOR,2022,10.51,50,High
+wri,MAR,2022,10.29,51,High
+wri,SDN,2022,10.12,52,High
+wri,HTI,2022,9.99,53,High
+wri,TUN,2022,9.87,54,High
+wri,ESP,2022,9.68,55,High
+wri,COD,2022,9.65,56,High
+wri,SAU,2022,9.64,57,High
+wri,DZA,2022,9.58,58,High
+wri,ZAF,2022,9.42,59,High
+wri,ITA,2022,9.37,60,High
+wri,MRT,2022,9.34,61,High
+wri,NGA,2022,9.12,62,High
+wri,IRQ,2022,8.65,63,High
+wri,GRC,2022,8.55,64,High
+wri,KHM,2022,8.42,65,High
+wri,CUB,2022,7.97,66,High
+wri,TLS,2022,7.97,66,High
+wri,ERI,2022,7.7,68,High
+wri,BLZ,2022,7.65,69,High
+wri,OMN,2022,7.27,70,High
+wri,GIN,2022,6.84,71,High
+wri,FRA,2022,6.67,72,High
+wri,GUY,2022,6.64,73,High
+wri,FJI,2022,6.54,74,High
+wri,ARE,2022,6.52,75,High
+wri,LKA,2022,5.93,76,High
+wri,NAM,2022,5.93,76,High
+wri,GBR,2022,5.78,78,Medium
+wri,SEN,2022,5.42,79,Medium
+wri,PRT,2022,5.08,80,Medium
+wri,SLE,2022,5,81,Medium
+wri,ALB,2022,4.98,82,Medium
+wri,URY,2022,4.92,83,Medium
+wri,SUR,2022,4.87,84,Medium
+wri,HRV,2022,4.86,85,Medium
+wri,COG,2022,4.85,86,Medium
+wri,ETH,2022,4.8,87,Medium
+wri,GAB,2022,4.72,88,Medium
+wri,ISR,2022,4.65,89,Medium
+wri,JAM,2022,4.65,89,Medium
+wri,POL,2022,4.63,91,Medium
+wri,GMB,2022,4.45,92,Medium
+wri,FSM,2022,4.36,93,Medium
+wri,SSD,2022,4.21,94,Medium
+wri,BEL,2022,4.16,95,Medium
+wri,GNB,2022,4.14,96,Medium
+wri,LBR,2022,4.11,97,Medium
+wri,AFG,2022,4.05,98,Medium
+wri,NLD,2022,4.04,99,Medium
+wri,TON,2022,3.94,100,Medium
+wri,DEU,2022,3.92,101,Medium
+wri,UKR,2022,3.89,102,Medium
+wri,ATG,2022,3.84,103,Medium
+wri,GEO,2022,3.79,104,Medium
+wri,BHS,2022,3.75,105,Medium
+wri,LBN,2022,3.52,106,Medium
+wri,MUS,2022,3.5,107,Medium
+wri,JOR,2022,3.48,108,Medium
+wri,GNQ,2022,3.36,109,Medium
+wri,CAF,2022,3.34,110,Medium
+wri,MNE,2022,3.3,111,Medium
+wri,MWI,2022,3.3,111,Medium
+wri,DMA,2022,3.27,113,Medium
+wri,ROU,2022,3.19,114,Low
+wri,NOR,2022,3.16,115,Low
+wri,WSM,2022,3.15,116,Low
+wri,IRL,2022,3.1,117,Low
+wri,BOL,2022,3.07,118,Low
+wri,GHA,2022,3.05,119,Low
+wri,BDI,2022,3.03,120,Low
+wri,ZMB,2022,2.94,121,Low
+wri,TTO,2022,2.93,122,Low
+wri,TCD,2022,2.92,123,Low
+wri,LAO,2022,2.91,124,Low
+wri,UGA,2022,2.81,125,Low
+wri,CYP,2022,2.78,126,Low
+wri,ARM,2022,2.72,127,Low
+wri,RWA,2022,2.7,128,Low
+wri,LCA,2022,2.69,129,Low
+wri,KIR,2022,2.64,130,Low
+wri,NPL,2022,2.62,131,Low
+wri,COM,2022,2.56,132,Low
+wri,KWT,2022,2.56,132,Low
+wri,SYC,2022,2.54,134,Low
+wri,BIH,2022,2.51,135,Low
+wri,ZWE,2022,2.44,136,Low
+wri,TJK,2022,2.38,137,Low
+wri,VCT,2022,2.3,138,Low
+wri,MHL,2022,2.29,139,Low
+wri,MLI,2022,2.25,140,Low
+wri,LTU,2022,2.24,141,Low
+wri,AZE,2022,2.2,142,Low
+wri,KGZ,2022,2.2,142,Low
+wri,KAZ,2022,2.18,144,Low
+wri,NER,2022,2.17,145,Low
+wri,BGR,2022,2.15,146,Low
+wri,LVA,2022,2.14,147,Low
+wri,CIV,2022,2.08,148,Low
+wri,MNG,2022,2.08,148,Low
+wri,KNA,2022,2.07,150,Low
+wri,BFA,2022,2.06,151,Low
+wri,BRB,2022,2.06,151,Low
+wri,SWE,2022,2.06,151,Low
+wri,GRD,2022,1.85,154,Low
+wri,SRB,2022,1.84,155,Very Low
+wri,EST,2022,1.82,156,Very Low
+wri,SWZ,2022,1.82,156,Very Low
+wri,PRY,2022,1.74,158,Very Low
+wri,UZB,2022,1.74,158,Very Low
+wri,ISL,2022,1.65,160,Very Low
+wri,BEN,2022,1.61,161,Very Low
+wri,TUV,2022,1.46,162,Very Low
+wri,BWA,2022,1.44,163,Very Low
+wri,SVN,2022,1.44,163,Very Low
+wri,BRN,2022,1.34,165,Very Low
+wri,LSO,2022,1.32,166,Very Low
+wri,TGO,2022,1.32,166,Very Low
+wri,FIN,2022,1.3,168,Very Low
+wri,MDA,2022,1.3,168,Very Low
+wri,TKM,2022,1.29,170,Very Low
+wri,CPV,2022,1.27,171,Very Low
+wri,MKD,2022,1.26,172,Very Low
+wri,PLW,2022,1.25,173,Very Low
+wri,QAT,2022,1.17,174,Very Low
+wri,AUT,2022,1.14,175,Very Low
+wri,BTN,2022,1.09,176,Very Low
+wri,CHE,2022,1.03,177,Very Low
+wri,DNK,2022,1.03,177,Very Low
+wri,MDV,2022,1.02,179,Very Low
+wri,CZE,2022,1,180,Very Low
+wri,NRU,2022,1,180,Very Low
+wri,SVK,2022,1,180,Very Low
+wri,HUN,2022,0.97,183,Very Low
+wri,BHR,2022,0.95,184,Very Low
+wri,MLT,2022,0.94,185,Very Low
+wri,BLR,2022,0.83,186,Very Low
+wri,SGP,2022,0.81,187,Very Low
+wri,LIE,2022,0.79,188,Very Low
+wri,LUX,2022,0.52,189,Very Low
+wri,STP,2022,0.48,190,Very Low
+wri,SMR,2022,0.38,191,Very Low
+wri,AND,2022,0.26,192,Very Low
+wri,MCO,2022,0.26,192,Very Low
 wri,ABW,2022,,,No data
 wri,ASM,2022,,,No data
-wri,CUW,2022,,,No data
-wri,CYM,2022,,,No data
-wri,FRO,2022,,,No data
-wri,MAF,2022,,,No data
-wri,PSE,2022,,,No data
-wri,PYF,2022,,,No data
-wri,SXM,2022,,,No data
-wri,TWN,2022,,,No data
-wri,VGB,2022,,,No data
-wri,XKX,2022,,,No data
 wri,ATF,2022,,,No data
 wri,COK,2022,,,No data
+wri,CUW,2022,,,No data
+wri,CYM,2022,,,No data
 wri,FLK,2022,,,No data
+wri,FRO,2022,,,No data
 wri,GGY,2022,,,No data
+wri,GUF,2022,,,No data
 wri,IOT,2022,,,No data
 wri,JEY,2022,,,No data
+wri,MAF,2022,,,No data
 wri,NIU,2022,,,No data
+wri,PSE,2022,,,No data
+wri,PYF,2022,,,No data
 wri,SAH,2022,,,No data
+wri,SXM,2022,,,No data
+wri,TWN,2022,,,No data
 wri,VAT,2022,,,No data
+wri,VGB,2022,,,No data
 wri,WLF,2022,,,No data
-wri,GUF,2022,,,No data
+wri,XKX,2022,,,No data
