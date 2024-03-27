@@ -69,8 +69,6 @@ const formatHash = (str: string) =>
 const StakeholderPage = ({
   data,
 }: PageProps<Queries.StakeholderPageQuery>): JSX.Element => {
-  console.log(data)
-
   const cmsData = useStakeholderPageData()
 
   const stakeholderName = data.stakeholdersCsv?.name
@@ -104,8 +102,6 @@ const StakeholderPage = ({
     { jee1: '1.0', jee2: '2.0' }[
       data.allJeeScoresCsv.nodes[0]?.risk_index ?? ''
     ] ?? ''
-
-  console.log('jeeVersion', jeeVersion)
 
   if (stakeholderIsCountry && !jeeVersion)
     throw new Error(`No JEE version found for ${data.stakeholdersCsv?.name}`)

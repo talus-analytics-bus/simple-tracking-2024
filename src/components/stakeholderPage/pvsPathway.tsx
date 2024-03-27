@@ -10,10 +10,10 @@ interface PvsPathwayProps {
 const PvsPathway = ({ data }: PvsPathwayProps) => {
   const theme = useTheme()
 
-  if (data.stakeholdersCsv?.iso3 && !data.pvs_pathway.nodes[0].data?.Select) {
+  if (data.stakeholdersCsv?.iso3 && !data.pvs_pathway.nodes[0]) {
     if (typeof window === 'undefined')
-      console.error(
-        `NAPHS data not found for country ${data.stakeholdersCsv.name}`
+      console.warn(
+        `PVS Pathway status not found for country ${data.stakeholdersCsv.name}`
       )
     else return <></>
   }

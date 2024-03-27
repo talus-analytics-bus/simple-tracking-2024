@@ -31,10 +31,10 @@ interface NaphsProps {
 const Naphs = ({ data }: NaphsProps) => {
   const theme = useTheme()
 
-  if (data.stakeholdersCsv?.iso3 && !data.naphs.nodes[0].data?.Status) {
+  if (data.stakeholdersCsv?.iso3 && !data.naphs.nodes[0]) {
     if (typeof window === 'undefined')
       console.error(
-        `NAPHS data not found for country ${data.stakeholdersCsv.name}`
+        `NAPHS status not found for country ${data.stakeholdersCsv.name}`
       )
     return <></>
   }
