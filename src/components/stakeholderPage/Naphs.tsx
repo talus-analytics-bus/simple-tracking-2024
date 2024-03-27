@@ -33,7 +33,7 @@ const Naphs = ({ data }: NaphsProps) => {
 
   if (data.stakeholdersCsv?.iso3 && !data.naphs.nodes[0]) {
     if (typeof window === 'undefined')
-      console.error(
+      console.warn(
         `NAPHS status not found for country ${data.stakeholdersCsv.name}`
       )
     return <></>
