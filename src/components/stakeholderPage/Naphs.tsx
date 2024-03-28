@@ -50,7 +50,7 @@ const Naphs = ({ data }: NaphsProps) => {
       </thead>
       <tbody>
         {data.naphs.nodes.map(({ data: document }) => (
-          <tr key={document?.PDF?.localFiles?.[0]?.publicURL}>
+          <tr key={document?.Years}>
             <td>
               <NaphStatusChip status={document?.Status as NaphStatus}>
                 {document?.Status}
