@@ -14,11 +14,6 @@ const TickLabel = styled.text`
   ${({ theme }) => theme.textStyleSmallNumbers};
   fill: ${({ theme }) => theme.common.colors.textSecondary};
 `
-const AxisLabel = styled.text`
-  text-anchor: middle;
-  ${({ theme }) => theme.textStyleSmallNumbersSemibold};
-  fill: ${({ theme }) => theme.common.colors.textPrimary};
-`
 const MinLabel = styled.text`
   text-anchor: start;
   ${({ theme }) => theme.textStyleSmallNumbers};
@@ -28,20 +23,13 @@ const MaxLabel = styled(MinLabel)`
   text-anchor: end;
 `
 
-interface XAxisProps {
-  xLabel: string
-}
-
-const XAxis = ({ xLabel }: XAxisProps) => {
+const XAxis = () => {
   const [dim] = useDim()
 
   const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
   return (
     <>
-      <AxisLabel x={dim.axes.x.scale((dim.axes.x.max as number) / 2)} y={15}>
-        {xLabel}
-      </AxisLabel>
       {ticks.map(tick => (
         <React.Fragment key={tick}>
           <AxisPath

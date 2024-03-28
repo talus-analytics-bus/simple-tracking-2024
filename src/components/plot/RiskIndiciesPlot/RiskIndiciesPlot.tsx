@@ -71,7 +71,7 @@ const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
 
   return (
     <PlotContainer>
-      <DimPlotParent plotSetup={plotSetup}>
+      <DimPlotParent plotSetup={plotSetup} drawLayout>
         <Bins bins={bins} />
         <XAxis xLabel="Risk Index" />
       </DimPlotParent>
