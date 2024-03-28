@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const useRiskIndicies = () => {
-  const riskIndicies = useStaticQuery<Queries.UseRiskIndicies>(graphql`
+  const riskIndicies = useStaticQuery<Queries.UseRiskIndiciesQuery>(graphql`
     query UseRiskIndicies {
       ghsi: allGhsiScores2021Csv(filter: { score: { ne: "" } }) {
         data: nodes {
