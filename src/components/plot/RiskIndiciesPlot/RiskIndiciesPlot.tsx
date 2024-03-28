@@ -9,7 +9,6 @@ import Bins from './Bins'
 import * as d3 from 'd3'
 
 interface RiskIndiciesPlotProps {
-  iso3: string
   min: number
   max: number
   data: {
@@ -24,23 +23,16 @@ const PlotContainer = styled.div`
   margin-top: 20px;
 `
 
-const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
-  const binCount = 50
+const binCount = 50
 
-  const numbers = data.map(d => parseFloat(d.score))
-
+const RiskIndiciesPlot = ({ data, min, max }: RiskIndiciesPlotProps) => {
   const histogram = d3
     .bin<number, number>()
     .domain([min < max ? min : max, min < max ? max : min])
     .thresholds(binCount)
 
-  console.log({ data })
-
+  const numbers = data.map(d => parseFloat(d.score))
   const bins = histogram(numbers)
-
-  console.log(bins)
-
-  const yMax = d3.max(bins, d => d.length) ?? 1
 
   const plotSetup = usePlotSetup({
     width: 500,
@@ -62,7 +54,7 @@ const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
         ticks: 6,
       },
       y: {
-        max: yMax,
+        max: d3.max(bins, d => d.length) ?? 1,
       },
     },
   })
