@@ -34,10 +34,10 @@ const Bins = ({ bins }: BinsProps) => {
       key={i}
       fill={colorScale(((d.x0 ?? 0) + (d.x1 ?? 1)) / 2)}
       d={`M ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.start} 
-              L ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.scale(d.length)}
-              L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.scale(d.length)}
-              L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.start}
-            `}
+          L ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.scale(d.length)}
+          L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.scale(d.length)}
+          L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.start}
+        `}
     />
   ))
 }
