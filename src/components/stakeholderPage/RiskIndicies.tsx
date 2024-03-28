@@ -6,7 +6,6 @@ import RiskIndiciesPlot from 'components/plot/RiskIndiciesPlot/RiskIndiciesPlot'
 
 const HalfWidthContentBox = styled(ContentBox)`
   flex-basis: calc(50% - 15px);
-  background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
 
   @media (max-width: 1200px) {
     flex-basis: 100%;

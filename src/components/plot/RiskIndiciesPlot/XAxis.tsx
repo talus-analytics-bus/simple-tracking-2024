@@ -46,10 +46,10 @@ const XAxis = () => {
         d={`M ${dim.axes.x.start - 14} ${dim.axes.y.start - 1}
             L ${dim.axes.x.end + 14} ${dim.axes.y.start - 1}`}
       />
-      <MinLabel x={dim.axes.x.start - 12} y={dim.axes.y.start + 60}>
+      <MinLabel x={dim.axes.x.start - 12} y={dim.axes.y.start + 55}>
         Most vulnerable
       </MinLabel>
-      <MaxLabel x={dim.axes.x.end + 12} y={dim.axes.y.start + 60}>
+      <MaxLabel x={dim.axes.x.end + 12} y={dim.axes.y.start + 55}>
         Least vulnerable
       </MaxLabel>
     </>

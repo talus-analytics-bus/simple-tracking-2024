@@ -21,7 +21,7 @@ const PlotContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin-top: 20px;
 `
 
 const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
@@ -48,14 +48,14 @@ const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
     width: 500,
     height: 300,
     padding: {
-      top: 50,
-      right: 50,
-      bottom: 100,
-      left: 50,
+      top: 0,
+      right: 15,
+      bottom: 60,
+      left: 15,
     },
     reference: {
       binCount,
-      barSep: 1,
+      barSep: 1.5,
     },
     axes: {
       x: {
@@ -71,9 +71,9 @@ const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
 
   return (
     <PlotContainer>
-      <DimPlotParent plotSetup={plotSetup} drawLayout>
+      <DimPlotParent plotSetup={plotSetup}>
         <Bins bins={bins} />
-        <XAxis xLabel="Risk Index" />
+        <XAxis />
       </DimPlotParent>
     </PlotContainer>
   )
