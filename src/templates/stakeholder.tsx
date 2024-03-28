@@ -33,25 +33,16 @@ const ScrollTarget = styled.div`
   position: relative;
   top: -160px;
 `
-
-const ContentPlaceholder = styled.div`
-  height: 30vh;
-  width: 70px;
-  background-color: lightgray;
-`
-
 const H1 = styled.h1`
   display: flex;
   align-items: center;
   gap: 20px;
 `
-
 const Flag = styled(GatsbyImage)`
   width: 46px;
   height: 46px;
   filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.35));
 `
-
 const YearSelector = styled.select`
   padding: 5px 8px;
   margin-left: auto;
