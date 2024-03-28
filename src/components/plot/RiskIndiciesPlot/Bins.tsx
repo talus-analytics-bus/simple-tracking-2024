@@ -19,9 +19,9 @@ const Bins = ({ bins }: BinsProps) => {
     .scaleLinear<string>()
     .domain([0, 0.5, 1])
     .range([
-      theme.recipient.colors.scoringGood,
-      theme.recipient.colors.scoringOk,
       theme.recipient.colors.scoringBad,
+      theme.recipient.colors.scoringOk,
+      theme.recipient.colors.scoringGood,
     ])
 
   const bars = bins.map((d, i) => {
