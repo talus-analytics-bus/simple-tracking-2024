@@ -99,7 +99,7 @@ const PublicationsPage = ({
 }
 
 export const query = graphql`
-  query MyQuery {
+  query PublicationsPage {
     publicationsByOurTeam: allAirtableCitations(
       filter: {
         data: {
