@@ -29,12 +29,10 @@ const RiskIndiciesPlot = ({ iso3, data, min, max }: RiskIndiciesPlotProps) => {
 
   const numbers = data.map(d => parseFloat(d.score))
 
-  const domain = [min < max ? min : max, min < max ? max : min] as [
-    number,
-    number,
-  ]
-
-  const histogram = d3.histogram().domain(domain).thresholds(binCount)
+  const histogram = d3
+    .bin<number, number>()
+    .domain([min < max ? min : max, min < max ? max : min])
+    .thresholds(binCount)
 
   console.log({ data })
 
