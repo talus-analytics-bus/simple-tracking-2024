@@ -44,11 +44,11 @@ disbursed AS (
 		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
 )
 SELECT 
-	received.response AS "responseReceived",
-	received.capacity AS "capacityReceived",
-	received.total AS "totalReceived",
-	disbursed.response AS "responseDisbursed",
-	disbursed.capacity AS "capacityDisbursed",
+	received.response AS "totalResponseReceived",
+	received.capacity AS "totalCapacityReceived",
+	received.total AS "totalDisbursedReceived",
+	disbursed.response AS "totalResponseDisbursed",
+	disbursed.capacity AS "totalCapacityDisbursed",
 	disbursed.total AS "totalDisbursed"
 FROM received
 FULL JOIN disbursed on 1=1

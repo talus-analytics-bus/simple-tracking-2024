@@ -1,2 +1,2 @@
-responseReceived,capacityReceived,totalReceived,responseDisbursed,capacityDisbursed,totalDisbursed
+totalResponseReceived,totalCapacityReceived,totalDisbursedReceived,totalResponseDisbursed,totalCapacityDisbursed,totalDisbursed
 48963112185,160088852059,209051964244,65173243025,200448517304,265621760330
