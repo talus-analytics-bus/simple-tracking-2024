@@ -27,7 +27,7 @@ const Bins = ({ bins }: BinsProps) => {
   const bars = bins.map((d, i) => {
     let fill
     let gap = dim.reference.barSep / 2
-    let barMiddle = 0.5 * ((d.x0 ?? 0) + (d.x1 ?? 1))
+    let barMiddle = ((d.x0 ?? 0) + (d.x1 ?? 1)) / 2
     if (invertedScale) {
       gap *= -1
       fill = colorScale(1 - barMiddle / (dim.axes.x.min as number))
