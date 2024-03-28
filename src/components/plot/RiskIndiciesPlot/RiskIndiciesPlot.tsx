@@ -11,8 +11,8 @@ import * as d3 from 'd3'
 interface RiskIndiciesPlotProps {
   min: number
   max: number
-  data: {
-    score: string
+  data: readonly {
+    readonly score: string | null
   }[]
 }
 
@@ -31,7 +31,7 @@ const RiskIndiciesPlot = ({ data, min, max }: RiskIndiciesPlotProps) => {
     .domain([min < max ? min : max, min < max ? max : min])
     .thresholds(binCount)
 
-  const numbers = data.map(d => parseFloat(d.score))
+  const numbers = data.map(d => parseFloat(d.score ?? ''))
   const bins = histogram(numbers)
 
   const plotSetup = usePlotSetup({
