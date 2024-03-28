@@ -11,42 +11,35 @@ interface BinsProps {
 
 const Bins = ({ bins }: BinsProps) => {
   const [dim] = useDim()
-
   const theme = useTheme()
 
-  const invertedScale = dim.axes.x.max < dim.axes.x.min
   const colorScale = d3
     .scaleLinear<string>()
-    .domain([0, 0.5, 1])
+    .domain([
+      dim.axes.x.min,
+      ((dim.axes.x.min as number) + (dim.axes.x.max as number)) / 2,
+      dim.axes.x.max,
+    ])
     .range([
       theme.recipient.colors.scoringBad,
       theme.recipient.colors.scoringOk,
       theme.recipient.colors.scoringGood,
     ])
 
-  const bars = bins.map((d, i) => {
-    let fill
-    let gap = dim.reference.barSep / 2
-    let barMiddle = ((d.x0 ?? 0) + (d.x1 ?? 1)) / 2
-    if (invertedScale) {
-      gap *= -1
-      fill = colorScale(1 - barMiddle / (dim.axes.x.min as number))
-    } else fill = colorScale(barMiddle / (dim.axes.x.max as number))
+  let gap =
+    (dim.reference.barSep / 2) * (dim.axes.x.max < dim.axes.x.min ? -1 : 1)
 
-    return (
-      <path
-        key={i}
-        fill={fill}
-        d={`M ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.start} 
+  return bins.map((d, i) => (
+    <path
+      key={i}
+      fill={colorScale(((d.x0 ?? 0) + (d.x1 ?? 1)) / 2)}
+      d={`M ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.start} 
               L ${dim.axes.x.scale(d.x0 ?? 0) + gap} ${dim.axes.y.scale(d.length)}
               L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.scale(d.length)}
               L ${dim.axes.x.scale(d.x1 ?? 1) - gap} ${dim.axes.y.start}
             `}
-      />
-    )
-  })
-
-  return bars
+    />
+  ))
 }
 
 export default Bins
