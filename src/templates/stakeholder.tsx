@@ -27,6 +27,7 @@ import JeeScores from 'components/stakeholderPage/JeeScores'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import Naphs from 'components/stakeholderPage/Naphs'
 import PvsPathway from 'components/stakeholderPage/pvsPathway'
+import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -275,7 +276,7 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
-              <ContentPlaceholder />
+              <RiskIndicies iso3={data.stakeholdersCsv.iso3 ?? ''} />
 
               <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
               <h2>
