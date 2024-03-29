@@ -1,6 +1,6 @@
 SELECT 
-	all_countries.name AS name,
-	all_countries.iso3 AS iso3,
+	top_level_stakeholders.name as name,
+	top_level_stakeholders.iso3 AS iso3,
 	CASE WHEN received_capacities.year = NULL 
 		THEN disbursed_capacities.year
 		ELSE received_capacities.year
@@ -44,14 +44,26 @@ SELECT
 	poe_disbursed,
 	ce_disbursed
 FROM (
-	-- All the stakeholders which are "countries"
-	SELECT name, iso3 FROM stakeholders 
-		WHERE subcat = 'country' 
-		AND iso3 IS NOT null
-		AND "show"
-) all_countries
+	SELECT id, name, iso3, iso2
+		FROM stakeholders
+		INNER JOIN LATERAL (
+			SELECT COUNT(id) > 1 as is_sub_stakeholder
+			FROM stakeholders sta
+			JOIN children_to_parents_direct_credit ctpdc
+				ON sta.id = ctpdc.parent_id
+			WHERE ctpdc.child_id = stakeholders.id
+		) AS sub_stakeholders on True
+		WHERE
+			stakeholders.show
+			AND NOT sub_stakeholders.is_sub_stakeholder
+			AND stakeholders.slug != 'not-reported'
+			AND stakeholders.subcat NOT IN (
+				'sub-organization',
+				'region',
+				'agency')
+) top_level_stakeholders
 LEFT JOIN (
-	-- all the countries which received core capacity funding
+	-- all the stakeholders which received core capacity funding
 	WITH core_capacity_sums AS (
 		SELECT
 			s.name AS name,
@@ -100,9 +112,9 @@ LEFT JOIN (
 	ORDER BY
 		name ASC, year DESC
 ) received_capacities
-ON all_countries.name = received_capacities.name
+ON top_level_stakeholders.name = received_capacities.name
 LEFT JOIN (
-	-- all the countries which disbursed core capacity funding
+	-- all the stakeholders which disbursed core capacity funding
 	WITH core_capacity_sums AS (
 		SELECT
 			s.name AS name,
@@ -151,5 +163,10 @@ LEFT JOIN (
 	ORDER BY
 		name ASC, year DESC
 ) disbursed_capacities
-ON all_countries.name = disbursed_capacities.name
+ON top_level_stakeholders.name = disbursed_capacities.name
 AND received_capacities.year = disbursed_capacities.year
+WHERE 
+    NOT (
+        received_capacities.year IS NULL 
+        AND disbursed_capacities.year is NULL
+        ) 
