@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const Line = styled.path`
   stroke-width: 2;
-  fill: none;
   stroke-dasharray: 5, 5;
   stroke: ${({ theme }) => theme.common.colors.textPrimary};
 `
