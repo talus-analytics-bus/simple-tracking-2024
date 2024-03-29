@@ -7,6 +7,7 @@ import XAxis from './XAxis'
 import Bins from './Bins'
 
 import * as d3 from 'd3'
+import ScoreHighlightLine from './ScoreHighlightLine'
 
 interface RiskIndiciesPlotProps {
   min: number
@@ -29,7 +30,12 @@ const PlotContainer = styled.div`
 
 const binCount = 50
 
-const RiskIndiciesPlot = ({ data, min, max }: RiskIndiciesPlotProps) => {
+const RiskIndiciesPlot = ({
+  data,
+  min,
+  max,
+  highlight,
+}: RiskIndiciesPlotProps) => {
   const histogram = d3
     .bin<number, number>()
     .domain([min < max ? min : max, min < max ? max : min])
@@ -67,6 +73,7 @@ const RiskIndiciesPlot = ({ data, min, max }: RiskIndiciesPlotProps) => {
     <PlotContainer>
       <DimPlotParent plotSetup={plotSetup}>
         <Bins bins={bins} />
+        <ScoreHighlightLine score={highlight?.score ?? ''} />
         <XAxis />
       </DimPlotParent>
     </PlotContainer>
