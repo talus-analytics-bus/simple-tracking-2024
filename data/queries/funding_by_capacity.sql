@@ -171,7 +171,7 @@ SELECT
     poe_disbursed,
     ce_disbursed
 FROM received_capacities
-FULL JOIN disbursed_capacities ON received_capacities.name = disbursed_capacities.name
+FULL JOIN disbursed_capacities ON received_capacities.name = disbursed_capacities.name and received_capacities.year = disbursed_capacities.year
 WHERE 
     COALESCE(received_capacities.iso3, disbursed_capacities.iso3) IS NULL 
     OR NOT COALESCE(received_capacities.iso3, disbursed_capacities.iso3) IN ('GLOBAL', 'GLB', 'GUF')
