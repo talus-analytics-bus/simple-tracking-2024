@@ -55,7 +55,7 @@ const FundsByCategory = ({
         year => year.year === selectedYear
       ) ?? {}
     ).forEach(([key, val]) => {
-      if (key !== 'Year' && val) {
+      if (key !== 'year' && val) {
         const direction = key.includes('_disbursed') ? 'disbursed' : 'received'
         const prettyKey = jeeCategoryNames[key]
         displayTotals[direction][prettyKey] = Number(val)
