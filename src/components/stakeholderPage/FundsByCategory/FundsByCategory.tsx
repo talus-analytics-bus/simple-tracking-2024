@@ -97,7 +97,7 @@ const FundsByCategory = ({
             {data.stakeholdersCsv?.name} | {selectedYearsLabel}
           </span>
         </h3>
-        {Object.keys(displayTotals.disbursed).length > 0 ? (
+        {Object.keys(displayTotals.received).length > 0 ? (
           <BarPlot
             bars={displayTotals.received}
             max={chartMax}
