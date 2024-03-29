@@ -267,7 +267,7 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
-              <RiskIndicies iso3={data.stakeholdersCsv.iso3 ?? ''} />
+              <RiskIndicies data={data} />
 
               <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
               <h2>
@@ -456,6 +456,22 @@ export const query = graphql`
           Report_type
         }
       }
+    }
+    ghsi: ghsiScores2021Csv(iso3: { eq: $iso3 }) {
+      score
+      rank
+    }
+    idvi: idviScores2016Csv(iso3: { eq: $iso3 }) {
+      score: overall_score_normed
+      rank
+    }
+    inform: informScores2022Csv(iso3: { eq: $iso3 }) {
+      score: risk_score
+      rank
+    }
+    wri: wriScores2022Csv(iso3: { eq: $iso3 }) {
+      score: world_risk_index
+      rank
     }
   }
 `

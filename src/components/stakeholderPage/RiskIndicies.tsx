@@ -13,31 +13,49 @@ const HalfWidthContentBox = styled(ContentBox)`
 `
 
 interface RiskIndiciesProps {
-  iso3: string
+  data: Queries.StakeholderPageQuery
 }
 
-const RiskIndicies = ({ iso3 }: RiskIndiciesProps) => {
+const RiskIndicies = ({ data }: RiskIndiciesProps) => {
   const riskIndicies = useRiskIndicies()
-  console.log(iso3)
-  console.log(riskIndicies)
 
   return (
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>
       <HalfWidthContentBox>
         <h3>GHS Index</h3>
-        <RiskIndiciesPlot data={riskIndicies.ghsi.data} min={0} max={100} />
+        <RiskIndiciesPlot
+          data={riskIndicies.ghsi.data}
+          highlight={data.ghsi}
+          min={0}
+          max={100}
+        />
       </HalfWidthContentBox>
       <HalfWidthContentBox>
         <h3>Infectious Disease Vulnerability Index</h3>
-        <RiskIndiciesPlot data={riskIndicies.idvi.data} min={0} max={1} />
+        <RiskIndiciesPlot
+          data={riskIndicies.idvi.data}
+          highlight={data.idvi}
+          min={0}
+          max={1}
+        />
       </HalfWidthContentBox>
       <HalfWidthContentBox>
         <h3>Inform Risk Index</h3>
-        <RiskIndiciesPlot data={riskIndicies.inform.data} min={10} max={0} />
+        <RiskIndiciesPlot
+          data={riskIndicies.inform.data}
+          highlight={data.inform}
+          min={10}
+          max={0}
+        />
       </HalfWidthContentBox>
       <HalfWidthContentBox>
         <h3>World Risk Index</h3>
-        <RiskIndiciesPlot data={riskIndicies.wri.data} min={50} max={0} />
+        <RiskIndiciesPlot
+          data={riskIndicies.wri.data}
+          highlight={data.wri}
+          min={50}
+          max={0}
+        />
       </HalfWidthContentBox>
     </HorizontalColumns>
   )
