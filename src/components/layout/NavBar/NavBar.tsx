@@ -14,6 +14,7 @@ import NavBarCountrySearch from './NavBarCountrySearch'
 // import simplifyForUrl from 'utilities/simplifyForUrl'
 import useIndexPageData from 'cmsHooks/useIndexPageData'
 import usePheicNames from 'queryHooks/usePheicNames'
+import simplifyForUrl from 'utilities/simplifyForUrl'
 
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.common.colors.surfaceThemeDarker};
@@ -80,7 +81,7 @@ const NavBar = () => {
 
   const pheicNames = usePheicNames()
   const pheicsLinks = pheicNames.map(({ data }) => ({
-    to: `/topics/${data?.PHEIC_name}/`,
+    to: `/pheic/${simplifyForUrl(data?.PHEIC_name ?? '')}/`,
     children: data?.PHEIC_name,
   }))
 
