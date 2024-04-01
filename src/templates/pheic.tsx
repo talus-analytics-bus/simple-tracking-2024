@@ -5,12 +5,44 @@ import CMS from 'components/library/airtable-cms'
 import NavBar from 'components/layout/NavBar/NavBar'
 import {
   Layout,
+  MainContent,
   Sidebar,
   SidebarLink,
 } from 'components/stakeholderPage/StakeholderLayout'
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import formatHash from 'utilities/formatHash'
 import usePheicPageData from 'cmsHooks/usePheicPageData'
+import styled from 'styled-components'
+
+const TopBar = styled.div`
+  grid-area: topbar;
+  position: sticky;
+  top: 67px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
+  border-bottom: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: baseline;
+  gap: 15px;
+
+  > h1 {
+    margin-bottom: 0px;
+    ${({ theme }) => theme.textStyleH1};
+    color: ${({ theme }) => theme.common.colors.textPrimary};
+  }
+
+  > h2 {
+    font-family: 'Barlow Condensed';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: ${({ theme }) => theme.common.colors.surfaceGray600};
+  }
+`
 
 const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
   const cmsData = usePheicPageData()
@@ -21,7 +53,6 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
         title={data.airtable?.data?.PHEIC_name ?? ''}
         description={data.airtable?.data?.Description ?? ''}
       />
-
       <NavBar />
       <Layout>
         <Sidebar>
@@ -30,18 +61,23 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
             <CMS.Text name="H2 left nav" data={cmsData} />
           </SidebarLink>
         </Sidebar>
-        <h1>{data.airtable?.data?.PHEIC_name}</h1>
-        <p>{data.airtable?.data?.Description}</p>
-        <p>{data.airtable?.data?.Date_PHEIC_declared}</p>
-        <p>{data.airtable?.data?.Date_PHEIC_ended}</p>
-        <p>{data.airtable?.data?.Total_cases}</p>
-        <p>{data.airtable?.data?.Total_deaths}</p>
-        <p>{data.airtable?.data?.Sources}</p>
-        <p>{data.airtable?.data?.Pathogen}</p>
-        <p>{data.airtable?.data?.Transmission}</p>
-        <p>{data.airtable?.data?.Route_of_infection}</p>
-        <p>{data.airtable?.data?.MCMs_available_at_onset}</p>
-        <p>{data.airtable?.data?.MCMs_developed_during_or_after_event}</p>
+        <TopBar>
+          <h1>{data.airtable?.data?.PHEIC_name}</h1>
+          <h2>Public Health Emergency of International Concern (PHEIC)</h2>
+        </TopBar>
+        <MainContent>
+          <p>{data.airtable?.data?.Description}</p>
+          <p>{data.airtable?.data?.Date_PHEIC_declared}</p>
+          <p>{data.airtable?.data?.Date_PHEIC_ended}</p>
+          <p>{data.airtable?.data?.Total_cases}</p>
+          <p>{data.airtable?.data?.Total_deaths}</p>
+          <p>{data.airtable?.data?.Sources}</p>
+          <p>{data.airtable?.data?.Pathogen}</p>
+          <p>{data.airtable?.data?.Transmission}</p>
+          <p>{data.airtable?.data?.Route_of_infection}</p>
+          <p>{data.airtable?.data?.MCMs_available_at_onset}</p>
+          <p>{data.airtable?.data?.MCMs_developed_during_or_after_event}</p>
+        </MainContent>
       </Layout>
     </Providers>
   )
