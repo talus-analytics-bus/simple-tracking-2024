@@ -39,7 +39,7 @@ recipients_to_funders AS (
 		AND s1.id in (select * from top_level_stakeholders)
 		AND s2.id in (select * from top_level_stakeholders)
     GROUP BY
-    s1.name, s2.name, sf.year
+    s1.name, sf.year
     ORDER BY
     recipient DESC
 ),
