@@ -91,6 +91,11 @@ export const SidebarLink = (
   )
 }
 
+export const ScrollTarget = styled.div`
+  position: relative;
+  top: -160px;
+`
+
 export const MainContent = styled.div`
   grid-area: main;
   padding: 25px;

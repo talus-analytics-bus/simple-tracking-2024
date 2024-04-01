@@ -13,6 +13,7 @@ import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import {
   Layout,
   MainContent,
+  ScrollTarget,
   Sidebar,
   SidebarLink,
   TopBar,
@@ -30,10 +31,6 @@ import PvsPathway from 'components/stakeholderPage/pvsPathway'
 import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
 import formatHash from 'utilities/formatHash'
 
-const ScrollTarget = styled.div`
-  position: relative;
-  top: -160px;
-`
 const H1 = styled.h1`
   display: flex;
   align-items: center;
