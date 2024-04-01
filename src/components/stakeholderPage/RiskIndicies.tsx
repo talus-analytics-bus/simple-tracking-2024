@@ -25,6 +25,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
         <h3>GHS Index</h3>
         <RiskIndiciesPlot
           data={riskIndicies.ghsi.data}
+          name={data.stakeholdersCsv?.name}
           highlight={data.ghsi}
           min={0}
           max={100}
@@ -34,6 +35,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
         <h3>Infectious Disease Vulnerability Index</h3>
         <RiskIndiciesPlot
           data={riskIndicies.idvi.data}
+          name={data.stakeholdersCsv?.name}
           highlight={data.idvi}
           min={0}
           max={1}
@@ -43,6 +45,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
         <h3>Inform Risk Index</h3>
         <RiskIndiciesPlot
           data={riskIndicies.inform.data}
+          name={data.stakeholdersCsv?.name}
           highlight={data.inform}
           min={10}
           max={0}
@@ -52,6 +55,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
         <h3>World Risk Index</h3>
         <RiskIndiciesPlot
           data={riskIndicies.wri.data}
+          name={data.stakeholdersCsv?.name}
           highlight={data.wri}
           min={50}
           max={0}

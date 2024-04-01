@@ -22,14 +22,25 @@ const MinLabel = styled.text`
 const MaxLabel = styled(MinLabel)`
   text-anchor: end;
 `
+const AxisLabel = styled.text`
+  text-anchor: middle;
+  ${({ theme }) => theme.textStyleSmallNumbers};
+`
 
-const XAxis = () => {
+interface XAxisProps {
+  label: string
+}
+
+const XAxis = ({ label }: XAxisProps) => {
   const [dim] = useDim()
 
   const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
   return (
     <>
+      <AxisLabel x={dim.width / 2} y={dim.padding.top - 18}>
+        {label}
+      </AxisLabel>
       {ticks.map(tick => (
         <React.Fragment key={tick}>
           <AxisPath

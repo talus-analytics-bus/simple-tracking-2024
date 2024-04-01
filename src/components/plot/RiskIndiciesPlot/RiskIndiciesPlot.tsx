@@ -12,6 +12,7 @@ import ScoreHighlightLine from './ScoreHighlightLine'
 interface RiskIndiciesPlotProps {
   min: number
   max: number
+  name: string | null | undefined
   highlight: {
     readonly score: string | null
     readonly rank: string | null
@@ -34,6 +35,7 @@ const RiskIndiciesPlot = ({
   data,
   min,
   max,
+  name,
   highlight,
 }: RiskIndiciesPlotProps) => {
   const histogram = d3
@@ -46,9 +48,9 @@ const RiskIndiciesPlot = ({
 
   const plotSetup = usePlotSetup({
     width: 500,
-    height: 300,
+    height: 330,
     padding: {
-      top: 0,
+      top: 30,
       right: 15,
       bottom: 60,
       left: 15,
@@ -74,7 +76,9 @@ const RiskIndiciesPlot = ({
       <DimPlotParent plotSetup={plotSetup}>
         <Bins bins={bins} />
         <ScoreHighlightLine score={highlight?.score ?? ''} />
-        <XAxis />
+        <XAxis
+          label={`${name} | Rank: ${highlight?.rank} | Score: ${highlight?.score}/${max}`}
+        />
       </DimPlotParent>
     </PlotContainer>
   )
