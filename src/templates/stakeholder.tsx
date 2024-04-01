@@ -28,6 +28,7 @@ import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import Naphs from 'components/stakeholderPage/Naphs'
 import PvsPathway from 'components/stakeholderPage/pvsPathway'
 import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
+import formatHash from 'utilities/formatHash'
 
 const ScrollTarget = styled.div`
   position: relative;
@@ -54,9 +55,6 @@ const sortHLabeledNodes = (
 ) =>
   Number(a.data.Name.split(' ')[0].replace('H', '')) -
   Number(b.data.Name.split(' ')[0].replace('H', ''))
-
-const formatHash = (str: string) =>
-  str.trim().replaceAll(' ', '-').toLowerCase()
 
 const StakeholderPage = ({
   data,
