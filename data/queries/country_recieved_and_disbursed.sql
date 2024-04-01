@@ -19,6 +19,7 @@ WITH countries AS (
 			'agency'
 		)
 		AND stakeholders.iso3 IS NOT NULL
+        AND NOT iso3 IN ('GLOBAL', 'GLB', 'GUF')
 ),
 received AS (
 	-- flows received by those countries
