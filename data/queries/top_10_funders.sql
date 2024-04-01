@@ -35,6 +35,8 @@ recipients_to_funders AS (
         AND sf."year" BETWEEN 2014 AND 2022
         AND s1.id in (select * from top_level_stakeholders)
         AND s2.id in (select * from top_level_stakeholders)
+        AND (s1.iso3 IS NULL OR NOT s1.iso3 IN ('GLOBAL', 'GLB', 'GUF'))
+        AND (s2.iso3 IS NULL OR NOT s2.iso3 IN ('GLOBAL', 'GLB', 'GUF'))
     GROUP BY s1.name, s2.name, sf.year
     ORDER BY funder DESC, recipient DESC
 ),

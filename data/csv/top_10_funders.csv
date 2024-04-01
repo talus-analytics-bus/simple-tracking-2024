@@ -102,7 +102,7 @@ African Regional Industrial Property Organization,2017,United Nations (UN),78712
 African Regional Industrial Property Organization,2018,United Nations (UN),8180292
 African Regional Industrial Property Organization,2019,United Nations (UN),6955970
 African Regional Industrial Property Organization,2020,United Nations (UN),5987782
-African Regional Industrial Property Organization,2021,United Nations (UN),7408804
+African Regional Industrial Property Organization,2021,United Nations (UN),7408803
 Albania,2014,United States of America,492297
 Albania,2014,United Nations (UN),265849
 Albania,2014,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",192107
@@ -266,7 +266,7 @@ Angola,2020,Bill & Melinda Gates Foundation,208709
 Angola,2020,Norway,191543
 Angola,2021,Global Alliance for Vaccines and Immunisation (GAVI),122868321
 Angola,2021,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",51274342
-Angola,2021,United States of America,34657259
+Angola,2021,United States of America,34657258
 Angola,2021,World Bank,18462419
 Angola,2021,World Health Organization (WHO),9459064
 Angola,2021,United Nations (UN),1969762
@@ -1229,7 +1229,7 @@ Burkina Faso,2016,Canada,2608137
 Burkina Faso,2016,Italy,1132467
 Burkina Faso,2017,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",46187960
 Burkina Faso,2017,Global Alliance for Vaccines and Immunisation (GAVI),19159176
-Burkina Faso,2017,United States of America,18746733
+Burkina Faso,2017,United States of America,18746734
 Burkina Faso,2017,World Bank,15432711
 Burkina Faso,2017,United Nations (UN),14999358
 Burkina Faso,2017,Bill & Melinda Gates Foundation,11563667
@@ -2400,7 +2400,7 @@ Cuba,2018,Institute of Tropical Medicine,637258
 Cuba,2018,Vlaamse Interuniversitaire Raad voor Universitaire Ontwikkelingssamenwerking (VLIR-UOS),375269
 Cuba,2018,Global Alliance for Vaccines and Immunisation (GAVI),286000
 Cuba,2019,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",5481269
-Cuba,2019,World Health Organization (WHO),805831
+Cuba,2019,World Health Organization (WHO),805830
 Cuba,2019,Institute of Tropical Medicine,587594
 Cuba,2019,Germany,560212
 Cuba,2019,United Nations (UN),426613
@@ -2584,14 +2584,14 @@ Democratic Republic of the Congo,2022,Sweden,2624699
 Denmark,2014,United States of America,107637
 Denmark,2015,United States of America,76623
 Direct Relief,2014,Eli Lilly and Company,16667
-Direct Relief,2014,Merck,8333
 Direct Relief,2014,Pfizer,8333
+Direct Relief,2014,Merck,8333
 Direct Relief,2015,Eli Lilly and Company,16667
 Direct Relief,2015,Pfizer,8333
 Direct Relief,2015,Merck,8333
 Direct Relief,2016,Eli Lilly and Company,16667
-Direct Relief,2016,Pfizer,8333
 Direct Relief,2016,Merck,8333
+Direct Relief,2016,Pfizer,8333
 Djibouti,2014,United Nations (UN),3095601
 Djibouti,2014,United States of America,1671370
 Djibouti,2014,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1541994
@@ -3365,8 +3365,6 @@ France,2020,United Nations (UN),810168
 France,2020,Global Antibiotic Research and Development Partnership,638647
 France,2021,France,519600
 France,2021,Global Antibiotic Research and Development Partnership,295
-French Guiana,2017,France,164445
-French Guiana,2020,France,177890
 French Polynesia,2021,World Health Organization (WHO),30599
 Gabon,2014,Bill & Melinda Gates Foundation,488845
 Gabon,2014,United Nations (UN),401910
@@ -3490,39 +3488,6 @@ Gambia,2022,World Health Organization (WHO),1374813
 Gambia,2022,Global Alliance for Vaccines and Immunisation (GAVI),1103986
 Gambia,2022,United Nations (UN),249434
 Gambia,2022,Sweden,14574
-General Global Benefit,2014,International Labour Organization (ILO),15633654
-General Global Benefit,2015,International Labour Organization (ILO),19423720
-General Global Benefit,2015,Sweden,596648
-General Global Benefit,2016,International Labour Organization (ILO),12679271
-General Global Benefit,2016,Canada,5101096
-General Global Benefit,2016,World Health Organization (WHO),3600000
-General Global Benefit,2016,Sweden,587608
-General Global Benefit,2017,International Labour Organization (ILO),12895526
-General Global Benefit,2017,Canada,11234043
-General Global Benefit,2017,Sweden,588665
-General Global Benefit,2017,Germany,84181
-General Global Benefit,2017,United Kingdom,29614
-General Global Benefit,2018,Canada,15228257
-General Global Benefit,2018,Sweden,739467
-General Global Benefit,2018,Italy,232971
-General Global Benefit,2018,Germany,89674
-General Global Benefit,2018,United Kingdom,31097
-General Global Benefit,2019,Canada,9597049
-General Global Benefit,2019,Italy,232971
-General Global Benefit,2019,Germany,139581
-General Global Benefit,2019,United Kingdom,99429
-General Global Benefit,2019,France,63270
-General Global Benefit,2019,Russian Federation,50000
-General Global Benefit,2019,China,39350
-General Global Benefit,2020,World Health Organization (WHO),12900000
-General Global Benefit,2020,United States of America,3566667
-General Global Benefit,2020,Canada,93946
-General Global Benefit,2020,Ireland,11000
-General Global Benefit,2021,United States of America,3566667
-General Global Benefit,2021,Canada,93946
-General Global Benefit,2022,World Health Organization (WHO),3876983
-General Global Benefit,2022,United States of America,3566667
-General Global Benefit,2022,Canada,93946
 Georgetown Center for Global Health Science and Security (GHSS),2020,Canada,87824
 Georgetown Center for Global Health Science and Security (GHSS),2021,Canada,87824
 Georgetown Center for Global Health Science and Security (GHSS),2022,Canada,87824
@@ -6171,8 +6136,8 @@ Montenegro,2016,United Nations (UN),8637
 Montenegro,2017,United Nations (UN),1795
 Montenegro,2018,United Nations (UN),51
 Montenegro,2019,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",264547
-Montenegro,2019,Slovakia,11113
 Montenegro,2019,Germany,11113
+Montenegro,2019,Slovakia,11113
 Montenegro,2020,World Health Organization (WHO),325887
 Montenegro,2020,Germany,317533
 Montenegro,2020,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",303504
@@ -6737,7 +6702,7 @@ Nicaragua,2017,World Bank,25732726
 Nicaragua,2017,Inter-American Development Bank,21719307
 Nicaragua,2017,United States of America,13655103
 Nicaragua,2017,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",9112864
-Nicaragua,2017,World Health Organization (WHO),3057325
+Nicaragua,2017,World Health Organization (WHO),3057324
 Nicaragua,2017,Global Alliance for Vaccines and Immunisation (GAVI),1786040
 Nicaragua,2017,United Nations (UN),549896
 Nicaragua,2017,Germany,424666
@@ -9893,14 +9858,14 @@ United Nations (UN),2014,Japan,5940000
 United Nations (UN),2014,Republic of Korea,5000000
 United Nations (UN),2015,China,10000000
 United Nations (UN),2015,Belgium,8945028
-United Nations (UN),2015,"Venezuela, Bolivarian Republic of",5000000
 United Nations (UN),2015,Republic of Korea,5000000
+United Nations (UN),2015,"Venezuela, Bolivarian Republic of",5000000
 United Nations (UN),2015,Switzerland,4927079
 United Nations (UN),2015,Philippines,2041742
 United Nations (UN),2015,Turkey,1500000
+United Nations (UN),2015,Russian Federation,1000000
 United Nations (UN),2015,Royal Charity Organisation,1000000
 United Nations (UN),2015,Bolivia,1000000
-United Nations (UN),2015,Russian Federation,1000000
 United Nations (UN),2016,Belgium,8800000
 United Nations (UN),2016,Turkey,1500000
 United Nations (UN),2016,United Nations (UN),170371
@@ -10279,7 +10244,7 @@ Viet Nam,2019,United Kingdom,3028487
 Viet Nam,2019,Australia,2738875
 Viet Nam,2019,United Nations (UN),2450534
 Viet Nam,2019,Germany,1412074
-Viet Nam,2020,United States of America,39904056
+Viet Nam,2020,United States of America,39904057
 Viet Nam,2020,World Bank,37480208
 Viet Nam,2020,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",32492590
 Viet Nam,2020,Asian Development Bank,16487329
@@ -10364,8 +10329,8 @@ World Health Organization (WHO),2019,United States of America,21351000
 World Health Organization (WHO),2019,Global Alliance for Vaccines and Immunisation (GAVI),6533072
 World Health Organization (WHO),2019,Sweden,5532047
 World Health Organization (WHO),2019,United Nations (UN),4753218
-World Health Organization (WHO),2019,China,3000000
 World Health Organization (WHO),2019,Bill & Melinda Gates Foundation,3000000
+World Health Organization (WHO),2019,China,3000000
 World Health Organization (WHO),2019,Norway,2711909
 World Health Organization (WHO),2019,Germany,2272728
 World Health Organization (WHO),2020,Germany,428514146
