@@ -18,6 +18,10 @@ WITH top_level_stakeholders AS (
 			'region',
 			'agency'
 		)
+        AND (
+            iso3 IS NULL
+            OR NOT iso3 IN ('GLOBAL', 'GLB', 'GUF')
+        )
 ),
 received AS (
 	-- flows received by those countries
