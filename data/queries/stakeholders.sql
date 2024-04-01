@@ -18,6 +18,10 @@ WITH top_level_stakeholders AS (
 			'region',
 			'agency'
 		)
+		AND (
+			iso3 IS NULL
+			OR NOT iso3 IN ('GLOBAL', 'GLB', 'GUF')
+		)
 ),
 received AS (
 	-- flows received by those stakeholders
@@ -49,7 +53,4 @@ SELECT
 	COALESCE(received.iso2, disbursed.iso2) as iso2
 FROM received
 FULL JOIN disbursed ON disbursed.id = received.id
-WHERE 
-	COALESCE(received.iso3, disbursed.iso3) IS NULL 
-	OR NOT COALESCE(received.iso3, disbursed.iso3) IN ('GLOBAL', 'GLB', 'GUF')
 ORDER BY slug, name ASC
