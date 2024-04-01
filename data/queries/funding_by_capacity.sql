@@ -17,6 +17,10 @@ WITH top_level_stakeholders AS (
             'region',
             'agency'
         )
+        AND (
+            iso3 IS NULL
+            OR NOT iso3 IN ('GLOBAL', 'GLB', 'GUF')
+        )
 ),
 received AS (
     -- Flows received by those stakeholders
@@ -30,7 +34,7 @@ received AS (
     FROM
         simple_flows sf
         JOIN flows_to_stakeholder_targets_direct_credit ftsodc ON sf.sf_id = ftsodc.flow_id
-        JOIN stakeholders s ON s.id = ftsodc.stakeholder_id
+        JOIN top_level_stakeholders s ON s.id = ftsodc.stakeholder_id
         JOIN ccs_to_flows ctf ON ctf.flow_id = sf.sf_id
         JOIN core_capacities cc ON cc.id = ctf.cc_id
     WHERE
@@ -55,7 +59,7 @@ disbursed AS(
     FROM
         simple_flows sf
         JOIN flows_to_stakeholder_origins_direct_credit ftsodc ON sf.sf_id = ftsodc.flow_id
-        JOIN stakeholders s ON s.id = ftsodc.stakeholder_id
+        JOIN top_level_stakeholders s ON s.id = ftsodc.stakeholder_id
         JOIN ccs_to_flows ctf ON ctf.flow_id = sf.sf_id
         JOIN core_capacities cc ON cc.id = ctf.cc_id
     WHERE
@@ -172,7 +176,4 @@ SELECT
     ce_disbursed
 FROM received_capacities
 FULL JOIN disbursed_capacities ON received_capacities.name = disbursed_capacities.name and received_capacities.year = disbursed_capacities.year
-WHERE 
-    COALESCE(received_capacities.iso3, disbursed_capacities.iso3) IS NULL 
-    OR NOT COALESCE(received_capacities.iso3, disbursed_capacities.iso3) IN ('GLOBAL', 'GLB', 'GUF')
 ORDER BY name, year DESC;
