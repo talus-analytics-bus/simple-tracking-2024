@@ -11,7 +11,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     './src/templates/stakeholder.tsx'
   )
 
-  const stakeholdersQuery = await graphql<Queries.CountriesQuery>(`
+  const stakeholdersQuery = await graphql<Queries.StakeholdersQuery>(`
     query Stakeholders {
       stakeholders: allStakeholdersCsv {
         nodes {
@@ -33,6 +33,31 @@ export const createPages: GatsbyNode['createPages'] = async ({
       path: `/${stakeholder.slug}/${simplifyForUrl(stakeholder.name)}`,
       component: stakeholderPageTemplate,
       context: { name: stakeholder.name, iso3: stakeholder.iso3 },
+    })
+  }
+
+  const pheicsQuery = await graphql<Queries.PheicsQuery>(`
+    query Pheics {
+      pheics: allAirtable(filter: { table: { eq: "PHEIC" } }) {
+        nodes {
+          data {
+            PHEIC_name
+          }
+        }
+      }
+    }
+  `)
+
+  if (!pheicsQuery.data?.pheics.nodes)
+    throw new Error('No PHEICs found to publish')
+
+  for (const pheic of pheicsQuery.data.pheics.nodes) {
+    if (!pheic.data.PHEIC_name) throw new Error(`All PHEICs must have a name`)
+
+    actions.createPage({
+      path: `/pheic/${simplifyForUrl(pheic.data.PHEIC_name)}`,
+      component: path.resolve('./src/templates/pheic.tsx'),
+      context: { name: pheic.data.PHEIC_name },
     })
   }
 }
