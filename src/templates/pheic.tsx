@@ -20,7 +20,6 @@ import usePheicPageData from 'cmsHooks/usePheicPageData'
 import styled from 'styled-components'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import { commaSeparatedList } from 'utilities/grammar'
-import Expander from 'components/library/ui/expander'
 import Dropdown from 'components/library/ui/dropdown'
 
 const PheicTopBar = styled(TopBar)`
@@ -84,6 +83,15 @@ const PathogenBox = styled.div`
   }
 `
 
+const SourcesExpanderButton = styled.button`
+  ${({ theme }) => theme.textStyleSmallParagraph};
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.common.colors.textSecondary};
+  margin-top: 15px;
+  padding: 0;
+`
+
 const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
   const cmsData = usePheicPageData()
 
@@ -139,7 +147,9 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
                 </tbody>
               </table>
               <Dropdown
-                renderButton={() => <button>Sources</button>}
+                renderButton={() => (
+                  <SourcesExpanderButton>Sources</SourcesExpanderButton>
+                )}
                 floating={false}
               >
                 <Sources
