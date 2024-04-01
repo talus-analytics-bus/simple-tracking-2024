@@ -17,14 +17,18 @@ WITH top_level_stakeholders AS (
             'region',
             'agency'
         )
+        AND (
+            iso3 IS NULL
+            OR NOT iso3 IN ('GLOBAL', 'GLB', 'GUF')
+        )
 ),
 recipients_to_funders AS (
     -- All transaction pairs for selected stakeholders
     SELECT
-    s1.name AS recipient,
-    s2.name AS funder,
-    sf.year AS year,
-    ROUND(SUM(sf.value)) AS total
+        s1.name AS recipient,
+        s2.name AS funder,
+        sf.year AS year,
+        ROUND(SUM(sf.value)) AS total
     FROM flows_to_stakeholder_targets_direct_credit ftstdc
     JOIN simple_flows sf ON ftstdc.flow_id = sf.sf_id
     JOIN stakeholders s1 ON ftstdc.stakeholder_id = s1.id
