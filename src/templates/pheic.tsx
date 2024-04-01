@@ -20,6 +20,8 @@ import usePheicPageData from 'cmsHooks/usePheicPageData'
 import styled from 'styled-components'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import { commaSeparatedList } from 'utilities/grammar'
+import Expander from 'components/library/ui/expander'
+import Dropdown from 'components/library/ui/dropdown'
 
 const PheicTopBar = styled(TopBar)`
   flex-wrap: wrap;
@@ -136,11 +138,18 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
                   </tr>
                 </tbody>
               </table>
-              <Sources
-                dangerouslySetInnerHTML={{
-                  __html: CMS.parseRichText(data.airtable?.data?.Sources ?? ''),
-                }}
-              />
+              <Dropdown
+                renderButton={() => <button>Sources</button>}
+                floating={false}
+              >
+                <Sources
+                  dangerouslySetInnerHTML={{
+                    __html: CMS.parseRichText(
+                      data.airtable?.data?.Sources ?? ''
+                    ),
+                  }}
+                />
+              </Dropdown>
             </Description>
             <PathogenBox>
               <h3>Pathogen</h3>
