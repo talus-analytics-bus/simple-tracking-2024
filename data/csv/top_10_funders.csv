@@ -1229,7 +1229,7 @@ Burkina Faso,2016,Canada,2608137
 Burkina Faso,2016,Italy,1132467
 Burkina Faso,2017,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",46187960
 Burkina Faso,2017,Global Alliance for Vaccines and Immunisation (GAVI),19159176
-Burkina Faso,2017,United States of America,18746734
+Burkina Faso,2017,United States of America,18746733
 Burkina Faso,2017,World Bank,15432711
 Burkina Faso,2017,United Nations (UN),14999358
 Burkina Faso,2017,Bill & Melinda Gates Foundation,11563667
@@ -2400,7 +2400,7 @@ Cuba,2018,Institute of Tropical Medicine,637258
 Cuba,2018,Vlaamse Interuniversitaire Raad voor Universitaire Ontwikkelingssamenwerking (VLIR-UOS),375269
 Cuba,2018,Global Alliance for Vaccines and Immunisation (GAVI),286000
 Cuba,2019,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",5481269
-Cuba,2019,World Health Organization (WHO),805830
+Cuba,2019,World Health Organization (WHO),805831
 Cuba,2019,Institute of Tropical Medicine,587594
 Cuba,2019,Germany,560212
 Cuba,2019,United Nations (UN),426613
@@ -2590,8 +2590,8 @@ Direct Relief,2015,Eli Lilly and Company,16667
 Direct Relief,2015,Pfizer,8333
 Direct Relief,2015,Merck,8333
 Direct Relief,2016,Eli Lilly and Company,16667
-Direct Relief,2016,Merck,8333
 Direct Relief,2016,Pfizer,8333
+Direct Relief,2016,Merck,8333
 Djibouti,2014,United Nations (UN),3095601
 Djibouti,2014,United States of America,1671370
 Djibouti,2014,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1541994
@@ -2801,7 +2801,7 @@ Ecuador,2018,Vlaamse Interuniversitaire Raad voor Universitaire Ontwikkelingssam
 Ecuador,2018,Australia,26304
 Ecuador,2018,Frontline AIDS,6250
 Ecuador,2019,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2309965
-Ecuador,2019,World Health Organization (WHO),1511719
+Ecuador,2019,World Health Organization (WHO),1511718
 Ecuador,2019,United States of America,978586
 Ecuador,2019,United Nations (UN),489978
 Ecuador,2019,Norway,185639
@@ -3412,7 +3412,6 @@ Gabon,2022,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",552256
 Gabon,2022,United Nations (UN),425284
 Gabon,2022,France,77760
 Gabon,2022,World Bank,0
-Gabon,2023,United Nations (UN),138500
 Gambia,2014,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",9046160
 Gambia,2014,Global Alliance for Vaccines and Immunisation (GAVI),4128308
 Gambia,2014,Bill & Melinda Gates Foundation,2316242
@@ -4430,9 +4429,6 @@ International Atomic Energy Agency (IAEA),2020,Canada,2857193
 International Atomic Energy Agency (IAEA),2020,Belgium,218304
 International Atomic Energy Agency (IAEA),2021,Canada,2857193
 International Atomic Energy Agency (IAEA),2022,Canada,975258
-International Atomic Energy Agency (IAEA),2023,Canada,1020324
-International Atomic Energy Agency (IAEA),2024,Canada,1020324
-International Atomic Energy Agency (IAEA),2025,Canada,1020324
 International Centre for Diarrhoeal Disease Research,2016,Sweden,93528
 International Centre for Diarrhoeal Disease Research,2017,Sweden,93696
 International Centre for Diarrhoeal Disease Research,2018,Sweden,95752
@@ -4446,7 +4442,6 @@ International Criminal Police Organization (INTERPOL),2019,Canada,616020
 International Criminal Police Organization (INTERPOL),2020,Canada,616020
 International Criminal Police Organization (INTERPOL),2021,Canada,616020
 International Criminal Police Organization (INTERPOL),2022,Canada,616020
-International Criminal Police Organization (INTERPOL),2023,Canada,644486
 International Federation of Biosafety Associations (IFBA),2019,Canada,677497
 International Federation of Biosafety Associations (IFBA),2020,Canada,107396
 International Federation of Biosafety Associations (IFBA),2021,Canada,107396
@@ -5212,7 +5207,6 @@ Lao People's Democratic Republic,2022,Asian Development Bank,1680359
 Lao People's Democratic Republic,2022,Germany,906228
 Lao People's Democratic Republic,2022,United States of America,600000
 Lao People's Democratic Republic,2022,Sweden,215696
-Lao People's Democratic Republic,2023,Canada,75081
 Latvia,2020,World Health Organization (WHO),513329
 Latvia,2020,Global Antibiotic Research and Development Partnership,1547
 Latvia,2021,World Health Organization (WHO),348764
@@ -6177,8 +6171,8 @@ Montenegro,2016,United Nations (UN),8637
 Montenegro,2017,United Nations (UN),1795
 Montenegro,2018,United Nations (UN),51
 Montenegro,2019,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",264547
-Montenegro,2019,Germany,11113
 Montenegro,2019,Slovakia,11113
+Montenegro,2019,Germany,11113
 Montenegro,2020,World Health Organization (WHO),325887
 Montenegro,2020,Germany,317533
 Montenegro,2020,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",303504
@@ -6743,7 +6737,7 @@ Nicaragua,2017,World Bank,25732726
 Nicaragua,2017,Inter-American Development Bank,21719307
 Nicaragua,2017,United States of America,13655103
 Nicaragua,2017,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",9112864
-Nicaragua,2017,World Health Organization (WHO),3057324
+Nicaragua,2017,World Health Organization (WHO),3057325
 Nicaragua,2017,Global Alliance for Vaccines and Immunisation (GAVI),1786040
 Nicaragua,2017,United Nations (UN),549896
 Nicaragua,2017,Germany,424666
@@ -7044,8 +7038,6 @@ Nuclear Threat Initiative (NTI),2019,Canada,209753
 Nuclear Threat Initiative (NTI),2020,Canada,209753
 Nuclear Threat Initiative (NTI),2021,Canada,463814
 Nuclear Threat Initiative (NTI),2022,Canada,254061
-Nuclear Threat Initiative (NTI),2023,Canada,265801
-Nuclear Threat Initiative (NTI),2024,Canada,265801
 Oman,2014,United States of America,97888
 Oman,2014,United Nations (UN),94227
 Oman,2015,United Nations (UN),57311
@@ -7269,8 +7261,8 @@ Panama,2015,United States of America,278475
 Panama,2015,United Nations (UN),188821
 Panama,2015,Bill & Melinda Gates Foundation,69600
 Panama,2015,Canada,1182
-Panama,2015,World Bank,0
 Panama,2015,Spain,0
+Panama,2015,World Bank,0
 Panama,2016,United States of America,1077619
 Panama,2016,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",701245
 Panama,2016,Bill & Melinda Gates Foundation,232000
@@ -7308,8 +7300,8 @@ Panama,2022,World Health Organization (WHO),191629
 Panama,2022,United States of America,5169
 Pan American Health Organization (PAHO),2016,United States of America,8185836
 Pan American Health Organization (PAHO),2016,World Health Organization (WHO),2015000
-Pan American Health Organization (PAHO),2016,United Kingdom,1000000
 Pan American Health Organization (PAHO),2016,Pfizer,1000000
+Pan American Health Organization (PAHO),2016,United Kingdom,1000000
 Pan American Health Organization (PAHO),2016,Canada,887097
 Pan American Health Organization (PAHO),2016,Bill & Melinda Gates Foundation,700935
 Pan American Health Organization (PAHO),2016,Norway,517000
@@ -8379,8 +8371,8 @@ Solomon Islands,2021,World Bank,1001559
 Solomon Islands,2021,United Nations (UN),210343
 Solomon Islands,2021,Oxfam International,45664
 Solomon Islands,2021,Sweden,19587
-Solomon Islands,2021,Republic of Korea,0
 Solomon Islands,2021,Asian Development Bank,0
+Solomon Islands,2021,Republic of Korea,0
 Solomon Islands,2022,Asian Development Bank,5000000
 Solomon Islands,2022,New Zealand,1881944
 Solomon Islands,2022,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1448211
@@ -9495,7 +9487,6 @@ Tunisia,2022,World Health Organization (WHO),206765
 Tunisia,2022,Sweden,43722
 Tunisia,2022,France,39648
 Tunisia,2022,Oxfam International,32005
-Tunisia,2023,Germany,906855
 Turkey,2014,World Bank,10862489
 Turkey,2014,Spain,220586
 Turkey,2014,United Nations (UN),147108
@@ -9902,14 +9893,14 @@ United Nations (UN),2014,Japan,5940000
 United Nations (UN),2014,Republic of Korea,5000000
 United Nations (UN),2015,China,10000000
 United Nations (UN),2015,Belgium,8945028
-United Nations (UN),2015,Republic of Korea,5000000
 United Nations (UN),2015,"Venezuela, Bolivarian Republic of",5000000
+United Nations (UN),2015,Republic of Korea,5000000
 United Nations (UN),2015,Switzerland,4927079
 United Nations (UN),2015,Philippines,2041742
 United Nations (UN),2015,Turkey,1500000
-United Nations (UN),2015,Russian Federation,1000000
 United Nations (UN),2015,Royal Charity Organisation,1000000
 United Nations (UN),2015,Bolivia,1000000
+United Nations (UN),2015,Russian Federation,1000000
 United Nations (UN),2016,Belgium,8800000
 United Nations (UN),2016,Turkey,1500000
 United Nations (UN),2016,United Nations (UN),170371
@@ -10010,8 +10001,6 @@ United Republic of Tanzania,2022,United Nations (UN),3867780
 United Republic of Tanzania,2022,World Bank,3503615
 United Republic of Tanzania,2022,MSI Reproductive Choices,1003603
 United Republic of Tanzania,2022,Italy,847296
-United Republic of Tanzania,2023,Finland,330567
-United Republic of Tanzania,2023,United Nations (UN),124000
 United States of America,2014,Aeras,2859074
 United States of America,2015,Indigo Trust,14984
 United States of America,2015,Liverpool School of Tropical Medicine,6918
@@ -10290,7 +10279,7 @@ Viet Nam,2019,United Kingdom,3028487
 Viet Nam,2019,Australia,2738875
 Viet Nam,2019,United Nations (UN),2450534
 Viet Nam,2019,Germany,1412074
-Viet Nam,2020,United States of America,39904057
+Viet Nam,2020,United States of America,39904056
 Viet Nam,2020,World Bank,37480208
 Viet Nam,2020,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",32492590
 Viet Nam,2020,Asian Development Bank,16487329
@@ -10400,13 +10389,11 @@ World Health Organization (WHO),2021,United States of America,27129303
 World Health Organization (WHO),2021,Denmark,15797803
 World Health Organization (WHO),2021,Kuwait,15000000
 World Health Organization (WHO),2022,Canada,2204122
-World Health Organization (WHO),2023,Canada,708803
 World Organisation for Animal Health (OIE),2018,Canada,421341
 World Organisation for Animal Health (OIE),2019,Canada,2844004
 World Organisation for Animal Health (OIE),2020,Canada,411266
 World Organisation for Animal Health (OIE),2021,Canada,411266
 World Organisation for Animal Health (OIE),2022,Canada,411266
-World Organisation for Animal Health (OIE),2023,Canada,430270
 Yemen,2014,Global Alliance for Vaccines and Immunisation (GAVI),44378747
 Yemen,2014,Germany,27422755
 Yemen,2014,United Nations (UN),27278893

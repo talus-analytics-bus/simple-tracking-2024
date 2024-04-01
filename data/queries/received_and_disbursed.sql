@@ -31,7 +31,7 @@ received AS (
 		top_level_stakeholders
 		JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
-		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
+		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 2022
 		GROUP BY name, year
 ), 
 disbursed AS (
@@ -46,7 +46,7 @@ disbursed AS (
 		top_level_stakeholders
 		JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
 		JOIN simple_flows ON sf_id = flow_id
-		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 3000
+		WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 2022
 		GROUP BY name, year
 )
 SELECT 

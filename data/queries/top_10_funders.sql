@@ -32,7 +32,7 @@ recipients_to_funders AS (
     JOIN stakeholders s2 ON ftstdc.stakeholder_id = s2.id
     WHERE
         sf.flow_type = 'disbursed_funds'
-        AND sf."year" BETWEEN 2014 AND 3000
+        AND sf."year" BETWEEN 2014 AND 2022
         AND s1.id in (select * from top_level_stakeholders)
         AND s2.id in (select * from top_level_stakeholders)
     GROUP BY s1.name, s2.name, sf.year
