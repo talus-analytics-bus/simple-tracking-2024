@@ -47,6 +47,10 @@ const DescriptionSection = styled.div`
   display: flex;
   align-items: start;
   gap: 15px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `
 const Description = styled.div`
   ${({ theme }) => theme.textStyleParagraph};
@@ -72,6 +76,10 @@ const PathogenBox = styled.div`
   padding: 25px;
   width: 350px;
   flex-shrink: 0;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `
 
 const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
