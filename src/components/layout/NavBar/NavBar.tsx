@@ -13,6 +13,7 @@ import NavBarCountrySearch from './NavBarCountrySearch'
 // import useTopics from 'queryHooks/useTopics'
 // import simplifyForUrl from 'utilities/simplifyForUrl'
 import useIndexPageData from 'cmsHooks/useIndexPageData'
+import usePheicNames from 'queryHooks/usePheicNames'
 
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.common.colors.surfaceThemeDarker};
@@ -77,11 +78,10 @@ const NavLogo = styled(CMS.Image)`
 const NavBar = () => {
   const data = useIndexPageData()
 
-  // const topics = useTopics()
-  const pheics = [{ name: 'placeholder' }]
-  const pheicsLinks = pheics.map(({ name }) => ({
-    to: `/topics/${name}/`,
-    children: name,
+  const pheicNames = usePheicNames()
+  const pheicsLinks = pheicNames.map(({ data }) => ({
+    to: `/topics/${data?.PHEIC_name}/`,
+    children: data?.PHEIC_name,
   }))
 
   const aboutLinks = [
