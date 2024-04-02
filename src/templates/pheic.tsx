@@ -41,7 +41,7 @@ const PheicTopBar = styled(TopBar)`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: ${({ theme }) => theme.common.colors.surfaceGray600};
+    color: ${({ theme }) => theme.common.colors.surfaceGray500};
   }
 `
 const DescriptionSection = styled.div`
@@ -142,6 +142,24 @@ const SourcesExpanderButton = styled.button<{ open: boolean }>`
     transition: 250ms;
   }
 `
+const CasesTable = styled.table`
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  th {
+    ${({ theme }) => theme.textStyleNumbers};
+    color: ${({ theme }) => theme.common.colors.textPrimary};
+    text-align: left;
+  }
+
+  td {
+    ${({ theme }) => theme.textStyleMedNumber};
+    color: ${({ theme }) => theme.common.colors.textPrimary};
+    text-align: left;
+    padding-right: 50px;
+    padding-top: 6px;
+  }
+`
 
 const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
   const cmsData = usePheicPageData()
@@ -180,7 +198,7 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
           <DescriptionSection>
             <Description>
               <p>{data.airtable?.data?.Description}</p>
-              <table>
+              <CasesTable>
                 <thead>
                   <tr>
                     <th>Total cases</th>
@@ -193,7 +211,7 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
                     <td>{data.airtable?.data?.Total_deaths}</td>
                   </tr>
                 </tbody>
-              </table>
+              </CasesTable>
               <Dropdown
                 renderButton={open => (
                   <SourcesExpanderButton open={open}>

@@ -4,7 +4,7 @@ export default {
       badJob: '#c42300',
       blue300: '#d9e8f5',
       blue400: '#8ca9c2',
-      blue500: '#3874a9',
+      blue500: '#3270a6',
       blue600: '#084174',
       goodJob: '#5faa66',
       link: '#1e54a5',
@@ -76,7 +76,7 @@ export default {
   },
   common: {
     colors: {
-      callToActionDefault: '#3874a9',
+      callToActionDefault: '#3270a6',
       callToActionHover: '#8ca9c2',
       strokeWhite: '#ffffff',
       surfaceGray100: '#f1f1f1',
