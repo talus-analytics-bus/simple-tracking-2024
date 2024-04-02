@@ -169,6 +169,10 @@ export const TotalsTable = styled.table`
     text-align: right;
     width: 40%;
     ${({ theme }) => theme.textStyleBigNumber};
+
+    @media (max-width: 900px) {
+      ${({ theme }) => theme.textStyleMedNumber};
+    }
   }
 
   td:last-child {
