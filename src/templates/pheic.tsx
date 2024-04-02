@@ -44,7 +44,6 @@ const PheicTopBar = styled(TopBar)`
     color: ${({ theme }) => theme.common.colors.surfaceGray600};
   }
 `
-
 const DescriptionSection = styled.div`
   display: flex;
   align-items: start;
@@ -84,8 +83,40 @@ const PathogenBox = styled.div`
   @media (max-width: 1200px) {
     width: 100%;
   }
-`
 
+  > h3 {
+    ${({ theme }) => theme.textStyleNumbers};
+    margin: 0px;
+  }
+
+  > h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    ${({ theme }) => theme.textStyleNumbers};
+    color: ${({ theme }) => theme.primitives.colors.blue600};
+    margin-bottom: 5px;
+  }
+
+  > h5 {
+    ${({ theme }) => theme.textStyleParagraph};
+    color: ${({ theme }) => theme.primitives.colors.blue600};
+    margin: 0px;
+    margin-left: 36px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  > p {
+    margin: 0px;
+    margin-left: 36px;
+  }
+
+  > p:nth-child(2) {
+    ${({ theme }) => theme.textStyleH2};
+    margin: 0;
+  }
+`
 const SourcesExpanderButton = styled.button<{ open: boolean }>`
   position: relative;
   ${({ theme }) => theme.textStyleSmallParagraph};
@@ -184,15 +215,27 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
             <PathogenBox>
               <h3>Pathogen</h3>
               <p>{data.airtable?.data?.Pathogen}</p>
-              <h4>Transmission</h4>
+              <h4>
+                <CMS.Icon name="Transmission" style={{ height: 25 }} />
+                Transmission
+              </h4>
               <p>{data.airtable?.data?.Transmission}</p>
-              <h4>Route of infection</h4>
+              <h4>
+                <CMS.Icon name="Route of infection" style={{ height: 25 }} />
+                Route of infection
+              </h4>
               <p>
                 {commaSeparatedList(
                   data.airtable?.data?.Route_of_infection as string[]
                 )}
               </p>
-              <h4>Medical countermeasures</h4>
+              <h4>
+                <CMS.Icon
+                  name="Medical countermeasures"
+                  style={{ height: 25 }}
+                />
+                Medical countermeasures
+              </h4>
               <h5>Available at onset</h5>
               <p>
                 {commaSeparatedList(
