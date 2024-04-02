@@ -35,8 +35,6 @@ const TopFundersAndRecipients = ({
     chartMax = Math.max(Number(funder.total), chartMax)
   }
 
-  console.log({ topFundersBars, topRecipientsBars })
-
   return (
     <ChartColumn>
       <ContentBox>
