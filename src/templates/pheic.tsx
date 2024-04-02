@@ -21,6 +21,7 @@ import styled from 'styled-components'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import { commaSeparatedList } from 'utilities/grammar'
 import Dropdown from 'components/library/ui/dropdown'
+import TopFundersAndRecipients from 'components/pheicPage/TopFundersAndRecipients'
 
 const PheicTopBar = styled(TopBar)`
   flex-wrap: wrap;
@@ -247,28 +248,11 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
           <h3>
             <CMS.Text name="H3 subtitle" data={cmsData} />
           </h3>
-          <ContentBox>
-            <h3>
-              <span>
-                <CMS.Icon name="Disbursed" />
-                Top 10 funders
-              </span>
-              <span>
-                {startYear} - {endYear}
-              </span>
-            </h3>
-          </ContentBox>
-          <ContentBox>
-            <h3>
-              <span>
-                <CMS.Icon name="Received" />
-                Top 10 recipients
-              </span>
-              <span>
-                {startYear} - {endYear}
-              </span>
-            </h3>
-          </ContentBox>
+          <TopFundersAndRecipients
+            startYear={startYear}
+            endYear={endYear}
+            data={data}
+          />
         </MainContent>
       </Layout>
     </Providers>
