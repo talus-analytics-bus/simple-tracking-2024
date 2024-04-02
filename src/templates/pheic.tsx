@@ -37,11 +37,7 @@ const PheicTopBar = styled(TopBar)`
   }
 
   > h2 {
-    font-family: 'Barlow Condensed';
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    ${({ theme }) => theme.textStylePheicLabel}
     color: ${({ theme }) => theme.common.colors.textSecondary};
   }
 `
