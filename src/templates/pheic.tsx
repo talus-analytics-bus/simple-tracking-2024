@@ -42,7 +42,7 @@ const PheicTopBar = styled(TopBar)`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: ${({ theme }) => theme.common.colors.surfaceGray500};
+    color: ${({ theme }) => theme.common.colors.textSecondary};
   }
 `
 const DescriptionSection = styled.div`
@@ -143,22 +143,30 @@ const SourcesExpanderButton = styled.button<{ open: boolean }>`
     transition: 250ms;
   }
 `
-const CasesTable = styled.table`
+const Cases = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+`
+const Count = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-  th {
+  > h4 {
     ${({ theme }) => theme.textStyleNumbers};
     color: ${({ theme }) => theme.common.colors.textPrimary};
-    text-align: left;
+    margin: 0px;
   }
 
-  td {
+  > p {
     ${({ theme }) => theme.textStyleMedNumber};
     color: ${({ theme }) => theme.common.colors.textPrimary};
-    text-align: left;
-    padding-right: 50px;
-    padding-top: 6px;
+    margin: 0px;
+    margin-top: 5px;
+    line-height: 40px;
   }
 `
 
@@ -199,20 +207,16 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
           <DescriptionSection>
             <Description>
               <p>{data.airtable?.data?.Description}</p>
-              <CasesTable>
-                <thead>
-                  <tr>
-                    <th>Total cases</th>
-                    <th>Total deaths</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{data.airtable?.data?.Total_cases}</td>
-                    <td>{data.airtable?.data?.Total_deaths}</td>
-                  </tr>
-                </tbody>
-              </CasesTable>
+              <Cases>
+                <Count>
+                  <h4>Total cases</h4>
+                  <p>{data.airtable?.data?.Total_cases}</p>
+                </Count>
+                <Count>
+                  <h4>Total deaths</h4>
+                  <p>{data.airtable?.data?.Total_deaths}</p>
+                </Count>
+              </Cases>
               <Dropdown
                 renderButton={open => (
                   <SourcesExpanderButton open={open}>
