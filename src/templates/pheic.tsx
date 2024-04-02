@@ -98,9 +98,6 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
   const startYear = data.airtable?.data?.Date_PHEIC_declared?.split('-')[0]
   const endYear = data.airtable?.data?.Date_PHEIC_ended?.split('-')[0]
 
-  const totalDisbursed = NaN
-  const totalReceived = NaN
-
   return (
     <Providers>
       <CMS.SEO
@@ -209,7 +206,11 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
               <TotalsTable>
                 <tbody>
                   <tr>
-                    <td>{formatDisplayNumber(totalDisbursed)}</td>
+                    <td>
+                      {formatDisplayNumber(
+                        Number(data.fundingTotals?.disbursed)
+                      )}
+                    </td>
                     <td>Total funding (USD)</td>
                   </tr>
                 </tbody>
@@ -228,7 +229,11 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
               <TotalsTable>
                 <tbody>
                   <tr>
-                    <td>{formatDisplayNumber(totalReceived)}</td>
+                    <td>
+                      {formatDisplayNumber(
+                        Number(data.fundingTotals?.received)
+                      )}
+                    </td>
                     <td>Total funding (USD)</td>
                   </tr>
                 </tbody>
@@ -286,6 +291,24 @@ export const query = graphql`
         Route_of_infection
         MCMs_available_at_onset
         MCMs_developed_during_or_after_event
+      }
+    }
+    fundingTotals: globalFundingByPheicCsv(pheic: { eq: $name }) {
+      received
+      disbursed
+    }
+    top10Funders: allPheicTop10FundersCsv(filter: { pheic: { eq: $name } }) {
+      nodes {
+        name
+        total
+      }
+    }
+    top10Recipients: allPheicTop10RecipientsCsv(
+      filter: { pheic: { eq: $name } }
+    ) {
+      nodes {
+        name
+        total
       }
     }
   }
