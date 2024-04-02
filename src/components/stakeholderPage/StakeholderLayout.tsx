@@ -145,6 +145,16 @@ export const ContentBox = styled.div`
     > span:last-child {
       color: ${({ theme }) => theme.common.colors.textSecondary};
     }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+
+      > span:last-child {
+        margin-left: 40px;
+      }
+    }
   }
 `
 
