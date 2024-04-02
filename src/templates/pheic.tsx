@@ -260,7 +260,7 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
 }
 
 export const query = graphql`
-  query PheicPage($name: String) {
+  query PheicPage($name: String, $database_name: String) {
     airtable(data: { PHEIC_name: { eq: $name } }) {
       data {
         PHEIC_name
@@ -277,18 +277,20 @@ export const query = graphql`
         MCMs_developed_during_or_after_event
       }
     }
-    fundingTotals: globalFundingByPheicCsv(pheic: { eq: $name }) {
+    fundingTotals: globalFundingByPheicCsv(pheic: { eq: $database_name }) {
       received
       disbursed
     }
-    top10Funders: allPheicTop10FundersCsv(filter: { pheic: { eq: $name } }) {
+    top10Funders: allPheicTop10FundersCsv(
+      filter: { pheic: { eq: $database_name } }
+    ) {
       nodes {
         name
         total
       }
     }
     top10Recipients: allPheicTop10RecipientsCsv(
-      filter: { pheic: { eq: $name } }
+      filter: { pheic: { eq: $database_name } }
     ) {
       nodes {
         name

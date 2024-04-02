@@ -42,6 +42,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
         nodes {
           data {
             PHEIC_name
+            PHEIC_database_name
           }
         }
       }
@@ -57,7 +58,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
     actions.createPage({
       path: `/pheic/${simplifyForUrl(pheic.data.PHEIC_name)}`,
       component: path.resolve('./src/templates/pheic.tsx'),
-      context: { name: pheic.data.PHEIC_name },
+      context: {
+        name: pheic.data.PHEIC_name,
+        database_name: pheic.data.PHEIC_database_name,
+      },
     })
   }
 }
