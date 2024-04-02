@@ -1,7 +1,7 @@
 import DimPlotParent, {
   usePlotSetup,
 } from 'components/library/dim-plot/dim-plot-parent'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import styled from 'styled-components'
 import XAxis from './XAxis'
 import Bins from './Bins'
@@ -46,11 +46,23 @@ const RiskIndiciesPlot = ({
   const values = data.map(d => parseFloat(d.score ?? ''))
   const bins = histogram(values)
 
+  const [narrowLayout, setNarrowLayout] = React.useState(false)
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      setNarrowLayout(window.innerWidth < 600)
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const plotSetup = usePlotSetup({
-    width: 500,
+    width: narrowLayout ? 300 : 500,
     height: 330,
     padding: {
-      top: 30,
+      top: narrowLayout ? 60 : 30,
       right: 15,
       bottom: 60,
       left: 15,
@@ -77,7 +89,9 @@ const RiskIndiciesPlot = ({
         <Bins bins={bins} />
         <ScoreHighlightLine score={highlight?.score ?? ''} />
         <XAxis
-          label={`${name} | Rank: ${highlight?.rank} | Score: ${highlight?.score}/${max}`}
+          narrowLayout={narrowLayout}
+          name={name}
+          label={`Rank: ${highlight?.rank} | Score: ${highlight?.score}/${max}`}
         />
       </DimPlotParent>
     </PlotContainer>

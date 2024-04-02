@@ -28,19 +28,32 @@ const AxisLabel = styled.text`
 `
 
 interface XAxisProps {
+  name: string | null | undefined
   label: string
+  narrowLayout: boolean
 }
 
-const XAxis = ({ label }: XAxisProps) => {
+const XAxis = ({ label, name, narrowLayout }: XAxisProps) => {
   const [dim] = useDim()
 
   const ticks = dim.axes.x.scale.ticks(dim.axes.x.ticks)
 
   return (
     <>
-      <AxisLabel x={dim.width / 2} y={dim.padding.top - 18}>
-        {label}
-      </AxisLabel>
+      {narrowLayout ? (
+        <>
+          <AxisLabel x={dim.width / 2} y={dim.padding.top - 45}>
+            {name}
+          </AxisLabel>
+          <AxisLabel x={dim.width / 2} y={dim.padding.top - 18}>
+            {label}
+          </AxisLabel>
+        </>
+      ) : (
+        <AxisLabel x={dim.width / 2} y={dim.padding.top - 18}>
+          {`${name} | ${label}`}
+        </AxisLabel>
+      )}
       {ticks.map(tick => (
         <React.Fragment key={tick}>
           <AxisPath
