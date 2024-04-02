@@ -22,6 +22,7 @@ import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import { commaSeparatedList } from 'utilities/grammar'
 import Dropdown from 'components/library/ui/dropdown'
 import TopFundersAndRecipients from 'components/pheicPage/TopFundersAndRecipients'
+import Footer from 'components/layout/Footer'
 
 const PheicTopBar = styled(TopBar)`
   flex-wrap: wrap;
@@ -338,6 +339,7 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
           />
         </MainContent>
       </Layout>
+      <Footer />
     </Providers>
   )
 }
