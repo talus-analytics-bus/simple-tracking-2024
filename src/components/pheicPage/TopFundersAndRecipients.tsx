@@ -51,7 +51,7 @@ const TopFundersAndRecipients = ({
         </h3>
         <BarPlot
           bars={topFundersBars}
-          barColor={theme.funder.colors.graphViz1}
+          barColor={theme.funder.colors.graphColor}
           max={chartMax}
           xLabel="Funds (USD)"
           yLabel="Funders"
@@ -69,7 +69,7 @@ const TopFundersAndRecipients = ({
         </h3>
         <BarPlot
           bars={topRecipientsBars}
-          barColor={theme.recipient.colors.graphViz1}
+          barColor={theme.recipient.colors.graphColor}
           max={chartMax}
           xLabel="Funds (USD)"
           yLabel="Funders"

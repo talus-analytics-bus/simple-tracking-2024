@@ -79,7 +79,7 @@ const FundsByCategory = ({
           <BarPlot
             bars={displayTotals.disbursed}
             max={chartMax}
-            barColor={theme.funder.colors.graphViz1}
+            barColor={theme.funder.colors.graphColor}
             xLabel="Funds (USD)"
             yLabel="JEE 1.0 Category"
           />
@@ -101,7 +101,7 @@ const FundsByCategory = ({
           <BarPlot
             bars={displayTotals.received}
             max={chartMax}
-            barColor={theme.recipient.colors.graphViz1}
+            barColor={theme.recipient.colors.graphColor}
             xLabel="Funds (USD)"
             yLabel="JEE 1.0 Category"
           />
