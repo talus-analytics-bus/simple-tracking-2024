@@ -15,6 +15,7 @@ export const Layout = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     grid-template-areas: 'topbar' 'main';
+    padding: 0;
   }
 `
 
