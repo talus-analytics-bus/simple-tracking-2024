@@ -64,9 +64,11 @@ const Sources = styled.div`
   margin-top: 15px;
   font-size: 14px;
   line-height: 1.5;
+
   a {
     color: ${({ theme }) => theme.common.colors.textPrimary};
     text-decoration: underline;
+    line-break: anywhere;
   }
   a:hover {
     color: ${({ theme }) => theme.common.colors.textSecondary};
@@ -84,13 +86,30 @@ const PathogenBox = styled.div`
   }
 `
 
-const SourcesExpanderButton = styled.button`
+const SourcesExpanderButton = styled.button<{ open: boolean }>`
+  position: relative;
   ${({ theme }) => theme.textStyleSmallParagraph};
   background: none;
   border: none;
   color: ${({ theme }) => theme.common.colors.textSecondary};
   margin-top: 15px;
   padding: 0;
+
+  &::after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 3px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2444_6118)'%3E%3Cpath d='M12 10.5L8 6.5L4 10.5L12 10.5Z' fill='%23767676'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2444_6118'%3E%3Crect width='16' height='16' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 150%;
+    transform: scaleY(${({ open }) => (open ? 1 : -1)});
+    transition: 250ms;
+  }
 `
 
 const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
@@ -145,10 +164,13 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
                 </tbody>
               </table>
               <Dropdown
-                renderButton={() => (
-                  <SourcesExpanderButton>Sources</SourcesExpanderButton>
+                renderButton={open => (
+                  <SourcesExpanderButton open={open}>
+                    Sources
+                  </SourcesExpanderButton>
                 )}
                 floating={false}
+                expanderStyle={{ width: '100%' }}
               >
                 <Sources
                   dangerouslySetInnerHTML={{
