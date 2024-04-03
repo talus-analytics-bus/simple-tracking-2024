@@ -9,7 +9,10 @@ import BarPlot from 'components/plot/BarPlot/BarPlot'
 import jeeCategoryNames from 'utilities/jeeCategoryNames'
 
 interface FundsByCategoryProps {
-  data: Queries.StakeholderPageQuery
+  data: {
+    allFundingByCapacityCsv: Queries.StakeholderPageQuery['allFundingByCapacityCsv']
+    stakeholdersCsv?: Queries.StakeholderPageQuery['stakeholdersCsv']
+  }
   selectedYear: string
   selectedYearsLabel: string
 }

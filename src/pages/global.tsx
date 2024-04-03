@@ -24,6 +24,7 @@ import formatHash from 'utilities/formatHash'
 import FundingMap from 'components/map/Map'
 import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
+import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
@@ -107,13 +108,23 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
           <h3>
             <CMS.Text name="H3 subtitle global" data={cmsData} />
           </h3>
-          {
-            <FundingTotals
-              data={data}
-              selectedYear={selectedYear}
-              selectedYearsLabel={selectedYearsLabel}
-            />
-          }
+          <FundingTotals
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
+          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H4 left nav'))} />
+          <h2>
+            <CMS.Text name="H4 header" data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name="H4 subtitle global" data={cmsData} />
+          </h3>
+          <FundsByCategory
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
         </MainContent>
       </Layout>
       <Footer />
@@ -153,7 +164,7 @@ export const query = graphql`
         disbursed
       }
     }
-    allGlobalFundingByCapacityCsv {
+    allFundingByCapacityCsv: allGlobalFundingByCapacityCsv {
       years: nodes {
         year
         p1_received
