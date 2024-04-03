@@ -5,15 +5,12 @@ import Providers from 'components/layout/Providers'
 import NavBar from 'components/layout/NavBar/NavBar'
 import Footer from 'components/layout/Footer'
 import {
-  ContentBox,
-  HorizontalColumns,
   Layout,
   MainContent,
   ScrollTarget,
   Sidebar,
   SidebarLink,
   TopBar,
-  TotalsTable,
   YearSelector,
 } from 'components/stakeholderPage/StakeholderLayout'
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
@@ -25,6 +22,7 @@ import FundingMap from 'components/map/Map'
 import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
+import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
@@ -125,6 +123,18 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             selectedYear={selectedYear}
             selectedYearsLabel={selectedYearsLabel}
           />
+          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H5 left nav'))} />
+          <h2>
+            <CMS.Text name="H5 header" data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name="H5 subtitle global" data={cmsData} />
+          </h3>
+          <FundsByPHEIC
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
         </MainContent>
       </Layout>
       <Footer />
@@ -157,10 +167,21 @@ export const query = graphql`
         recipient
       }
     }
-    allGlobalFundingByPheicCsv {
-      nodes {
+    pheic_received: allGlobalFundingByPheicAndYearCsv(
+      filter: { received: { ne: "" } }
+    ) {
+      pheics: nodes {
+        year
         pheic
         received
+      }
+    }
+    pheic_disbursed: allGlobalFundingByPheicAndYearCsv(
+      filter: { disbursed: { ne: "" } }
+    ) {
+      pheics: nodes {
+        year
+        pheic
         disbursed
       }
     }
