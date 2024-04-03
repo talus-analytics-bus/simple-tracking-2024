@@ -6,7 +6,10 @@ import { ContentBox, HorizontalColumns, TotalsTable } from './StakeholderLayout'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 
 interface FundingTotalsProps {
-  data: Queries.StakeholderPageQuery
+  data: {
+    allReceivedAndDisbursedCsv: Queries.StakeholderPageQuery['allReceivedAndDisbursedCsv']
+    stakeholdersCsv?: Queries.StakeholderPageQuery['stakeholdersCsv']
+  }
   selectedYear: string
   selectedYearsLabel: string
 }
