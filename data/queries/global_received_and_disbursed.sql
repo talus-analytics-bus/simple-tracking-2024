@@ -26,6 +26,7 @@ WITH top_level_stakeholders AS (
 received AS (
     -- flows received by those countries
     SELECT
+        year,
         ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
         ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
         ROUND(SUM(value)) AS total
@@ -34,10 +35,12 @@ received AS (
         JOIN flows_to_stakeholder_targets_direct_credit ON stakeholder_id = id
         JOIN simple_flows ON sf_id = flow_id
         WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 2022
+        GROUP BY year
 ), 
 disbursed AS (
     -- flows sent by those countries
     SELECT
+        year,
         ROUND(SUM(CASE WHEN response_or_capacity = 'response' THEN value ELSE 0 END)) AS response,
         ROUND(SUM(CASE WHEN response_or_capacity = 'capacity' THEN value ELSE 0 END)) AS capacity,
         ROUND(SUM(value)) AS total
@@ -46,8 +49,10 @@ disbursed AS (
         JOIN flows_to_stakeholder_origins_direct_credit ON stakeholder_id = id
         JOIN simple_flows ON sf_id = flow_id
         WHERE flow_type = 'disbursed_funds' AND year BETWEEN 2014 AND 2022
+        GROUP BY year
 )
 SELECT 
+    COALESCE(received.year, disbursed.year) AS year,
     received.response AS "totalResponseReceived",
     received.capacity AS "totalCapacityReceived",
     received.total AS "totalDisbursedReceived",
@@ -55,4 +60,4 @@ SELECT
     disbursed.capacity AS "totalCapacityDisbursed",
     disbursed.total AS "totalDisbursed"
 FROM received
-FULL JOIN disbursed on 1=1
+FULL JOIN disbursed on disbursed.year = received.year
