@@ -6,12 +6,6 @@ import { ChartColumn, ContentBox, NoData } from './StakeholderLayout'
 import BarPlot from 'components/plot/BarPlot/BarPlot'
 import { useTheme } from 'styled-components'
 
-interface FundsByPHEICProps {
-  data: Queries.StakeholderPageQuery
-  selectedYear: string
-  selectedYearsLabel: string
-}
-
 const isDisbursed = (
   pheic: any
 ): pheic is Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0] =>
@@ -30,6 +24,16 @@ const restructurePheics = (
   if (!acc[pheicName]) acc[pheicName] = value
   else acc[pheicName] += value
   return acc
+}
+
+interface FundsByPHEICProps {
+  data: {
+    pheic_received: Queries.StakeholderPageQuery['pheic_received']
+    pheic_disbursed: Queries.StakeholderPageQuery['pheic_disbursed']
+    stakeholdersCsv?: Queries.StakeholderPageQuery['stakeholdersCsv']
+  }
+  selectedYear: string
+  selectedYearsLabel: string
 }
 
 const FundsByPHEIC = ({
