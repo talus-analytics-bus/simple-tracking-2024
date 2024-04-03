@@ -4,12 +4,6 @@ import { ContentBox, HorizontalColumns, NoData } from './StakeholderLayout'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import styled, { useTheme } from 'styled-components'
 
-interface TopFundersAndRecipientsProps {
-  data: Queries.StakeholderPageQuery
-  selectedYear: string
-  selectedYearsLabel: string
-}
-
 const Table = styled.table`
   border-collapse: collapse;
 
@@ -30,6 +24,15 @@ const Table = styled.table`
     text-align: right;
   }
 `
+
+interface TopFundersAndRecipientsProps {
+  data: {
+    top10RecipientsByYear: Queries.StakeholderPageQuery['top10RecipientsByYear']
+    top10FundersByYear: Queries.StakeholderPageQuery['top10FundersByYear']
+  }
+  selectedYear: string
+  selectedYearsLabel: string
+}
 
 const TopFundersAndRecipients = ({
   data,
