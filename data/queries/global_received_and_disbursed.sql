@@ -61,3 +61,4 @@ SELECT
     disbursed.total AS "totalDisbursed"
 FROM received
 FULL JOIN disbursed on disbursed.year = received.year
+ORDER BY year DESC;
