@@ -22,14 +22,17 @@ import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
 import formatHash from 'utilities/formatHash'
 import FundingMap from 'components/map/Map'
-import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
 
-  const yearOptions = ['All time', '2021']
+  const yearOptions = [
+    'All time',
+    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.year ?? '') ??
+      []),
+  ]
   const [selectedYear, setSelectedYear] = useState(yearOptions[0])
 
   const selectedYearsLabel =
@@ -97,12 +100,12 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             <CMS.Text name={'H2 subtitle global'} data={cmsData} />
           </h3>
           <FundingMap />
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H2 left nav'))} />
+          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />
           <h2>
-            <CMS.Text name="H2 header" data={cmsData} />
+            <CMS.Text name="H3 header" data={cmsData} />
           </h2>
           <h3>
-            <CMS.Text name="H2 subtitle global" data={cmsData} />
+            <CMS.Text name="H3 subtitle global" data={cmsData} />
           </h3>
           {
             <FundingTotals
