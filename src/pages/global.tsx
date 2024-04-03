@@ -23,6 +23,7 @@ import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
+import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
@@ -135,6 +136,18 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             selectedYear={selectedYear}
             selectedYearsLabel={selectedYearsLabel}
           />
+          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H6 left nav'))} />
+          <h2>
+            <CMS.Text name="H6 header" data={cmsData} />
+          </h2>
+          <h3>
+            <CMS.Text name="H6 subtitle global" data={cmsData} />
+          </h3>
+          <TopFundersAndRecipients
+            data={data}
+            selectedYear={selectedYear}
+            selectedYearsLabel={selectedYearsLabel}
+          />
         </MainContent>
       </Layout>
       <Footer />
@@ -156,15 +169,17 @@ export const query = graphql`
       }
     }
     top10FundersByYear: allGlobalTop10FundersCsv {
-      nodes {
+      funders: nodes {
         year
-        funder
+        name: funder
+        total
       }
     }
     top10RecipientsByYear: allGlobalTop10RecipientsCsv {
-      nodes {
+      recipients: nodes {
         year
-        recipient
+        name: recipient
+        total
       }
     }
     pheic_received: allGlobalFundingByPheicAndYearCsv(
