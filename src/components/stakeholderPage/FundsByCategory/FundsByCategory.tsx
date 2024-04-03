@@ -75,7 +75,7 @@ const FundsByCategory = ({
             Funds disbursed
           </span>
           <span>
-            {data.stakeholdersCsv?.name} | {selectedYearsLabel}
+            {data.stakeholdersCsv?.name ?? 'Global'} | {selectedYearsLabel}
           </span>
         </h3>
         {Object.keys(displayTotals.disbursed).length > 0 ? (
@@ -97,7 +97,7 @@ const FundsByCategory = ({
             Funds received
           </span>
           <span>
-            {data.stakeholdersCsv?.name} | {selectedYearsLabel}
+            {data.stakeholdersCsv?.name ?? 'Global'} | {selectedYearsLabel}
           </span>
         </h3>
         {Object.keys(displayTotals.received).length > 0 ? (
