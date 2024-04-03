@@ -37,6 +37,11 @@ export const TopBar = styled.div`
   }
 `
 
+export const YearSelector = styled.select`
+  padding: 5px 8px;
+  margin-left: auto;
+`
+
 export const Sidebar = styled.div`
   position: sticky;
   grid-area: sidebar;

@@ -17,6 +17,7 @@ import {
   Sidebar,
   SidebarLink,
   TopBar,
+  YearSelector,
 } from 'components/stakeholderPage/StakeholderLayout'
 
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
@@ -40,10 +41,6 @@ const Flag = styled(GatsbyImage)`
   width: 46px;
   height: 46px;
   filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.35));
-`
-const YearSelector = styled.select`
-  padding: 5px 8px;
-  margin-left: auto;
 `
 
 const sortHLabeledNodes = (
@@ -96,8 +93,6 @@ const StakeholderPage = ({
   const stakeholderNameReplacement = {
     '[STAKEHOLDER]': stakeholderName,
   }
-
-  console.log(data)
 
   return (
     <Providers>
