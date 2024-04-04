@@ -25,8 +25,15 @@ export const TopBar = styled.div`
   top: 67px;
   width: 100%;
   background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
-  border-bottom: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
-  padding: 15px;
+  border-bottom: 2px solid ${({ theme }) => theme.common.colors.surfaceGray400};
+  padding: 18px 25px;
+  padding: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: calc(100% - 50px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
