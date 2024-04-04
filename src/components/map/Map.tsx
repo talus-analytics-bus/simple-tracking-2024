@@ -52,14 +52,12 @@ const FundingMap = () => {
     setHoveredISO(event.features?.[0]?.properties?.ISO_A3 ?? ' ')
   }, [])
 
-  return <>Map</>
-
   return (
     <MapContainer>
       <Map
         mapboxAccessToken={mapboxAccessToken}
         mapStyle="mapbox://styles/ryan-talus/clddahzv7007j01qbgn0bba8w"
-        // projection={'naturalEarth'}
+        projection={{ name: 'naturalEarth' }}
         initialViewState={{
           longitude: 0,
           latitude: 15,
@@ -67,8 +65,8 @@ const FundingMap = () => {
           // these bounds are weird due to a bug in mapbox with non-mercator projections:
           // https://github.com/mapbox/mapbox-gl-js/issues/11284
           bounds: [
-            [180, 50],
-            [-150, -35],
+            [350, 70],
+            [-90, -45],
           ],
         }}
         maxZoom={5}
