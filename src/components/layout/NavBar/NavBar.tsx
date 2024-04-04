@@ -108,6 +108,7 @@ const NavBar = () => {
           <NavbarDropdown title="PHEICs">
             <LinksList links={pheicsLinks} />
           </NavbarDropdown>
+          <NavLink to="/map/">Map</NavLink>
           <NavbarDropdown title="About">
             <LinksList links={aboutLinks} />
           </NavbarDropdown>
