@@ -49,8 +49,7 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
 const useCountryLayer = () => {
   const theme = useTheme()
 
-  // const countriesReceivedAndDisbursed = useCountriesReceivedAndDisbursed()
-  const countriesReceivedAndDisbursed = []
+  const countriesReceivedAndDisbursed = useCountriesReceivedAndDisbursed()
 
   const countryLayer = useMemo(() => {
     // find max value for received and disbursed
@@ -90,7 +89,7 @@ const useCountryLayer = () => {
           ['get', 'ISO_A3'],
           ...countryColorMatch,
           // last color in the array is the "default color"
-          theme.recipient.colors.mapNone,
+          theme.recipient.colors.mapUnspecified,
           //
           // for making disabled map for homepage
           // theme.darkGray,
@@ -98,6 +97,8 @@ const useCountryLayer = () => {
       },
       beforeId: 'countries-outline',
     }
+
+    console.log(countryLayer)
 
     return countryLayer
   }, [countriesReceivedAndDisbursed, theme])
