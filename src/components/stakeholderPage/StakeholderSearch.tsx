@@ -10,6 +10,8 @@ const StakeholderSearch = ({ style }: { style: React.CSSProperties }) => {
   const theme = useTheme()
   const searchItems = useStakeholderSearchItems()
 
+  // add PHEICs to searchItems
+
   const iconColor = theme.common.colors.surfaceGray400.replace('#', '')
 
   return (
@@ -19,10 +21,9 @@ const StakeholderSearch = ({ style }: { style: React.CSSProperties }) => {
       // RenderItem={({ item, selected }) => (
       //   <TypeaheadResult {...{ item, selected }} />
       // )}
-      // borderColor={theme.common.colors.surfaceThemeDarker}
       fontColor={theme.common.colors.textPrimary}
       items={searchItems}
-      placeholder={`Funders & Recipients`}
+      placeholder={`Search`}
       onAdd={item => {
         navigate(item.url)
       }}
