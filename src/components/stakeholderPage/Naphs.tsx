@@ -70,7 +70,7 @@ const Naphs = ({ data }: NaphsProps) => {
                     name="Open new tab"
                     color={theme.common.colors.textLink}
                   />
-                  {data.stakeholdersCsv?.name} PVS Pathway {document?.Years}
+                  {data.stakeholdersCsv?.name} NAPHS {document?.Years}
                 </DocumentLink>
               )}
             </td>
