@@ -105,7 +105,7 @@ const NavBar = () => {
         </HomeLink>
         <DesktopNavList>
           <NavLink to="/global/">Global</NavLink>
-          <NavbarDropdown title="PHEICS">
+          <NavbarDropdown title="PHEICs">
             <LinksList links={pheicsLinks} />
           </NavbarDropdown>
           <NavbarDropdown title="About">
