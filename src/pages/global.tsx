@@ -5,6 +5,8 @@ import Providers from 'components/layout/Providers'
 import NavBar from 'components/layout/NavBar/NavBar'
 import Footer from 'components/layout/Footer'
 import {
+  ContentBox,
+  HorizontalColumns,
   Layout,
   MainContent,
   ScrollTarget,
@@ -39,8 +41,6 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
     selectedYear === 'All time'
       ? `${yearOptions.at(-1)} – ${yearOptions.at(1)}`
       : selectedYear
-
-  console.log(data)
 
   return (
     <Providers>
@@ -99,7 +99,28 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
           <h3>
             <CMS.Text name={'H2 subtitle global'} data={cmsData} />
           </h3>
-          <FundingMap />
+          <HorizontalColumns>
+            <ContentBox>
+              <h3>
+                <span>
+                  <CMS.Icon name="Disbursed" style={{ height: 25 }} />
+                  Global funders
+                </span>
+                <span>{selectedYearsLabel}</span>
+              </h3>
+              <FundingMap />
+            </ContentBox>
+            <ContentBox>
+              <h3>
+                <span>
+                  <CMS.Icon name="Received" style={{ height: 25 }} />
+                  Global recipients
+                </span>
+                <span>{selectedYearsLabel}</span>
+              </h3>
+              <FundingMap />
+            </ContentBox>
+          </HorizontalColumns>
           <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />
           <h2>
             <CMS.Text name="H3 header" data={cmsData} />
