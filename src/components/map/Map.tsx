@@ -17,8 +17,11 @@ if (!mapboxAccessToken)
 const MapContainer = styled.div<{ fullscreen?: boolean }>`
   width: 100%;
   ${({ fullscreen }) =>
-    fullscreen ? 'height: calc(100vh - 100px)' : 'aspect-ratio: 16/9'};
-  border-radius: 5px;
+    fullscreen
+      ? `height: calc(100vh - 70px);
+         border-radius: 0;`
+      : `aspect-ratio: 16/9;
+         border-radius: 5px;`};
   overflow: hidden;
 
   @media (max-width: 600px) {
