@@ -120,7 +120,7 @@ export const MainContent = styled.div`
     margin-bottom: 15px;
   }
 
-  > h2:not(:first-of-type) {
+  > h2:not(:nth-child(2)) {
     border-top: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
     padding-top: 30px;
     margin-top: 60px;
