@@ -60,7 +60,6 @@ const FundingMap = ({
     'source-layer': 'countries_v13c-6uk894',
     paint: {
       'line-color': theme.common.colors.strokeWhite,
-      // 'rgb(65, 101, 131)',
       'line-width': 2,
     },
     beforeId: 'country-label',
