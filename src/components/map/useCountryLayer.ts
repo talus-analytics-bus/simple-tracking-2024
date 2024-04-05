@@ -82,18 +82,13 @@ const useCountryLayer = (mapType: MapType) => {
       source: `countries_v13c-6uk894`,
       'source-layer': 'countries_v13c-6uk894',
       paint: {
-        'fill-outline-color': 'white',
-        // outline color for saving images from the map to use on the homepage
-        // 'fill-outline-color': theme.ampEidDarkBlue,
+        'fill-outline-color': theme.common.colors.surfaceWhite,
         'fill-color': [
           'match',
           ['get', 'ISO_A3'],
           ...countryColorMatch,
           // last color in the array is the "default color"
           theme.recipient.colors.mapUnspecified,
-          //
-          // for making disabled map for homepage
-          // theme.darkGray,
         ] as Expression,
       },
       beforeId: 'countries-outline',
