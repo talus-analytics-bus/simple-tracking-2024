@@ -9,7 +9,7 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
     case value === '':
       return theme.recipient.colors.mapUnspecified
     case value === '0':
-      return theme.recipient.colors.mapNone
+      return theme.recipient.colors.mapUnspecified
     case Number(value) < 2_300_000:
       return theme.recipient.colors.mapViz6
     case Number(value) < 35_000_000:

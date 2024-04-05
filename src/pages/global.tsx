@@ -20,7 +20,7 @@ import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
 import formatHash from 'utilities/formatHash'
-import FundingMap from 'components/map/Map'
+import FundingMap, { MapType } from 'components/map/Map'
 import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
@@ -108,7 +108,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
                 </span>
                 <span>{selectedYearsLabel}</span>
               </h3>
-              <FundingMap />
+              <FundingMap type={MapType.Disbursed} />
             </ContentBox>
             <ContentBox>
               <h3>
@@ -118,7 +118,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
                 </span>
                 <span>{selectedYearsLabel}</span>
               </h3>
-              <FundingMap />
+              <FundingMap type={MapType.Recieved} />
             </ContentBox>
           </HorizontalColumns>
           <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />

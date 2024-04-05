@@ -17,7 +17,7 @@ const GlobalPage = () => {
         description="Overall maps and charts for all data collected by GHS Tracking."
       />
       <NavBar />
-      <FundingMap type={mapType} />
+      <FundingMap type={mapType} interactive />
     </Providers>
   )
 }

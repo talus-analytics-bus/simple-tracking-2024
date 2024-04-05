@@ -27,7 +27,17 @@ const MapContainer = styled.div`
   }
 `
 
-const FundingMap = () => {
+export enum MapType {
+  Recieved,
+  Disbursed,
+}
+
+interface FundingMapProps {
+  interactive?: boolean
+  type: MapType
+}
+
+const FundingMap = ({ interactive }: FundingMapProps) => {
   const theme = useTheme()
 
   const [hoveredISO, setHoveredISO] = React.useState(' ')
@@ -58,6 +68,7 @@ const FundingMap = () => {
         mapboxAccessToken={mapboxAccessToken}
         mapStyle="mapbox://styles/ryan-talus/clddahzv7007j01qbgn0bba8w"
         projection={{ name: 'naturalEarth' }}
+        interactive={interactive}
         initialViewState={{
           longitude: 0,
           latitude: 15,
@@ -71,8 +82,12 @@ const FundingMap = () => {
         }}
         maxZoom={5}
         minZoom={0}
-        onMouseMove={onHover}
-        interactiveLayerIds={[countryLayer.id]}
+        {...(interactive
+          ? {
+              onMouseMove: onHover,
+              interactiveLayerIds: [countryLayer.id],
+            }
+          : {})}
       >
         {/* This source provides country shapes and their ISO codes */}
         <Source

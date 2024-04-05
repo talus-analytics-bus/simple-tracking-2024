@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import useIndexPageData from 'cmsHooks/useIndexPageData'
 import CMS from 'components/library/airtable-cms'
 import Main from 'components/layout/Main'
-import FundingMap from 'components/map/Map'
+import FundingMap, { MapType } from 'components/map/Map'
 
 const Columns = styled.div`
   display: grid;
@@ -60,7 +60,7 @@ const FirstFold = () => {
           </H3>
         </TextContainer>
         <MapContainer>
-          <FundingMap />
+          <FundingMap type={MapType.Disbursed} />
         </MapContainer>
       </Columns>
     </Main>
