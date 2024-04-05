@@ -1,20 +1,11 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import { ContentBox, HorizontalColumns } from './StakeholderLayout'
+import { HalfWidthContentBox, HorizontalColumns } from './StakeholderLayout'
 
 interface JeeScoresProps {
   data: Queries.StakeholderPageQuery
 }
-
-const HalfWidthContentBox = styled(ContentBox)`
-  flex-basis: calc(50% - 15px);
-  background-color: ${({ theme }) => theme.common.colors.surfaceWhite};
-
-  @media (max-width: 1200px) {
-    flex-basis: 100%;
-  }
-`
 
 const Table = styled.table`
   border-collapse: collapse;

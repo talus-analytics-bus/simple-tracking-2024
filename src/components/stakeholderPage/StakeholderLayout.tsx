@@ -170,6 +170,14 @@ export const ContentBox = styled.div`
   }
 `
 
+export const HalfWidthContentBox = styled(ContentBox)`
+  flex-basis: calc(50% - 7.5px);
+
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+  }
+`
+
 export const TotalsTable = styled.table`
   width: 100%;
   border-collapse: collapse;

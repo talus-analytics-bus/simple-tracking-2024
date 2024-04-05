@@ -1,16 +1,7 @@
 import useRiskIndicies from 'queryHooks/useRiskIndicies'
 import React from 'react'
-import { ContentBox, HorizontalColumns } from './StakeholderLayout'
-import styled from 'styled-components'
+import { HalfWidthContentBox, HorizontalColumns } from './StakeholderLayout'
 import RiskIndiciesPlot from 'components/plot/RiskIndiciesPlot/RiskIndiciesPlot'
-
-const HalfWidthContentBox = styled(ContentBox)`
-  flex-basis: calc(50% - 15px);
-
-  @media (max-width: 1200px) {
-    flex-basis: 100%;
-  }
-`
 
 interface RiskIndiciesProps {
   data: Queries.StakeholderPageQuery
