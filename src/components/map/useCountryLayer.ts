@@ -71,13 +71,9 @@ const useCountryLayer = (mapType: MapType) => {
       const received = country.totalDisbursedReceived ?? ''
       const disbursed = country.totalDisbursed ?? ''
 
-      if (mapType === MapType.Recieved) {
-        console.log(`Map type received`)
+      if (mapType === MapType.Recieved)
         countryColorMatch.push(iso, getColor(received, theme))
-      } else {
-        console.log(`Map type disbursed`)
-        countryColorMatch.push(iso, getColorFunder(disbursed, theme))
-      }
+      else countryColorMatch.push(iso, getColorFunder(disbursed, theme))
     }
 
     const countryLayer = {
