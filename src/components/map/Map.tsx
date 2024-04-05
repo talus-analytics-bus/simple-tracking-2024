@@ -14,9 +14,10 @@ if (!mapboxAccessToken)
       'GATSBY_MAPBOX_API_KEY environment variable'
   )
 
-const MapContainer = styled.div`
+const MapContainer = styled.div<{ fullscreen?: boolean }>`
   width: 100%;
-  aspect-ratio: 16/9;
+  ${({ fullscreen }) =>
+    fullscreen ? 'height: calc(100vh - 100px)' : 'aspect-ratio: 16/9'};
   border-radius: 5px;
   overflow: hidden;
 
@@ -33,11 +34,16 @@ export enum MapType {
 }
 
 interface FundingMapProps {
-  interactive?: boolean
   mapType: MapType
+  interactive?: boolean
+  fullscreen?: boolean
 }
 
-const FundingMap = ({ interactive, mapType }: FundingMapProps) => {
+const FundingMap = ({
+  interactive,
+  mapType,
+  fullscreen = false,
+}: FundingMapProps) => {
   const theme = useTheme()
 
   const [hoveredISO, setHoveredISO] = React.useState(' ')
@@ -63,7 +69,7 @@ const FundingMap = ({ interactive, mapType }: FundingMapProps) => {
   }, [])
 
   return (
-    <MapContainer>
+    <MapContainer fullscreen={fullscreen}>
       <Map
         mapboxAccessToken={mapboxAccessToken}
         mapStyle="mapbox://styles/ryan-talus/clddahzv7007j01qbgn0bba8w"

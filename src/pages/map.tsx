@@ -26,7 +26,7 @@ const GlobalPage = () => {
       >
         Toggle map type
       </button>
-      <FundingMap mapType={mapType} interactive />
+      <FundingMap mapType={mapType} interactive fullscreen />
     </Providers>
   )
 }
