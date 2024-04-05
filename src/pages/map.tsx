@@ -16,8 +16,6 @@ const MapControlContainer = styled.div`
   padding: 5px;
   display: flex;
   gap: 5px;
-
-  opacity: 0.9;
 `
 const MapControlButton = styled.button<{ mapType: MapType; selected: boolean }>`
   border: none;
