@@ -146,7 +146,10 @@ const StakeholderPage = ({
             // </h3>
             // <ContentPlaceholder />
           }
-          <ScrollTarget id={formatHash(leftNavElements[1].data.Text)} />
+          <ScrollTarget
+            id={formatHash(leftNavElements[1].data.Text)}
+            style={{ top: '-170px' }}
+          />
           <h2>
             <CMS.Text name={'H3 header'} data={cmsData} />
           </h2>

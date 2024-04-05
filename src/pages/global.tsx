@@ -92,7 +92,10 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
           </YearSelector>
         </TopBar>
         <MainContent>
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H2 left nav'))} />
+          <ScrollTarget
+            id={formatHash(CMS.getText(cmsData, 'H2 left nav'))}
+            style={{ top: '-170px' }}
+          />
           <h2>
             <CMS.Text name={'H2 header'} data={cmsData} />
           </h2>

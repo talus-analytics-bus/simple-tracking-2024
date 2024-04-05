@@ -113,6 +113,7 @@ export const ScrollTarget = styled.div`
 export const MainContent = styled.div`
   grid-area: main;
   padding: 25px;
+  padding-top: 0px;
 
   > h2 {
     ${({ theme }) => theme.textStyleH2};
