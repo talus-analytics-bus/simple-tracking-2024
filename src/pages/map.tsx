@@ -38,6 +38,10 @@ const MapControlButton = styled.button<{ mapType: MapType; selected: boolean }>`
     selected
       ? theme.common.colors.textInvert
       : theme.common.colors.textPrimary};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.common.colors.surfaceGray200};
+  }
 `
 
 const GlobalPage = () => {
