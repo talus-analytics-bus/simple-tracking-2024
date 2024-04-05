@@ -107,7 +107,7 @@ export const SidebarLink = (
 
 export const ScrollTarget = styled.div`
   position: relative;
-  top: -160px;
+  top: -100px;
 `
 
 export const MainContent = styled.div`
