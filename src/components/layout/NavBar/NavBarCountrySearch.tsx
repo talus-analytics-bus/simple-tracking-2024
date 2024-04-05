@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import styled, { useTheme } from 'styled-components'
 import { navigate } from 'gatsby'
 
 import Typeahead from 'components/library/ui/typeahead'
 import useStakeholderSearchItems from 'hooks/useStakeholderSearchItems'
+import useCountries from 'queryHooks/useCountries'
+import simplifyForUrl from 'utilities/simplifyForUrl'
 
 interface CoutnrySearchProps {
   style?: React.CSSProperties
@@ -34,7 +36,19 @@ enum SearchStatus {
 
 const CountrySearch = ({ style }: CoutnrySearchProps) => {
   const theme = useTheme()
-  const searchItems = useStakeholderSearchItems()
+  let countries = useCountries()
+
+  const searchItems = useMemo(
+    () =>
+      countries
+        .map(stakeholder => ({
+          key: stakeholder.name ?? '',
+          label: stakeholder.name ?? '',
+          url: `/country/${simplifyForUrl(stakeholder.name ?? '')}`,
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label)),
+    []
+  )
 
   const [searchStatus, setSearchStatus] = useState(SearchStatus.Initial)
 
@@ -76,7 +90,7 @@ const CountrySearch = ({ style }: CoutnrySearchProps) => {
             : theme.common.colors.textInvert
         }
         items={searchItems}
-        placeholder={`Funders & Recipients`}
+        placeholder={`Countries`}
         onAdd={item => {
           setSearchStatus(SearchStatus.Loading)
           navigate(item.url)
