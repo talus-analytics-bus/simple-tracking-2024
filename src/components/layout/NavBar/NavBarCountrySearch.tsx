@@ -3,7 +3,6 @@ import styled, { useTheme } from 'styled-components'
 import { navigate } from 'gatsby'
 
 import Typeahead from 'components/library/ui/typeahead'
-import useStakeholderSearchItems from 'hooks/useStakeholderSearchItems'
 import useCountries from 'queryHooks/useCountries'
 import simplifyForUrl from 'utilities/simplifyForUrl'
 
