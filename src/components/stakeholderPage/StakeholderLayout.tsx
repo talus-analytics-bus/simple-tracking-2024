@@ -69,6 +69,7 @@ const StyledSidebarLink = styled.a<{ selected: boolean }>`
   border-radius: 5px;
   color: ${({ theme }) => theme.common.colors.textPrimary};
   text-decoration: none;
+  transition: 200ms;
 
   &:hover,
   &:active,
@@ -78,7 +79,8 @@ const StyledSidebarLink = styled.a<{ selected: boolean }>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
+    background-color: ${({ theme }) => theme.common.colors.surfaceGray100};
+    color: ${({ theme }) => theme.common.colors.textPrimary};
   }
 
   ${({ selected, theme }) =>
@@ -86,6 +88,11 @@ const StyledSidebarLink = styled.a<{ selected: boolean }>`
     `
     background-color: ${theme.common.colors.surfaceThemeDarker};
     color: ${theme.common.colors.textInvert};
+
+    &:hover {
+      background-color: ${theme.common.colors.surfaceThemeHazy};
+      color: ${theme.common.colors.textInvert};
+    }
   `};
 `
 
