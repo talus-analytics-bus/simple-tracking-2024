@@ -40,7 +40,12 @@ const MapControlButton = styled.button<{ mapType: MapType; selected: boolean }>`
       : theme.common.colors.textPrimary};
 
   &:hover {
-    background-color: ${({ theme }) => theme.common.colors.surfaceGray200};
+    background-color: ${({ theme, selected, mapType }) =>
+      selected
+        ? mapType === MapType.Disbursed
+          ? theme.funder.colors.mapViz3
+          : theme.recipient.colors.mapViz3
+        : theme.common.colors.surfaceGray200};
   }
 `
 
