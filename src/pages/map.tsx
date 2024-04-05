@@ -6,7 +6,7 @@ import NavBar from 'components/layout/NavBar/NavBar'
 import FundingMap, { MapType } from 'components/map/Map'
 
 const GlobalPage = () => {
-  const [mapType, setMapType] = useState<MapType>(MapType.Recieved)
+  const [mapType, setMapType] = useState<MapType>(MapType.Disbursed)
 
   console.log({ setMapType })
 
@@ -17,7 +17,16 @@ const GlobalPage = () => {
         description="Overall maps and charts for all data collected by GHS Tracking."
       />
       <NavBar />
-      <FundingMap type={mapType} interactive />
+      <button
+        onClick={() =>
+          setMapType(prev =>
+            prev === MapType.Disbursed ? MapType.Recieved : MapType.Disbursed
+          )
+        }
+      >
+        Toggle map type
+      </button>
+      <FundingMap mapType={mapType} interactive />
     </Providers>
   )
 }

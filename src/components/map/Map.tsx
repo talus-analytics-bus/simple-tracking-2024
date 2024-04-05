@@ -34,15 +34,15 @@ export enum MapType {
 
 interface FundingMapProps {
   interactive?: boolean
-  type: MapType
+  mapType: MapType
 }
 
-const FundingMap = ({ interactive }: FundingMapProps) => {
+const FundingMap = ({ interactive, mapType }: FundingMapProps) => {
   const theme = useTheme()
 
   const [hoveredISO, setHoveredISO] = React.useState(' ')
 
-  const countryLayer = useCountryLayer()
+  const countryLayer = useCountryLayer(mapType)
 
   const outlineLayer = {
     id: `countries-outline`,

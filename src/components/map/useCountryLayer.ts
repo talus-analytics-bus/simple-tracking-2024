@@ -3,6 +3,7 @@ import { useTheme } from 'styled-components'
 import { Expression } from 'mapbox-gl'
 
 import useCountriesReceivedAndDisbursed from 'queryHooks/useCountriesRecievedAndDisbursed'
+import { MapType } from './Map'
 
 const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
   switch (true) {
@@ -25,28 +26,28 @@ const getColor = (value: string, theme: ReturnType<typeof useTheme>) => {
   }
 }
 
-// const getColorFunder = (value: string, theme: ReturnType<typeof useTheme>) => {
-//   switch (true) {
-//     case value === "":
-//       return theme.funder.colors.mapUnspecified
-//     case value === "0":
-//       return theme.funder.colors.mapNone
-//     case Number(value) < 570_000:
-//       return theme.funder.colors.mapViz5
-//     case Number(value) < 2_300_000:
-//       return theme.funder.colors.mapViz4
-//     case Number(value) < 19_000_000:
-//       return theme.funder.colors.mapViz3
-//     case Number(value) < 490_000_000:
-//       return theme.funder.colors.mapViz3
-//     case Number(value) < 1_700_000_000:
-//       return theme.funder.colors.mapViz1
-//     default:
-//       return theme.funder.colors.mapViz1
-//   }
-// }
+const getColorFunder = (value: string, theme: ReturnType<typeof useTheme>) => {
+  switch (true) {
+    case value === '':
+      return theme.funder.colors.mapUnspecified
+    case value === '0':
+      return theme.funder.colors.mapUnspecified
+    case Number(value) < 570_000:
+      return theme.funder.colors.mapViz5
+    case Number(value) < 2_300_000:
+      return theme.funder.colors.mapViz4
+    case Number(value) < 19_000_000:
+      return theme.funder.colors.mapViz3
+    case Number(value) < 490_000_000:
+      return theme.funder.colors.mapViz3
+    case Number(value) < 1_700_000_000:
+      return theme.funder.colors.mapViz1
+    default:
+      return theme.funder.colors.mapViz1
+  }
+}
 
-const useCountryLayer = () => {
+const useCountryLayer = (mapType: MapType) => {
   const theme = useTheme()
 
   const countriesReceivedAndDisbursed = useCountriesReceivedAndDisbursed()
@@ -66,13 +67,17 @@ const useCountryLayer = () => {
     // to populate the mapbox fill-color match statement format
     const countryColorMatch: string[] = []
     for (const country of countriesReceivedAndDisbursed) {
-      const iso = country.iso3
-      const received = country.totalDisbursedReceived
+      const iso = country.iso3 ?? ''
+      const received = country.totalDisbursedReceived ?? ''
+      const disbursed = country.totalDisbursed ?? ''
 
-      if (received && iso)
+      if (mapType === MapType.Recieved) {
+        console.log(`Map type received`)
         countryColorMatch.push(iso, getColor(received, theme))
-      // else
-      //   console.log(`Country status not found for ${JSON.stringify(country)}`)
+      } else {
+        console.log(`Map type disbursed`)
+        countryColorMatch.push(iso, getColorFunder(disbursed, theme))
+      }
     }
 
     const countryLayer = {
@@ -101,7 +106,7 @@ const useCountryLayer = () => {
     console.log(countryLayer)
 
     return countryLayer
-  }, [countriesReceivedAndDisbursed, theme])
+  }, [mapType, countriesReceivedAndDisbursed, theme])
 
   return countryLayer
 }
