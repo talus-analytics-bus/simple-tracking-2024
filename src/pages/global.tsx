@@ -118,7 +118,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
                 </span>
                 <span>{selectedYearsLabel}</span>
               </h3>
-              <FundingMap mapType={MapType.Recieved} />
+              <FundingMap mapType={MapType.Received} />
             </ContentBox>
           </HorizontalColumns>
           <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />

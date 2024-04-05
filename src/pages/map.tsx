@@ -60,9 +60,9 @@ const GlobalPage = () => {
           Funder
         </MapControlButton>
         <MapControlButton
-          mapType={MapType.Recieved}
-          selected={mapType === MapType.Recieved}
-          onClick={() => setMapType(MapType.Recieved)}
+          mapType={MapType.Received}
+          selected={mapType === MapType.Received}
+          onClick={() => setMapType(MapType.Received)}
         >
           Recipient
         </MapControlButton>

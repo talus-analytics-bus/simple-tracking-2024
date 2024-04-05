@@ -32,7 +32,7 @@ const MapContainer = styled.div<{ fullscreen?: boolean }>`
 `
 
 export enum MapType {
-  Recieved,
+  Received,
   Disbursed,
 }
 

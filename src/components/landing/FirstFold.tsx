@@ -60,7 +60,7 @@ const FirstFold = () => {
           </H3>
         </TextContainer>
         <MapContainer>
-          <FundingMap mapType={MapType.Recieved} />
+          <FundingMap mapType={MapType.Received} />
         </MapContainer>
       </Columns>
     </Main>
