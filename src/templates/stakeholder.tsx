@@ -16,6 +16,7 @@ import {
   ScrollTarget,
   Sidebar,
   SidebarLink,
+  SourceText,
   TopBar,
   YearSelector,
 } from 'components/stakeholderPage/StakeholderLayout'
@@ -231,6 +232,9 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
+              <SourceText>
+                <CMS.RichText name={'H7 source'} data={cmsData} />
+              </SourceText>
               <SparScores data={data} />
 
               <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
@@ -248,6 +252,9 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
+              <SourceText>
+                <CMS.RichText name={'H8 source'} data={cmsData} />
+              </SourceText>
               <JeeScores data={data} />
 
               <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
@@ -287,6 +294,9 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
+              <SourceText>
+                <CMS.RichText name={'H11 source'} data={cmsData} />
+              </SourceText>
               <PvsPathway data={data} />
             </>
           )}

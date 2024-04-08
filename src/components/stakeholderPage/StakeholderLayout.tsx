@@ -298,10 +298,28 @@ export const DocumentTable = styled.table`
     }
   }
 `
+
 export const DocumentLink = styled.a`
   display: flex;
   align-items: flex-start;
   gap: 5px;
 
   color: ${({ theme }) => theme.common.colors.textLink};
+`
+
+export const SourceText = styled.p`
+  ${({ theme }) => theme.textStyleSmallParagraph};
+  margin: 0;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: ${({ theme }) => theme.common.colors.textSecondary};
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.common.colors.textLink};
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
