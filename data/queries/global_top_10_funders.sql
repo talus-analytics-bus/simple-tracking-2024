@@ -45,8 +45,8 @@ recipients_to_funders AS (
 ranked_recipients AS (
     SELECT
         funder,
-        year,
         iso3,
+        year,
         total,
         ROW_NUMBER()
             OVER (
