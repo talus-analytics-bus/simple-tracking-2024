@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { useDim } from 'components/library/dim-plot/dim-plot-parent'
-import { textHOffset } from './Bar'
+import { textHOffset } from './Bars'
 
 const AxisPath = styled.path`
   stroke: ${({ theme }) => theme.common.colors.surfaceGray400};

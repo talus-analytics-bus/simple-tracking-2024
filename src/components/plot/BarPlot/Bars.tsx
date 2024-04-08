@@ -24,8 +24,15 @@ const BarQuanitityLabel = styled.text`
 
 export const textHOffset = 20
 
+export interface BarPlotBars {
+  [key: string]: {
+    value: number
+    label: React.ReactNode
+  }
+}
+
 interface BarProps {
-  bars: { [key: string]: number }
+  bars: BarPlotBars
   color: string
   narrowLayout: boolean
 }
@@ -36,9 +43,9 @@ const Bars = ({ bars, color, narrowLayout }: BarProps) => {
   const textVOffset = dim.reference.barHeight / 2 + 4
 
   return Object.entries(bars)
-    .sort((a, b) => b[1] - a[1])
+    .sort((a, b) => b[1].value - a[1].value)
     .slice(0, 10)
-    .map(([label, value], index) => {
+    .map(([key, { label, value }], index) => {
       const topLeft = {
         x: dim.axes.x.scale(0),
         y:
@@ -54,7 +61,7 @@ const Bars = ({ bars, color, narrowLayout }: BarProps) => {
       const barEnd = Math.max(dim.axes.x.scale(value), dim.axes.x.scale(0) + 1)
 
       return (
-        <React.Fragment key={label}>
+        <React.Fragment key={key}>
           <YLabel
             narrowLayout={narrowLayout}
             x={topLeft.x + (narrowLayout ? textHOffset : -textHOffset)}

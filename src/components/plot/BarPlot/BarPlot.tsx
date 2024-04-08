@@ -7,7 +7,7 @@ import DimPlotParent, {
 
 import XAxis from './XAxis'
 import YAxis from './YAxis'
-import Bars from './Bar'
+import Bars, { BarPlotBars } from './Bars'
 
 const PlotContainer = styled.div`
   display: flex;
@@ -17,12 +17,11 @@ const PlotContainer = styled.div`
 `
 
 interface BarPlotProps {
-  bars: { [key: string]: number }
+  bars: BarPlotBars
   max: number
   barColor: string
   xLabel: string
   yLabel: string
-  linkLabels?: boolean
 }
 
 const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
