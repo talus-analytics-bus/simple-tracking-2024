@@ -1,5 +1,4 @@
 const simplifyForUrl = (string: string) =>
-  string.replace(/[\/ ]/g, '-').replace(/[,.]/g, '').toLowerCase()
+  string.trim().replace(/[\/ ]/g, '-').replace(/[,.]/g, '').toLowerCase()
 
 export default simplifyForUrl
-
