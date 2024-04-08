@@ -95,7 +95,14 @@ const TypeaheadResult = ({ item: { label } }: RenderItemProps) => (
 const PurpleBar = () => {
   const theme = useTheme()
   const data = useIndexPageData()
+
   const searchItems = useStakeholderSearchItems()
+  const stakeholderSearchItems = searchItems.filter(
+    item => !item.url.startsWith('/pheic/')
+  )
+  const pheicSearchItems = searchItems.filter(item =>
+    item.url.startsWith('/pheic/')
+  )
 
   const iconColor = theme.common.colors.textInvert.replace('#', '')
 
@@ -110,7 +117,7 @@ const PurpleBar = () => {
           <H3>
             <CMS.Text name={`Highlight paragraph 1`} data={data} />
           </H3>
-          <ButtonLink to="/global">
+          <ButtonLink to="/map/">
             <CMS.Text name="Highlight button 1" data={data} />
           </ButtonLink>
           <PurpleBarIcon name={`Purple bar icon 2`} style={{ height: 35 }} />
@@ -129,7 +136,7 @@ const PurpleBar = () => {
               <TypeaheadResult {...{ item, selected }} />
             )}
             fontColor={theme.common.colors.textInvert}
-            items={searchItems}
+            items={stakeholderSearchItems}
             placeholder={`Funders & Recipients`}
             onAdd={item => {
               navigate(item.url)
@@ -152,7 +159,7 @@ const PurpleBar = () => {
             )}
             borderColor={theme.common.colors.surfaceThemeDarker}
             fontColor={theme.common.colors.textInvert}
-            items={searchItems}
+            items={pheicSearchItems}
             placeholder={`Funders & Recipients`}
             onAdd={item => {
               navigate(item.url)
