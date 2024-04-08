@@ -174,7 +174,7 @@ const TopFundersAndRecipients = ({
           <span>Top 10 funders</span>
           <span>{selectedYearsLabel}</span>
         </h3>
-        {displayTotals.recipients.length !== 0 ? (
+        {displayTotals.funders.length !== 0 ? (
           <Table>
             <tbody>
               {displayTotals.funders.map((funder, i) => (
