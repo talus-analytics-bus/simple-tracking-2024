@@ -183,7 +183,11 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
       <Layout>
         <Sidebar>
           <StakeholderSearch style={{ width: '100%', marginBottom: 20 }} />
-          <SidebarLink href="#pheic-overview">PHEIC Overview</SidebarLink>
+          <SidebarLink
+            href={`#${formatHash(CMS.getText(cmsData, 'PHEIC overview'))}`}
+          >
+            <CMS.Text name="PHEIC overview" data={cmsData} />
+          </SidebarLink>
           <SidebarLink
             href={`#${formatHash(CMS.getText(cmsData, 'H2 left nav'))}`}
           >
