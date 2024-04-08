@@ -141,8 +141,6 @@ const TopFundersAndRecipients = ({
       }))
   }
 
-  console.log(displayTotals)
-
   return (
     <HorizontalColumns>
       <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
