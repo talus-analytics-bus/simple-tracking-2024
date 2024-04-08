@@ -78,12 +78,12 @@ const TopFundersAndRecipients = ({
         if (!acc[recipient.name ?? ''])
           acc[recipient.name ?? ''] = {
             value: Number(recipient.total),
-            slug: recipient.slug,
+            slug: recipient.slug ?? '',
           }
         else
           acc[recipient.name ?? ''] = {
             value: Number(recipient.total) + acc[recipient.name ?? ''].value,
-            slug: recipient.slug,
+            slug: recipient.slug ?? '',
           }
         return acc
       },
@@ -95,12 +95,12 @@ const TopFundersAndRecipients = ({
         if (!acc[recipient.name ?? ''])
           acc[recipient.name ?? ''] = {
             value: Number(recipient.total),
-            slug: recipient.slug,
+            slug: recipient.slug ?? '',
           }
         else
           acc[recipient.name ?? ''] = {
             value: Number(recipient.total) + acc[recipient.name ?? ''].value,
-            slug: recipient.slug,
+            slug: recipient.slug ?? '',
           }
         return acc
       },

@@ -372,6 +372,7 @@ export const query = graphql`
     ) {
       nodes {
         name
+        slug
         total
       }
     }
@@ -380,6 +381,7 @@ export const query = graphql`
     ) {
       nodes {
         name
+        slug
         total
       }
     }

@@ -53,7 +53,7 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
     top: 70,
     right: 50,
     bottom: 5,
-    left: narrowLayout ? 5 : 430,
+    left: narrowLayout ? 5 : 460,
   }
 
   const plotSetup = usePlotSetup({
