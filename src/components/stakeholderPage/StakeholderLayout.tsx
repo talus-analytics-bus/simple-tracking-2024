@@ -138,6 +138,11 @@ export const MainContent = styled.div`
     margin-top: 15px;
     margin-bottom: 30px;
   }
+
+  a {
+    color: ${({ theme }) => theme.common.colors.textLink};
+    color: red;
+  }
 `
 
 export const ContentBox = styled.div`

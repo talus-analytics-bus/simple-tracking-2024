@@ -10,6 +10,10 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   ${({ theme }) => theme.textStyleParagraph}
   margin-bottom: 40px;
+
+  a {
+    color: ${({ theme }) => theme.common.colors.textLink};
+  }
 `
 
 const PublicationsGrid = styled.div`
@@ -21,6 +25,10 @@ const PublicationsGrid = styled.div`
   grid-auto-flow: column;
 
   ${({ theme }) => theme.textStyleParagraph}
+
+  a {
+    color: ${({ theme }) => theme.common.colors.textLink};
+  }
 
   @media (max-width: 1000px) {
     display: flex;
@@ -43,7 +51,7 @@ const PublicationsCiting = () => {
         <CMS.Text name="Publications header" data={data} />
       </H2>
       <H3>
-        <CMS.Text name="Publications paragraph" data={data} />
+        <CMS.RichText name="Publications paragraph" data={data} />
       </H3>
       <PublicationsGrid>
         {publications.map(publication => (
