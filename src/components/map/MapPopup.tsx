@@ -1,16 +1,17 @@
 import React, { Dispatch, SetStateAction } from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
+
+import CMS from 'components/library/airtable-cms'
 
 import { LngLat } from 'mapbox-gl'
 import { Popup } from 'react-map-gl'
 
 import useCountriesReceivedAndDisbursed from 'queryHooks/useCountriesRecievedAndDisbursed'
+import useCountryNamesAndFlags from 'queryHooks/useCountryNamesAndFlags'
 
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
-import CMS from 'components/library/airtable-cms'
-import useCountryNamesAndFlags from 'queryHooks/useCountryNamesAndFlags'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
 import simplifyForUrl from 'utilities/simplifyForUrl'
 
 const PopupContainer = styled.div`
