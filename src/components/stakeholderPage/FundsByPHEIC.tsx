@@ -4,15 +4,26 @@ import CMS from 'components/library/airtable-cms'
 
 import { ChartColumn, ContentBox, NoData } from './StakeholderLayout'
 import BarPlot from 'components/plot/BarPlot/BarPlot'
-import { useTheme } from 'styled-components'
+import styled, { useTheme } from 'styled-components'
+import { BarPlotBars } from 'components/plot/BarPlot/Bars'
+import { Link } from 'gatsby'
+import simplifyForUrl from 'utilities/simplifyForUrl'
 
 const isDisbursed = (
   pheic: any
 ): pheic is Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0] =>
   'disbursed' in pheic
 
+const BarLabelLink = styled(Link)`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const restructurePheics = (
-  acc: { [key: string]: number },
+  acc: BarPlotBars,
   pheic:
     | Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0]
     | Queries.StakeholderPageQuery['pheic_received']['pheics'][0]
@@ -21,8 +32,24 @@ const restructurePheics = (
   let value = 0
   if (isDisbursed(pheic)) value = Number(pheic.disbursed ?? 0)
   else value = Number(pheic.received ?? 0)
-  if (!acc[pheicName]) acc[pheicName] = value
-  else acc[pheicName] += value
+  if (!acc[pheicName])
+    acc[pheicName] = {
+      label: (
+        <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
+          {pheicName}
+        </BarLabelLink>
+      ),
+      value,
+    }
+  else
+    acc[pheicName] = {
+      label: (
+        <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
+          {pheicName}
+        </BarLabelLink>
+      ),
+      value: value + acc[pheicName].value,
+    }
   return acc
 }
 
@@ -49,8 +76,8 @@ const FundsByPHEIC = ({
   const theme = useTheme()
 
   let displayTotals = {
-    received: {} as { [key: string]: number },
-    disbursed: {} as { [key: string]: number },
+    received: {} as BarPlotBars,
+    disbursed: {} as BarPlotBars,
   }
 
   if (selectedYear === 'All time') {
@@ -72,8 +99,8 @@ const FundsByPHEIC = ({
   }
 
   const chartMax = Math.max(
-    ...Object.values(displayTotals.received),
-    ...Object.values(displayTotals.disbursed)
+    ...Object.values(displayTotals.received).map(bar => bar.value),
+    ...Object.values(displayTotals.disbursed).map(bar => bar.value)
   )
 
   return (
