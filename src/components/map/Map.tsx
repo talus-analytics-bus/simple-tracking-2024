@@ -8,8 +8,12 @@ import Map, {
   Source,
 } from 'react-map-gl'
 
+import MapPopup, { PopupState } from './MapPopup'
+
 import 'mapbox-gl/dist/mapbox-gl.css'
+
 import useCountryLayer from './useCountryLayer'
+import useCountriesReceivedAndDisbursed from 'queryHooks/useCountriesRecievedAndDisbursed'
 
 const mapboxAccessToken = process.env.GATSBY_MAPBOX_API_KEY
 
@@ -55,7 +59,9 @@ const FundingMap = ({
   const theme = useTheme()
 
   const [hoveredISO, setHoveredISO] = React.useState(' ')
+  const [popupState, setPopupState] = React.useState<PopupState | null>(null)
 
+  const countriesRecievedAndDisbursed = useCountriesReceivedAndDisbursed()
   const countryLayer = useCountryLayer(mapType)
 
   const outlineLayer = {
@@ -71,9 +77,44 @@ const FundingMap = ({
   }
 
   const onHover = useCallback((event: MapLayerMouseEvent) => {
-    console.log(event.features?.[0]?.properties?.ISO_A3 ?? ' ')
     setHoveredISO(event.features?.[0]?.properties?.ISO_A3 ?? ' ')
   }, [])
+
+  const onClick = useCallback(
+    (event: MapLayerMouseEvent) => {
+      const iso3 = event.features?.[0]?.properties?.ISO_A3
+
+      if (
+        !iso3 ||
+        !event.lngLat ||
+        !countriesRecievedAndDisbursed.some(c => c.iso3 === iso3)
+      ) {
+        setPopupState(null)
+        return
+      }
+
+      // if (window.innerWidth <= 900) {
+      //   setPopupState(null)
+      //   setModal(
+      //     <MapPopup
+      //       popupState={{ iso, lnglat: event.lngLat }}
+      //       {...{ setPopupState }}
+      //     />,
+      //     { closeable: true }
+      //   )
+      //   return
+      // }
+
+      setPopupState({
+        iso3,
+        lnglat: event.lngLat,
+        setPopupState,
+      })
+    },
+    [countriesRecievedAndDisbursed]
+  )
+
+  console.log({ popupState })
 
   return (
     <MapContainer fullscreen={fullscreen}>
@@ -99,6 +140,7 @@ const FundingMap = ({
           ? {
               onMouseMove: onHover,
               interactiveLayerIds: [countryLayer.id],
+              onClick: onClick,
             }
           : {})}
       >
@@ -119,6 +161,7 @@ const FundingMap = ({
         {interactive && (
           <NavigationControl position="top-left" showCompass={false} />
         )}
+        {popupState && <MapPopup popupState={popupState} />}
       </Map>
     </MapContainer>
   )
