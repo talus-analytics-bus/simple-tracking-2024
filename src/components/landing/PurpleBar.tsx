@@ -137,7 +137,7 @@ const PurpleBar = () => {
             )}
             fontColor={theme.common.colors.textInvert}
             items={stakeholderSearchItems}
-            placeholder={`Funders & Recipients`}
+            placeholder={`Search by stakeholder`}
             onAdd={item => {
               navigate(item.url)
             }}
@@ -160,7 +160,7 @@ const PurpleBar = () => {
             borderColor={theme.common.colors.surfaceThemeDarker}
             fontColor={theme.common.colors.textInvert}
             items={pheicSearchItems}
-            placeholder={`Funders & Recipients`}
+            placeholder={`Search by pheic`}
             onAdd={item => {
               navigate(item.url)
             }}
