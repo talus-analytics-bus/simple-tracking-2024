@@ -1,7 +1,12 @@
 import React, { useCallback } from 'react'
 import styled, { useTheme } from 'styled-components'
 
-import Map, { Layer, MapLayerMouseEvent, Source } from 'react-map-gl'
+import Map, {
+  Layer,
+  MapLayerMouseEvent,
+  NavigationControl,
+  Source,
+} from 'react-map-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
 import useCountryLayer from './useCountryLayer'
@@ -111,6 +116,9 @@ const FundingMap = ({
           />
           <Layer key={countryLayer.id} {...countryLayer} />
         </Source>
+        {interactive && (
+          <NavigationControl position="top-left" showCompass={false} />
+        )}
       </Map>
     </MapContainer>
   )
