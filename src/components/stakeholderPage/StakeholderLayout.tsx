@@ -141,7 +141,6 @@ export const MainContent = styled.div`
 
   a {
     color: ${({ theme }) => theme.common.colors.textLink};
-    color: red;
   }
 `
 
@@ -201,7 +200,7 @@ export const TotalsTable = styled.table`
     padding: 15px 20px 15px 0;
     text-align: right;
     width: 40%;
-    ${({ theme }) => theme.textStyleBigNumber};
+    ${({ theme }) => theme.textStyleBigNumberSemibold};
 
     @media (max-width: 900px) {
       ${({ theme }) => theme.textStyleMedNumber};
