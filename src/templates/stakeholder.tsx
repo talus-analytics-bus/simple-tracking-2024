@@ -389,6 +389,7 @@ export const query = graphql`
       funders: nodes {
         year
         name: funder
+        slug
         total
       }
     }
@@ -398,6 +399,7 @@ export const query = graphql`
       recipients: nodes {
         year
         name: recipient
+        slug
         total
       }
     }

@@ -3,6 +3,8 @@ import React from 'react'
 import { ContentBox, HorizontalColumns, NoData } from './StakeholderLayout'
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import styled, { useTheme } from 'styled-components'
+import { Link } from 'gatsby'
+import simplifyForUrl from 'utilities/simplifyForUrl'
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -19,6 +21,15 @@ const Table = styled.table`
   td {
     padding: 10px 15px;
     text-align: left;
+
+    a {
+      color: ${({ theme }) => theme.common.colors.textLink};
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   td:nth-child(2) {
     text-align: right;
@@ -42,21 +53,38 @@ const TopFundersAndRecipients = ({
   const theme = useTheme()
 
   let displayTotals = {
-    recipients: [] as { name: string; total: number }[],
-    funders: [] as { name: string; total: number }[],
+    recipients: [] as { name: string; total: number; slug: string }[],
+    funders: [] as { name: string; total: number; slug: string }[],
   }
 
   if (selectedYear === 'All time') {
     const totalsByFunder = {
-      recipients: {} as { [key: string]: number },
-      funders: {} as { [key: string]: number },
+      recipients: {} as {
+        [key: string]: {
+          value: number
+          slug: string
+        }
+      },
+      funders: {} as {
+        [key: string]: {
+          value: number
+          slug: string
+        }
+      },
     }
 
     totalsByFunder.recipients = data.top10RecipientsByYear.recipients.reduce(
       (acc, recipient) => {
         if (!acc[recipient.name ?? ''])
-          acc[recipient.name ?? ''] = Number(recipient.total)
-        else acc[recipient.name ?? ''] += Number(recipient.total)
+          acc[recipient.name ?? ''] = {
+            value: Number(recipient.total),
+            slug: recipient.slug,
+          }
+        else
+          acc[recipient.name ?? ''] = {
+            value: Number(recipient.total) + acc[recipient.name ?? ''].value,
+            slug: recipient.slug,
+          }
         return acc
       },
       {} as typeof totalsByFunder.recipients
@@ -65,26 +93,35 @@ const TopFundersAndRecipients = ({
     totalsByFunder.funders = data.top10FundersByYear.funders.reduce(
       (acc, recipient) => {
         if (!acc[recipient.name ?? ''])
-          acc[recipient.name ?? ''] = Number(recipient.total)
-        else acc[recipient.name ?? ''] += Number(recipient.total)
+          acc[recipient.name ?? ''] = {
+            value: Number(recipient.total),
+            slug: recipient.slug,
+          }
+        else
+          acc[recipient.name ?? ''] = {
+            value: Number(recipient.total) + acc[recipient.name ?? ''].value,
+            slug: recipient.slug,
+          }
         return acc
       },
       {} as typeof totalsByFunder.funders
     )
 
     displayTotals.funders = Object.entries(totalsByFunder.funders)
-      .sort((a, b) => b[1] - a[1])
-      .map(([name, total]) => ({
+      .sort((a, b) => b[1].value - a[1].value)
+      .map(([name, { value, slug }]) => ({
         name,
-        total,
+        total: value,
+        slug,
       }))
       .slice(0, 10)
 
     displayTotals.recipients = Object.entries(totalsByFunder.recipients)
-      .sort((a, b) => b[1] - a[1])
-      .map(([name, total]) => ({
+      .sort((a, b) => b[1].value - a[1].value)
+      .map(([name, { value, slug }]) => ({
         name,
-        total,
+        total: value,
+        slug,
       }))
       .slice(0, 10)
   } else {
@@ -93,14 +130,18 @@ const TopFundersAndRecipients = ({
       .map(funder => ({
         name: funder.name ?? '',
         total: Number(funder.total) ?? 0,
+        slug: funder.slug ?? '',
       }))
     displayTotals.recipients = data.top10RecipientsByYear.recipients
       .filter(funder => funder.year === selectedYear)
       .map(funder => ({
         name: funder.name ?? '',
         total: Number(funder.total) ?? 0,
+        slug: funder.slug ?? '',
       }))
   }
+
+  console.log(displayTotals)
 
   return (
     <HorizontalColumns>
@@ -114,7 +155,11 @@ const TopFundersAndRecipients = ({
             <tbody>
               {displayTotals.recipients.map((funder, i) => (
                 <tr key={i}>
-                  <td>{funder.name}</td>
+                  <td>
+                    <Link to={`/${funder.slug}/${simplifyForUrl(funder.name)}`}>
+                      {funder.name}
+                    </Link>
+                  </td>
                   <td>{formatDisplayNumber(funder.total)}</td>
                 </tr>
               ))}
@@ -134,7 +179,11 @@ const TopFundersAndRecipients = ({
             <tbody>
               {displayTotals.funders.map((funder, i) => (
                 <tr key={i}>
-                  <td>{funder.name}</td>
+                  <td>
+                    <Link to={`/${funder.slug}/${simplifyForUrl(funder.name)}`}>
+                      {funder.name}
+                    </Link>
+                  </td>
                   <td>{formatDisplayNumber(funder.total)}</td>
                 </tr>
               ))}
