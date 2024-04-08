@@ -45,6 +45,7 @@ const DescriptionSection = styled.div`
   display: flex;
   align-items: start;
   gap: 15px;
+  margin-top: 40px;
 
   @media (max-width: 1200px) {
     flex-direction: column;
