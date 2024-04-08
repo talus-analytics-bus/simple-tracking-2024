@@ -33,6 +33,7 @@ import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
 import formatHash from 'utilities/formatHash'
 
 const H1 = styled.h1`
+  ${({ theme }) => theme.textStyleH1};
   display: flex;
   align-items: center;
   gap: 20px;
