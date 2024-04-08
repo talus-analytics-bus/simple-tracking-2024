@@ -26,6 +26,11 @@ import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
+import styled from 'styled-components'
+
+const H1 = styled.h1`
+  ${({ theme }) => theme.textStyleH1};
+`
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
@@ -79,7 +84,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
           </SidebarLink>
         </Sidebar>
         <TopBar>
-          <h1>Global</h1>
+          <H1>Global</H1>
           <YearSelector
             value={selectedYear}
             onChange={e => setSelectedYear(e.target.value)}
