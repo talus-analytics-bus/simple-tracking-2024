@@ -7,6 +7,7 @@ import { ChartColumn, ContentBox, NoData } from '../StakeholderLayout'
 import BarPlot from 'components/plot/BarPlot/BarPlot'
 
 import jeeCategoryNames from 'utilities/jeeCategoryNames'
+import { BarPlotBars } from 'components/plot/BarPlot/Bars'
 
 interface FundsByCategoryProps {
   data: {
@@ -30,8 +31,8 @@ const FundsByCategory = ({
   const theme = useTheme()
 
   let displayTotals = {
-    received: {} as { [key: string]: number },
-    disbursed: {} as { [key: string]: number },
+    received: {} as BarPlotBars,
+    disbursed: {} as BarPlotBars,
   }
 
   let chartMax = 0
@@ -45,9 +46,16 @@ const FundsByCategory = ({
             ? 'disbursed'
             : 'received'
           if (!acc[direction][prettyKey])
-            acc[direction][prettyKey] = Number(val)
-          else acc[direction][prettyKey] += Number(val)
-          chartMax = Math.max(chartMax, acc[direction][prettyKey])
+            acc[direction][prettyKey] = {
+              label: prettyKey,
+              value: Number(val),
+            }
+          else
+            acc[direction][prettyKey] = {
+              label: prettyKey,
+              value: Number(val) + acc[direction][prettyKey].value,
+            }
+          chartMax = Math.max(chartMax, acc[direction][prettyKey].value)
         }
       })
       return acc
@@ -61,8 +69,11 @@ const FundsByCategory = ({
       if (key !== 'year' && val) {
         const direction = key.includes('_disbursed') ? 'disbursed' : 'received'
         const prettyKey = jeeCategoryNames[key]
-        displayTotals[direction][prettyKey] = Number(val)
-        chartMax = Math.max(chartMax, displayTotals[direction][prettyKey])
+        displayTotals[direction][prettyKey] = {
+          label: prettyKey,
+          value: Number(val),
+        }
+        chartMax = Math.max(chartMax, displayTotals[direction][prettyKey].value)
       }
     })
 

@@ -8,6 +8,7 @@ import {
 } from 'components/stakeholderPage/StakeholderLayout'
 import BarPlot from 'components/plot/BarPlot/BarPlot'
 import { useTheme } from 'styled-components'
+import { BarPlotBars } from 'components/plot/BarPlot/Bars'
 
 interface TopFundersAndRecipientsProps {
   startYear: string | undefined
@@ -22,16 +23,22 @@ const TopFundersAndRecipients = ({
 }: TopFundersAndRecipientsProps) => {
   const theme = useTheme()
 
-  const topFundersBars = {} as { [key: string]: number }
+  const topFundersBars = {} as BarPlotBars
   let chartMax = 0
   for (const funder of data.top10Funders.nodes) {
-    topFundersBars[funder.name ?? ''] = Number(funder.total)
+    topFundersBars[funder.name ?? ''] = {
+      label: funder.name,
+      value: Number(funder.total),
+    }
     chartMax = Math.max(Number(funder.total), chartMax)
   }
 
-  const topRecipientsBars = {} as { [key: string]: number }
+  const topRecipientsBars = {} as BarPlotBars
   for (const funder of data.top10Recipients.nodes) {
-    topRecipientsBars[funder.name ?? ''] = Number(funder.total)
+    topRecipientsBars[funder.name ?? ''] = {
+      label: funder.name,
+      value: Number(funder.total),
+    }
     chartMax = Math.max(Number(funder.total), chartMax)
   }
 
