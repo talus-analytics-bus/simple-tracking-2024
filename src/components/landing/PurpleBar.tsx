@@ -160,7 +160,7 @@ const PurpleBar = () => {
             borderColor={theme.common.colors.surfaceThemeDarker}
             fontColor={theme.common.colors.textInvert}
             items={pheicSearchItems}
-            placeholder={`Search by pheic`}
+            placeholder={`Search by PHEIC`}
             onAdd={item => {
               navigate(item.url)
             }}

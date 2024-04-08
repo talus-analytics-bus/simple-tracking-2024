@@ -115,7 +115,7 @@ const NavBar = () => {
           <NavBarCountrySearch style={{ minWidth: 250, margin: '0' }} />
         </DesktopNavList>
         <MobileMenu>
-          <MobileMenuDropdown title="PHEICS">
+          <MobileMenuDropdown title="PHEICs">
             <LinksList $darkMode links={pheicsLinks} />
           </MobileMenuDropdown>
           <MobileMenuDropdown title="About">
