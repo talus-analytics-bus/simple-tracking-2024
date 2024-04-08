@@ -281,6 +281,9 @@ const StakeholderPage = ({
                   replace={stakeholderNameReplacement}
                 />
               </h3>
+              <SourceText>
+                <CMS.RichText name={'H10 source'} data={cmsData} />
+              </SourceText>
               <Naphs data={data} />
 
               <ScrollTarget id={formatHash(leftNavElements[9].data.Text)} />
