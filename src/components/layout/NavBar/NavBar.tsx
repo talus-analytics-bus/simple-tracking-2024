@@ -10,8 +10,6 @@ import NavbarDropdown from './NavbarDropdown'
 import MobileMenuDropdown from './MobileMenu/MobileMenuDropdown'
 import NavBarCountrySearch from './NavBarCountrySearch'
 
-// import useTopics from 'queryHooks/useTopics'
-// import simplifyForUrl from 'utilities/simplifyForUrl'
 import useIndexPageData from 'cmsHooks/useIndexPageData'
 import usePheicNames from 'queryHooks/usePheicNames'
 import simplifyForUrl from 'utilities/simplifyForUrl'
@@ -33,11 +31,12 @@ const Container = styled.div`
   padding: 8px;
 `
 const NavLink = styled(Link)`
-  color: white !important;
+  color: ${({ theme }) => theme.common.colors.textInvert};
   padding: 14px;
   text-decoration: none;
   transition: 500ms ease;
   font-weight: 400;
+
   &:hover {
     color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
   }
