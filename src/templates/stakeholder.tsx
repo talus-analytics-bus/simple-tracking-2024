@@ -71,7 +71,7 @@ const StakeholderPage = ({
 
   const selectedYearsLabel =
     selectedYear === 'All time'
-      ? `${yearOptions.at(-1)} – ${yearOptions.at(1)}`
+      ? `${yearOptions.at(-1)}–${yearOptions.at(1)}`
       : selectedYear
 
   let leftNavElements = cmsData.nodes
