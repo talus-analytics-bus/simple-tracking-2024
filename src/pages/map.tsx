@@ -50,7 +50,7 @@ const MapControlButton = styled.button<{ mapType: MapType; selected: boolean }>`
 `
 
 const GlobalPage = () => {
-  const [mapType, setMapType] = useState<MapType>(MapType.Disbursed)
+  const [mapType, setMapType] = useState(MapType.Received)
 
   return (
     <Providers>
