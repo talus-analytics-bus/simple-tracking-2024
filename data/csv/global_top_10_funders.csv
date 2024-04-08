@@ -1,91 +1,91 @@
-year,rank,funder,total
-2022,1,Global Alliance for Vaccines and Immunisation (GAVI),3166695023
-2022,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1788756787
-2022,3,World Bank,1607897518
-2022,4,United States of America,1283340951
-2022,5,Germany,1143698771
-2022,6,World Health Organization (WHO),446974719
-2022,7,International Rescue Committee,440392376
-2022,8,United Nations (UN),379235850
-2022,9,Bill & Melinda Gates Foundation,126729635
-2022,10,Canada,116183620
-2021,1,United States of America,10260181920
-2021,2,Global Alliance for Vaccines and Immunisation (GAVI),6251672229
-2021,3,World Bank,5184918516
-2021,4,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",4957891039
-2021,5,Asian Development Bank,3566625168
-2021,6,United Nations (UN),2083447471
-2021,7,Germany,1470133515
-2021,8,Inter-American Development Bank,1141977974
-2021,9,World Health Organization (WHO),963544399
-2021,10,Bill & Melinda Gates Foundation,607692470
-2020,1,United States of America,9802273927
-2020,2,Asian Development Bank,7949686100
-2020,3,World Bank,5223238113
-2020,4,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",5047564843
-2020,5,United Nations (UN),3136156677
-2020,6,African Development Bank,2354029209
-2020,7,Global Alliance for Vaccines and Immunisation (GAVI),1628335963
-2020,8,United Kingdom,1297373867
-2020,9,Germany,1173727644
-2020,10,Bill & Melinda Gates Foundation,1045844473
-2019,1,United States of America,8688478006
-2019,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3411040405
-2019,3,World Bank,1793012088
-2019,4,Global Alliance for Vaccines and Immunisation (GAVI),1722008468
-2019,5,United Nations (UN),1057800245
-2019,6,Bill & Melinda Gates Foundation,923915326
-2019,7,United Kingdom,848098651
-2019,8,Canada,522127277
-2019,9,Germany,383893353
-2019,10,Inter-American Development Bank,251888508
-2018,1,United States of America,4482112615
-2018,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3141638070
-2018,3,United Nations (UN),1641675434
-2018,4,World Bank,1450058460
-2018,5,Global Alliance for Vaccines and Immunisation (GAVI),1369822932
-2018,6,Bill & Melinda Gates Foundation,970422804
-2018,7,United Kingdom,665386900
-2018,8,Canada,538944584
-2018,9,Germany,420782505
-2018,10,Inter-American Development Bank,311737620
-2017,1,United States of America,4538364415
-2017,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",4252943472
-2017,3,United Nations (UN),1643007682
-2017,4,World Bank,1464399344
-2017,5,Global Alliance for Vaccines and Immunisation (GAVI),1328648332
-2017,6,Bill & Melinda Gates Foundation,919182236
-2017,7,United Kingdom,792094435
-2017,8,Canada,533515147
-2017,9,Germany,436243315
-2017,10,Inter-American Development Bank,254727999
-2016,1,United States of America,5198645372
-2016,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3623631786
-2016,3,United Nations (UN),1714556742
-2016,4,Global Alliance for Vaccines and Immunisation (GAVI),1275947543
-2016,5,World Bank,961376130
-2016,6,United Kingdom,777259984
-2016,7,Bill & Melinda Gates Foundation,693450252
-2016,8,Canada,426350601
-2016,9,Germany,356192535
-2016,10,Australia,168990085
-2015,1,United States of America,4931958814
-2015,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3253386024
-2015,3,United Nations (UN),1589508209
-2015,4,Global Alliance for Vaccines and Immunisation (GAVI),1533317706
-2015,5,World Bank,955693093
-2015,6,United Kingdom,851595317
-2015,7,Bill & Melinda Gates Foundation,612907260
-2015,8,Canada,608089983
-2015,9,Germany,481073163
-2015,10,Inter-American Development Bank,398430984
-2014,1,United States of America,5789835635
-2014,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2875045953
-2014,3,Global Alliance for Vaccines and Immunisation (GAVI),1313583394
-2014,4,United Nations (UN),1305160350
-2014,5,United Kingdom,1199292920
-2014,6,World Bank,992125896
-2014,7,Inter-American Development Bank,630960325
-2014,8,Canada,445631942
-2014,9,Germany,426668244
-2014,10,Bill & Melinda Gates Foundation,424115635
+year,rank,slug,funder,total
+2022,1,organization,Global Alliance for Vaccines and Immunisation (GAVI),3166695023
+2022,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1788756787
+2022,3,organization,World Bank,1607897518
+2022,4,country,United States of America,1283340951
+2022,5,country,Germany,1143698771
+2022,6,organization,World Health Organization (WHO),446974719
+2022,7,organization,International Rescue Committee,440392376
+2022,8,organization,United Nations (UN),379235850
+2022,9,organization,Bill & Melinda Gates Foundation,126729635
+2022,10,country,Canada,116183620
+2021,1,country,United States of America,10260181920
+2021,2,organization,Global Alliance for Vaccines and Immunisation (GAVI),6251672229
+2021,3,organization,World Bank,5184918516
+2021,4,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",4957891039
+2021,5,organization,Asian Development Bank,3566625168
+2021,6,organization,United Nations (UN),2083447471
+2021,7,country,Germany,1470133515
+2021,8,organization,Inter-American Development Bank,1141977974
+2021,9,organization,World Health Organization (WHO),963544399
+2021,10,organization,Bill & Melinda Gates Foundation,607692470
+2020,1,country,United States of America,9802273927
+2020,2,organization,Asian Development Bank,7949686100
+2020,3,organization,World Bank,5223238113
+2020,4,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",5047564843
+2020,5,organization,United Nations (UN),3136156677
+2020,6,organization,African Development Bank,2354029209
+2020,7,organization,Global Alliance for Vaccines and Immunisation (GAVI),1628335963
+2020,8,country,United Kingdom,1297373867
+2020,9,country,Germany,1173727644
+2020,10,organization,Bill & Melinda Gates Foundation,1045844473
+2019,1,country,United States of America,8688478006
+2019,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3411040405
+2019,3,organization,World Bank,1793012088
+2019,4,organization,Global Alliance for Vaccines and Immunisation (GAVI),1722008468
+2019,5,organization,United Nations (UN),1057800245
+2019,6,organization,Bill & Melinda Gates Foundation,923915326
+2019,7,country,United Kingdom,848098651
+2019,8,country,Canada,522127277
+2019,9,country,Germany,383893353
+2019,10,organization,Inter-American Development Bank,251888508
+2018,1,country,United States of America,4482112615
+2018,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3141638070
+2018,3,organization,United Nations (UN),1641675434
+2018,4,organization,World Bank,1450058460
+2018,5,organization,Global Alliance for Vaccines and Immunisation (GAVI),1369822932
+2018,6,organization,Bill & Melinda Gates Foundation,970422804
+2018,7,country,United Kingdom,665386900
+2018,8,country,Canada,538944584
+2018,9,country,Germany,420782505
+2018,10,organization,Inter-American Development Bank,311737620
+2017,1,country,United States of America,4538364415
+2017,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",4252943472
+2017,3,organization,United Nations (UN),1643007682
+2017,4,organization,World Bank,1464399344
+2017,5,organization,Global Alliance for Vaccines and Immunisation (GAVI),1328648332
+2017,6,organization,Bill & Melinda Gates Foundation,919182236
+2017,7,country,United Kingdom,792094435
+2017,8,country,Canada,533515147
+2017,9,country,Germany,436243315
+2017,10,organization,Inter-American Development Bank,254727999
+2016,1,country,United States of America,5198645372
+2016,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3623631786
+2016,3,organization,United Nations (UN),1714556742
+2016,4,organization,Global Alliance for Vaccines and Immunisation (GAVI),1275947543
+2016,5,organization,World Bank,961376130
+2016,6,country,United Kingdom,777259984
+2016,7,organization,Bill & Melinda Gates Foundation,693450252
+2016,8,country,Canada,426350601
+2016,9,country,Germany,356192535
+2016,10,country,Australia,168990085
+2015,1,country,United States of America,4931958814
+2015,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3253386024
+2015,3,organization,United Nations (UN),1589508209
+2015,4,organization,Global Alliance for Vaccines and Immunisation (GAVI),1533317706
+2015,5,organization,World Bank,955693093
+2015,6,country,United Kingdom,851595317
+2015,7,organization,Bill & Melinda Gates Foundation,612907260
+2015,8,country,Canada,608089983
+2015,9,country,Germany,481073163
+2015,10,organization,Inter-American Development Bank,398430984
+2014,1,country,United States of America,5789835635
+2014,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2875045953
+2014,3,organization,Global Alliance for Vaccines and Immunisation (GAVI),1313583394
+2014,4,organization,United Nations (UN),1305160350
+2014,5,country,United Kingdom,1199292920
+2014,6,organization,World Bank,992125896
+2014,7,organization,Inter-American Development Bank,630960325
+2014,8,country,Canada,445631942
+2014,9,country,Germany,426668244
+2014,10,organization,Bill & Melinda Gates Foundation,424115635

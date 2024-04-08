@@ -1,5 +1,5 @@
 WITH top_level_stakeholders AS (
-    SELECT id, name
+    SELECT id, name, iso3
     FROM stakeholders
     INNER JOIN LATERAL (
         SELECT COUNT(id) > 1 as is_sub_stakeholder
@@ -26,6 +26,7 @@ disbursed AS (
     -- all the countries which disbursed response funding
     SELECT
         s.name AS name,
+        s.iso3 AS iso3,
         e.name AS pheic,
         ROUND(SUM(sf.value)) AS total
     FROM
@@ -37,12 +38,13 @@ disbursed AS (
     WHERE
         sf.flow_type = 'disbursed_funds'
         AND sf.response_or_capacity = 'response'
-    GROUP BY s.name, pheic
+    GROUP BY s.name, s.iso3, pheic
 ),
 ranked_funders AS (
     SELECT
         pheic,
         name,
+        iso3,
         total,
         ROW_NUMBER()
             OVER (
@@ -55,6 +57,10 @@ ranked_funders AS (
 SELECT
     pheic,
     rank,
+    CASE 
+        WHEN iso3 IS NULL THEN 'organization' 
+        ELSE 'country'
+    END AS slug,
     name,
     total
 FROM

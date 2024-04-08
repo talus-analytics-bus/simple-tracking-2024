@@ -1,53 +1,53 @@
-pheic,rank,name,total
-2009-2010 H1N1,1,Bangladesh,399810
-2014-2016 Ebola in West Africa,1,Liberia,615289869
-2014-2016 Ebola in West Africa,2,Sierra Leone,540539330
-2014-2016 Ebola in West Africa,3,World Health Organization (WHO),342486238
-2014-2016 Ebola in West Africa,4,Guinea,227311310
-2014-2016 Ebola in West Africa,5,United Nations (UN),148161511
-2014-2016 Ebola in West Africa,6,CDC Foundation,25000000
-2014-2016 Ebola in West Africa,7,Ghana,15270469
-2014-2016 Ebola in West Africa,8,South Sudan,11624099
-2014-2016 Ebola in West Africa,9,Cote d'Ivoire,8649377
-2014-2016 Ebola in West Africa,10,Mali,8461578
-2014-2022 Poliovirus,1,Nigeria,1320424403
-2014-2022 Poliovirus,2,Pakistan,1288886462
-2014-2022 Poliovirus,3,Afghanistan,449545153
-2014-2022 Poliovirus,4,India,244337147
-2014-2022 Poliovirus,5,Democratic Republic of the Congo,111365998
-2014-2022 Poliovirus,6,Ethiopia,98161740
-2014-2022 Poliovirus,7,Somalia,52683482
-2014-2022 Poliovirus,8,Indonesia,50069737
-2014-2022 Poliovirus,9,Chad,47122287
-2014-2022 Poliovirus,10,South Sudan,42885093
-2015-2016 Zika Virus,1,Pan American Health Organization (PAHO),14627308
-2015-2016 Zika Virus,2,International Red Cross and Red Crescent Movement,6897926
-2015-2016 Zika Virus,3,CDC Foundation,4750000
-2015-2016 Zika Virus,4,Indonesia,2938466
-2015-2016 Zika Virus,5,Haiti,840362
-2015-2016 Zika Virus,6,Chembio Diagnostics Systems Inc.,550000
-2015-2016 Zika Virus,7,Brazil,106862
-2015-2016 Zika Virus,8,Tonga,100310
-2015-2016 Zika Virus,9,Population Services International,100000
-2015-2016 Zika Virus,10,Lithuania,22819
-2018-2020 Ebola in DRC,1,Democratic Republic of the Congo,733334014
-2018-2020 Ebola in DRC,2,World Health Organization (WHO),232027618
-2018-2020 Ebola in DRC,3,Central African Republic,19982432
-2018-2020 Ebola in DRC,4,South Sudan,8916986
-2018-2020 Ebola in DRC,5,Uganda,7202864
-2018-2020 Ebola in DRC,6,United Nations (UN),4600000
-2018-2020 Ebola in DRC,7,Malawi,4353406
-2018-2020 Ebola in DRC,8,Rwanda,4319559
-2018-2020 Ebola in DRC,9,Guinea,638015
-2018-2020 Ebola in DRC,10,United Republic of Tanzania,500000
-2019-2022 COVID-19 Pandemic,1,Indonesia,3460269104
-2019-2022 COVID-19 Pandemic,2,Philippines,3400957370
-2019-2022 COVID-19 Pandemic,3,India,3124627952
-2019-2022 COVID-19 Pandemic,4,World Health Organization (WHO),2557715766
-2019-2022 COVID-19 Pandemic,5,Pakistan,1713312184
-2019-2022 COVID-19 Pandemic,6,Thailand,1518886480
-2019-2022 COVID-19 Pandemic,7,Coalition for Epidemic Preparedness Innovations (CEPI),1319112292
-2019-2022 COVID-19 Pandemic,8,Nigeria,1153583688
-2019-2022 COVID-19 Pandemic,9,Kazakhstan,1119415962
-2019-2022 COVID-19 Pandemic,10,Bangladesh,1045097021
-2022 Monkeypox,1,Johns Hopkins Center for Communication Programs,725000
+pheic,rank,slug,name,total
+2009-2010 H1N1,1,country,Bangladesh,399810
+2014-2016 Ebola in West Africa,1,country,Liberia,615289869
+2014-2016 Ebola in West Africa,2,country,Sierra Leone,540539330
+2014-2016 Ebola in West Africa,3,organization,World Health Organization (WHO),342486238
+2014-2016 Ebola in West Africa,4,country,Guinea,227311310
+2014-2016 Ebola in West Africa,5,organization,United Nations (UN),148161511
+2014-2016 Ebola in West Africa,6,organization,CDC Foundation,25000000
+2014-2016 Ebola in West Africa,7,country,Ghana,15270469
+2014-2016 Ebola in West Africa,8,country,South Sudan,11624099
+2014-2016 Ebola in West Africa,9,country,Cote d'Ivoire,8649377
+2014-2016 Ebola in West Africa,10,country,Mali,8461578
+2014-2022 Poliovirus,1,country,Nigeria,1320424403
+2014-2022 Poliovirus,2,country,Pakistan,1288886462
+2014-2022 Poliovirus,3,country,Afghanistan,449545153
+2014-2022 Poliovirus,4,country,India,244337147
+2014-2022 Poliovirus,5,country,Democratic Republic of the Congo,111365998
+2014-2022 Poliovirus,6,country,Ethiopia,98161740
+2014-2022 Poliovirus,7,country,Somalia,52683482
+2014-2022 Poliovirus,8,country,Indonesia,50069737
+2014-2022 Poliovirus,9,country,Chad,47122287
+2014-2022 Poliovirus,10,country,South Sudan,42885093
+2015-2016 Zika Virus,1,organization,Pan American Health Organization (PAHO),14627308
+2015-2016 Zika Virus,2,organization,International Red Cross and Red Crescent Movement,6897926
+2015-2016 Zika Virus,3,organization,CDC Foundation,4750000
+2015-2016 Zika Virus,4,country,Indonesia,2938466
+2015-2016 Zika Virus,5,country,Haiti,840362
+2015-2016 Zika Virus,6,organization,Chembio Diagnostics Systems Inc.,550000
+2015-2016 Zika Virus,7,country,Brazil,106862
+2015-2016 Zika Virus,8,country,Tonga,100310
+2015-2016 Zika Virus,9,organization,Population Services International,100000
+2015-2016 Zika Virus,10,country,Lithuania,22819
+2018-2020 Ebola in DRC,1,country,Democratic Republic of the Congo,733334014
+2018-2020 Ebola in DRC,2,organization,World Health Organization (WHO),232027618
+2018-2020 Ebola in DRC,3,country,Central African Republic,19982432
+2018-2020 Ebola in DRC,4,country,South Sudan,8916986
+2018-2020 Ebola in DRC,5,country,Uganda,7202864
+2018-2020 Ebola in DRC,6,organization,United Nations (UN),4600000
+2018-2020 Ebola in DRC,7,country,Malawi,4353406
+2018-2020 Ebola in DRC,8,country,Rwanda,4319559
+2018-2020 Ebola in DRC,9,country,Guinea,638015
+2018-2020 Ebola in DRC,10,country,United Republic of Tanzania,500000
+2019-2022 COVID-19 Pandemic,1,country,Indonesia,3460269104
+2019-2022 COVID-19 Pandemic,2,country,Philippines,3400957370
+2019-2022 COVID-19 Pandemic,3,country,India,3124627952
+2019-2022 COVID-19 Pandemic,4,organization,World Health Organization (WHO),2557715766
+2019-2022 COVID-19 Pandemic,5,country,Pakistan,1713312184
+2019-2022 COVID-19 Pandemic,6,country,Thailand,1518886480
+2019-2022 COVID-19 Pandemic,7,organization,Coalition for Epidemic Preparedness Innovations (CEPI),1319112292
+2019-2022 COVID-19 Pandemic,8,country,Nigeria,1153583688
+2019-2022 COVID-19 Pandemic,9,country,Kazakhstan,1119415962
+2019-2022 COVID-19 Pandemic,10,country,Bangladesh,1045097021
+2022 Monkeypox,1,organization,Johns Hopkins Center for Communication Programs,725000

@@ -1,91 +1,91 @@
-year,rank,recipient,total
-2022,1,Global Alliance for Vaccines and Immunisation (GAVI),1160000000
-2022,2,Indonesia,746355795
-2022,3,India,673186790
-2022,4,Nigeria,661317914
-2022,5,Pakistan,599247319
-2022,6,Bangladesh,520233365
-2022,7,Philippines,376047551
-2022,8,Egypt,326381486
-2022,9,Ethiopia,298297987
-2022,10,Sierra Leone,286882530
-2021,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2328252146
-2021,2,Nigeria,2082981765
-2021,3,Philippines,1879150054
-2021,4,Thailand,1555649344
-2021,5,Pakistan,1521958937
-2021,6,Indonesia,1237743411
-2021,7,South Africa,1229717193
-2021,8,India,1205411186
-2021,9,Uganda,1201486734
-2021,10,United Republic of Tanzania,1099394267
-2020,1,India,2922161495
-2020,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2220351827
-2020,3,Nigeria,2056290905
-2020,4,Indonesia,1972970471
-2020,5,Pakistan,1667794079
-2020,6,Mexico,1426168857
-2020,7,World Health Organization (WHO),1422532052
-2020,8,Democratic Republic of the Congo,1420400127
-2020,9,Philippines,1388056882
-2020,10,Coalition for Epidemic Preparedness Innovations (CEPI),1316199438
-2019,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1534028890
-2019,2,Nigeria,1278955497
-2019,3,Democratic Republic of the Congo,1204134107
-2019,4,United Republic of Tanzania,1029311517
-2019,5,South Africa,1029091128
-2019,6,Kenya,1005673732
-2019,7,Uganda,984333384
-2019,8,Mozambique,849506947
-2019,9,Ethiopia,732479174
-2019,10,Zambia,711978928
-2018,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1470830311
-2018,2,Nigeria,962456618
-2018,3,Ethiopia,718285607
-2018,4,Democratic Republic of the Congo,665939796
-2018,5,India,631925505
-2018,6,Pakistan,625018754
-2018,7,Uganda,588255785
-2018,8,Kenya,579510651
-2018,9,Bangladesh,554403209
-2018,10,Myanmar,501038376
-2017,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1527053497
-2017,2,Nigeria,1159163491
-2017,3,India,833515802
-2017,4,Ethiopia,801681299
-2017,5,Pakistan,690776650
-2017,6,United Republic of Tanzania,656016792
-2017,7,Kenya,634851371
-2017,8,Democratic Republic of the Congo,613841327
-2017,9,Mozambique,507140034
-2017,10,Uganda,496721996
-2016,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2165358018
-2016,2,Nigeria,983794584
-2016,3,India,731884597
-2016,4,Ethiopia,695360197
-2016,5,Democratic Republic of the Congo,583699112
-2016,6,United Republic of Tanzania,578913810
-2016,7,Uganda,572712771
-2016,8,Kenya,520691507
-2016,9,Pakistan,475544236
-2016,10,Mozambique,447651410
-2015,1,Nigeria,1485010908
-2015,2,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1037650099
-2015,3,India,912691741
-2015,4,Ethiopia,823208443
-2015,5,Kenya,718602724
-2015,6,United Republic of Tanzania,608523741
-2015,7,Uganda,588310980
-2015,8,Democratic Republic of the Congo,575229167
-2015,9,Liberia,524814186
-2015,10,Pakistan,516532408
-2014,1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1961935570
-2014,2,Nigeria,1140616306
-2014,3,Ethiopia,793691131
-2014,4,United Republic of Tanzania,694060612
-2014,5,Kenya,654418464
-2014,6,Uganda,597583591
-2014,7,India,565819239
-2014,8,Mozambique,544373561
-2014,9,Democratic Republic of the Congo,504377714
-2014,10,South Africa,480802593
+year,rank,slug,recipient,total
+2022,1,organization,Global Alliance for Vaccines and Immunisation (GAVI),1160000000
+2022,2,country,Indonesia,746355795
+2022,3,country,India,673186790
+2022,4,country,Nigeria,661317914
+2022,5,country,Pakistan,599247319
+2022,6,country,Bangladesh,520233365
+2022,7,country,Philippines,376047551
+2022,8,country,Egypt,326381486
+2022,9,country,Ethiopia,298297987
+2022,10,country,Sierra Leone,286882530
+2021,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2328252146
+2021,2,country,Nigeria,2082981765
+2021,3,country,Philippines,1879150054
+2021,4,country,Thailand,1555649344
+2021,5,country,Pakistan,1521958937
+2021,6,country,Indonesia,1237743411
+2021,7,country,South Africa,1229717193
+2021,8,country,India,1205411186
+2021,9,country,Uganda,1201486734
+2021,10,country,United Republic of Tanzania,1099394267
+2020,1,country,India,2922161495
+2020,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2220351827
+2020,3,country,Nigeria,2056290905
+2020,4,country,Indonesia,1972970471
+2020,5,country,Pakistan,1667794079
+2020,6,country,Mexico,1426168857
+2020,7,organization,World Health Organization (WHO),1422532052
+2020,8,country,Democratic Republic of the Congo,1420400127
+2020,9,country,Philippines,1388056882
+2020,10,organization,Coalition for Epidemic Preparedness Innovations (CEPI),1316199438
+2019,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1534028890
+2019,2,country,Nigeria,1278955497
+2019,3,country,Democratic Republic of the Congo,1204134107
+2019,4,country,United Republic of Tanzania,1029311517
+2019,5,country,South Africa,1029091128
+2019,6,country,Kenya,1005673732
+2019,7,country,Uganda,984333384
+2019,8,country,Mozambique,849506947
+2019,9,country,Ethiopia,732479174
+2019,10,country,Zambia,711978928
+2018,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1470830311
+2018,2,country,Nigeria,962456618
+2018,3,country,Ethiopia,718285607
+2018,4,country,Democratic Republic of the Congo,665939796
+2018,5,country,India,631925505
+2018,6,country,Pakistan,625018754
+2018,7,country,Uganda,588255785
+2018,8,country,Kenya,579510651
+2018,9,country,Bangladesh,554403209
+2018,10,country,Myanmar,501038376
+2017,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1527053497
+2017,2,country,Nigeria,1159163491
+2017,3,country,India,833515802
+2017,4,country,Ethiopia,801681299
+2017,5,country,Pakistan,690776650
+2017,6,country,United Republic of Tanzania,656016792
+2017,7,country,Kenya,634851371
+2017,8,country,Democratic Republic of the Congo,613841327
+2017,9,country,Mozambique,507140034
+2017,10,country,Uganda,496721996
+2016,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2165358018
+2016,2,country,Nigeria,983794584
+2016,3,country,India,731884597
+2016,4,country,Ethiopia,695360197
+2016,5,country,Democratic Republic of the Congo,583699112
+2016,6,country,United Republic of Tanzania,578913810
+2016,7,country,Uganda,572712771
+2016,8,country,Kenya,520691507
+2016,9,country,Pakistan,475544236
+2016,10,country,Mozambique,447651410
+2015,1,country,Nigeria,1485010908
+2015,2,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1037650099
+2015,3,country,India,912691741
+2015,4,country,Ethiopia,823208443
+2015,5,country,Kenya,718602724
+2015,6,country,United Republic of Tanzania,608523741
+2015,7,country,Uganda,588310980
+2015,8,country,Democratic Republic of the Congo,575229167
+2015,9,country,Liberia,524814186
+2015,10,country,Pakistan,516532408
+2014,1,organization,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",1961935570
+2014,2,country,Nigeria,1140616306
+2014,3,country,Ethiopia,793691131
+2014,4,country,United Republic of Tanzania,694060612
+2014,5,country,Kenya,654418464
+2014,6,country,Uganda,597583591
+2014,7,country,India,565819239
+2014,8,country,Mozambique,544373561
+2014,9,country,Democratic Republic of the Congo,504377714
+2014,10,country,South Africa,480802593

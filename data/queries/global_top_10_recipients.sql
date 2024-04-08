@@ -26,6 +26,7 @@ recipients_to_funders AS (
     -- All transaction pairs for selected stakeholders
     SELECT
     s1.name AS recipient,
+    s1.iso3 AS iso3,
     sf.year AS year,
     ROUND(SUM(sf.value)) AS total
     FROM flows_to_stakeholder_targets_direct_credit ftstdc
@@ -38,14 +39,13 @@ recipients_to_funders AS (
 		AND sf."year" BETWEEN 2014 AND 2022
 		AND s1.id in (select * from top_level_stakeholders)
 		AND s2.id in (select * from top_level_stakeholders)
-    GROUP BY
-    s1.name, sf.year
-    ORDER BY
-    recipient DESC
+    GROUP BY s1.name, s1.iso3, sf.year
+    ORDER BY recipient DESC
 ),
 ranked_funders AS (
     SELECT
         recipient,
+        iso3,
         year,
         total,
         ROW_NUMBER()
@@ -58,7 +58,11 @@ ranked_funders AS (
 )
 SELECT
     year,
-	rank,
+    rank,
+    CASE 
+        WHEN iso3 IS NULL THEN 'organization'
+        ELSE 'country'
+    END AS slug,
     recipient,
     total
 FROM
