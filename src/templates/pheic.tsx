@@ -54,6 +54,9 @@ const DescriptionSection = styled.div`
 const Description = styled.div`
   ${({ theme }) => theme.textStyleParagraph};
   color: ${({ theme }) => theme.common.colors.textPrimary};
+  p {
+    margin-top: 0px;
+  }
 `
 const Sources = styled.div`
   ${({ theme }) => theme.textStyleParagraph};
