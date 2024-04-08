@@ -7,7 +7,7 @@ import DimPlotParent, {
 
 import XAxis from './XAxis'
 import YAxis from './YAxis'
-import Bar from './Bar'
+import Bars from './Bar'
 
 const PlotContainer = styled.div`
   display: flex;
@@ -22,6 +22,7 @@ interface BarPlotProps {
   barColor: string
   xLabel: string
   yLabel: string
+  linkLabels?: boolean
 }
 
 const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
@@ -83,7 +84,7 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
       <DimPlotParent plotSetup={plotSetup}>
         <YAxis yLabel={yLabel} narrowLayout={narrowLayout} />
         <XAxis xLabel={xLabel} />
-        <Bar bars={bars} color={barColor} narrowLayout={narrowLayout} />
+        <Bars bars={bars} color={barColor} narrowLayout={narrowLayout} />
       </DimPlotParent>
     </PlotContainer>
   )

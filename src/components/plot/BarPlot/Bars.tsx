@@ -30,7 +30,7 @@ interface BarProps {
   narrowLayout: boolean
 }
 
-const Bar = ({ bars, color, narrowLayout }: BarProps) => {
+const Bars = ({ bars, color, narrowLayout }: BarProps) => {
   const [dim] = useDim()
 
   const textVOffset = dim.reference.barHeight / 2 + 4
@@ -84,4 +84,4 @@ const Bar = ({ bars, color, narrowLayout }: BarProps) => {
     })
 }
 
-export default Bar
+export default Bars
