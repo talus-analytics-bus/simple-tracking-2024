@@ -20,17 +20,17 @@ import {
   TopBar,
   YearSelector,
 } from 'components/stakeholderPage/StakeholderLayout'
-
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
 import SparScores from 'components/stakeholderPage/SparScores'
 import JeeScores from 'components/stakeholderPage/JeeScores'
-
-import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import Naphs from 'components/stakeholderPage/Naphs'
 import PvsPathway from 'components/stakeholderPage/pvsPathway'
 import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
+
+import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
+
 import formatHash from 'utilities/formatHash'
 
 const H1 = styled.h1`
