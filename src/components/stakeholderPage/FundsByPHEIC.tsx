@@ -16,6 +16,7 @@ const isDisbursed = (
 
 const BarLabelLink = styled(Link)`
   text-decoration: none;
+  fill: ${({ theme }) => theme.common.colors.textLink};
 
   &:hover {
     text-decoration: underline;
