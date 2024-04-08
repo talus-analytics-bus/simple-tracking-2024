@@ -1,3 +1,4 @@
+import CMS from 'components/library/airtable-cms'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -183,6 +184,14 @@ export const ContentBox = styled.div`
 `
 
 export const HalfWidthContentBox = styled(ContentBox)`
+  flex-basis: calc(50% - 7.5px);
+
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+  }
+`
+
+export const HalfWidthSimpleBox = styled.div`
   flex-basis: calc(50% - 7.5px);
 
   @media (max-width: 1200px) {
