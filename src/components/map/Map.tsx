@@ -93,6 +93,9 @@ const FundingMap = ({
         return
       }
 
+      // if the popup gets bigger, will need to
+      // switch to a modal-style popup for mobile
+
       // if (window.innerWidth <= 900) {
       //   setPopupState(null)
       //   setModal(
@@ -113,8 +116,6 @@ const FundingMap = ({
     },
     [countriesRecievedAndDisbursed]
   )
-
-  console.log({ popupState })
 
   return (
     <MapContainer fullscreen={fullscreen}>

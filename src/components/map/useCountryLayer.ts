@@ -94,8 +94,6 @@ const useCountryLayer = (mapType: MapType) => {
       beforeId: 'countries-outline',
     }
 
-    console.log(countryLayer)
-
     return countryLayer
   }, [mapType, countriesReceivedAndDisbursed, theme])
 
