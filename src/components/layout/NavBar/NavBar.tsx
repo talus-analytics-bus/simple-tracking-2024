@@ -34,7 +34,7 @@ const NavLink = styled(Link)`
   color: ${({ theme }) => theme.common.colors.textInvert};
   padding: 14px;
   text-decoration: none;
-  transition: 500ms ease;
+  transition: 250ms ease;
   font-weight: 400;
 
   &:hover {
