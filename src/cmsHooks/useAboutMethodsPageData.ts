@@ -19,6 +19,13 @@ const useAboutMethodsPageData = () => {
             data {
               Name
               Text
+              Download {
+                localFiles {
+                  name
+                  prettySize
+                  publicURL
+                }
+              }
             }
           }
         }

@@ -19,6 +19,13 @@ const useAboutDataSourcesPageData = () => {
             data {
               Name
               Text
+              Download {
+                localFiles {
+                  name
+                  prettySize
+                  publicURL
+                }
+              }
             }
           }
         }

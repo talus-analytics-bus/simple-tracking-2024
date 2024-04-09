@@ -1,4 +1,5 @@
 import React from 'react'
+import { renderToString } from 'react-dom/server'
 
 import CMS from 'components/library/airtable-cms/'
 
@@ -9,10 +10,16 @@ import Providers from 'components/layout/Providers'
 
 import AboutStyle from 'components/about/AboutStyle'
 import Footer from 'components/layout/Footer'
+
 import useAboutMethodsPageData from 'cmsHooks/useAboutMethodsPageData'
 
 const MethodsPage = (): JSX.Element => {
   const cmsData = useAboutMethodsPageData()
+
+  const linkString = renderToString(
+    <CMS.Download name="Technical appendix" data={cmsData} />
+  ).replace(/\n|\r/g, '')
+
   return (
     <Providers>
       <CMS.SEO
@@ -26,7 +33,13 @@ const MethodsPage = (): JSX.Element => {
           <h1>
             <CMS.Text name="H1 title" data={cmsData} />
           </h1>
-          <CMS.RichText name="H2 content" data={cmsData} />
+          <CMS.RichText
+            name="H2 content"
+            data={cmsData}
+            replace={{
+              '[TECHNICAL APPENDIX LINK]': linkString,
+            }}
+          />
         </AboutStyle>
       </Main>
       <Footer />

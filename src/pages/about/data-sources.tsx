@@ -1,4 +1,5 @@
 import React from 'react'
+import { renderToString } from 'react-dom/server'
 import styled from 'styled-components'
 import { PageProps, graphql } from 'gatsby'
 
@@ -58,6 +59,10 @@ const DataSourcesPage = ({
 }: PageProps<Queries.DataSourcesPageQuery>): JSX.Element => {
   const cmsData = useAboutDataSourcesPageData()
 
+  const linkString = renderToString(
+    <CMS.Download name="Technical appendix" data={cmsData} />
+  ).replace(/\n|\r/g, '')
+
   return (
     <Providers>
       <CMS.SEO
@@ -71,7 +76,13 @@ const DataSourcesPage = ({
           <h1>
             <CMS.Text name="H1 title" data={cmsData} />
           </h1>
-          <CMS.RichText name="H1 paragraph" data={cmsData} />
+          <CMS.RichText
+            name="H1 paragraph"
+            data={cmsData}
+            replace={{
+              '[TECHNICAL APPENDIX LINK]': linkString,
+            }}
+          />
         </AboutStyle>
         <DataSourcesTable>
           <thead>
