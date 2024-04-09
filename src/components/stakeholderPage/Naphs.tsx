@@ -58,7 +58,7 @@ const Naphs = ({ data }: NaphsProps) => {
             </td>
             <td>{document?.Years}</td>
             <td>
-              {document?.PDF?.localFiles?.[0]?.publicURL && (
+              {document?.PDF?.localFiles?.[0]?.publicURL ? (
                 <DocumentLink href={document?.PDF?.localFiles?.[0]?.publicURL}>
                   <CMS.Icon
                     style={{
@@ -72,6 +72,8 @@ const Naphs = ({ data }: NaphsProps) => {
                   />
                   {data.stakeholdersCsv?.name} NAPHS {document?.Years}
                 </DocumentLink>
+              ) : (
+                <span>No document available</span>
               )}
             </td>
           </tr>
