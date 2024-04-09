@@ -35,7 +35,12 @@ const DataSourcesTable = styled.table`
     ${({ theme }) => theme.textStyleParagraph};
 
     a {
-      color: ${({ theme }) => theme.common.colors.textPrimary};
+      text-decoration: none;
+      color: ${({ theme }) => theme.common.colors.textLink};
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
