@@ -112,6 +112,7 @@ const FundingMap = ({
         iso3,
         lnglat: event.lngLat,
         setPopupState,
+        mapType,
       })
     },
     [countriesRecievedAndDisbursed]
@@ -162,7 +163,7 @@ const FundingMap = ({
         {interactive && (
           <NavigationControl position="top-left" showCompass={false} />
         )}
-        {popupState && <MapPopup popupState={popupState} />}
+        {popupState && <MapPopup popupState={popupState} mapType={mapType} />}
       </Map>
     </MapContainer>
   )

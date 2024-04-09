@@ -13,6 +13,7 @@ import useCountryNamesAndFlags from 'queryHooks/useCountryNamesAndFlags'
 
 import formatDisplayNumber from 'utilities/formatDisplayNumber'
 import simplifyForUrl from 'utilities/simplifyForUrl'
+import { MapType } from './Map'
 
 const PopupContainer = styled.div`
   padding: 0px 5px 0px 5px;
@@ -63,9 +64,15 @@ export interface PopupState {
   iso3: string
   lnglat: LngLat
   setPopupState: Dispatch<SetStateAction<PopupState | null>>
+  mapType: MapType
 }
 
-const MapPopup = ({ popupState }: { popupState: PopupState }) => {
+interface MapPopupProps {
+  popupState: PopupState
+  mapType: MapType
+}
+
+const MapPopup = ({ popupState, mapType }: MapPopupProps) => {
   const { iso3, lnglat, setPopupState } = popupState
 
   const countriesRecievedAndDisbursed = useCountriesReceivedAndDisbursed()
@@ -77,6 +84,14 @@ const MapPopup = ({ popupState }: { popupState: PopupState }) => {
 
   const nameAndFlag = countryNamesAndFlags.find(
     country => country.iso3 === iso3
+  )
+
+  const displayValue = formatDisplayNumber(
+    Number(
+      mapType === MapType.Received
+        ? country?.totalDisbursedReceived
+        : country?.totalDisbursed
+    )
   )
 
   return (
@@ -101,9 +116,15 @@ const MapPopup = ({ popupState }: { popupState: PopupState }) => {
           </H1>
         </CountryLink>
         <FundsSection>
-          <h2>Total funding disbursed 2014-2022 (USD)</h2>
-          <p>{formatDisplayNumber(Number(country?.totalDisbursedReceived))}</p>
-          <CMS.Icon name="Disbursed" />
+          <h2>
+            Total funding{' '}
+            {mapType === MapType.Received ? 'received' : 'disbursed'} 2014-2022
+            (USD)
+          </h2>
+          <p>{displayValue}</p>
+          <CMS.Icon
+            name={mapType === MapType.Received ? 'Received' : 'Disbursed'}
+          />
         </FundsSection>
       </PopupContainer>
     </Popup>
