@@ -13,6 +13,11 @@ const H3 = styled.h3`
 
   a {
     color: ${({ theme }) => theme.common.colors.textLink};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
@@ -28,6 +33,11 @@ const PublicationsGrid = styled.div`
 
   a {
     color: ${({ theme }) => theme.common.colors.textLink};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media (max-width: 1000px) {
