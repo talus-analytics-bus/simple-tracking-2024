@@ -18,8 +18,8 @@ const NaphStatusChip = styled.div<{ status: NaphStatus }>`
   background-color: ${({ theme, status }) =>
     ({
       'Completed and published': theme.recipient.colors.scoringGood,
-      Completed: theme.recipient.colors.scoringOk,
-      'Ongoing and planned': theme.recipient.colors.scoringBad,
+      Completed: theme.recipient.colors.scoringGood,
+      'Ongoing and planned': theme.recipient.colors.scoringOk,
       'No data': theme.recipient.colors.scoringNoData,
     })[status]};
 `
