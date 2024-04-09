@@ -297,6 +297,7 @@ export const DocumentTable = styled.table`
   }
   td:nth-child(2) {
     grid-area: metric_name;
+    width: 200px;
   }
   td:nth-child(3) {
     grid-area: meaning;
