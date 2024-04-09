@@ -31,8 +31,6 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
   const riskIndicies = useRiskIndicies()
   const cmsData = useStakeholderPageData()
 
-  console.log({ cmsData })
-
   return (
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>
       <HalfWidthSimpleBox>
