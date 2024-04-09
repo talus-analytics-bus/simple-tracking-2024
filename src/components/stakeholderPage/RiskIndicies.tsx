@@ -37,7 +37,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>
       <HalfWidthSimpleBox>
         <ContentBox>
-          <h3>
+          <h3 style={{ justifyContent: 'center' }}>
             <CMS.Text name="GHS Index title" data={cmsData} />
           </h3>
           <RiskIndiciesPlot
@@ -52,7 +52,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
       </HalfWidthSimpleBox>
       <HalfWidthSimpleBox>
         <ContentBox>
-          <h3>
+          <h3 style={{ justifyContent: 'center' }}>
             <CMS.Text
               name="Infectious Disease Vulnerability Index title"
               data={cmsData}
@@ -73,7 +73,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
       </HalfWidthSimpleBox>
       <HalfWidthSimpleBox>
         <ContentBox>
-          <h3>
+          <h3 style={{ justifyContent: 'center' }}>
             <CMS.Text name="INFORM Risk Index title" data={cmsData} />
           </h3>
           <RiskIndiciesPlot
@@ -88,7 +88,7 @@ const RiskIndicies = ({ data }: RiskIndiciesProps) => {
       </HalfWidthSimpleBox>
       <HalfWidthSimpleBox>
         <ContentBox>
-          <h3>
+          <h3 style={{ justifyContent: 'center' }}>
             <CMS.Text name="World Risk Index title" data={cmsData} />
           </h3>
           <RiskIndiciesPlot

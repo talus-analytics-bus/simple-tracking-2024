@@ -100,7 +100,7 @@ const JeeScores = ({ data }: JeeScoresProps) => {
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>
       {Object.entries(scoresByCategory).map(([category, scores]) => (
         <HalfWidthContentBox key={category}>
-          <h3>{category}</h3>
+          <h3 style={{ justifyContent: 'center' }}>{category}</h3>
           <Table>
             <tbody>
               {scores.map(score => (
