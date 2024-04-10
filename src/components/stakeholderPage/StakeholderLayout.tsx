@@ -157,7 +157,7 @@ export const ContentSection = styled.section`
 const ScrollTargetDiv = styled.div`
   position: absolute;
   top: -160px;
-  height: 100%;
+  height: 80%;
 `
 
 const elementIsAtTop = (element: HTMLElement) => {
@@ -187,8 +187,8 @@ export const ScrollTarget = (props: React.HTMLAttributes<HTMLDivElement>) => {
     }
 
     const observer = new IntersectionObserver(callback, {
-      rootMargin: '0px',
-      threshold: 0.25,
+      rootMargin: '-30px',
+      threshold: [1, 0.75],
     })
 
     if (ref.current) {
