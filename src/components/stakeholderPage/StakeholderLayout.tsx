@@ -247,7 +247,9 @@ const NoDataP = styled.p`
   padding-top: 20px;
 `
 
-export const NoData = () => <NoDataP>No data available</NoDataP>
+export const NoData = ({ style }: { style?: React.CSSProperties }) => (
+  <NoDataP style={style}>No data available</NoDataP>
+)
 
 export const DocumentTable = styled.table`
   border-collapse: collapse;

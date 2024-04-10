@@ -1,7 +1,12 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import { HalfWidthContentBox, HorizontalColumns } from './StakeholderLayout'
+import {
+  ContentBox,
+  HalfWidthContentBox,
+  HorizontalColumns,
+  NoData,
+} from './StakeholderLayout'
 
 interface JeeScoresProps {
   data: Queries.StakeholderPageQuery
@@ -83,10 +88,13 @@ const JeeScores = ({ data }: JeeScoresProps) => {
     [key: string]: Writeable<typeof data.allJeeScoresCsv.nodes>
   }
 
+  let noData = true
+
   for (const node of data.allJeeScoresCsv.nodes) {
     const category = node.capacity_category ?? ''
     if (!scoresByCategory[category]) scoresByCategory[category] = [node]
     else scoresByCategory[category].push(node)
+    if (node.meaning !== 'No data') noData = false
   }
 
   for (const category in scoresByCategory) {
@@ -95,6 +103,13 @@ const JeeScores = ({ data }: JeeScoresProps) => {
         Number(a.metric?.split('.')[1]) - Number(b.metric?.split('.')[1])
     )
   }
+
+  if (noData)
+    return (
+      <ContentBox>
+        <NoData style={{ padding: 0 }} />
+      </ContentBox>
+    )
 
   return (
     <HorizontalColumns style={{ flexWrap: 'wrap' }}>

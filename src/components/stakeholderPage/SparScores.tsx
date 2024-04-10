@@ -83,6 +83,16 @@ const SparScores = ({ data }: SparScoresProps) => {
     (a, b) => Number(a.metric?.split('.')[1]) - Number(b.metric?.split('.')[1])
   )
 
+  const noData = sparScoreColumns.every(column => column.meaning === 'No data')
+
+  if (noData) {
+    return (
+      <ContentBox>
+        <NoData style={{ padding: 0 }} />
+      </ContentBox>
+    )
+  }
+
   return (
     <HorizontalColumns>
       <ContentBox style={{ background: theme.common.colors.surfaceWhite }}>
