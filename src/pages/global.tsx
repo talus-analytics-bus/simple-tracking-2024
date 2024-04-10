@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+import { PageProps, graphql } from 'gatsby'
+
 import CMS from 'components/library/airtable-cms'
 
 import Providers from 'components/layout/Providers'
@@ -6,6 +9,7 @@ import NavBar from 'components/layout/NavBar/NavBar'
 import Footer from 'components/layout/Footer'
 import {
   ContentBox,
+  HalfWidthSimpleBox,
   HorizontalColumns,
   Layout,
   MainContent,
@@ -15,18 +19,17 @@ import {
   TopBar,
   YearSelector,
 } from 'components/stakeholderPage/StakeholderLayout'
+
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
-
-import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
-
-import formatHash from 'utilities/formatHash'
 import FundingMap, { MapType } from 'components/map/Map'
-import { PageProps, graphql } from 'gatsby'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import FundsByCategory from 'components/stakeholderPage/FundsByCategory/FundsByCategory'
 import FundsByPHEIC from 'components/stakeholderPage/FundsByPHEIC'
 import TopFundersAndRecipients from 'components/stakeholderPage/TopFundersAndRecipients'
-import styled from 'styled-components'
+import MapLegend from 'components/map/MapLegend/MapLegend'
+
+import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
+import formatHash from 'utilities/formatHash'
 
 const H1 = styled.h1`
   ${({ theme }) => theme.textStyleH1};
@@ -108,26 +111,35 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             <CMS.Text name={'H2 subtitle global'} data={cmsData} />
           </h3>
           <HorizontalColumns>
-            <ContentBox>
-              <h3>
-                <span>
-                  <CMS.Icon name="Disbursed" style={{ height: 25 }} />
-                  Global funders
-                </span>
-                <span>{selectedYearsLabel}</span>
-              </h3>
-              <FundingMap mapType={MapType.Disbursed} />
-            </ContentBox>
-            <ContentBox>
-              <h3>
-                <span>
-                  <CMS.Icon name="Received" style={{ height: 25 }} />
-                  Global recipients
-                </span>
-                <span>{selectedYearsLabel}</span>
-              </h3>
-              <FundingMap mapType={MapType.Received} />
-            </ContentBox>
+            <HalfWidthSimpleBox>
+              <ContentBox style={{ paddingBottom: 10 }}>
+                <h3>
+                  <span>
+                    <CMS.Icon name="Disbursed" style={{ height: 25 }} />
+                    Global funders
+                  </span>
+                  <span>{selectedYearsLabel}</span>
+                </h3>
+                <FundingMap mapType={MapType.Disbursed} />
+              </ContentBox>
+              <MapLegend
+                style={{ marginTop: 15 }}
+                mapType={MapType.Disbursed}
+              />
+            </HalfWidthSimpleBox>
+            <HalfWidthSimpleBox>
+              <ContentBox style={{ paddingBottom: 10 }}>
+                <h3>
+                  <span>
+                    <CMS.Icon name="Received" style={{ height: 25 }} />
+                    Global recipients
+                  </span>
+                  <span>{selectedYearsLabel}</span>
+                </h3>
+                <FundingMap mapType={MapType.Received} />
+              </ContentBox>
+              <MapLegend style={{ marginTop: 15 }} mapType={MapType.Received} />
+            </HalfWidthSimpleBox>
           </HorizontalColumns>
           <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />
           <h2>
