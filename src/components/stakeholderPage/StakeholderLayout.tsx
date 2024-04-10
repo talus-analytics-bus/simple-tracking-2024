@@ -302,6 +302,10 @@ export const TotalsTable = styled.table`
     }
   }
 
+  tr:not(:first-child) > td:first-child {
+    ${({ theme }) => theme.textStyleBigNumber};
+  }
+
   td:last-child {
     ${({ theme }) => theme.textStyleSmallNumbers};
   }
