@@ -158,9 +158,6 @@ const ScrollTargetDiv = styled.div`
   position: absolute;
   top: -160px;
   height: calc(100% + 60px);
-  width: 30px;
-  border: 1px solid red;
-  background: rgba(255, 30, 30, 0.5);
 `
 
 const elementIsAtTop = (element: HTMLElement) => {
