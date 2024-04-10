@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: 400;
+  src: url(/assets/fonts/barlowCondensed/BarlowCondensed-regular.woff2) format('woff2');
+}
+
+
+@font-face {
   font-family: 'Fira Mono';
   font-weight: 400;
   src: url(/assets/fonts/firaMono/FiraMono-Regular.woff2) format('woff2');
