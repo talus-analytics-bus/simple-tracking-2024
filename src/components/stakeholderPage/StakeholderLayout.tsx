@@ -29,6 +29,7 @@ const scrollingContext = React.createContext({
 export const Layout = (props: React.HTMLAttributes<HTMLDivElement>) => {
   const [selectedId, setSelectedId] = useState('')
   const [visibleIds, setVisibleIds] = useState([] as string[])
+
   return (
     <scrollingContext.Provider
       value={{ selectedId, setSelectedId, visibleIds, setVisibleIds }}
@@ -161,8 +162,7 @@ const ScrollTargetDiv = styled.div`
 
 const elementIsAtTop = (element: HTMLElement) => {
   const rect = element.getBoundingClientRect()
-  console.log(element, rect.top)
-  return rect.top <= 10
+  return rect.top <= 30
 }
 
 export const ScrollTarget = (props: React.HTMLAttributes<HTMLDivElement>) => {
