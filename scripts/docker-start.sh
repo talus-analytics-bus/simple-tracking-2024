@@ -2,14 +2,12 @@
 
 reset=0;
 clean=0;
-# airtable_secret='';
 
 # parse params
 while [[ "$#" > 0 ]];
   do case $1 in
     -r|--reset) reset=1; shift;;
     -c|--clean) clean=1; shift;;
-    # -a|--airtable-secret); shift;;
     *) echo "Unknown parameter passed: $1"; exit 1 ;;
   esac
   shift
@@ -17,7 +15,7 @@ done
 
 
 if [[ -z "${AIRTABLE_API_KEY}" ]]; then
-  # fetch environment variables from secrets manager
+  # fetch airtable api key from secrets manager
   echo "Fetch AIRTABLE_API_KEY from secrets manager"
   export AIRTABLE_API_KEY=$(
     aws secretsmanager get-secret-value --secret-id airtable-api-key --region us-west-1 |\
@@ -26,7 +24,7 @@ if [[ -z "${AIRTABLE_API_KEY}" ]]; then
 fi
 
 if [[ -z "${GATSBY_MAPBOX_API_KEY}" ]]; then
-  # fetch environment variables from secrets manager
+  # fetch mapbox api key from secrets manager
   echo "Fetch GATSBY_MAPBOX_API_KEY from secrets manager"
   export GATSBY_MAPBOX_API_KEY=$(
     aws secretsmanager get-secret-value --secret-id pharos-mapbox-api-key --region us-west-1 |\
@@ -35,8 +33,7 @@ if [[ -z "${GATSBY_MAPBOX_API_KEY}" ]]; then
 fi
 
 if [ "$reset" == "1" ]; then
-  bvm upgrade;
-  yarn install;
+  npm i;
   gatsby clean;
 fi
 
