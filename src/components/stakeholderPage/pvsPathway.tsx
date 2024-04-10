@@ -19,7 +19,7 @@ const PvsPathway = ({ data }: PvsPathwayProps) => {
   }
 
   return (
-    <DocumentTable>
+    <DocumentTable style={{ marginBottom: 300 }}>
       <thead>
         <tr>
           <th>Report type</th>
