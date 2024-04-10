@@ -9,6 +9,7 @@ import NavBar from 'components/layout/NavBar/NavBar'
 import Footer from 'components/layout/Footer'
 import {
   ContentBox,
+  ContentSection,
   HalfWidthSimpleBox,
   HorizontalColumns,
   Layout,
@@ -100,95 +101,116 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
           </YearSelector>
         </TopBar>
         <MainContent>
-          <ScrollTarget
-            id={formatHash(CMS.getText(cmsData, 'H2 left nav'))}
-            style={{ top: '-170px' }}
-          />
-          <h2>
-            <CMS.Text name={'H2 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name={'H2 subtitle global'} data={cmsData} />
-          </h3>
-          <HorizontalColumns>
-            <HalfWidthSimpleBox>
-              <ContentBox style={{ paddingBottom: 10 }}>
-                <h3>
-                  <span>
-                    <CMS.Icon name="Disbursed" style={{ height: 25 }} />
-                    Global funders
-                  </span>
-                  <span>{selectedYearsLabel}</span>
-                </h3>
-                <FundingMap mapType={MapType.Disbursed} />
-              </ContentBox>
-              <MapLegend
-                style={{ marginTop: 15 }}
-                mapType={MapType.Disbursed}
-              />
-            </HalfWidthSimpleBox>
-            <HalfWidthSimpleBox>
-              <ContentBox style={{ paddingBottom: 10 }}>
-                <h3>
-                  <span>
-                    <CMS.Icon name="Received" style={{ height: 25 }} />
-                    Global recipients
-                  </span>
-                  <span>{selectedYearsLabel}</span>
-                </h3>
-                <FundingMap mapType={MapType.Received} />
-              </ContentBox>
-              <MapLegend style={{ marginTop: 15 }} mapType={MapType.Received} />
-            </HalfWidthSimpleBox>
-          </HorizontalColumns>
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />
-          <h2>
-            <CMS.Text name="H3 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H3 subtitle global" data={cmsData} />
-          </h3>
-          <FundingTotals
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H4 left nav'))} />
-          <h2>
-            <CMS.Text name="H4 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H4 subtitle global" data={cmsData} />
-          </h3>
-          <FundsByCategory
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H5 left nav'))} />
-          <h2>
-            <CMS.Text name="H5 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H5 subtitle global" data={cmsData} />
-          </h3>
-          <FundsByPHEIC
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H6 left nav'))} />
-          <h2>
-            <CMS.Text name="H6 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H6 subtitle global" data={cmsData} />
-          </h3>
-          <TopFundersAndRecipients
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H2 left nav'))}
+              style={{ top: '-170px' }}
+            />
+            <h2>
+              <CMS.Text name={'H2 header'} data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name={'H2 subtitle global'} data={cmsData} />
+            </h3>
+            <HorizontalColumns>
+              <HalfWidthSimpleBox>
+                <ContentBox style={{ paddingBottom: 10 }}>
+                  <h3>
+                    <span>
+                      <CMS.Icon name="Disbursed" style={{ height: 25 }} />
+                      Global funders
+                    </span>
+                    <span>{selectedYearsLabel}</span>
+                  </h3>
+                  <FundingMap mapType={MapType.Disbursed} />
+                </ContentBox>
+                <MapLegend
+                  style={{ marginTop: 15 }}
+                  mapType={MapType.Disbursed}
+                />
+              </HalfWidthSimpleBox>
+              <HalfWidthSimpleBox>
+                <ContentBox style={{ paddingBottom: 10 }}>
+                  <h3>
+                    <span>
+                      <CMS.Icon name="Received" style={{ height: 25 }} />
+                      Global recipients
+                    </span>
+                    <span>{selectedYearsLabel}</span>
+                  </h3>
+                  <FundingMap mapType={MapType.Received} />
+                </ContentBox>
+                <MapLegend
+                  style={{ marginTop: 15 }}
+                  mapType={MapType.Received}
+                />
+              </HalfWidthSimpleBox>
+            </HorizontalColumns>
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H3 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H3 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H3 subtitle global" data={cmsData} />
+            </h3>
+            <FundingTotals
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
+            />
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H4 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H4 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H4 subtitle global" data={cmsData} />
+            </h3>
+            <FundsByCategory
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
+            />
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H5 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H5 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H5 subtitle global" data={cmsData} />
+            </h3>
+            <FundsByPHEIC
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
+            />
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H6 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H6 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H6 subtitle global" data={cmsData} />
+            </h3>
+            <TopFundersAndRecipients
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
+            />
+          </ContentSection>
         </MainContent>
       </Layout>
       <Footer />

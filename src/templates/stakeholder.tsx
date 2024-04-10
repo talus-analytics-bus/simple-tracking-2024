@@ -11,6 +11,7 @@ import Footer from 'components/layout/Footer'
 import StakeholderSearch from 'components/stakeholderPage/StakeholderSearch'
 import FundingTotals from 'components/stakeholderPage/FundingTotals'
 import {
+  ContentSection,
   Layout,
   MainContent,
   ScrollTarget,
@@ -148,159 +149,177 @@ const StakeholderPage = ({
             // </h3>
             // <ContentPlaceholder />
           }
-          <ScrollTarget
-            id={formatHash(leftNavElements[1].data.Text)}
-            style={{ top: '-170px' }}
-          />
-          <h2>
-            <CMS.Text name={'H3 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text
-              name={'H3 subtitle stakeholder'}
-              data={cmsData}
-              replace={stakeholderNameReplacement}
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(leftNavElements[1].data.Text)}
+              style={{ top: '-170px' }}
             />
-          </h3>
-          <FundingTotals
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+            <h2>
+              <CMS.Text name={'H3 header'} data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text
+                name={'H3 subtitle stakeholder'}
+                data={cmsData}
+                replace={stakeholderNameReplacement}
+              />
+            </h3>
+            <FundingTotals
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
+            />
+          </ContentSection>
 
-          <ScrollTarget id={formatHash(leftNavElements[2].data.Text)} />
-          <h2>
-            <CMS.Text name={'H4 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text
-              name={'H4 subtitle stakeholder'}
-              data={cmsData}
-              replace={stakeholderNameReplacement}
+          <ContentSection>
+            <ScrollTarget id={formatHash(leftNavElements[2].data.Text)} />
+            <h2>
+              <CMS.Text name={'H4 header'} data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text
+                name={'H4 subtitle stakeholder'}
+                data={cmsData}
+                replace={stakeholderNameReplacement}
+              />
+            </h3>
+            <FundsByCategory
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
             />
-          </h3>
-          <FundsByCategory
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+          </ContentSection>
 
-          <ScrollTarget id={formatHash(leftNavElements[3].data.Text)} />
-          <h2>
-            <CMS.Text name={'H5 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text
-              name={'H5 subtitle stakeholder'}
-              data={cmsData}
-              replace={stakeholderNameReplacement}
+          <ContentSection>
+            <ScrollTarget id={formatHash(leftNavElements[3].data.Text)} />
+            <h2>
+              <CMS.Text name={'H5 header'} data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text
+                name={'H5 subtitle stakeholder'}
+                data={cmsData}
+                replace={stakeholderNameReplacement}
+              />
+            </h3>
+            <FundsByPHEIC
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
             />
-          </h3>
-          <FundsByPHEIC
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+          </ContentSection>
 
-          <ScrollTarget id={formatHash(leftNavElements[4].data.Text)} />
-          <h2>
-            <CMS.Text name={'H6 header'} data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text
-              name={'H6 subtitle stakeholder'}
-              data={cmsData}
-              replace={stakeholderNameReplacement}
+          <ContentSection>
+            <ScrollTarget id={formatHash(leftNavElements[4].data.Text)} />
+            <h2>
+              <CMS.Text name={'H6 header'} data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text
+                name={'H6 subtitle stakeholder'}
+                data={cmsData}
+                replace={stakeholderNameReplacement}
+              />
+            </h3>
+            <TopFundersAndRecipients
+              data={data}
+              selectedYear={selectedYear}
+              selectedYearsLabel={selectedYearsLabel}
             />
-          </h3>
-          <TopFundersAndRecipients
-            data={data}
-            selectedYear={selectedYear}
-            selectedYearsLabel={selectedYearsLabel}
-          />
+          </ContentSection>
 
           {stakeholderIsCountry && (
             <>
-              <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
-              <h2>
-                <CMS.Text name={'H7 header'} data={cmsData} />
-              </h2>
-              <h3>
-                <CMS.Text
-                  name={'H7 subtitle'}
-                  data={cmsData}
-                  replace={stakeholderNameReplacement}
-                />
-              </h3>
-              <SourceText>
-                <CMS.RichText name={'H7 source'} data={cmsData} />
-              </SourceText>
-              <SparScores data={data} />
+              <ContentSection>
+                <ScrollTarget id={formatHash(leftNavElements[5].data.Text)} />
+                <h2>
+                  <CMS.Text name={'H7 header'} data={cmsData} />
+                </h2>
+                <h3>
+                  <CMS.Text
+                    name={'H7 subtitle'}
+                    data={cmsData}
+                    replace={stakeholderNameReplacement}
+                  />
+                </h3>
+                <SourceText>
+                  <CMS.RichText name={'H7 source'} data={cmsData} />
+                </SourceText>
+                <SparScores data={data} />
+              </ContentSection>
 
-              <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
-              <h2>
-                <CMS.Text
-                  name={'H8 header'}
-                  data={cmsData}
-                  replace={{ '[1.0]': jeeVersion }}
-                />
-              </h2>
-              <h3>
-                <CMS.Text
-                  name={'H8 subtitle'}
-                  data={cmsData}
-                  replace={stakeholderNameReplacement}
-                />
-              </h3>
-              <SourceText>
-                <CMS.RichText name={'H8 source'} data={cmsData} />
-              </SourceText>
-              <JeeScores data={data} />
+              <ContentSection>
+                <ScrollTarget id={formatHash(leftNavElements[6].data.Text)} />
+                <h2>
+                  <CMS.Text
+                    name={'H8 header'}
+                    data={cmsData}
+                    replace={{ '[1.0]': jeeVersion }}
+                  />
+                </h2>
+                <h3>
+                  <CMS.Text
+                    name={'H8 subtitle'}
+                    data={cmsData}
+                    replace={stakeholderNameReplacement}
+                  />
+                </h3>
+                <SourceText>
+                  <CMS.RichText name={'H8 source'} data={cmsData} />
+                </SourceText>
+                <JeeScores data={data} />
+              </ContentSection>
 
-              <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
-              <h2>
-                <CMS.Text name={'H9 header'} data={cmsData} />
-              </h2>
-              <h3>
-                <CMS.Text
-                  name={'H9 subtitle'}
-                  data={cmsData}
-                  replace={stakeholderNameReplacement}
-                />
-              </h3>
-              <RiskIndicies data={data} />
+              <ContentSection>
+                <ScrollTarget id={formatHash(leftNavElements[7].data.Text)} />
+                <h2>
+                  <CMS.Text name={'H9 header'} data={cmsData} />
+                </h2>
+                <h3>
+                  <CMS.Text
+                    name={'H9 subtitle'}
+                    data={cmsData}
+                    replace={stakeholderNameReplacement}
+                  />
+                </h3>
+                <RiskIndicies data={data} />
+              </ContentSection>
 
-              <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
-              <h2>
-                <CMS.Text name={'H10 header'} data={cmsData} />
-              </h2>
-              <h3>
-                <CMS.Text
-                  name={'H10 subtitle'}
-                  data={cmsData}
-                  replace={stakeholderNameReplacement}
-                />
-              </h3>
-              <SourceText>
-                <CMS.RichText name={'H10 source'} data={cmsData} />
-              </SourceText>
-              <Naphs data={data} />
+              <ContentSection>
+                <ScrollTarget id={formatHash(leftNavElements[8].data.Text)} />
+                <h2>
+                  <CMS.Text name={'H10 header'} data={cmsData} />
+                </h2>
+                <h3>
+                  <CMS.Text
+                    name={'H10 subtitle'}
+                    data={cmsData}
+                    replace={stakeholderNameReplacement}
+                  />
+                </h3>
+                <SourceText>
+                  <CMS.RichText name={'H10 source'} data={cmsData} />
+                </SourceText>
+                <Naphs data={data} />
+              </ContentSection>
 
-              <ScrollTarget id={formatHash(leftNavElements[9].data.Text)} />
-              <h2>
-                <CMS.Text name={'H11 header'} data={cmsData} />
-              </h2>
-              <h3>
-                <CMS.Text
-                  name={'H11 subtitle'}
-                  data={cmsData}
-                  replace={stakeholderNameReplacement}
-                />
-              </h3>
-              <SourceText>
-                <CMS.RichText name={'H11 source'} data={cmsData} />
-              </SourceText>
-              <PvsPathway data={data} />
+              <ContentSection>
+                <ScrollTarget id={formatHash(leftNavElements[9].data.Text)} />
+                <h2>
+                  <CMS.Text name={'H11 header'} data={cmsData} />
+                </h2>
+                <h3>
+                  <CMS.Text
+                    name={'H11 subtitle'}
+                    data={cmsData}
+                    replace={stakeholderNameReplacement}
+                  />
+                </h3>
+                <SourceText>
+                  <CMS.RichText name={'H11 source'} data={cmsData} />
+                </SourceText>
+                <PvsPathway data={data} />
+              </ContentSection>
             </>
           )}
         </MainContent>

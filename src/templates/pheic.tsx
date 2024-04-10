@@ -5,6 +5,7 @@ import CMS from 'components/library/airtable-cms'
 import NavBar from 'components/layout/NavBar/NavBar'
 import {
   ContentBox,
+  ContentSection,
   HorizontalColumns,
   Layout,
   MainContent,
@@ -207,144 +208,154 @@ const PheicPage = ({ data }: PageProps<Queries.PheicPageQuery>) => {
           <h2>Public Health Emergency of International Concern (PHEIC)</h2>
         </PheicTopBar>
         <MainContent>
-          <ScrollTarget id="pheic-overview" style={{ top: -250 }} />
-          <DescriptionSection>
-            <Description>
-              <p>{data.airtable?.data?.Description}</p>
-              <Cases>
-                <Count>
-                  <h4>Total cases</h4>
-                  <p>{data.airtable?.data?.Total_cases}</p>
-                </Count>
-                <Count>
-                  <h4>Total deaths</h4>
-                  <p>{data.airtable?.data?.Total_deaths}</p>
-                </Count>
-              </Cases>
-              <Dropdown
-                renderButton={open => (
-                  <SourcesExpanderButton open={open}>
-                    Sources
-                  </SourcesExpanderButton>
-                )}
-                floating={false}
-                expanderStyle={{ width: '100%' }}
-              >
-                <Sources
-                  dangerouslySetInnerHTML={{
-                    __html: CMS.parseRichText(
-                      data.airtable?.data?.Sources ?? ''
-                    ),
-                  }}
-                />
-              </Dropdown>
-            </Description>
-            <PathogenBox>
-              <h3>Pathogen</h3>
-              <p>{data.airtable?.data?.Pathogen}</p>
-              <h4>
-                <CMS.Icon name="Transmission" style={{ height: 25 }} />
-                Transmission
-              </h4>
-              <p>{data.airtable?.data?.Transmission}</p>
-              <h4>
-                <CMS.Icon name="Route of infection" style={{ height: 25 }} />
-                Route of infection
-              </h4>
-              <p>
-                {commaSeparatedList(
-                  data.airtable?.data?.Route_of_infection as string[]
-                )}
-              </p>
-              <h4>
-                <CMS.Icon
-                  name="Medical countermeasures"
-                  style={{ height: 25 }}
-                />
-                Medical countermeasures
-              </h4>
-              <h5>Available at onset</h5>
-              <p>
-                {commaSeparatedList(
-                  data.airtable?.data?.MCMs_available_at_onset as string[]
-                )}
-              </p>
-              <h5>Developed during or after event</h5>
-              <p>
-                {commaSeparatedList(
-                  data.airtable?.data
-                    ?.MCMs_developed_during_or_after_event as string[]
-                )}
-              </p>
-            </PathogenBox>
-          </DescriptionSection>
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H2 left nav'))} />
-          <h2>
-            <CMS.Text name="H2 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H2 subtitle" data={cmsData} />
-          </h3>
-          <HorizontalColumns>
-            <ContentBox>
-              <h3>
-                <span>
-                  <CMS.Icon name="Disbursed" style={{ height: 25 }} />
-                  Funds disbursed
-                </span>
-                <span>
-                  {startYear} - {endYear}
-                </span>
-              </h3>
-              <TotalsTable>
-                <tbody>
-                  <tr>
-                    <td>
-                      {formatDisplayNumber(
-                        Number(data.fundingTotals?.disbursed)
-                      )}
-                    </td>
-                    <td>Total funding (USD)</td>
-                  </tr>
-                </tbody>
-              </TotalsTable>
-            </ContentBox>
-            <ContentBox>
-              <h3>
-                <span>
-                  <CMS.Icon name="Received" style={{ height: 25 }} />
-                  Funds received
-                </span>
-                <span>
-                  {startYear} - {endYear}
-                </span>
-              </h3>
-              <TotalsTable>
-                <tbody>
-                  <tr>
-                    <td>
-                      {formatDisplayNumber(
-                        Number(data.fundingTotals?.received)
-                      )}
-                    </td>
-                    <td>Total funding (USD)</td>
-                  </tr>
-                </tbody>
-              </TotalsTable>
-            </ContentBox>
-          </HorizontalColumns>
-          <ScrollTarget id={formatHash(CMS.getText(cmsData, 'H3 left nav'))} />
-          <h2>
-            <CMS.Text name="H3 header" data={cmsData} />
-          </h2>
-          <h3>
-            <CMS.Text name="H3 subtitle" data={cmsData} />
-          </h3>
-          <TopFundersAndRecipients
-            startYear={startYear}
-            endYear={endYear}
-            data={data}
-          />
+          <ContentSection>
+            <ScrollTarget id="pheic-overview" style={{ top: -250 }} />
+            <DescriptionSection>
+              <Description>
+                <p>{data.airtable?.data?.Description}</p>
+                <Cases>
+                  <Count>
+                    <h4>Total cases</h4>
+                    <p>{data.airtable?.data?.Total_cases}</p>
+                  </Count>
+                  <Count>
+                    <h4>Total deaths</h4>
+                    <p>{data.airtable?.data?.Total_deaths}</p>
+                  </Count>
+                </Cases>
+                <Dropdown
+                  renderButton={open => (
+                    <SourcesExpanderButton open={open}>
+                      Sources
+                    </SourcesExpanderButton>
+                  )}
+                  floating={false}
+                  expanderStyle={{ width: '100%' }}
+                >
+                  <Sources
+                    dangerouslySetInnerHTML={{
+                      __html: CMS.parseRichText(
+                        data.airtable?.data?.Sources ?? ''
+                      ),
+                    }}
+                  />
+                </Dropdown>
+              </Description>
+              <PathogenBox>
+                <h3>Pathogen</h3>
+                <p>{data.airtable?.data?.Pathogen}</p>
+                <h4>
+                  <CMS.Icon name="Transmission" style={{ height: 25 }} />
+                  Transmission
+                </h4>
+                <p>{data.airtable?.data?.Transmission}</p>
+                <h4>
+                  <CMS.Icon name="Route of infection" style={{ height: 25 }} />
+                  Route of infection
+                </h4>
+                <p>
+                  {commaSeparatedList(
+                    data.airtable?.data?.Route_of_infection as string[]
+                  )}
+                </p>
+                <h4>
+                  <CMS.Icon
+                    name="Medical countermeasures"
+                    style={{ height: 25 }}
+                  />
+                  Medical countermeasures
+                </h4>
+                <h5>Available at onset</h5>
+                <p>
+                  {commaSeparatedList(
+                    data.airtable?.data?.MCMs_available_at_onset as string[]
+                  )}
+                </p>
+                <h5>Developed during or after event</h5>
+                <p>
+                  {commaSeparatedList(
+                    data.airtable?.data
+                      ?.MCMs_developed_during_or_after_event as string[]
+                  )}
+                </p>
+              </PathogenBox>
+            </DescriptionSection>
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H2 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H2 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H2 subtitle" data={cmsData} />
+            </h3>
+            <HorizontalColumns>
+              <ContentBox>
+                <h3>
+                  <span>
+                    <CMS.Icon name="Disbursed" style={{ height: 25 }} />
+                    Funds disbursed
+                  </span>
+                  <span>
+                    {startYear} - {endYear}
+                  </span>
+                </h3>
+                <TotalsTable>
+                  <tbody>
+                    <tr>
+                      <td>
+                        {formatDisplayNumber(
+                          Number(data.fundingTotals?.disbursed)
+                        )}
+                      </td>
+                      <td>Total funding (USD)</td>
+                    </tr>
+                  </tbody>
+                </TotalsTable>
+              </ContentBox>
+              <ContentBox>
+                <h3>
+                  <span>
+                    <CMS.Icon name="Received" style={{ height: 25 }} />
+                    Funds received
+                  </span>
+                  <span>
+                    {startYear} - {endYear}
+                  </span>
+                </h3>
+                <TotalsTable>
+                  <tbody>
+                    <tr>
+                      <td>
+                        {formatDisplayNumber(
+                          Number(data.fundingTotals?.received)
+                        )}
+                      </td>
+                      <td>Total funding (USD)</td>
+                    </tr>
+                  </tbody>
+                </TotalsTable>
+              </ContentBox>
+            </HorizontalColumns>
+          </ContentSection>
+          <ContentSection>
+            <ScrollTarget
+              id={formatHash(CMS.getText(cmsData, 'H3 left nav'))}
+            />
+            <h2>
+              <CMS.Text name="H3 header" data={cmsData} />
+            </h2>
+            <h3>
+              <CMS.Text name="H3 subtitle" data={cmsData} />
+            </h3>
+            <TopFundersAndRecipients
+              startYear={startYear}
+              endYear={endYear}
+              data={data}
+            />
+          </ContentSection>
         </MainContent>
       </Layout>
       <Footer />

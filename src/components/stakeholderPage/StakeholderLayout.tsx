@@ -1,8 +1,7 @@
-import CMS from 'components/library/airtable-cms'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
-export const Layout = styled.div`
+const LayoutDiv = styled.div`
   position: relative;
   max-width: 1500px;
   margin: 0 auto;
@@ -19,6 +18,25 @@ export const Layout = styled.div`
     padding: 0;
   }
 `
+
+const scrollingContext = React.createContext({
+  selectedId: '',
+  setSelectedId: (() => {}) as React.Dispatch<React.SetStateAction<string>>,
+  visibleIds: [] as string[],
+  setVisibleIds: (() => {}) as React.Dispatch<React.SetStateAction<string[]>>,
+})
+
+export const Layout = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const [selectedId, setSelectedId] = useState('')
+  const [visibleIds, setVisibleIds] = useState([] as string[])
+  return (
+    <scrollingContext.Provider
+      value={{ selectedId, setSelectedId, visibleIds, setVisibleIds }}
+    >
+      <LayoutDiv {...props}>{props.children}</LayoutDiv>
+    </scrollingContext.Provider>
+  )
+}
 
 export const TopBar = styled.div`
   grid-area: topbar;
@@ -100,41 +118,109 @@ const StyledSidebarLink = styled.a<{ selected: boolean }>`
 export const SidebarLink = (
   props: React.AnchorHTMLAttributes<HTMLAnchorElement>
 ) => {
-  const hash = typeof window !== 'undefined' ? window.location.hash : ''
-  let selected = Boolean(hash) && hash.includes(props.href ?? '')
+  const { selectedId, setSelectedId, visibleIds } =
+    React.useContext(scrollingContext)
 
-  // show first link as selected if there is no hash
-  if (hash === '' && props.href === '#1') selected = true
+  const handleClick = () => {
+    window.location.hash = props.href ?? ''
+
+    // used to guarantee that the clicked item shows
+    // up as selected after the smooth scroll happens
+    // even if the clicked item is close to the bottom
+    // of the page so it never naturally highlights based
+    // on the scroll position during smooth scrolling.
+    setTimeout(() => {
+      setSelectedId(props.href?.replace('#', '') ?? '')
+    }, 810)
+  }
 
   return (
-    <StyledSidebarLink {...props} selected={selected}>
+    <StyledSidebarLink
+      {...props}
+      selected={
+        selectedId
+          ? selectedId === props.href?.replace('#', '')
+          : visibleIds[0] === props.href?.replace('#', '')
+      }
+      onClick={handleClick}
+    >
       {props.children}
     </StyledSidebarLink>
   )
 }
 
-export const ScrollTarget = styled.div`
+export const ContentSection = styled.section`
   position: relative;
-  top: -100px;
 `
+
+const ScrollTargetDiv = styled.div`
+  position: absolute;
+  top: -160px;
+  height: 100%;
+`
+
+const elementIsAtTop = (element: HTMLElement) => {
+  const rect = element.getBoundingClientRect()
+  console.log(element, rect.top)
+  return rect.top <= 10
+}
+
+export const ScrollTarget = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const { setSelectedId, setVisibleIds } = React.useContext(scrollingContext)
+
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      setSelectedId('')
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (elementIsAtTop(entry.target as HTMLElement)) {
+            setVisibleIds(prev => [entry.target?.id ?? '', ...prev])
+          } else {
+            setVisibleIds(prev => [...prev, entry.target?.id ?? ''])
+          }
+        } else {
+          setVisibleIds(prev => prev.filter(id => id !== entry.target?.id))
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      rootMargin: '0px',
+      threshold: 0.25,
+    })
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [ref.current])
+
+  return <ScrollTargetDiv ref={ref} {...props} />
+}
 
 export const MainContent = styled.div`
   grid-area: main;
   padding: 25px;
   padding-top: 0px;
 
-  > h2 {
+  > section > h2 {
+    position: relative;
     ${({ theme }) => theme.textStyleH2};
     margin-bottom: 15px;
   }
 
-  > h2:not(:nth-child(2)) {
+  > section:not(:nth-child(1)) > h2 {
     border-top: 2px solid ${({ theme }) => theme.common.colors.surfaceGray100};
     padding-top: 30px;
     margin-top: 60px;
   }
 
-  > h3 {
+  > section > h3 {
     ${({ theme }) => theme.textStyleParagraph};
     margin-top: 15px;
     margin-bottom: 30px;
