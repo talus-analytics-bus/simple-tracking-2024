@@ -5,6 +5,7 @@ import CMS from 'components/library/airtable-cms'
 import Providers from 'components/layout/Providers'
 import NavBar from 'components/layout/NavBar/NavBar'
 import FundingMap, { MapType } from 'components/map/Map'
+import MapLegend from 'components/map/MapLegend/MapLegend'
 
 const MapControlContainer = styled.div`
   position: absolute;
@@ -48,6 +49,17 @@ const MapControlButton = styled.button<{ mapType: MapType; selected: boolean }>`
         : theme.common.colors.surfaceGray200};
   }
 `
+const MapLegendContainer = styled.div`
+  position: fixed;
+  bottom: 30px;
+  padding: 8px 15px;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 580px;
+  max-width: 90vw;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+`
 
 const GlobalPage = () => {
   const [mapType, setMapType] = useState(MapType.Received)
@@ -76,6 +88,9 @@ const GlobalPage = () => {
           Recipient
         </MapControlButton>
       </MapControlContainer>
+      <MapLegendContainer>
+        <MapLegend mapType={mapType} />
+      </MapLegendContainer>
     </Providers>
   )
 }
