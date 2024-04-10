@@ -5,7 +5,12 @@ const format = Intl.NumberFormat(undefined, {
   notation: 'compact',
 })
 
-const formatDisplayNumber = (num: number) => {
+const nonCurrencyFormat = Intl.NumberFormat(undefined, {
+  maximumSignificantDigits: 3,
+  notation: 'compact',
+})
+
+const formatDisplayNumber = (num: number, skipCurrencySymbol = false) => {
   if (num === 0) return format.format(0)
   if (num < 1000) return '<' + format.format(1000)
 
@@ -18,6 +23,7 @@ const formatDisplayNumber = (num: number) => {
   else if (scaled > 100) round = Math.round(scaled / 5) * 5
   else round = Math.round(scaled)
 
+  if (skipCurrencySymbol) return nonCurrencyFormat.format(round * scale)
   return format.format(round * scale)
 }
 
