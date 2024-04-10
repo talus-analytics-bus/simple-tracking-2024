@@ -29,7 +29,7 @@ interface MapLegendProps {
 }
 
 const width = 550
-const height = 65
+const height = 70
 
 const MapLegend = ({ style, mapType }: MapLegendProps) => {
   const plotSetup = usePlotSetup({
