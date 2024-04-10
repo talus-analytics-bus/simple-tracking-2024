@@ -29,6 +29,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 8px;
+  height: 70px;
 `
 const NavLink = styled(Link)`
   color: ${({ theme }) => theme.common.colors.textInvert};
