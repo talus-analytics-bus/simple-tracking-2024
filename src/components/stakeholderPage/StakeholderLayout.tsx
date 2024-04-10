@@ -157,7 +157,7 @@ export const ContentSection = styled.section`
 const ScrollTargetDiv = styled.div`
   position: absolute;
   top: -160px;
-  height: calc(100% + 60px);
+  height: 100%;
 `
 
 const elementIsAtTop = (element: HTMLElement) => {
