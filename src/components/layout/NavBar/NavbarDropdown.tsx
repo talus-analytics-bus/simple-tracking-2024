@@ -16,7 +16,7 @@ const DropdownButton = styled.button<{ open: boolean }>`
   color: ${({ theme }) => theme.common.colors.surfaceWhite};
   padding: 14px;
   &:hover {
-    color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
+    color: ${({ theme }) => theme.common.colors.surfaceGray400};
   }
   ${({ theme, open }) =>
     open && `color: ${theme.common.colors.surfaceThemeLighter}`}

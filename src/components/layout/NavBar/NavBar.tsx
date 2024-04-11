@@ -39,7 +39,7 @@ const NavLink = styled(Link)`
   font-weight: 400;
 
   &:hover {
-    color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
+    color: ${({ theme }) => theme.common.colors.surfaceGray400};
   }
 `
 const HomeLink = styled(NavLink)`
