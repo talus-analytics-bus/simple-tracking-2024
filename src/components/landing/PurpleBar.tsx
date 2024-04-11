@@ -56,15 +56,18 @@ const H3 = styled.h3`
 `
 
 const ButtonLink = styled(Link)`
+  ${({ theme }) => theme.textStyleSmallParagraph}
   background-color: ${({ theme }) => theme.common.colors.surfaceThemeHazy};
   color: ${({ theme }) => theme.common.colors.textInvert};
   padding: 11px 20px;
   border-radius: 3px;
   text-decoration: none;
   transition: 250ms;
+  border: 2px solid ${({ theme }) => theme.common.colors.surfaceThemeHazy};
 
   &:hover {
-    background-color: ${({ theme }) => theme.common.colors.surfaceThemeHover};
+    background-color: ${({ theme }) => theme.common.colors.surfaceThemeDarker};
+    border: 2px solid ${({ theme }) => theme.common.colors.surfaceWhite};
   }
 `
 
