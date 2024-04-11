@@ -73,6 +73,8 @@ const DataAccessPage = ({
 }: PageProps<Queries.DataAccessPageQuery>): JSX.Element => {
   const cmsData = useAboutDataAccessPageData()
 
+  console.log('cacheing issues?')
+
   return (
     <Providers>
       <CMS.SEO
@@ -89,16 +91,18 @@ const DataAccessPage = ({
           <CMS.RichText name="H1 paragraph" data={cmsData} />
           <CMS.RichText name="H2 download" data={cmsData} />
           <DownloadTable>
-            {data.allFile.nodes.map(node => (
-              <tr key={node.name}>
-                <td>{fileDisplayNames[node.name ?? ''] ?? node.name}</td>
-                <td>
-                  <a href={node.publicURL ?? ''} download>
-                    Download (CSV, {node.prettySize})
-                  </a>
-                </td>
-              </tr>
-            ))}
+            <tbody>
+              {data.allFile.nodes.map(node => (
+                <tr key={node.name}>
+                  <td>{fileDisplayNames[node.name ?? ''] ?? node.name}</td>
+                  <td>
+                    <a href={node.publicURL ?? ''} download>
+                      Download (CSV, {node.prettySize})
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </DownloadTable>
           <CMS.RichText name="H3 citation and license" data={cmsData} />
         </AboutStyle>
