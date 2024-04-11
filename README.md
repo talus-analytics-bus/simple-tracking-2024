@@ -40,17 +40,17 @@ Docker desktop must be running for the development commands to work.
 docker compose up
 ```
 
-This command starts the database (at port `5432`) and the website 
+This command starts the database (at port `5432`) and the website
 (at [http://localhost:8000/](http://localhost:8000/)).
 
-If **[AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)** 
+If **[AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)**
 are not configured, you will need to provide an Airtable token and Mapbox API key:
 
 ```sh
 GATSBY_MAPBOX_API_KEY='XXXX' AIRTABLE_API_KEY='XXXX' docker compose up
 ```
 
-You can [create an airtable token](https://airtable.com/create/tokens) in the 
+You can [create an airtable token](https://airtable.com/create/tokens) in the
 developers settings in airtable.
 
 </br>
@@ -66,14 +66,14 @@ sh/restore-db
 
 #### AWS CLI not found, please download database dump manually.
 > If you don't have AWS CLI or credentials, you will get a message saying
-"AWS CLI not found, please download database dump manually." In this case, 
-download the tracking database dump file, name it `dump-tracking`, and 
+"AWS CLI not found, please download database dump manually." In this case,
+download the tracking database dump file, name it `dump-tracking`, and
 place it in the `./data/dumps/` directory.
 
 #### Port 5432 In Use
-> *You may get an error saying the port is already in use 
-if your system is already running `postgres`, if you 
-get that message, shut down your instance of 
+> *You may get an error saying the port is already in use
+if your system is already running `postgres`, if you
+get that message, shut down your instance of
 `postgres` first*
 
 
@@ -82,15 +82,15 @@ While the project is running (`docker compose up`) and after the database
 has been restored (`sh/restore-db`) queries in the `/data/queries/`
 directory will re-run and save changes to a CSV file with the same name in
 the `/data/csv/` directory, and will be updated in the GraphQL server and
-changes will be hot-reloaded on the site. 
+changes will be hot-reloaded on the site.
 
-New queries added to the `/data/csv/` directory will run automatically and 
-save output into a csv file with the same name in the `/data/csv/` 
+New queries added to the `/data/csv/` directory will run automatically and
+save output into a csv file with the same name in the `/data/csv/`
 directory, and will be added to the GraphQL server.
 
 ### Connect to Tracking DB
 
-To connect using a graphical database management tool 
+To connect using a graphical database management tool
 (e.g. dBeaver, pgAdmin):
 
 ```
