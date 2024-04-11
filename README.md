@@ -2,6 +2,31 @@
     Tracking 2024
 </h1>
 
+## 📈 Analytics
+
+- [Plausible Dashboard](#)
+- [Google Search Console](#)
+
+## 🚀 Deployment Status
+
+| Branch  | CI/CD Status                      | Url                                                                                              |
+| ------- | --------------------------------- | -------------------------------------------------------------------------------------------------|
+| Prod    | [Create CI/CD Badges in CircleCI] | [prod-simple-tracking-2024.ghssidea.org/](https://prod-simple-tracking-2024.ghssidea.org/)       |
+| Staging | [Create CI/CD Badges in CircleCI] | [staging-simple-tracking-2024.ghssidea.org/](https://staging-simple-tracking-2024.ghssidea.org/) |
+| Review  | [Create CI/CD Badges in CircleCI] | [review-simple-tracking-2024.ghssidea.org/](https://review-simple-tracking-2024.ghssidea.org/)   |
+| Dev     | [Create CI/CD Badges in CircleCI] | [dev-simple-tracking-2024.ghssidea.org/](https://dev-simple-tracking-2024.ghssidea.org/)         |
+
+
+
+Automated deployment schedule: CMS data are ingested to `Staging` weekly.
+
+## 📄 Ingest Latest CMS Data from Airtable
+
+1. Click the "CI/CD Status" badge above next to the site where you want to update data
+2. Click "Trigger Pipeline" button on the top right section of that page.
+
+
+
 ## 👩‍💻 Local Development Quick start
 
 ### Dependencies
