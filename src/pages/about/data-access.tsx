@@ -114,10 +114,7 @@ const DataAccessPage = ({ data }: PageProps<Queries.DataAccessPageQuery>) => {
 export const query = graphql`
   query DataAccessPage {
     allFile(
-      filter: {
-        dir: { eq: "/app/data/csv" }
-        name: { in: ["funding_by_pheic", "funding_by_capacity"] }
-      }
+      filter: { name: { in: ["funding_by_pheic", "funding_by_capacity"] } }
     ) {
       nodes {
         name
