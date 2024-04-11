@@ -125,14 +125,14 @@ export const SidebarLink = (
   const handleClick = () => {
     window.location.hash = props.href ?? ''
 
-    // used to guarantee that the clicked item shows
-    // up as selected after the smooth scroll happens
-    // even if the clicked item is close to the bottom
-    // of the page so it never naturally highlights based
-    // on the scroll position during smooth scrolling.
-    setTimeout(() => {
-      setSelectedId(props.href?.replace('#', '') ?? '')
-    }, 810)
+    // // used to guarantee that the clicked item shows
+    // // up as selected after the smooth scroll happens
+    // // even if the clicked item is close to the bottom
+    // // of the page so it never naturally highlights based
+    // // on the scroll position during smooth scrolling.
+    // setTimeout(() => {
+    //   setSelectedId(props.href?.replace('#', '') ?? '')
+    // }, 810)
   }
 
   return (
