@@ -68,11 +68,10 @@ const fileDisplayNames = {
   funding_by_capacity: 'Funding by Capacity',
 } as { [key: string]: string }
 
-const DataAccessPage = ({
-  data,
-}: PageProps<Queries.DataAccessPageQuery>): JSX.Element => {
+const DataAccessPage = ({ data }: PageProps<Queries.DataAccessPageQuery>) => {
   const cmsData = useAboutDataAccessPageData()
 
+  console.log({ data })
   console.log('cacheing issues?')
 
   return (
