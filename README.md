@@ -77,6 +77,17 @@ get that message, shut down your instance of
 `postgres` first*
 
 
+### Editing queries
+While the project is running (`docker compose up`) and after the database
+has been restored (`sh/restore-db`) queries in the `/data/queries/`
+directory will re-run and save changes to a CSV file with the same name in
+the `/data/csv/` directory, and will be updated in the GraphQL server and
+changes will be hot-reloaded on the site. 
+
+New queries added to the `/data/csv/` directory will run automatically and 
+save output into a csv file with the same name in the `/data/csv/` 
+directory, and will be added to the GraphQL server.
+
 ### Connect to Tracking DB
 
 To connect using a graphical database management tool 
