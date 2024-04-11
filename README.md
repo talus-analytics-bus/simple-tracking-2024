@@ -11,10 +11,10 @@
 
 | Branch  | CI/CD Status                      | Url                                                                                              |
 | ------- | --------------------------------- | -------------------------------------------------------------------------------------------------|
-| Prod    | [Create CI/CD Badges in CircleCI] | [prod-simple-tracking-2024.ghssidea.org/](https://prod-simple-tracking-2024.ghssidea.org/)       |
-| Staging | [Create CI/CD Badges in CircleCI] | [staging-simple-tracking-2024.ghssidea.org/](https://staging-simple-tracking-2024.ghssidea.org/) |
-| Review  | [Create CI/CD Badges in CircleCI] | [review-simple-tracking-2024.ghssidea.org/](https://review-simple-tracking-2024.ghssidea.org/)   |
-| Dev     | [Create CI/CD Badges in CircleCI] | [dev-simple-tracking-2024.ghssidea.org/](https://dev-simple-tracking-2024.ghssidea.org/)         |
+| Prod    | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/talus-analytics-bus/simple-tracking-2024/tree/prod.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/talus-analytics-bus/simple-tracking-2024/tree/prod) | [prod-simple-tracking-2024.ghssidea.org/](https://prod-simple-tracking-2024.ghssidea.org/)       |
+| Staging | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/talus-analytics-bus/simple-tracking-2024/tree/prod.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/talus-analytics-bus/simple-tracking-2024/tree/staging) | [staging-simple-tracking-2024.ghssidea.org/](https://staging-simple-tracking-2024.ghssidea.org/) |
+| Review  | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/talus-analytics-bus/simple-tracking-2024/tree/prod.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/talus-analytics-bus/simple-tracking-2024/tree/review) | [review-simple-tracking-2024.ghssidea.org/](https://review-simple-tracking-2024.ghssidea.org/)   |
+| Dev     | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/talus-analytics-bus/simple-tracking-2024/tree/prod.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/talus-analytics-bus/simple-tracking-2024/tree/dev) | [dev-simple-tracking-2024.ghssidea.org/](https://dev-simple-tracking-2024.ghssidea.org/)         |
 
 
 
