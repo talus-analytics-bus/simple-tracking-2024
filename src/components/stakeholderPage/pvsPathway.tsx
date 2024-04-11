@@ -33,7 +33,7 @@ const PvsPathway = ({ data }: PvsPathwayProps) => {
             <td>{document?.Report_type}</td>
             <td>{document?.Year}</td>
             <td>
-              {document?.PDF?.localFiles?.[0]?.publicURL && (
+              {document?.PDF?.localFiles?.[0]?.publicURL ? (
                 <DocumentLink href={document?.PDF?.localFiles?.[0]?.publicURL}>
                   <CMS.Icon
                     style={{
@@ -47,6 +47,8 @@ const PvsPathway = ({ data }: PvsPathwayProps) => {
                   />
                   {data.stakeholdersCsv?.name} PVS Pathway {document?.Year}
                 </DocumentLink>
+              ) : (
+                <span>No document available</span>
               )}
             </td>
           </tr>

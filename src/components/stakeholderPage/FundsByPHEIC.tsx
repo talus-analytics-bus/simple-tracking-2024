@@ -8,6 +8,7 @@ import styled, { useTheme } from 'styled-components'
 import { BarPlotBars } from 'components/plot/BarPlot/Bars'
 import { Link } from 'gatsby'
 import simplifyForUrl from 'utilities/simplifyForUrl'
+import usePheicNames from 'queryHooks/usePheicNames'
 
 const isDisbursed = (
   pheic: any
@@ -23,36 +24,41 @@ const BarLabelLink = styled(Link)`
   }
 `
 
-const restructurePheics = (
-  acc: BarPlotBars,
-  pheic:
-    | Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0]
-    | Queries.StakeholderPageQuery['pheic_received']['pheics'][0]
-) => {
-  const pheicName = pheic.pheic ?? ''
-  let value = 0
-  if (isDisbursed(pheic)) value = Number(pheic.disbursed ?? 0)
-  else value = Number(pheic.received ?? 0)
-  if (!acc[pheicName])
-    acc[pheicName] = {
-      label: (
-        <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
-          {pheicName}
-        </BarLabelLink>
-      ),
-      value,
-    }
-  else
-    acc[pheicName] = {
-      label: (
-        <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
-          {pheicName}
-        </BarLabelLink>
-      ),
-      value: value + acc[pheicName].value,
-    }
-  return acc
-}
+const getRestructurePheics =
+  (pheicNames: Queries.UsePheicNamesQuery['allAirtable']['pheicNames']) =>
+  (
+    acc: BarPlotBars,
+    pheic:
+      | Queries.StakeholderPageQuery['pheic_disbursed']['pheics'][0]
+      | Queries.StakeholderPageQuery['pheic_received']['pheics'][0]
+  ) => {
+    const pheicName =
+      pheicNames.find(({ data }) => data?.PHEIC_database_name === pheic.pheic)
+        ?.data?.PHEIC_name ?? ''
+
+    let value = 0
+    if (isDisbursed(pheic)) value = Number(pheic.disbursed ?? 0)
+    else value = Number(pheic.received ?? 0)
+    if (!acc[pheicName])
+      acc[pheicName] = {
+        label: (
+          <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
+            {pheicName}
+          </BarLabelLink>
+        ),
+        value,
+      }
+    else
+      acc[pheicName] = {
+        label: (
+          <BarLabelLink to={`/pheic/${simplifyForUrl(pheicName)}`}>
+            {pheicName}
+          </BarLabelLink>
+        ),
+        value: value + acc[pheicName].value,
+      }
+    return acc
+  }
 
 interface FundsByPHEICProps {
   data: {
@@ -74,6 +80,7 @@ const FundsByPHEIC = ({
       `Data not found for stakeholder ${data.stakeholdersCsv?.name} in pheic_received or pheic_disbursed`
     )
 
+  const pheicNames = usePheicNames()
   const theme = useTheme()
 
   let displayTotals = {
@@ -83,20 +90,20 @@ const FundsByPHEIC = ({
 
   if (selectedYear === 'All time') {
     displayTotals.received = data.pheic_received.pheics.reduce(
-      restructurePheics,
+      getRestructurePheics(pheicNames),
       displayTotals.received
     )
     displayTotals.disbursed = data.pheic_disbursed.pheics.reduce(
-      restructurePheics,
+      getRestructurePheics(pheicNames),
       displayTotals.disbursed
     )
   } else {
     displayTotals.received = data.pheic_received.pheics
       .filter(pheic => pheic.year === selectedYear)
-      .reduce(restructurePheics, displayTotals.received)
+      .reduce(getRestructurePheics(pheicNames), displayTotals.received)
     displayTotals.disbursed = data.pheic_disbursed.pheics
       .filter(pheic => pheic.year === selectedYear)
-      .reduce(restructurePheics, displayTotals.disbursed)
+      .reduce(getRestructurePheics(pheicNames), displayTotals.disbursed)
   }
 
   const chartMax = Math.max(
