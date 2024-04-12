@@ -163,6 +163,12 @@ const config: GatsbyConfig = {
       },
       __key: 'pages',
     },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `tracking.ghscosting.org`,
+      },
+    },
     'talus-gatsby-transformer-svg',
     'gatsby-plugin-styled-components',
     'talus-gatsby-transformer-svg',
