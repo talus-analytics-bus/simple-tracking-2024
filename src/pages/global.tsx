@@ -48,7 +48,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
 
   const selectedYearsLabel =
     selectedYear === 'All time'
-      ? `${yearOptions.at(-1)} – ${yearOptions.at(1)}`
+      ? `${yearOptions.at(-1)}–${yearOptions.at(1)}`
       : selectedYear
 
   return (
