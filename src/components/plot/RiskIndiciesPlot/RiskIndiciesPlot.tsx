@@ -59,7 +59,7 @@ const RiskIndiciesPlot = ({
   }, [])
 
   const plotSetup = usePlotSetup({
-    width: narrowLayout ? 300 : 520,
+    width: narrowLayout ? 300 : 550,
     height: 330,
     padding: {
       top: narrowLayout ? 60 : 30,

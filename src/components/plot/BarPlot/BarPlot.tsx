@@ -51,7 +51,7 @@ const BarPlot = ({ bars, max, barColor, xLabel, yLabel }: BarPlotProps) => {
 
   const padding = {
     top: 70,
-    right: 55,
+    right: 62,
     bottom: 5,
     left: narrowLayout ? 5 : 460,
   }
