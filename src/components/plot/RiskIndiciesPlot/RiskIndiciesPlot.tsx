@@ -59,7 +59,7 @@ const RiskIndiciesPlot = ({
   }, [])
 
   const plotSetup = usePlotSetup({
-    width: narrowLayout ? 300 : 550,
+    width: narrowLayout ? 300 : 500,
     height: 330,
     padding: {
       top: narrowLayout ? 60 : 30,
@@ -91,7 +91,7 @@ const RiskIndiciesPlot = ({
         <XAxis
           narrowLayout={narrowLayout}
           name={name}
-          label={`Rank: ${highlight?.rank} | Score: ${highlight?.score}`}
+          label={`Score: ${highlight?.score}`}
         />
       </DimPlotParent>
     </PlotContainer>
