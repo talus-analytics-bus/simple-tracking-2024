@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+  @supports (-moz-appearance:none) {
+    html {
+      scroll-behavior: unset;
+    }
+  }
   body {
     margin: 0;
     padding: 0;
