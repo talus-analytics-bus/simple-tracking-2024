@@ -59,6 +59,13 @@ const FundsSection = styled.section`
     margin: 0px;
   }
 `
+const Unspecified = styled.h3`
+  ${({ theme }) => theme.textStyleParagraph}
+  padding: 5px 10px;
+  background-color: ${({ theme }) => theme.common.colors.surfaceGray200};
+  border-radius: 5px;
+  margin: 0px;
+`
 
 export interface PopupState {
   iso3: string
@@ -86,13 +93,13 @@ const MapPopup = ({ popupState, mapType }: MapPopupProps) => {
     country => country.iso3 === iso3
   )
 
-  const displayValue = formatDisplayNumber(
-    Number(
-      mapType === MapType.Received
-        ? country?.totalDisbursedReceived
-        : country?.totalDisbursed
-    )
+  const numericValue = Number(
+    mapType === MapType.Received
+      ? country?.totalDisbursedReceived
+      : country?.totalDisbursed
   )
+
+  const displayValue = formatDisplayNumber(numericValue)
 
   return (
     <Popup
@@ -115,17 +122,23 @@ const MapPopup = ({ popupState, mapType }: MapPopupProps) => {
             {nameAndFlag?.name}
           </H1>
         </CountryLink>
-        <FundsSection>
-          <h2>
-            Total funding{' '}
-            {mapType === MapType.Received ? 'received' : 'disbursed'} 2014-2022
-            (USD)
-          </h2>
-          <p>{displayValue}</p>
-          <CMS.Icon
-            name={mapType === MapType.Received ? 'Received' : 'Disbursed'}
-          />
-        </FundsSection>
+        {numericValue !== 0 ? (
+          <FundsSection>
+            <h2>
+              Total funding{' '}
+              {mapType === MapType.Received ? 'received' : 'disbursed'}{' '}
+              2014-2022 (USD)
+            </h2>
+            <p>{displayValue}</p>
+            <CMS.Icon
+              name={mapType === MapType.Received ? 'Received' : 'Disbursed'}
+            />
+          </FundsSection>
+        ) : (
+          <FundsSection>
+            <Unspecified>Funding unspecified</Unspecified>
+          </FundsSection>
+        )}
       </PopupContainer>
     </Popup>
   )
