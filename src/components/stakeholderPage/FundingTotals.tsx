@@ -61,19 +61,21 @@ const FundingTotals = ({
           <tbody>
             <tr>
               <td>{formatDisplayNumber(displayTotals.totalDisbursed)}</td>
-              <td>Total funding (USD)</td>
+              <td>Total funds (USD)</td>
             </tr>
             <tr>
               <td>
                 {formatDisplayNumber(displayTotals.totalCapacityDisbursed)}
               </td>
-              <td>Non-PHEIC capacity building funding (USD)</td>
+              <td>
+                Capacity-building funds, including JEE core capacities (USD)
+              </td>
             </tr>
             <tr>
               <td>
                 {formatDisplayNumber(displayTotals.totalResponseDisbursed)}
               </td>
-              <td>PHEIC funding (USD)</td>
+              <td>PHEIC funds (USD)</td>
             </tr>
           </tbody>
         </TotalsTable>
@@ -92,19 +94,21 @@ const FundingTotals = ({
               <td>
                 {formatDisplayNumber(displayTotals.totalDisbursedReceived)}
               </td>
-              <td>Total funding (USD)</td>
+              <td>Total funds (USD)</td>
             </tr>
             <tr>
               <td>
                 {formatDisplayNumber(displayTotals.totalCapacityReceived)}
               </td>
-              <td>Non-PHEIC capacity building funding (USD)</td>
+              <td>
+                Capacity-building funds, including JEE core capacities (USD)
+              </td>
             </tr>
             <tr>
               <td>
                 {formatDisplayNumber(displayTotals.totalResponseReceived)}
               </td>
-              <td>PHEIC funding (USD)</td>
+              <td>PHEIC funds (USD)</td>
             </tr>
           </tbody>
         </TotalsTable>
