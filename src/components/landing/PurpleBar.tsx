@@ -120,7 +120,7 @@ const PurpleBar = () => {
           <H3>
             <CMS.Text name={`Highlight paragraph 1`} data={data} />
           </H3>
-          <ButtonLink to="/map/">
+          <ButtonLink to="/global/">
             <CMS.Text name="Highlight button 1" data={data} />
           </ButtonLink>
           <PurpleBarIcon name={`Purple bar icon 2`} style={{ height: 35 }} />
