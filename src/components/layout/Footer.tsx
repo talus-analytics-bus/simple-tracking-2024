@@ -34,6 +34,7 @@ const Copyright = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 
   @media (max-width: 720px) {
     margin-left: 0;
