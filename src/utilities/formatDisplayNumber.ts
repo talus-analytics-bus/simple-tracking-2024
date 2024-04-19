@@ -21,7 +21,8 @@ const formatDisplayNumber = (num: number, skipCurrencySymbol = false) => {
   let round = scaled
   if (scaled < 10) round = (Math.round((scaled * 10) / 5) * 5) / 10
   else if (scaled > 100) round = Math.round(scaled / 5) * 5
-  else round = Math.round(scaled)
+  else round = Math.round(scaled / 5) * 5
+  // else round = Math.round(scaled)
 
   if (skipCurrencySymbol) return nonCurrencyFormat.format(round * scale)
   return format.format(round * scale)
