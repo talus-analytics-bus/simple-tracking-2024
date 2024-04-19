@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { renderToString } from 'react-dom/server'
 import styled from 'styled-components'
 import { PageProps, graphql } from 'gatsby'
 
@@ -31,6 +32,7 @@ import MapLegend from 'components/map/MapLegend/MapLegend'
 
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 import formatHash from 'utilities/formatHash'
+import useTechnicalAppendixLinkData from 'cmsHooks/useTechnicalAppendixLinkData'
 
 const H1 = styled.h1`
   ${({ theme }) => theme.textStyleH1};
@@ -38,6 +40,7 @@ const H1 = styled.h1`
 
 const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
   const cmsData = useStakeholderPageData()
+  const technicalAppendixLinkData = useTechnicalAppendixLinkData()
 
   const yearOptions = [
     'All time',
@@ -50,6 +53,10 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
     selectedYear === 'All time'
       ? `${yearOptions.at(-1)}–${yearOptions.at(1)}`
       : selectedYear
+
+  const linkString = renderToString(
+    <CMS.Download name="Technical appendix" data={technicalAppendixLinkData} />
+  ).replace(/\n|\r/g, '')
 
   return (
     <Providers>
@@ -170,9 +177,15 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             <h2>
               <CMS.Text name="H4 header" data={cmsData} />
             </h2>
-            <h3>
-              <CMS.Text name="H4 subtitle global" data={cmsData} />
-            </h3>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: CMS.parseRichText(
+                  CMS.getText(cmsData, 'H4 subtitle stakeholder', false, {
+                    '[TECHNICAL APPENDIX LINK]': linkString,
+                  })
+                ),
+              }}
+            />
             <FundsByCategory
               data={data}
               selectedYear={selectedYear}

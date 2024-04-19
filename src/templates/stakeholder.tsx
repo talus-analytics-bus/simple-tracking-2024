@@ -1,4 +1,5 @@
 import React from 'react'
+import { renderToString } from 'react-dom/server'
 import styled from 'styled-components'
 import { graphql, PageProps } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
@@ -33,6 +34,7 @@ import RiskIndicies from 'components/stakeholderPage/RiskIndicies'
 import useStakeholderPageData from 'cmsHooks/useStakeholderPageData'
 
 import formatHash from 'utilities/formatHash'
+import useTechnicalAppendixLinkData from 'cmsHooks/useTechnicalAppendixLinkData'
 
 const H1 = styled.h1`
   ${({ theme }) => theme.textStyleH1};
@@ -57,6 +59,7 @@ const StakeholderPage = ({
   data,
 }: PageProps<Queries.StakeholderPageQuery>): JSX.Element => {
   const cmsData = useStakeholderPageData()
+  const technicalAppendixLinkData = useTechnicalAppendixLinkData()
 
   const stakeholderName = data.stakeholdersCsv?.name
   const stakeholderIsCountry = data.stakeholdersCsv?.iso3 !== ''
@@ -96,6 +99,10 @@ const StakeholderPage = ({
   const stakeholderNameReplacement = {
     '[STAKEHOLDER]': stakeholderName,
   }
+
+  const linkString = renderToString(
+    <CMS.Download name="Technical appendix" data={technicalAppendixLinkData} />
+  ).replace(/\n|\r/g, '')
 
   return (
     <Providers>
@@ -176,13 +183,16 @@ const StakeholderPage = ({
             <h2>
               <CMS.Text name={'H4 header'} data={cmsData} />
             </h2>
-            <h3>
-              <CMS.Text
-                name={'H4 subtitle stakeholder'}
-                data={cmsData}
-                replace={stakeholderNameReplacement}
-              />
-            </h3>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: CMS.parseRichText(
+                  CMS.getText(cmsData, 'H4 subtitle stakeholder', false, {
+                    ...stakeholderNameReplacement,
+                    '[TECHNICAL APPENDIX LINK]': linkString,
+                  })
+                ),
+              }}
+            />
             <FundsByCategory
               data={data}
               selectedYear={selectedYear}
