@@ -42,6 +42,10 @@ const NavLink = styled(Link)`
     color: ${({ theme }) => theme.common.colors.surfaceGray400};
   }
 `
+const MobileNavLink = styled(NavLink)`
+  padding: 10px 20px;
+`
+
 const HomeLink = styled(NavLink)`
   font-family: 'Overpass', sans-serif !important;
   font-weight: 500 !important;
@@ -115,11 +119,11 @@ const NavBar = () => {
           <NavBarCountrySearch style={{ minWidth: 250, margin: '0' }} />
         </DesktopNavList>
         <MobileMenu>
-          <NavLink to="/global/">Global</NavLink>
+          <MobileNavLink to="/global/">Global</MobileNavLink>
           <MobileMenuDropdown title="PHEICs">
             <LinksList $darkMode links={pheicsLinks} />
           </MobileMenuDropdown>
-          <NavLink to="/map/">Map</NavLink>
+          <MobileNavLink to="/map/">Map</MobileNavLink>
           <MobileMenuDropdown title="About">
             <LinksList $darkMode links={aboutLinks} />
           </MobileMenuDropdown>
