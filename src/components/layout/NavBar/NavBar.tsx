@@ -115,9 +115,11 @@ const NavBar = () => {
           <NavBarCountrySearch style={{ minWidth: 250, margin: '0' }} />
         </DesktopNavList>
         <MobileMenu>
+          <NavLink to="/global/">Global</NavLink>
           <MobileMenuDropdown title="PHEICs">
             <LinksList $darkMode links={pheicsLinks} />
           </MobileMenuDropdown>
+          <NavLink to="/map/">Map</NavLink>
           <MobileMenuDropdown title="About">
             <LinksList $darkMode links={aboutLinks} />
           </MobileMenuDropdown>
