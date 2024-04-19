@@ -224,6 +224,10 @@ export const MainContent = styled.div`
     ${({ theme }) => theme.textStyleParagraph};
     margin-top: 15px;
     margin-bottom: 30px;
+
+    > p {
+      margin: 0;
+    }
   }
 
   a {
@@ -409,7 +413,7 @@ export const DocumentLink = styled.a`
   color: ${({ theme }) => theme.common.colors.textLink};
 `
 
-export const SourceText = styled.p`
+export const SourceText = styled.div`
   ${({ theme }) => theme.textStyleSmallParagraph};
   margin: 0;
   margin-top: -15px;
