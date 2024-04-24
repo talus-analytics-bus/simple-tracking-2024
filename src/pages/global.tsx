@@ -180,7 +180,7 @@ const GlobalPage = ({ data }: PageProps<Queries.GlobalPageQuery>) => {
             <h3
               dangerouslySetInnerHTML={{
                 __html: CMS.parseRichText(
-                  CMS.getText(cmsData, 'H4 subtitle stakeholder', false, {
+                  CMS.getText(cmsData, 'H4 subtitle global', false, {
                     '[TECHNICAL APPENDIX LINK]': linkString,
                   })
                 ),
