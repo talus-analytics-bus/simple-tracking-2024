@@ -62,6 +62,17 @@ const AboutNav = (): JSX.Element => {
             background: theme.common.colors.surfaceThemeDarker,
             color: theme.common.colors.textInvert,
           }}
+          to="/about/data-limitations/"
+        >
+          Data limitations
+        </PaddedLink>
+      </li>
+      <li>
+        <PaddedLink
+          activeStyle={{
+            background: theme.common.colors.surfaceThemeDarker,
+            color: theme.common.colors.textInvert,
+          }}
           to="/about/data-sources/"
         >
           Data sources
