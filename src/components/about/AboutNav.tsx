@@ -9,16 +9,20 @@ const LinkList = styled.ul`
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 15px;
   margin: 0;
   margin-top: 10px;
   padding: 0 0 30px 0;
   border-bottom: 3px solid ${({ theme }) => theme.common.colors.surfaceGray100};
 `
+const Li = styled.li`
+  display: block;
+  padding: 10px 0px;
+`
 const PaddedLink = styled(Link)`
   ${({ theme }) => theme.textStyleBigParagraph};
-  padding: 8px 20px 10px 20px;
-  background-color: white;
+  padding: 8px 15px 10px 15px;
+  background-color: rgba(0,0,0,0);
   border-radius: 10px;
   transition: 150ms ease;
   color: ${({ theme }) => theme.common.colors.textPrimary};
@@ -34,7 +38,7 @@ const AboutNav = (): JSX.Element => {
 
   return (
     <LinkList>
-      <li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -44,8 +48,8 @@ const AboutNav = (): JSX.Element => {
         >
           Overview
         </PaddedLink>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -55,8 +59,8 @@ const AboutNav = (): JSX.Element => {
         >
           Methods
         </PaddedLink>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -66,8 +70,8 @@ const AboutNav = (): JSX.Element => {
         >
           Data limitations
         </PaddedLink>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -77,8 +81,8 @@ const AboutNav = (): JSX.Element => {
         >
           Data sources
         </PaddedLink>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -88,8 +92,8 @@ const AboutNav = (): JSX.Element => {
         >
           Data access
         </PaddedLink>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <PaddedLink
           activeStyle={{
             background: theme.common.colors.surfaceThemeDarker,
@@ -99,7 +103,7 @@ const AboutNav = (): JSX.Element => {
         >
           Publications
         </PaddedLink>
-      </li>
+      </Li>
     </LinkList>
   )
 }
