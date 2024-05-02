@@ -92,6 +92,7 @@ const NavBar = () => {
   const aboutLinks = [
     { to: '/about/overview/', children: 'Overview' },
     { to: '/about/methods/', children: 'Methods' },
+    { to: '/about/data-limitations/', children: 'Data limitations' },
     { to: '/about/data-sources/', children: 'Data sources' },
     { to: '/about/data-access/', children: 'Data access' },
     { to: '/about/publications/', children: 'Publications' },
