@@ -41,6 +41,9 @@ const H2 = styled.h1`
 `
 const H3 = styled.h1`
   ${({ theme }) => theme.textStyleParagraph}
+  a {
+    color: ${({ theme }) => theme.common.colors.textLink};
+  }
 `
 
 const ButtonRow = styled.div`
@@ -64,6 +67,7 @@ const ButtonLink = styled(Link)`
     border: 2px solid ${({ theme }) => theme.common.colors.surfaceThemeDarker};
     color: ${({ theme }) => theme.common.colors.textPrimary};
   }
+
 `
 
 const FirstFold = () => {
@@ -80,7 +84,7 @@ const FirstFold = () => {
             <CMS.Text name="Section 1 paragraph 1" data={data} />
           </H2>
           <H3>
-            <CMS.Text name="Section 1 paragraph 2" data={data} />
+            <CMS.RichText name="Section 1 paragraph 2" data={data} />
           </H3>
           <ButtonRow>
             <ButtonLink to="/map/">
