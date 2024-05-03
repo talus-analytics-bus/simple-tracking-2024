@@ -34,15 +34,20 @@ const MapContainer = styled.div`
   justify-content: center;
 `
 const H1 = styled.h1`
-  ${({ theme }) => theme.textStyleBigLanding}
+  ${({ theme }) => theme.textStyleBigLanding};
 `
 const H2 = styled.h1`
-  ${({ theme }) => theme.textStyleBigParagraph}
+  ${({ theme }) => theme.textStyleBigParagraph};
 `
 const H3 = styled.h1`
-  ${({ theme }) => theme.textStyleParagraph}
+  ${({ theme }) => theme.textStyleParagraph};
   a {
     color: ${({ theme }) => theme.common.colors.textLink};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
