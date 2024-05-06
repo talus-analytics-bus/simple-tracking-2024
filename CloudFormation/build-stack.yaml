@@ -12,10 +12,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   DomainName:
     Type: String
-    Default: 'ghssidea.org'
+    Default: 'ghscosting.org'
   CertificateArn:
     Type: String
-    Default: 'arn:aws:acm:us-east-1:560812044035:certificate/d2a78318-eef1-4b0b-8b34-93c53e4bfd4f'
+    Default: 'arn:aws:acm:us-east-1:560812044035:certificate/48de3150-5b42-4433-b682-ff94552831a9'
 
 Conditions:
   # This conditional checks if the domain name is project-specific, or
@@ -39,7 +39,7 @@ Conditions:
   # aws cloudformation update-stack \
   #   --stack-name build-stack-test \
   #   --template-body file://build-stack.yaml
-  CustomDomainProvided: !Not [!Equals [!Ref DomainName, 'ghssidea.org']]
+  CustomDomainProvided: !Not [!Equals [!Ref DomainName, 'ghscosting.org']]
 
 Resources:
   # Using lambda to generate random string to use in headers between CF and S3
@@ -556,20 +556,8 @@ Resources:
     Type: 'AWS::CloudFront::Distribution'
     Properties:
       DistributionConfig:
-        Aliases:
-          - !If [
-              CustomDomainProvided,
-              !Ref DomainName,
-              !Join ['', ['prod-', !Ref AWS::StackName, '.', !Ref DomainName]],
-            ]
-          - !If [
-              CustomDomainProvided,
-              !Join ['.', ['www', !Ref DomainName]],
-              !Join [
-                '',
-                ['prodwww-', !Ref AWS::StackName, '.', !Ref DomainName],
-              ],
-            ]
+        Aliases: 
+          - !Join ['', ['tracking.', !Ref DomainName]]
         Origins:
           - DomainName:
               !Select [1, !Split ['//', !GetAtt S3ProdBucket.WebsiteURL]]
@@ -596,9 +584,9 @@ Resources:
           ForwardedValues:
             QueryString: 'true'
           ViewerProtocolPolicy: redirect-to-https
-          LambdaFunctionAssociations:
-            - EventType: "viewer-request"
-              LambdaFunctionARN: !Ref BasicAuthLambdaVersion
+          # LambdaFunctionAssociations:
+          #   - EventType: "viewer-request"
+          #     LambdaFunctionARN: !Ref BasicAuthLambdaVersion
         PriceClass: PriceClass_All
         ViewerCertificate:
           AcmCertificateArn: !Ref CertificateArn
@@ -615,33 +603,7 @@ Resources:
         - AliasTarget:
             DNSName: !GetAtt ProdDistribution.DomainName
             HostedZoneId: Z2FDTNDATAQYW2
-          Name:
-            !If [
-              CustomDomainProvided,
-              !Ref DomainName,
-              !Join ['', ['prod-', !Ref AWS::StackName, '.', !Ref DomainName]],
-            ]
-          Type: A
-
-  Route53ProdWWWRecord:
-    Type: AWS::Route53::RecordSetGroup
-    Properties:
-      # HostedZoneName must include a trailing dot
-      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzonename
-      HostedZoneName: !Join ['', [!Ref DomainName, '.']]
-      RecordSets:
-        - AliasTarget:
-            DNSName: !GetAtt ProdDistribution.DomainName
-            HostedZoneId: Z2FDTNDATAQYW2
-          Name:
-            !If [
-              CustomDomainProvided,
-              !Join ['.', ['www', !Ref DomainName]],
-              !Join [
-                '',
-                ['prodwww-', !Ref AWS::StackName, '.', !Ref DomainName],
-              ],
-            ]
+          Name: !Join ['', ['tracking.', !Ref DomainName]]
           Type: A
 
 Outputs:
