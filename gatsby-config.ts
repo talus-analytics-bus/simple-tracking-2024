@@ -2,8 +2,8 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: 'https://example.talusanalytics.com/',
-    title: 'Talus Analytics',
+    siteUrl: 'https://tracking.ghscosting.org/',
+    title: 'GHS Tracking',
     cookieConsent: {
       cookieMessage:
         'Talus sites use cookies to ensure you get the best experience possible.',
@@ -175,6 +175,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-root-import',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     'gatsby-plugin-sass',
