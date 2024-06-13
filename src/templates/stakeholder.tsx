@@ -69,8 +69,9 @@ const StakeholderPage = ({
 
   const yearOptions = [
     'All time',
-    ...(data.allReceivedAndDisbursedCsv?.years.map(year => year.year ?? '') ??
-      []),
+    ...(
+      data.allReceivedAndDisbursedCsv?.years.map(year => year.year ?? '') ?? []
+    ).sort((a, b) => b.localeCompare(a)),
   ]
 
   const [selectedYear, setSelectedYear] = React.useState(yearOptions[0])
